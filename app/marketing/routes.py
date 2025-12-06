@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, session
-from app.auth.routes import login_required
+from app.auth.decorators import login_required
+
 
 marketing_bp = Blueprint(
     "marketing",

@@ -20,3 +20,4 @@ def create_app():
         return redirect(url_for("auth.login"))
 
     return app
+
