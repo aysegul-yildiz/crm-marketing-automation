@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>CRM Marketing Automation</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <a href="/">Dashboard</a> |
-        <a href="/segments">Segments</a> |
-        <a href="/campaigns">Campaigns</a>
+      {% if session.email %} Logged in as {{ session.username }} |
+      <a href="{{ url_for('marketing.dashboard') }}">Marketing</a> |
+      <a href="{{ url_for('auth.logout') }}">Logout</a>
+      {% else %}
+      <a href="{{ url_for('auth.login') }}">Login</a> |
+      <a href="{{ url_for('auth.register') }}">Register</a>
+      {% endif %}
     </nav>
-    <hr>
+    <hr />
     {% block content %}{% endblock %}
-</body>
+  </body>
 </html>
