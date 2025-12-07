@@ -87,3 +87,14 @@ CREATE TABLE campaign_event (
     FOREIGN KEY(campaign_id) REFERENCES campaign(id),
     FOREIGN KEY(step_id) REFERENCES workflow_step(id)
 );
+
+CREATE TABLE segmentation_rule (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    segmentation_id INT,
+    field VARCHAR(50) NOT NULL,
+    operator VARCHAR(10) NOT NULL,
+    target_value VARCHAR(100) NOT NULL,
+    add_or_remove BOOLEAN NOT NULL, -- when true the user will be added to the segment, else it will be removed from the segment when the predicate is true
+    FOREIGN KEY(segmentation_id) REFERENCES segmentation_group(id)
+        ON DELETE CASCADE
+);
