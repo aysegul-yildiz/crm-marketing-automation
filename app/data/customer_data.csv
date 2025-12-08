@@ -1,0 +1,1001 @@
+id,first_name,last_name,email,gender,ip_address,created_at,age,lifetime_value,churn_risk_score,segment
+1,Guss,Calltone,gcalltone0@usatoday.com,Male,242.246.175.49,21/01/2025,79,9250,12602,High CLV Customers
+2,Lizzie,Eccleston,leccleston1@dmoz.org,Female,199.123.184.147,10/09/2025,24,6819,10044,New Signups (Last 30 Days)
+3,Tabina,Humburton,thumburton2@pinterest.com,Female,210.147.178.85,27/03/2025,49,6252,750,Churn Risk
+4,Vasily,Davidsen,vdavidsen3@blog.com,Male,171.221.4.92,02/07/2025,28,16255,19214,Churn Risk
+5,Brynne,Ockleshaw,bockleshaw4@soundcloud.com,Female,247.185.159.181,01/08/2025,22,966,13552,Inactive > 90 Days
+6,Tomlin,Cescotti,tcescotti5@wikia.com,Male,153.166.250.114,17/09/2025,21,15795,10179,Churn Risk
+7,Jesse,Bris,jbris6@prnewswire.com,Male,117.84.197.247,13/04/2025,42,1075,3424,Inactive > 90 Days
+8,Benito,Whooley,bwhooley7@youku.com,Male,97.206.3.237,13/09/2025,73,17364,9377,New Signups (Last 30 Days)
+9,Cleveland,Folker,cfolker8@engadget.com,Male,77.130.135.193,03/04/2025,78,7708,6110,High CLV Customers
+10,Cornie,MacDiarmond,cmacdiarmond9@netvibes.com,Male,180.71.40.63,11/03/2025,19,16777,7704,New Signups (Last 30 Days)
+11,Hobart,Yesson,hyessona@answers.com,Male,201.40.43.194,05/02/2025,32,7992,18006,High CLV Customers
+12,Craggy,Read,creadb@ow.ly,Male,28.117.211.242,05/08/2025,24,6467,11812,New Signups (Last 30 Days)
+13,Frannie,Annear,fannearc@psu.edu,Female,116.45.53.238,27/03/2025,51,19724,7820,New Signups (Last 30 Days)
+14,Arlina,Hirthe,ahirthed@bbb.org,Female,225.207.131.155,08/12/2024,43,10765,5997,High CLV Customers
+15,Boyce,Dear,bdeare@cbslocal.com,Male,42.105.188.89,24/02/2025,32,17169,11370,New Signups (Last 30 Days)
+16,Webster,Corrett,wcorrettf@chronoengine.com,Male,254.150.109.63,04/02/2025,46,13151,5422,Inactive > 90 Days
+17,Cosimo,Brodnecke,cbrodneckeg@nifty.com,Male,196.241.88.123,24/03/2025,28,12217,12336,Inactive > 90 Days
+18,Chrotoem,Corwin,ccorwinh@ucla.edu,Male,78.220.236.149,22/03/2025,27,11324,18260,High CLV Customers
+19,Cariotta,Halvosen,chalvoseni@icq.com,Female,71.247.80.220,15/10/2025,25,17663,7301,Inactive > 90 Days
+20,Tandi,Lowe,tlowej@ebay.co.uk,Non-binary,243.191.168.196,11/01/2025,70,14737,11442,Churn Risk
+21,Hayyim,Straneo,hstraneok@mtv.com,Male,2.103.15.34,30/03/2025,45,18191,11006,Inactive > 90 Days
+22,Nicky,Strutley,nstrutleyl@upenn.edu,Male,240.156.107.212,22/12/2024,37,6811,6695,New Signups (Last 30 Days)
+23,Raul,Goodoune,rgoodounem@eepurl.com,Male,132.182.221.80,09/12/2024,56,934,7786,Churn Risk
+24,Wheeler,Mainds,wmaindsn@foxnews.com,Male,18.33.167.72,25/01/2025,26,3447,5310,Inactive > 90 Days
+25,Mirabella,Saull,msaullo@hexun.com,Female,3.111.63.218,28/06/2025,50,11853,10895,New Signups (Last 30 Days)
+26,Kristofor,Cockshutt,kcockshuttp@squidoo.com,Male,179.4.14.103,20/07/2025,66,7124,9121,High CLV Customers
+27,Golda,Goscar,ggoscarq@indiatimes.com,Female,184.202.108.247,18/12/2024,80,2565,2728,Churn Risk
+28,Merrie,Skains,mskainsr@blog.com,Female,105.174.252.244,12/03/2025,61,18929,1985,Churn Risk
+29,Rubetta,Rauprich,rrauprichs@mapy.cz,Female,0.70.250.186,23/12/2024,64,18750,5848,High CLV Customers
+30,Dodie,Park,dparkt@cbslocal.com,Female,112.247.37.234,13/03/2025,41,8515,4065,High CLV Customers
+31,Ricki,Suttling,rsuttlingu@theguardian.com,Male,82.19.158.34,26/10/2025,64,18419,2209,High CLV Customers
+32,Gabi,Dekeyser,gdekeyserv@pbs.org,Male,2.136.164.194,17/01/2025,39,5733,5342,Churn Risk
+33,Lanny,Geard,lgeardw@sakura.ne.jp,Male,84.137.70.120,24/03/2025,42,6834,5498,Churn Risk
+34,Axel,Gergler,agerglerx@ovh.net,Male,54.152.137.108,10/09/2025,32,843,5082,New Signups (Last 30 Days)
+35,Howard,Lorenzetti,hlorenzettiy@biblegateway.com,Male,87.177.93.254,27/05/2025,75,12762,5732,Churn Risk
+36,Clywd,Stephenson,cstephensonz@123-reg.co.uk,Male,139.134.148.239,16/04/2025,57,6979,11508,Inactive > 90 Days
+37,Brooks,Duval,bduval10@biglobe.ne.jp,Female,124.169.156.96,30/03/2025,66,9396,7185,High CLV Customers
+38,Weston,Goward,wgoward11@bloglines.com,Male,37.17.16.2,07/05/2025,18,12573,15021,New Signups (Last 30 Days)
+39,Deonne,O'Donohue,dodonohue12@loc.gov,Female,209.45.203.254,22/03/2025,70,14238,7773,Inactive > 90 Days
+40,Terrye,Allkins,tallkins13@cnet.com,Female,2.193.187.65,01/09/2025,78,11653,6505,High CLV Customers
+41,Rance,Heliar,rheliar14@hugedomains.com,Male,180.230.14.88,19/10/2025,40,12303,18873,High CLV Customers
+42,Casey,Speek,cspeek15@netvibes.com,Male,149.201.29.215,18/09/2025,66,3223,8422,New Signups (Last 30 Days)
+43,Sky,Brazenor,sbrazenor16@nyu.edu,Non-binary,231.189.78.177,16/07/2025,59,6461,14442,Inactive > 90 Days
+44,Allin,Dunderdale,adunderdale17@narod.ru,Male,238.205.207.57,10/09/2025,28,16200,16173,Churn Risk
+45,Dolly,Jakubovski,djakubovski18@unicef.org,Female,7.145.215.242,17/04/2025,46,2358,13104,New Signups (Last 30 Days)
+46,Malvina,Crosfield,mcrosfield19@ustream.tv,Female,166.177.95.57,06/07/2025,49,4319,12666,High CLV Customers
+47,Allen,Abramowitz,aabramowitz1a@freewebs.com,Male,201.228.12.243,06/12/2025,28,2946,8751,High CLV Customers
+48,Dudley,Tillard,dtillard1b@mapy.cz,Male,247.196.68.162,24/01/2025,30,9942,11290,New Signups (Last 30 Days)
+49,Merrick,Wayt,mwayt1c@ebay.co.uk,Male,135.106.41.215,18/05/2025,72,8590,12744,Churn Risk
+50,Dasya,Bamell,dbamell1d@stanford.edu,Female,58.112.225.210,10/08/2025,30,11498,2319,Inactive > 90 Days
+51,Rossy,Bunting,rbunting1e@4shared.com,Male,132.219.13.44,03/03/2025,43,8966,13100,New Signups (Last 30 Days)
+52,Yard,De La Cote,ydelacote1f@sohu.com,Male,165.97.165.116,14/07/2025,46,5334,6765,Churn Risk
+53,Sharron,Rosenstock,srosenstock1g@tinyurl.com,Female,242.130.201.170,21/01/2025,68,16862,1805,New Signups (Last 30 Days)
+54,Querida,Williamson,qwilliamson1h@mozilla.com,Female,12.229.238.141,08/08/2025,69,18015,11608,High CLV Customers
+55,Zoe,Sorbie,zsorbie1i@bbb.org,Female,137.4.229.196,14/01/2025,35,4093,11338,Inactive > 90 Days
+56,Ravi,Laise,rlaise1j@wordpress.org,Male,37.207.186.52,05/10/2025,54,2599,10107,Inactive > 90 Days
+57,Ase,Dumsday,adumsday1k@stumbleupon.com,Male,14.127.61.105,23/08/2025,79,19265,13292,High CLV Customers
+58,Bev,Duddin,bduddin1l@ft.com,Female,159.199.157.225,24/05/2025,51,3120,7737,High CLV Customers
+59,Cynthie,Rockey,crockey1m@sfgate.com,Female,228.42.71.145,30/10/2025,33,14635,5643,High CLV Customers
+60,Adina,Sorensen,asorensen1n@edublogs.org,Female,48.158.96.120,12/10/2025,43,14677,207,High CLV Customers
+61,Estrellita,Petters,epetters1o@netscape.com,Female,200.183.42.79,31/05/2025,64,1380,10116,Inactive > 90 Days
+62,Carlen,Guile,cguile1p@sourceforge.net,Agender,40.121.192.121,18/05/2025,77,3077,6407,Churn Risk
+63,Thorsten,Swettenham,tswettenham1q@irs.gov,Male,140.50.1.204,14/08/2025,61,19626,10375,Churn Risk
+64,Annette,Filov,afilov1r@taobao.com,Female,151.51.198.138,20/07/2025,62,2619,9824,New Signups (Last 30 Days)
+65,Steffen,Ianson,sianson1s@uol.com.br,Male,181.97.53.37,18/10/2025,72,4705,13539,New Signups (Last 30 Days)
+66,Caty,Beatey,cbeatey1t@istockphoto.com,Female,79.113.179.91,22/06/2025,79,19350,7834,Inactive > 90 Days
+67,Hyacinth,Larvor,hlarvor1u@behance.net,Non-binary,112.117.211.31,18/05/2025,41,4022,12807,High CLV Customers
+68,Daisie,Johnes,djohnes1v@harvard.edu,Agender,231.97.35.52,19/08/2025,74,19094,4948,New Signups (Last 30 Days)
+69,Catlee,Parks,cparks1w@shinystat.com,Genderfluid,100.143.216.62,29/05/2025,27,1569,11084,Inactive > 90 Days
+70,Donavon,Toth,dtoth1x@gnu.org,Male,195.22.15.248,24/07/2025,56,16230,547,New Signups (Last 30 Days)
+71,Reinaldos,Hacun,rhacun1y@theatlantic.com,Male,110.164.154.12,04/08/2025,30,6110,1790,Inactive > 90 Days
+72,Gerhard,Sibbit,gsibbit1z@noaa.gov,Male,60.160.198.4,27/11/2025,21,16186,6153,Inactive > 90 Days
+73,Lindon,Hakewell,lhakewell20@dailymotion.com,Male,251.168.23.65,09/09/2025,52,3796,539,Churn Risk
+74,Huntley,Dalziell,hdalziell21@house.gov,Male,88.43.26.104,02/05/2025,43,16210,9123,Inactive > 90 Days
+75,Emmanuel,Gregoire,egregoire22@fda.gov,Male,181.61.109.93,14/07/2025,42,2963,14680,High CLV Customers
+76,Charmian,Vaughan-Hughes,cvaughanhughes23@mlb.com,Female,228.124.206.21,06/01/2025,63,15292,15661,High CLV Customers
+77,Rudiger,Powles,rpowles24@exblog.jp,Male,236.70.158.28,07/03/2025,40,4261,16518,New Signups (Last 30 Days)
+78,Teddi,Lewnden,tlewnden25@qq.com,Female,181.74.73.114,27/12/2024,33,9690,11221,High CLV Customers
+79,Linn,Berkowitz,lberkowitz26@fema.gov,Female,84.30.146.136,25/03/2025,78,4412,15331,Inactive > 90 Days
+80,Yvonne,Bingall,ybingall27@feedburner.com,Polygender,201.103.247.48,06/11/2025,76,19516,3481,High CLV Customers
+81,Joly,Hamil,jhamil28@arstechnica.com,Female,55.150.70.95,09/04/2025,51,9075,1975,Inactive > 90 Days
+82,Sid,Imms,simms29@discuz.net,Male,59.167.176.23,01/06/2025,22,15203,9842,Inactive > 90 Days
+83,Tracy,Warrender,twarrender2a@meetup.com,Male,41.187.94.95,30/08/2025,47,19039,1598,Churn Risk
+84,Silvanus,Witty,switty2b@myspace.com,Male,76.151.163.223,11/06/2025,63,17427,1813,Churn Risk
+85,Ardyce,Metcalfe,ametcalfe2c@bloglovin.com,Female,235.36.203.204,25/06/2025,62,4812,18524,High CLV Customers
+86,Jdavie,Sopper,jsopper2d@hostgator.com,Male,121.46.172.217,17/06/2025,73,19532,15932,Churn Risk
+87,Arabella,Freear,afreear2e@globo.com,Female,176.186.28.44,28/09/2025,20,15616,6226,Inactive > 90 Days
+88,Aldus,Goodson,agoodson2f@people.com.cn,Male,71.227.213.87,21/09/2025,49,10202,18968,High CLV Customers
+89,Linn,Culverhouse,lculverhouse2g@usgs.gov,Male,193.222.139.65,23/12/2024,20,18762,15829,High CLV Customers
+90,Odelinda,Hauxley,ohauxley2h@guardian.co.uk,Female,128.145.15.253,11/02/2025,28,15165,12300,Inactive > 90 Days
+91,Hulda,Mabbe,hmabbe2i@virginia.edu,Female,101.3.197.183,11/04/2025,70,2483,14538,Inactive > 90 Days
+92,Kiley,Shann,kshann2j@mayoclinic.com,Male,13.128.147.188,20/01/2025,20,263,3492,New Signups (Last 30 Days)
+93,Dalston,Hewes,dhewes2k@instagram.com,Male,46.206.250.240,09/12/2024,75,8357,1694,Churn Risk
+94,Dyane,Armal,darmal2l@nih.gov,Female,48.6.70.133,15/08/2025,46,18832,2682,New Signups (Last 30 Days)
+95,Bo,Edmunds,bedmunds2m@lycos.com,Male,20.153.54.60,16/05/2025,66,6791,18209,Churn Risk
+96,Odelle,Thomkins,othomkins2n@utexas.edu,Bigender,214.95.161.142,30/01/2025,50,7058,19882,Churn Risk
+97,Lion,Faires,lfaires2o@woothemes.com,Male,143.109.244.150,01/09/2025,66,15217,19378,New Signups (Last 30 Days)
+98,Melly,Gotcher,mgotcher2p@hc360.com,Female,212.75.119.78,29/11/2025,58,14390,14732,Inactive > 90 Days
+99,Paige,Stelfox,pstelfox2q@miitbeian.gov.cn,Male,49.71.82.35,04/05/2025,78,11229,6314,Inactive > 90 Days
+100,Midge,Kuhnt,mkuhnt2r@eepurl.com,Female,12.85.96.167,14/02/2025,25,5520,190,High CLV Customers
+101,Maggee,Mc Coughan,mmccoughan2s@twitter.com,Female,62.190.205.185,08/03/2025,50,776,10457,Inactive > 90 Days
+102,Karlis,Packington,kpackington2t@upenn.edu,Male,7.158.122.50,06/01/2025,78,11098,18315,High CLV Customers
+103,Lief,Barttrum,lbarttrum2u@4shared.com,Male,106.32.45.154,09/03/2025,74,18112,1685,New Signups (Last 30 Days)
+104,Rica,Carville,rcarville2v@spotify.com,Female,144.64.122.254,16/08/2025,43,7217,8205,Inactive > 90 Days
+105,Nerta,Stirrup,nstirrup2w@typepad.com,Female,155.30.232.63,23/04/2025,68,16300,9759,Inactive > 90 Days
+106,Ashly,FitzAlan,afitzalan2x@marriott.com,Female,243.112.171.239,14/10/2025,73,18750,7756,High CLV Customers
+107,Janean,Stubbert,jstubbert2y@lycos.com,Female,68.210.83.50,16/12/2024,24,16452,14846,Churn Risk
+108,Reynard,Perren,rperren2z@spotify.com,Male,252.236.65.159,06/08/2025,47,1155,15197,New Signups (Last 30 Days)
+109,Ruy,Newbury,rnewbury30@ibm.com,Male,149.190.85.233,29/12/2024,52,12633,1874,Churn Risk
+110,Theodor,Burdon,tburdon31@sfgate.com,Male,161.3.28.48,06/09/2025,35,19671,19000,Inactive > 90 Days
+111,Ogdon,Armiger,oarmiger32@youtube.com,Non-binary,124.0.244.218,19/06/2025,74,10698,6161,Churn Risk
+112,Yule,Brend,ybrend33@theatlantic.com,Male,201.141.145.133,31/12/2024,47,12376,13357,Inactive > 90 Days
+113,Maurise,Lynam,mlynam34@nih.gov,Male,221.134.60.100,26/10/2025,65,4872,13465,High CLV Customers
+114,Lemmy,Blissett,lblissett35@europa.eu,Male,145.132.100.233,27/08/2025,27,13556,16762,New Signups (Last 30 Days)
+115,Carver,Babinski,cbabinski36@mac.com,Male,179.92.27.131,18/02/2025,70,18038,10275,New Signups (Last 30 Days)
+116,Charin,Burch,cburch37@newyorker.com,Female,89.218.49.214,23/08/2025,79,18872,3962,New Signups (Last 30 Days)
+117,Beth,Egel,begel38@unicef.org,Female,209.117.23.107,06/10/2025,38,15633,18557,Inactive > 90 Days
+118,Juieta,Boecke,jboecke39@washingtonpost.com,Non-binary,88.123.7.31,18/03/2025,64,5538,5166,High CLV Customers
+119,Gay,Arundel,garundel3a@networkadvertising.org,Polygender,183.52.159.166,14/06/2025,60,4427,10896,High CLV Customers
+120,Jordan,Cordeau,jcordeau3b@ucla.edu,Male,78.29.103.115,30/12/2024,49,9165,266,Churn Risk
+121,Deina,Torritti,dtorritti3c@netscape.com,Female,35.226.226.180,03/04/2025,38,16767,11984,Inactive > 90 Days
+122,Yanaton,French,yfrench3d@opensource.org,Agender,178.121.116.0,18/02/2025,73,2113,5810,Churn Risk
+123,Frederik,Jurzyk,fjurzyk3e@sohu.com,Male,104.15.119.37,22/06/2025,48,4060,2944,Churn Risk
+124,Perkin,Bantham,pbantham3f@behance.net,Male,104.144.242.133,22/06/2025,72,14838,19985,Inactive > 90 Days
+125,Marie-ann,Calendar,mcalendar3g@4shared.com,Female,163.91.63.44,23/01/2025,46,14721,12494,Inactive > 90 Days
+126,Gavin,Luigi,gluigi3h@wufoo.com,Male,223.46.74.230,02/04/2025,28,10265,8956,Churn Risk
+127,Den,Gertray,dgertray3i@salon.com,Male,87.228.240.215,20/08/2025,44,18060,9659,Churn Risk
+128,Breena,Moncaster,bmoncaster3j@dot.gov,Female,21.71.158.148,28/01/2025,49,17841,1984,New Signups (Last 30 Days)
+129,Devy,Duer,dduer3k@gnu.org,Male,109.184.169.242,02/02/2025,35,13447,1691,New Signups (Last 30 Days)
+130,Town,Simons,tsimons3l@tripod.com,Male,47.199.55.142,23/08/2025,25,5835,8940,Inactive > 90 Days
+131,Lazaro,Bearblock,lbearblock3m@narod.ru,Male,185.191.191.239,31/05/2025,64,12702,1797,Churn Risk
+132,Bobbye,Clair,bclair3n@reference.com,Female,18.226.66.81,05/01/2025,34,611,6223,Inactive > 90 Days
+133,Rodd,Swannack,rswannack3o@sciencedirect.com,Male,93.83.175.159,20/08/2025,25,7850,5066,High CLV Customers
+134,Sandy,Satterley,ssatterley3p@deviantart.com,Male,182.132.232.174,10/07/2025,66,2090,18521,High CLV Customers
+135,Kendricks,Brice,kbrice3q@economist.com,Bigender,28.46.91.11,06/09/2025,19,3041,17415,New Signups (Last 30 Days)
+136,Giacobo,Flecknoe,gflecknoe3r@360.cn,Male,9.212.80.115,21/06/2025,46,5902,618,New Signups (Last 30 Days)
+137,Fergus,Bunting,fbunting3s@homestead.com,Male,44.62.97.166,25/04/2025,53,13270,18293,Inactive > 90 Days
+138,Aldus,Stambridge,astambridge3t@time.com,Male,253.197.199.190,20/01/2025,73,278,18900,New Signups (Last 30 Days)
+139,Renaldo,Leneham,rleneham3u@scientificamerican.com,Male,232.209.187.191,31/03/2025,30,9592,2895,High CLV Customers
+140,Brit,Mendez,bmendez3v@nifty.com,Female,202.123.101.72,28/02/2025,52,10893,11483,Inactive > 90 Days
+141,Irvin,McChesney,imcchesney3w@merriam-webster.com,Male,87.158.16.129,18/05/2025,38,4937,17641,Churn Risk
+142,Lorinda,Filyaev,lfilyaev3x@statcounter.com,Female,56.122.139.233,14/08/2025,62,6879,13440,Inactive > 90 Days
+143,Humfried,Dowsey,hdowsey3y@simplemachines.org,Male,92.187.189.208,08/07/2025,75,19792,3808,High CLV Customers
+144,Coop,Carpenter,ccarpenter3z@topsy.com,Male,206.0.174.58,27/08/2025,54,10592,4122,New Signups (Last 30 Days)
+145,Berkie,Sodor,bsodor40@vkontakte.ru,Male,177.19.90.181,01/12/2025,68,15985,1644,Churn Risk
+146,Jorrie,Tatlock,jtatlock41@unicef.org,Female,10.251.181.5,30/06/2025,28,16190,554,New Signups (Last 30 Days)
+147,Addison,Clotworthy,aclotworthy42@diigo.com,Male,139.133.214.116,04/02/2025,44,18335,1499,Inactive > 90 Days
+148,Munroe,Maillard,mmaillard43@craigslist.org,Male,117.53.174.29,20/03/2025,18,2204,5941,Churn Risk
+149,Judd,Hallas,jhallas44@independent.co.uk,Male,1.121.63.232,01/07/2025,46,18369,2849,New Signups (Last 30 Days)
+150,Charil,Rozec,crozec45@ucla.edu,Female,186.106.254.127,18/02/2025,79,4531,9407,New Signups (Last 30 Days)
+151,Spenser,Rupprecht,srupprecht46@geocities.jp,Male,50.32.205.131,25/07/2025,56,4456,14833,Inactive > 90 Days
+152,Bone,Seleway,bseleway47@independent.co.uk,Male,186.233.243.191,19/08/2025,75,12105,12136,Inactive > 90 Days
+153,Moore,Wyllt,mwyllt48@seattletimes.com,Male,27.135.138.44,30/04/2025,40,8991,14269,High CLV Customers
+154,Sidoney,Drydale,sdrydale49@printfriendly.com,Female,200.190.89.249,09/01/2025,78,16466,4917,Inactive > 90 Days
+155,Reiko,Jannasch,rjannasch4a@pinterest.com,Female,190.199.169.155,02/01/2025,34,3644,17788,Churn Risk
+156,Phip,Fante,pfante4b@ebay.co.uk,Male,217.211.215.128,06/11/2025,54,7697,17355,New Signups (Last 30 Days)
+157,Bernadene,Yashin,byashin4c@nifty.com,Female,70.128.209.31,15/07/2025,30,1146,136,High CLV Customers
+158,Stuart,Varnes,svarnes4d@com.com,Male,56.254.31.69,15/02/2025,66,19661,10537,High CLV Customers
+159,Cherey,Base,cbase4e@bandcamp.com,Genderqueer,198.87.72.47,26/08/2025,37,16422,4621,Inactive > 90 Days
+160,Mitch,Oganian,moganian4f@si.edu,Male,164.31.184.106,07/06/2025,65,18048,9260,New Signups (Last 30 Days)
+161,Salem,Tabourier,stabourier4g@usa.gov,Male,40.46.45.209,20/07/2025,77,10145,12932,Inactive > 90 Days
+162,Grata,Vaneschi,gvaneschi4h@nhs.uk,Female,93.212.149.130,13/01/2025,59,175,9327,New Signups (Last 30 Days)
+163,Casandra,Gerrish,cgerrish4i@globo.com,Female,226.111.228.66,06/01/2025,34,14080,3011,High CLV Customers
+164,Marlin,Cahey,mcahey4j@barnesandnoble.com,Male,27.55.198.235,25/04/2025,50,12017,9365,Inactive > 90 Days
+165,Courtney,Pittel,cpittel4k@cbsnews.com,Female,122.15.241.150,25/11/2025,67,3768,5241,Churn Risk
+166,Town,Armit,tarmit4l@elpais.com,Male,109.85.185.225,21/06/2025,65,18163,8223,Churn Risk
+167,Inigo,Epperson,iepperson4m@china.com.cn,Male,220.40.87.120,15/12/2024,40,5832,8827,High CLV Customers
+168,Trixie,Bowlands,tbowlands4n@youtube.com,Female,77.227.9.188,17/05/2025,46,4480,10291,High CLV Customers
+169,Clarice,De Rye Barrett,cderyebarrett4o@kickstarter.com,Genderfluid,181.65.47.0,28/07/2025,38,8682,1200,High CLV Customers
+170,Barbette,Totterdill,btotterdill4p@seattletimes.com,Genderfluid,83.219.18.231,28/10/2025,54,4196,7922,High CLV Customers
+171,Ainslie,Balassi,abalassi4q@vkontakte.ru,Female,252.211.102.96,16/07/2025,33,14644,6955,Churn Risk
+172,Marcie,Watmough,mwatmough4r@uol.com.br,Bigender,120.53.187.251,26/12/2024,74,18652,332,New Signups (Last 30 Days)
+173,Ariel,Necolds,anecolds4s@163.com,Genderfluid,248.202.228.31,21/06/2025,72,2320,9934,New Signups (Last 30 Days)
+174,Davin,Mertgen,dmertgen4t@cisco.com,Male,243.187.85.115,14/07/2025,39,1929,17432,Inactive > 90 Days
+175,Germana,Darwent,gdarwent4u@arizona.edu,Female,238.45.32.48,19/02/2025,49,12223,9287,New Signups (Last 30 Days)
+176,Amy,Haggis,ahaggis4v@yandex.ru,Female,193.135.246.56,15/09/2025,28,925,13015,New Signups (Last 30 Days)
+177,Merilyn,Riddles,mriddles4w@cocolog-nifty.com,Female,14.8.69.137,08/01/2025,36,3987,18228,High CLV Customers
+178,Dara,Bealton,dbealton4x@usgs.gov,Female,111.209.42.35,04/05/2025,43,16547,1786,Churn Risk
+179,Karil,de Clerc,kdeclerc4y@bing.com,Female,248.107.214.179,19/11/2025,80,8698,18174,Churn Risk
+180,Codie,Tolley,ctolley4z@nih.gov,Male,165.22.83.169,31/03/2025,47,7899,1142,New Signups (Last 30 Days)
+181,Yolanda,Cesaric,ycesaric50@csmonitor.com,Female,79.162.113.205,03/01/2025,52,19611,13542,Churn Risk
+182,Mahmoud,MacCleod,mmaccleod51@tripadvisor.com,Male,143.221.63.183,02/09/2025,53,10797,1604,New Signups (Last 30 Days)
+183,Billy,Dahlbom,bdahlbom52@1688.com,Polygender,30.162.47.147,02/03/2025,23,17085,5907,High CLV Customers
+184,Dew,Curneen,dcurneen53@over-blog.com,Male,37.192.227.117,11/04/2025,34,11828,16775,Churn Risk
+185,Ernest,De Beneditti,edebeneditti54@paypal.com,Male,180.156.20.153,09/08/2025,70,10527,17126,High CLV Customers
+186,Ernestus,Leate,eleate55@statcounter.com,Male,221.21.208.147,07/07/2025,51,16535,16142,New Signups (Last 30 Days)
+187,Farrell,Blenkensop,fblenkensop56@uol.com.br,Male,30.42.27.42,19/06/2025,22,9363,357,High CLV Customers
+188,Maryanna,Harp,mharp57@chronoengine.com,Agender,132.94.164.114,26/10/2025,67,19843,15915,New Signups (Last 30 Days)
+189,Rolando,Durston,rdurston58@deviantart.com,Male,37.50.59.65,13/12/2024,79,14992,19761,New Signups (Last 30 Days)
+190,Stormi,Illing,silling59@zimbio.com,Female,116.105.0.84,25/04/2025,71,5065,4075,Inactive > 90 Days
+191,Amie,Chilver,achilver5a@noaa.gov,Female,217.84.59.180,29/06/2025,56,2614,11988,High CLV Customers
+192,De witt,Trounson,dtrounson5b@google.it,Male,79.237.85.42,20/06/2025,58,19143,5883,High CLV Customers
+193,Augusta,Wiggin,awiggin5c@a8.net,Female,16.60.148.88,29/09/2025,45,15152,10510,New Signups (Last 30 Days)
+194,Rosie,Shellcross,rshellcross5d@histats.com,Agender,174.193.139.89,30/08/2025,64,8062,13920,Churn Risk
+195,Kellen,Behagg,kbehagg5e@wikia.com,Female,2.221.113.17,11/10/2025,50,5412,1779,Inactive > 90 Days
+196,Celestyn,De Witt,cdewitt5f@google.de,Female,242.205.213.206,11/02/2025,23,1262,3959,Churn Risk
+197,Mikel,Spenley,mspenley5g@princeton.edu,Male,223.63.29.134,08/11/2025,27,18810,7527,Inactive > 90 Days
+198,Loralyn,Dudenie,ldudenie5h@blog.com,Female,108.72.160.156,18/05/2025,30,12927,4934,Inactive > 90 Days
+199,Toby,Yoskowitz,tyoskowitz5i@indiatimes.com,Female,38.129.243.191,27/05/2025,43,19610,11633,Inactive > 90 Days
+200,Lamont,Puve,lpuve5j@imdb.com,Male,235.210.141.87,05/05/2025,61,1622,7776,Churn Risk
+201,Aila,Life,alife5k@ocn.ne.jp,Female,50.56.38.29,18/09/2025,58,18279,9262,High CLV Customers
+202,Leonora,Winckle,lwinckle5l@twitpic.com,Female,197.200.17.132,14/07/2025,50,19178,6192,Inactive > 90 Days
+203,Selie,Alyokhin,salyokhin5m@reverbnation.com,Female,39.82.34.34,16/05/2025,59,7156,1546,High CLV Customers
+204,Edyth,O'Giany,eogiany5n@google.cn,Female,20.52.9.240,20/04/2025,38,4850,5028,High CLV Customers
+205,Wolfgang,Andren,wandren5o@a8.net,Male,252.22.107.40,15/10/2025,49,7940,998,Inactive > 90 Days
+206,Isobel,Richardes,irichardes5p@smh.com.au,Female,124.175.121.233,28/08/2025,48,4328,19676,Churn Risk
+207,Robb,Grivori,rgrivori5q@biglobe.ne.jp,Male,242.231.127.78,14/12/2024,24,12363,3444,New Signups (Last 30 Days)
+208,Atlante,McLuckie,amcluckie5r@seesaa.net,Female,59.138.13.223,06/05/2025,36,15394,1834,High CLV Customers
+209,Sid,Kirkby,skirkby5s@tamu.edu,Male,24.85.22.135,09/08/2025,58,18195,2072,High CLV Customers
+210,Ted,Sammon,tsammon5t@auda.org.au,Male,81.61.198.239,26/06/2025,45,16313,312,Inactive > 90 Days
+211,Arman,Matyushenko,amatyushenko5u@simplemachines.org,Male,213.67.66.248,24/05/2025,56,10792,8034,New Signups (Last 30 Days)
+212,Mata,Blakemore,mblakemore5v@comcast.net,Male,226.10.36.231,14/10/2025,67,8395,3069,New Signups (Last 30 Days)
+213,Kylie,Shyram,kshyram5w@a8.net,Male,150.180.40.242,13/11/2025,50,632,18192,High CLV Customers
+214,Brose,Feehely,bfeehely5x@toplist.cz,Male,59.46.144.166,07/01/2025,79,8673,12585,High CLV Customers
+215,Joana,Baalham,jbaalham5y@jugem.jp,Female,107.134.94.31,12/10/2025,78,418,15620,New Signups (Last 30 Days)
+216,Gustave,Pawley,gpawley5z@prnewswire.com,Male,187.42.104.54,09/06/2025,80,3788,6174,High CLV Customers
+217,Fletch,Matveiko,fmatveiko60@etsy.com,Male,245.57.168.87,11/06/2025,20,1658,14112,High CLV Customers
+218,Francyne,Josephs,fjosephs61@china.com.cn,Female,118.181.21.42,24/08/2025,29,14617,4800,New Signups (Last 30 Days)
+219,Kally,Feldstern,kfeldstern62@buzzfeed.com,Female,26.232.242.75,12/12/2024,48,10745,1788,Inactive > 90 Days
+220,Norry,Spinney,nspinney63@msu.edu,Female,191.128.14.208,26/02/2025,33,4878,15186,High CLV Customers
+221,Isacco,Peattie,ipeattie64@devhub.com,Male,23.18.74.75,14/03/2025,38,2676,13816,High CLV Customers
+222,Teddy,Shires,tshires65@scribd.com,Male,200.130.186.204,16/01/2025,70,9274,17064,New Signups (Last 30 Days)
+223,Gilemette,Munden,gmunden66@jiathis.com,Female,165.25.158.239,29/03/2025,23,19544,19500,Inactive > 90 Days
+224,Roldan,Ponceford,rponceford67@craigslist.org,Male,191.5.85.209,03/05/2025,74,10905,18899,Churn Risk
+225,Kandace,Gillard,kgillard68@ifeng.com,Female,140.71.27.161,17/02/2025,66,2979,15519,Churn Risk
+226,Mahalia,Ragbourne,mragbourne69@dedecms.com,Female,157.173.126.154,25/12/2024,79,4329,4668,New Signups (Last 30 Days)
+227,Jourdan,Beake,jbeake6a@patch.com,Female,71.34.235.207,05/04/2025,79,13747,18417,Inactive > 90 Days
+228,Suzie,Sabater,ssabater6b@joomla.org,Female,143.84.0.102,02/01/2025,24,12568,14701,New Signups (Last 30 Days)
+229,Devan,Birdsall,dbirdsall6c@bluehost.com,Female,111.232.77.6,29/08/2025,64,6185,8632,Churn Risk
+230,Bennett,Prestwich,bprestwich6d@chicagotribune.com,Male,149.22.82.149,30/06/2025,45,7699,16371,New Signups (Last 30 Days)
+231,Raychel,Thain,rthain6e@github.io,Female,98.222.180.224,01/02/2025,20,18133,12355,New Signups (Last 30 Days)
+232,Baron,Taye,btaye6f@buzzfeed.com,Male,159.117.250.32,26/03/2025,46,13255,7531,New Signups (Last 30 Days)
+233,Barnabe,Sucre,bsucre6g@comsenz.com,Male,108.203.241.47,04/06/2025,29,4641,3590,High CLV Customers
+234,Krishna,MacPadene,kmacpadene6h@china.com.cn,Male,8.142.38.121,05/11/2025,71,16550,11555,Churn Risk
+235,Kristal,MacConnal,kmacconnal6i@lulu.com,Female,204.140.107.68,06/07/2025,31,12992,15506,High CLV Customers
+236,Elva,Osgarby,eosgarby6j@spiegel.de,Female,5.89.158.9,14/04/2025,49,2953,7248,New Signups (Last 30 Days)
+237,Kellsie,Savin,ksavin6k@unc.edu,Female,146.17.64.4,18/02/2025,30,18311,7703,Churn Risk
+238,Tonya,Kures,tkures6l@nba.com,Female,129.241.0.73,09/12/2024,40,10389,13778,New Signups (Last 30 Days)
+239,Gardener,Prin,gprin6m@biblegateway.com,Male,37.196.136.71,28/08/2025,23,18654,10985,Churn Risk
+240,Cristy,Garretson,cgarretson6n@flavors.me,Female,171.36.196.128,10/02/2025,32,9942,1193,Churn Risk
+241,Pascale,Shayes,pshayes6o@qq.com,Male,22.87.7.195,17/04/2025,45,18902,18378,Churn Risk
+242,Cookie,Cliff,ccliff6p@mtv.com,Female,102.135.186.191,08/09/2025,24,5286,15620,Inactive > 90 Days
+243,Taylor,Lampke,tlampke6q@storify.com,Male,77.113.56.164,14/10/2025,62,10274,11443,High CLV Customers
+244,Rycca,Shankle,rshankle6r@umich.edu,Female,211.208.229.224,30/10/2025,58,5158,4592,High CLV Customers
+245,Conroy,O'Hagerty,cohagerty6s@google.fr,Male,153.129.41.37,28/06/2025,38,17139,13032,High CLV Customers
+246,Arlan,McGlaud,amcglaud6t@wp.com,Male,72.11.206.124,12/06/2025,32,3986,17321,High CLV Customers
+247,Angelico,Yong,ayong6u@china.com.cn,Male,167.118.210.213,21/09/2025,42,11975,14972,New Signups (Last 30 Days)
+248,Nappy,Paoletti,npaoletti6v@pbs.org,Male,8.229.58.108,12/07/2025,57,4901,13023,Inactive > 90 Days
+249,Lynnet,Cogdon,lcogdon6w@google.com,Female,178.52.4.74,10/05/2025,39,6292,10613,Churn Risk
+250,Augustus,Comizzoli,acomizzoli6x@elpais.com,Bigender,115.243.253.45,17/05/2025,68,5433,5906,New Signups (Last 30 Days)
+251,Ker,Piggford,kpiggford6y@cafepress.com,Male,109.205.188.105,13/07/2025,29,13029,10328,Churn Risk
+252,Babb,Fauning,bfauning6z@prlog.org,Female,70.108.53.6,17/11/2025,70,3804,15989,High CLV Customers
+253,Halette,Wooderson,hwooderson70@g.co,Female,34.89.184.241,30/09/2025,40,6302,12841,High CLV Customers
+254,Maddy,Romagosa,mromagosa71@1688.com,Male,0.201.117.199,22/09/2025,23,16992,3014,Churn Risk
+255,Emmalyn,Izzett,eizzett72@xing.com,Bigender,102.126.25.119,20/11/2025,25,7277,9042,Churn Risk
+256,Gerick,Kingsworth,gkingsworth73@sina.com.cn,Male,226.178.7.137,17/12/2024,36,7301,6060,Inactive > 90 Days
+257,Rheba,Corr,rcorr74@devhub.com,Female,167.17.85.94,10/03/2025,68,2267,6164,Inactive > 90 Days
+258,Umeko,Rubery,urubery75@mozilla.com,Female,156.5.66.227,08/03/2025,55,14399,5730,New Signups (Last 30 Days)
+259,Amery,Le Sieur,alesieur76@ning.com,Genderfluid,150.227.77.89,22/06/2025,69,18860,15556,New Signups (Last 30 Days)
+260,Halli,Rudeforth,hrudeforth77@whitehouse.gov,Female,178.20.83.148,22/03/2025,67,5475,2880,High CLV Customers
+261,Baron,Kelemen,bkelemen78@ucoz.ru,Male,160.132.164.26,14/02/2025,75,11075,703,High CLV Customers
+262,Jeana,Slucock,jslucock79@answers.com,Female,51.108.62.154,25/11/2025,38,4267,9529,Inactive > 90 Days
+263,Sapphira,Feild,sfeild7a@archive.org,Female,130.28.183.25,27/04/2025,24,13299,7936,High CLV Customers
+264,Delainey,Jaquest,djaquest7b@umich.edu,Male,121.91.82.18,18/01/2025,41,7710,4372,Churn Risk
+265,Lissa,Bedburrow,lbedburrow7c@usa.gov,Female,23.19.191.24,07/04/2025,58,19148,808,New Signups (Last 30 Days)
+266,Austine,Le Provest,aleprovest7d@alexa.com,Female,82.141.63.75,22/10/2025,73,16063,17485,Churn Risk
+267,Pavla,Zelake,pzelake7e@baidu.com,Female,142.142.222.130,03/04/2025,40,11490,14644,New Signups (Last 30 Days)
+268,West,Bourdice,wbourdice7f@china.com.cn,Male,108.174.236.22,17/07/2025,35,19701,19168,Inactive > 90 Days
+269,Cynthea,Copplestone,ccopplestone7g@posterous.com,Female,247.69.61.66,04/08/2025,60,19637,9194,High CLV Customers
+270,Jeremy,Squirrell,jsquirrell7h@furl.net,Male,141.222.26.6,09/07/2025,77,4600,4567,New Signups (Last 30 Days)
+271,Gardener,Mor,gmor7i@ted.com,Male,232.23.219.213,25/08/2025,67,11865,1831,Inactive > 90 Days
+272,Ginni,Flancinbaum,gflancinbaum7j@nyu.edu,Female,119.136.125.12,31/12/2024,21,6357,7879,High CLV Customers
+273,Lynnea,Ferens,lferens7k@army.mil,Female,69.155.124.177,02/10/2025,79,7147,19816,Churn Risk
+274,Mollee,Giovanazzi,mgiovanazzi7l@dropbox.com,Genderqueer,135.154.13.238,21/09/2025,54,15059,16431,Churn Risk
+275,Lonee,Shenfisch,lshenfisch7m@washingtonpost.com,Female,169.146.12.2,06/03/2025,52,4859,14507,High CLV Customers
+276,Shae,Aizik,saizik7n@printfriendly.com,Female,5.145.201.223,11/10/2025,27,7043,16985,Inactive > 90 Days
+277,Liva,Cockrem,lcockrem7o@ihg.com,Female,27.37.232.195,22/09/2025,44,16964,7562,New Signups (Last 30 Days)
+278,Vivianne,Lukacs,vlukacs7p@usatoday.com,Agender,40.229.209.116,03/06/2025,67,4725,2506,Inactive > 90 Days
+279,Eran,Gatenby,egatenby7q@marriott.com,Female,124.170.119.170,27/04/2025,63,2467,6298,Churn Risk
+280,Claudell,Thorp,cthorp7r@ehow.com,Male,1.75.131.173,28/03/2025,70,11117,16487,New Signups (Last 30 Days)
+281,Edi,Frostdicke,efrostdicke7s@1und1.de,Female,160.225.41.206,02/02/2025,60,17906,1050,Inactive > 90 Days
+282,Flossie,Garken,fgarken7t@si.edu,Female,231.166.110.250,03/04/2025,33,13935,9274,High CLV Customers
+283,Lorene,While,lwhile7u@alibaba.com,Female,133.133.33.192,29/10/2025,61,17850,9885,New Signups (Last 30 Days)
+284,Reinaldos,Ovize,rovize7v@ning.com,Male,13.211.175.132,22/04/2025,25,14207,17252,High CLV Customers
+285,Townie,Bonsul,tbonsul7w@mozilla.org,Male,117.126.19.249,12/07/2025,46,19971,6480,Churn Risk
+286,Coral,Mandre,cmandre7x@furl.net,Female,255.186.9.28,07/04/2025,77,6683,4776,High CLV Customers
+287,Chrissy,Moring,cmoring7y@prnewswire.com,Male,185.17.118.89,10/06/2025,52,6012,13325,New Signups (Last 30 Days)
+288,Nollie,McCorkell,nmccorkell7z@jugem.jp,Male,24.128.210.66,17/11/2025,48,12106,18075,New Signups (Last 30 Days)
+289,Kingston,Siemantel,ksiemantel80@berkeley.edu,Male,252.213.226.98,18/09/2025,25,6724,14737,New Signups (Last 30 Days)
+290,Sancho,Mayer,smayer81@fema.gov,Male,31.24.19.232,24/09/2025,57,4473,2637,Inactive > 90 Days
+291,Ashbey,Durdy,adurdy82@cbslocal.com,Male,215.145.245.224,25/03/2025,69,14982,15400,Inactive > 90 Days
+292,Phaidra,Burbidge,pburbidge83@google.com.au,Polygender,248.192.194.60,29/12/2024,23,18117,2736,Inactive > 90 Days
+293,Wilbert,Melly,wmelly84@sina.com.cn,Male,243.116.116.255,10/11/2025,77,15576,3552,Inactive > 90 Days
+294,Rachelle,Pitkethly,rpitkethly85@who.int,Genderqueer,253.133.134.198,04/09/2025,73,14027,18969,New Signups (Last 30 Days)
+295,Emerson,Garroch,egarroch86@spiegel.de,Bigender,137.87.174.248,25/08/2025,34,10976,1590,High CLV Customers
+296,Isador,Ballin,iballin87@rakuten.co.jp,Male,68.184.167.212,14/11/2025,60,640,17843,New Signups (Last 30 Days)
+297,Mercedes,Kob,mkob88@1und1.de,Female,62.96.94.64,28/08/2025,30,10653,5843,Inactive > 90 Days
+298,Boony,Le Leu,bleleu89@goo.gl,Male,249.29.23.126,20/12/2024,62,19358,12913,Inactive > 90 Days
+299,Franni,McKyrrelly,fmckyrrelly8a@amazon.co.uk,Female,103.134.4.218,20/10/2025,33,12975,6696,Churn Risk
+300,Hewett,Clampe,hclampe8b@fc2.com,Male,103.133.43.222,10/03/2025,75,19734,10023,Churn Risk
+301,Raynell,Shaefer,rshaefer8c@census.gov,Female,254.189.161.53,17/11/2025,18,10075,17568,New Signups (Last 30 Days)
+302,Jervis,Peery,jpeery8d@freewebs.com,Male,48.234.45.171,26/04/2025,30,4996,5271,New Signups (Last 30 Days)
+303,Bondie,Oubridge,boubridge8e@army.mil,Male,43.207.54.172,11/03/2025,78,4397,6536,High CLV Customers
+304,Sacha,Egdell,segdell8f@nationalgeographic.com,Female,43.36.225.96,02/11/2025,72,17952,3522,Inactive > 90 Days
+305,Sophey,Auchterlonie,sauchterlonie8g@delicious.com,Female,111.151.103.24,11/05/2025,50,14806,5029,New Signups (Last 30 Days)
+306,Myrtice,Genge,mgenge8h@fotki.com,Female,149.140.147.86,16/11/2025,59,17429,10913,New Signups (Last 30 Days)
+307,Ophelie,Ramos,oramos8i@comcast.net,Female,227.92.18.171,16/09/2025,70,901,11939,Inactive > 90 Days
+308,Leo,Giggs,lgiggs8j@hatena.ne.jp,Genderfluid,71.141.184.120,27/01/2025,59,10550,19337,Churn Risk
+309,Nicholas,Strass,nstrass8k@lulu.com,Male,202.158.23.147,05/02/2025,60,3916,7487,New Signups (Last 30 Days)
+310,Roley,Vossgen,rvossgen8l@elegantthemes.com,Male,99.247.127.183,28/03/2025,25,12782,9553,New Signups (Last 30 Days)
+311,Gordan,Strain,gstrain8m@google.com.hk,Male,11.156.19.17,09/12/2024,48,12237,17914,Inactive > 90 Days
+312,Baron,Dukesbury,bdukesbury8n@t.co,Male,147.186.59.115,22/11/2025,33,9100,17956,New Signups (Last 30 Days)
+313,Carlina,Milmoe,cmilmoe8o@storify.com,Female,246.137.69.199,07/08/2025,28,18076,12070,Inactive > 90 Days
+314,Wallache,Pleven,wpleven8p@godaddy.com,Male,24.170.172.122,02/05/2025,58,17352,11454,Inactive > 90 Days
+315,Adorne,Spoure,aspoure8q@whitehouse.gov,Female,126.141.68.160,09/06/2025,35,18349,5101,High CLV Customers
+316,Zerk,Cheese,zcheese8r@disqus.com,Male,138.34.250.62,08/03/2025,52,15604,3975,High CLV Customers
+317,Bibi,Plevey,bplevey8s@bravesites.com,Female,239.84.251.78,11/02/2025,19,16645,10783,Inactive > 90 Days
+318,Ferdy,Jeanneau,fjeanneau8t@booking.com,Male,185.137.213.243,04/04/2025,35,1699,491,High CLV Customers
+319,Mack,Tees,mtees8u@fotki.com,Male,187.141.107.66,10/03/2025,43,4223,16853,New Signups (Last 30 Days)
+320,Ximenes,Hughf,xhughf8v@sitemeter.com,Male,165.32.17.56,12/08/2025,50,2191,8245,Churn Risk
+321,Shurlocke,Delia,sdelia8w@shareasale.com,Male,89.164.203.188,27/12/2024,25,18410,19828,New Signups (Last 30 Days)
+322,Sadella,Zanelli,szanelli8x@mozilla.com,Female,169.90.226.78,30/07/2025,75,8486,7654,Inactive > 90 Days
+323,Raleigh,Brixey,rbrixey8y@mashable.com,Male,31.160.52.219,17/12/2024,22,8249,12468,High CLV Customers
+324,Benny,Top,btop8z@cdc.gov,Male,152.51.123.106,30/06/2025,34,17133,18135,Churn Risk
+325,Arni,Drinan,adrinan90@tamu.edu,Genderqueer,110.243.184.101,10/12/2024,57,15855,3887,New Signups (Last 30 Days)
+326,Taylor,Buy,tbuy91@upenn.edu,Male,14.42.47.237,14/05/2025,44,11487,1801,New Signups (Last 30 Days)
+327,Joshua,Dawtry,jdawtry92@nbcnews.com,Male,254.227.170.184,13/03/2025,40,10362,2958,Churn Risk
+328,Conrado,Belleny,cbelleny93@mlb.com,Male,103.59.103.35,14/04/2025,18,1030,14919,New Signups (Last 30 Days)
+329,Fara,Neve,fneve94@mapy.cz,Female,235.40.228.239,13/02/2025,44,5467,6000,High CLV Customers
+330,Enoch,Kulic,ekulic95@elegantthemes.com,Male,182.226.12.239,01/12/2025,57,7004,1207,Churn Risk
+331,Brena,Beeckx,bbeeckx96@biglobe.ne.jp,Female,174.58.108.114,01/07/2025,61,6533,3710,New Signups (Last 30 Days)
+332,Peyter,Going,pgoing97@mtv.com,Male,226.155.103.253,13/11/2025,63,14769,18773,New Signups (Last 30 Days)
+333,Dionne,Donahue,ddonahue98@biglobe.ne.jp,Female,146.200.185.230,26/02/2025,27,12480,6787,Churn Risk
+334,Fredi,Dairton,fdairton99@scientificamerican.com,Female,145.112.200.251,15/08/2025,49,10900,9218,Churn Risk
+335,Caralie,Catling,ccatling9a@netvibes.com,Female,220.86.122.201,18/12/2024,75,17471,6510,Inactive > 90 Days
+336,Isaac,Tuhy,ituhy9b@phpbb.com,Male,131.12.73.17,23/01/2025,32,5894,8075,Inactive > 90 Days
+337,Esdras,Neubigging,eneubigging9c@over-blog.com,Male,34.104.186.91,15/05/2025,71,10680,6981,Churn Risk
+338,Chad,Berard,cberard9d@mail.ru,Male,223.54.121.203,13/09/2025,50,12027,11271,High CLV Customers
+339,Wilfred,Kybird,wkybird9e@trellian.com,Male,141.252.251.26,15/06/2025,78,5917,17872,Churn Risk
+340,Katalin,Cuningham,kcuningham9f@auda.org.au,Female,252.208.85.203,23/12/2024,38,8080,10371,Inactive > 90 Days
+341,Kevin,Odams,kodams9g@netscape.com,Male,139.241.223.187,23/06/2025,61,2671,15562,Churn Risk
+342,Patsy,Backman,pbackman9h@networkadvertising.org,Female,248.77.118.208,31/12/2024,58,2306,12070,High CLV Customers
+343,Abigael,McKue,amckue9i@columbia.edu,Female,69.25.191.131,07/06/2025,28,10096,9745,Inactive > 90 Days
+344,Rossie,Youde,ryoude9j@woothemes.com,Male,229.224.227.172,23/01/2025,58,15990,2914,Inactive > 90 Days
+345,Cammi,Srutton,csrutton9k@usa.gov,Female,75.39.208.211,15/04/2025,26,10926,14573,Inactive > 90 Days
+346,Ulysses,Mation,umation9l@g.co,Male,21.103.173.190,12/11/2025,34,15967,19073,High CLV Customers
+347,Karlee,Scripture,kscripture9m@washingtonpost.com,Female,91.53.138.85,22/12/2024,39,15343,13904,New Signups (Last 30 Days)
+348,Jeffry,Farriar,jfarriar9n@behance.net,Male,101.228.238.143,18/03/2025,40,10477,3890,New Signups (Last 30 Days)
+349,Rachele,Courtonne,rcourtonne9o@wikimedia.org,Female,39.215.243.101,20/02/2025,21,11576,8350,Churn Risk
+350,Abby,Mewis,amewis9p@youtube.com,Male,119.132.103.132,21/02/2025,35,1642,4169,Inactive > 90 Days
+351,Tootsie,Vanyukhin,tvanyukhin9q@un.org,Female,87.2.22.1,01/06/2025,35,19841,14366,Inactive > 90 Days
+352,Johannah,Halliburton,jhalliburton9r@hubpages.com,Non-binary,77.195.185.41,25/10/2025,42,4095,3535,Inactive > 90 Days
+353,Bartholomeus,Hurn,bhurn9s@toplist.cz,Male,112.6.94.32,11/04/2025,34,10868,16946,Inactive > 90 Days
+354,Sig,Jovicevic,sjovicevic9t@mediafire.com,Male,97.57.251.124,08/08/2025,24,1614,15840,High CLV Customers
+355,Jerrome,Latta,jlatta9u@cyberchimps.com,Male,28.20.162.183,20/08/2025,66,17642,17229,Inactive > 90 Days
+356,Jaymie,Anscombe,janscombe9v@newsvine.com,Male,108.243.249.23,21/12/2024,24,11477,3314,New Signups (Last 30 Days)
+357,Wilburt,Savoury,wsavoury9w@wp.com,Male,232.56.23.133,11/11/2025,74,1112,11620,Inactive > 90 Days
+358,Tedda,Pearn,tpearn9x@merriam-webster.com,Female,35.118.158.118,04/02/2025,35,1902,18027,New Signups (Last 30 Days)
+359,Wat,Adamovich,wadamovich9y@wsj.com,Male,201.248.188.153,24/09/2025,52,2247,5690,Inactive > 90 Days
+360,Dorry,Bradnick,dbradnick9z@alibaba.com,Female,60.65.171.178,11/06/2025,38,3993,10453,New Signups (Last 30 Days)
+361,Carrol,Pitcaithley,cpitcaithleya0@reddit.com,Male,39.252.158.203,17/10/2025,42,17095,2308,New Signups (Last 30 Days)
+362,Garvin,Husby,ghusbya1@opera.com,Male,63.74.117.175,24/05/2025,31,19591,14725,Inactive > 90 Days
+363,Brit,Mawford,bmawforda2@naver.com,Male,179.255.192.139,23/03/2025,70,3227,18198,Inactive > 90 Days
+364,Vinnie,Stoakley,vstoakleya3@last.fm,Male,210.120.196.199,08/09/2025,63,9685,12837,New Signups (Last 30 Days)
+365,Veronika,Leggate,vleggatea4@t.co,Female,131.101.247.95,06/09/2025,75,12013,16219,Inactive > 90 Days
+366,Finlay,Baum,fbauma5@smh.com.au,Male,169.254.52.198,06/12/2025,80,3342,14535,Churn Risk
+367,Hube,Curlis,hcurlisa6@merriam-webster.com,Male,3.19.11.218,10/05/2025,18,17729,12650,Inactive > 90 Days
+368,Harlene,Gullen,hgullena7@cdbaby.com,Female,120.136.144.136,19/07/2025,78,4966,19703,Inactive > 90 Days
+369,Lenci,Kubiczek,lkubiczeka8@ustream.tv,Male,151.92.6.0,14/04/2025,59,2815,7451,High CLV Customers
+370,Patrizio,De Domenici,pdedomenicia9@wsj.com,Male,221.209.158.246,25/09/2025,18,7189,15022,Inactive > 90 Days
+371,Dickie,Insko,dinskoaa@tamu.edu,Male,193.105.245.38,14/06/2025,55,9902,8699,Churn Risk
+372,Haleigh,Armytage,harmytageab@fema.gov,Male,128.66.238.212,27/07/2025,40,10748,13726,High CLV Customers
+373,Cameron,Roberts,crobertsac@photobucket.com,Male,218.241.109.247,19/08/2025,48,15648,1086,High CLV Customers
+374,Louie,Mailey,lmaileyad@squidoo.com,Male,70.45.67.137,17/03/2025,21,8352,210,Churn Risk
+375,Rolf,Lilion,rlilionae@microsoft.com,Male,159.159.92.206,04/10/2025,63,5289,3008,New Signups (Last 30 Days)
+376,Ashley,Moakler,amoakleraf@webs.com,Male,15.15.33.35,23/10/2025,26,1625,16582,High CLV Customers
+377,Gordy,Kleinholz,gkleinholzag@mediafire.com,Male,167.87.50.232,28/06/2025,65,12588,1471,High CLV Customers
+378,Dun,Zanassi,dzanassiah@elpais.com,Male,236.119.119.68,10/11/2025,73,14034,19999,New Signups (Last 30 Days)
+379,Lonee,Greenroa,lgreenroaai@usa.gov,Female,56.117.218.227,07/03/2025,39,11448,19394,Inactive > 90 Days
+380,Mitch,Farrer,mfarreraj@huffingtonpost.com,Male,18.246.66.132,22/07/2025,69,9053,17711,Churn Risk
+381,Quintin,Iacofo,qiacofoak@boston.com,Male,237.237.190.48,04/12/2025,45,1361,15876,High CLV Customers
+382,Carolynn,Alves,calvesal@tinypic.com,Female,160.237.17.158,20/05/2025,37,1041,17712,Churn Risk
+383,Jason,Clench,jclencham@myspace.com,Agender,253.201.175.224,19/09/2025,71,3985,8083,Inactive > 90 Days
+384,Roscoe,Etteridge,retteridgean@wordpress.com,Male,159.242.149.96,25/07/2025,37,10991,11451,High CLV Customers
+385,Ophelia,Henrot,ohenrotao@google.cn,Female,200.60.41.130,15/11/2025,74,12451,6879,High CLV Customers
+386,Dallas,Sylett,dsylettap@sphinn.com,Male,146.148.24.137,10/10/2025,26,7265,10541,Churn Risk
+387,Maurine,Siddons,msiddonsaq@shop-pro.jp,Female,160.228.225.179,14/01/2025,34,3726,18187,New Signups (Last 30 Days)
+388,Gilburt,Prudence,gprudencear@edublogs.org,Male,255.1.183.95,05/08/2025,28,18168,16064,Inactive > 90 Days
+389,Maridel,Crole,mcroleas@zdnet.com,Female,131.35.252.81,05/01/2025,79,12141,14988,Churn Risk
+390,Veronique,Fullun,vfullunat@mtv.com,Female,99.39.30.88,14/10/2025,26,9448,6139,Churn Risk
+391,Gustavus,Kenner,gkennerau@seattletimes.com,Male,56.235.171.54,08/10/2025,71,19884,19594,New Signups (Last 30 Days)
+392,Chandal,Siward,csiwardav@so-net.ne.jp,Female,42.185.243.25,21/03/2025,47,16608,8920,New Signups (Last 30 Days)
+393,Tiebout,Lesor,tlesoraw@arstechnica.com,Male,57.145.212.112,10/10/2025,80,8305,10822,Inactive > 90 Days
+394,Charlena,Caush,ccaushax@eepurl.com,Agender,76.98.91.172,05/02/2025,18,11515,7809,New Signups (Last 30 Days)
+395,Atlanta,Morot,amorotay@meetup.com,Female,235.116.255.89,18/01/2025,63,6799,6576,Churn Risk
+396,Catlin,Colqueran,ccolqueranaz@europa.eu,Female,223.228.215.52,28/09/2025,49,6416,6666,Inactive > 90 Days
+397,Rosemonde,McLorinan,rmclorinanb0@discovery.com,Female,194.28.232.87,11/05/2025,25,6518,1453,Inactive > 90 Days
+398,Daisie,Capin,dcapinb1@tumblr.com,Agender,27.151.17.236,26/04/2025,42,14894,8893,New Signups (Last 30 Days)
+399,Constantine,Puig,cpuigb2@adobe.com,Female,196.2.109.181,10/07/2025,56,15580,1775,High CLV Customers
+400,Cos,Torrese,ctorreseb3@va.gov,Bigender,174.20.202.149,06/09/2025,61,12830,10098,High CLV Customers
+401,Lesya,Jerrems,ljerremsb4@ca.gov,Female,219.42.183.59,31/07/2025,18,10864,17519,High CLV Customers
+402,Charlotte,Belliss,cbellissb5@loc.gov,Female,126.35.165.148,08/07/2025,29,2861,6535,High CLV Customers
+403,Marie,Mottini,mmottinib6@tamu.edu,Female,141.56.29.51,11/05/2025,77,1519,19318,Inactive > 90 Days
+404,Wood,Seres,wseresb7@bing.com,Male,5.101.67.187,21/06/2025,58,18609,13340,Inactive > 90 Days
+405,Thatch,Overstreet,toverstreetb8@acquirethisname.com,Male,211.163.74.203,19/08/2025,32,12042,16202,Churn Risk
+406,Brendan,Winkell,bwinkellb9@berkeley.edu,Male,19.184.190.176,26/04/2025,62,14507,338,New Signups (Last 30 Days)
+407,Osborn,Khristyukhin,okhristyukhinba@un.org,Male,95.63.109.164,30/07/2025,46,743,13370,High CLV Customers
+408,Nedi,Walkling,nwalklingbb@bloglines.com,Female,104.206.53.55,17/11/2025,57,4364,2478,New Signups (Last 30 Days)
+409,Clio,McCullough,cmcculloughbc@scientificamerican.com,Female,89.164.251.80,04/06/2025,60,17934,19929,Inactive > 90 Days
+410,Rolf,Follet,rfolletbd@dell.com,Male,98.105.136.96,04/03/2025,76,15902,19876,Churn Risk
+411,Tracy,Clarridge,tclarridgebe@wikispaces.com,Male,27.63.232.211,08/02/2025,54,2246,6055,New Signups (Last 30 Days)
+412,Mamie,Yurocjkin,myurocjkinbf@ning.com,Female,247.234.12.20,21/09/2025,34,16591,18424,High CLV Customers
+413,Ransom,Mcall,rmcallbg@zimbio.com,Male,53.133.201.91,13/06/2025,33,6182,1575,High CLV Customers
+414,Burnard,Gelder,bgelderbh@reference.com,Male,84.202.128.108,18/06/2025,55,10811,13846,New Signups (Last 30 Days)
+415,Valencia,Shevlane,vshevlanebi@simplemachines.org,Female,211.122.31.162,29/03/2025,77,8618,7300,High CLV Customers
+416,Vincents,Warret,vwarretbj@cornell.edu,Male,124.3.46.190,20/09/2025,54,17298,9838,Inactive > 90 Days
+417,Gilbert,Oldcote,goldcotebk@sun.com,Agender,14.123.147.42,01/01/2025,60,7228,12937,New Signups (Last 30 Days)
+418,Kath,Oulet,kouletbl@hc360.com,Female,178.166.92.164,13/04/2025,20,2771,2545,Inactive > 90 Days
+419,Danna,Bentson,dbentsonbm@auda.org.au,Female,167.216.110.29,12/09/2025,63,1163,13858,Inactive > 90 Days
+420,James,Tolan,jtolanbn@sina.com.cn,Male,201.56.3.152,12/06/2025,79,360,13151,New Signups (Last 30 Days)
+421,Walliw,Blyde,wblydebo@blogtalkradio.com,Female,231.152.104.25,06/05/2025,40,9643,1448,High CLV Customers
+422,Julee,Aleso,jalesobp@wikimedia.org,Female,173.58.124.105,11/09/2025,30,3485,1419,High CLV Customers
+423,Amber,Biggins,abigginsbq@livejournal.com,Female,211.162.58.236,16/05/2025,44,14747,4727,High CLV Customers
+424,Rona,Valde,rvaldebr@deliciousdays.com,Genderqueer,192.10.216.17,19/05/2025,34,3977,7245,High CLV Customers
+425,Cal,Frowing,cfrowingbs@pen.io,Agender,194.239.120.237,02/07/2025,65,5979,15892,Churn Risk
+426,Cass,Milnthorpe,cmilnthorpebt@mlb.com,Male,152.130.146.65,19/12/2024,35,277,9112,Churn Risk
+427,Jacky,Dunbabin,jdunbabinbu@hp.com,Male,149.120.38.252,14/12/2024,47,9046,8272,High CLV Customers
+428,Garrot,Webberley,gwebberleybv@harvard.edu,Male,173.156.112.7,08/04/2025,27,12596,17852,New Signups (Last 30 Days)
+429,Avrit,Baughen,abaughenbw@samsung.com,Polygender,5.251.77.227,04/06/2025,74,8093,1068,High CLV Customers
+430,Margery,Fessier,mfessierbx@google.fr,Female,224.24.58.59,28/04/2025,77,6208,14921,New Signups (Last 30 Days)
+431,Roman,Pease,rpeaseby@dyndns.org,Male,15.29.188.203,02/01/2025,73,11862,331,New Signups (Last 30 Days)
+432,Kermie,Hinze,khinzebz@blog.com,Male,36.72.72.212,02/02/2025,22,8788,9600,Inactive > 90 Days
+433,Rasia,Livard,rlivardc0@dion.ne.jp,Female,205.27.210.82,03/09/2025,51,13175,11212,High CLV Customers
+434,Eleanor,McPake,emcpakec1@washingtonpost.com,Female,249.214.0.185,07/01/2025,56,16608,5546,Inactive > 90 Days
+435,Rasia,Extence,rextencec2@fda.gov,Genderfluid,12.133.102.59,20/10/2025,63,1981,10675,New Signups (Last 30 Days)
+436,Guillema,Walcher,gwalcherc3@youtu.be,Genderfluid,190.84.163.56,31/12/2024,19,15675,2026,Inactive > 90 Days
+437,Gearalt,Tame,gtamec4@nytimes.com,Male,18.91.90.115,27/06/2025,33,19545,5125,Inactive > 90 Days
+438,Pate,Atwater,patwaterc5@samsung.com,Male,23.254.110.237,28/06/2025,36,2699,16247,High CLV Customers
+439,Gladi,Vater,gvaterc6@businessinsider.com,Female,159.203.13.182,26/12/2024,77,19583,13519,New Signups (Last 30 Days)
+440,Karim,Pauluzzi,kpauluzzic7@mlb.com,Male,126.32.105.104,16/12/2024,35,18396,14008,High CLV Customers
+441,Keefer,Coot,kcootc8@patch.com,Male,52.40.54.15,16/09/2025,58,3169,7134,Inactive > 90 Days
+442,Mahmud,Prahl,mprahlc9@free.fr,Male,136.221.48.245,26/03/2025,80,1095,14334,Churn Risk
+443,Gardiner,Edland,gedlandca@jugem.jp,Male,26.78.38.168,17/10/2025,22,6406,14796,Inactive > 90 Days
+444,Horatio,Eveling,hevelingcb@adobe.com,Male,23.74.154.171,10/06/2025,33,2858,18694,Churn Risk
+445,Ellynn,Dulwitch,edulwitchcc@nasa.gov,Female,59.49.190.126,16/11/2025,66,6415,11097,Inactive > 90 Days
+446,Anselm,Cuthill,acuthillcd@furl.net,Male,225.104.144.118,28/03/2025,78,399,3138,New Signups (Last 30 Days)
+447,Robbyn,Ashment,rashmentce@arizona.edu,Female,130.174.28.173,01/08/2025,38,4441,17988,New Signups (Last 30 Days)
+448,Mame,Ellit,mellitcf@zimbio.com,Female,120.206.115.166,18/12/2024,73,4601,4752,Inactive > 90 Days
+449,Nickie,Birtles,nbirtlescg@npr.org,Female,51.191.141.25,20/06/2025,38,14337,16831,Churn Risk
+450,Avery,Birt,abirtch@fotki.com,Male,229.160.24.142,19/01/2025,77,15342,13827,Inactive > 90 Days
+451,Doralin,Scadding,dscaddingci@biglobe.ne.jp,Female,201.204.200.113,19/01/2025,65,6493,10859,Inactive > 90 Days
+452,Carie,Mahomet,cmahometcj@squarespace.com,Genderqueer,40.130.76.111,16/11/2025,71,14444,6598,High CLV Customers
+453,Luciana,Cossey,lcosseyck@census.gov,Female,64.215.204.34,03/11/2025,26,9327,12349,Inactive > 90 Days
+454,Selby,Urvoy,survoycl@army.mil,Male,33.73.199.39,03/08/2025,61,5774,9104,High CLV Customers
+455,Maggy,Poizer,mpoizercm@gov.uk,Female,205.11.84.196,29/09/2025,46,14263,6506,Churn Risk
+456,Christoper,Sallenger,csallengercn@artisteer.com,Male,198.177.152.149,18/01/2025,33,7477,18573,Inactive > 90 Days
+457,Crichton,Walliker,cwallikerco@unicef.org,Male,51.1.220.180,26/08/2025,35,19228,1867,Inactive > 90 Days
+458,Lara,Glyssanne,lglyssannecp@skyrock.com,Female,110.77.170.7,01/11/2025,34,5536,4621,Inactive > 90 Days
+459,Gibb,Clinch,gclinchcq@shinystat.com,Non-binary,45.120.112.142,24/01/2025,56,14833,12581,Inactive > 90 Days
+460,Lamont,Kettel,lkettelcr@guardian.co.uk,Non-binary,152.218.223.138,09/04/2025,22,12665,9172,Churn Risk
+461,Zach,Maffi,zmaffics@mozilla.com,Male,166.71.119.23,29/04/2025,73,3510,112,New Signups (Last 30 Days)
+462,Cornall,Goodredge,cgoodredgect@usgs.gov,Male,121.204.121.194,11/02/2025,53,5023,3120,Inactive > 90 Days
+463,Nanete,Rippen,nrippencu@blinklist.com,Female,187.131.127.152,02/08/2025,59,16845,19174,Inactive > 90 Days
+464,Granville,Iglesias,giglesiascv@moonfruit.com,Male,137.156.57.203,18/02/2025,22,18284,9188,New Signups (Last 30 Days)
+465,Cam,Stobie,cstobiecw@netlog.com,Male,250.120.77.185,23/02/2025,31,9750,17076,New Signups (Last 30 Days)
+466,Ninon,Brymham,nbrymhamcx@merriam-webster.com,Female,41.4.198.149,16/09/2025,29,11576,16777,New Signups (Last 30 Days)
+467,Jeno,Nijs,jnijscy@people.com.cn,Male,95.210.67.72,25/07/2025,29,9516,1883,Inactive > 90 Days
+468,Kimberlyn,Milne,kmilnecz@surveymonkey.com,Genderfluid,211.68.161.143,10/01/2025,32,6587,7230,Churn Risk
+469,Nickolai,Valenti,nvalentid0@nba.com,Male,122.80.64.103,12/04/2025,44,10648,16080,High CLV Customers
+470,Bengt,Konrad,bkonradd1@webs.com,Male,134.196.132.73,10/03/2025,47,12008,2657,High CLV Customers
+471,Perry,Fingleton,pfingletond2@pbs.org,Male,199.221.91.188,28/07/2025,80,2218,16624,Inactive > 90 Days
+472,Smith,Dudbridge,sdudbridged3@marriott.com,Male,209.109.29.106,17/12/2024,63,6435,3694,New Signups (Last 30 Days)
+473,Marijo,Knotton,mknottond4@google.com.br,Female,112.189.48.199,18/07/2025,70,13248,10197,Churn Risk
+474,Seward,Gagan,sgagand5@bing.com,Male,67.28.204.38,09/03/2025,38,14715,4418,Inactive > 90 Days
+475,Roderich,Derycot,rderycotd6@elegantthemes.com,Male,220.143.129.190,22/07/2025,56,18796,5054,Churn Risk
+476,Zacherie,Revett,zrevettd7@yellowpages.com,Male,44.23.10.240,29/10/2025,23,2524,18632,High CLV Customers
+477,Jedidiah,Willson,jwillsond8@businessinsider.com,Male,0.92.235.203,18/03/2025,53,4458,15118,Churn Risk
+478,Bethany,Smales,bsmalesd9@istockphoto.com,Agender,189.144.56.89,24/06/2025,22,8226,16833,Inactive > 90 Days
+479,Zulema,Davana,zdavanada@wix.com,Female,237.110.155.60,28/05/2025,44,14437,7916,Churn Risk
+480,Ree,Illes,rillesdb@twitpic.com,Female,58.117.92.121,18/11/2025,48,2961,19313,Churn Risk
+481,Bridie,Edmands,bedmandsdc@i2i.jp,Female,72.100.17.31,30/07/2025,41,814,16909,High CLV Customers
+482,Filide,McCarly,fmccarlydd@wikipedia.org,Polygender,187.229.62.40,24/07/2025,30,6367,12344,Churn Risk
+483,Kaleena,Swann,kswannde@etsy.com,Female,255.37.255.31,12/04/2025,38,16740,19051,Churn Risk
+484,Marcellus,Burridge,mburridgedf@hao123.com,Male,24.207.54.138,21/11/2025,59,19951,8441,Churn Risk
+485,Shalna,Hynard,shynarddg@google.com.hk,Female,136.148.148.30,16/07/2025,24,4328,12449,High CLV Customers
+486,Gawain,Treend,gtreenddh@unicef.org,Male,230.9.151.133,26/11/2025,59,9251,5141,Inactive > 90 Days
+487,Corliss,Newcombe,cnewcombedi@utexas.edu,Female,181.56.82.246,10/09/2025,45,15363,13551,Churn Risk
+488,Roman,Dear,rdeardj@intel.com,Male,31.57.38.201,10/04/2025,57,10940,2122,New Signups (Last 30 Days)
+489,Kaycee,Peaker,kpeakerdk@java.com,Female,42.185.28.184,14/07/2025,22,19099,5332,New Signups (Last 30 Days)
+490,Willabella,Wrack,wwrackdl@ask.com,Female,87.164.225.195,05/02/2025,29,8188,6872,Inactive > 90 Days
+491,Ashby,Klagges,aklaggesdm@mysql.com,Male,165.105.191.52,02/10/2025,54,1948,4663,Churn Risk
+492,Rip,MacKissack,rmackissackdn@state.gov,Male,141.139.145.166,15/04/2025,30,10094,9022,High CLV Customers
+493,Tadio,Elders,teldersdo@craigslist.org,Male,213.111.92.142,02/01/2025,68,5749,18361,High CLV Customers
+494,Sheila,Gaspard,sgasparddp@paginegialle.it,Female,93.81.218.118,06/07/2025,68,11049,15238,Inactive > 90 Days
+495,Filbert,Jarry,fjarrydq@ucoz.ru,Male,155.71.44.244,27/08/2025,21,3870,7250,New Signups (Last 30 Days)
+496,Bartlet,Lewnden,blewndendr@rambler.ru,Male,108.56.86.91,16/10/2025,54,7913,15657,High CLV Customers
+497,Ursula,Baal,ubaalds@walmart.com,Polygender,89.190.224.131,04/08/2025,55,10885,1490,High CLV Customers
+498,Vivi,Ferries,vferriesdt@ucoz.ru,Female,250.71.77.186,12/04/2025,28,13386,1391,High CLV Customers
+499,Nap,Ziebart,nziebartdu@earthlink.net,Genderfluid,90.178.159.21,26/02/2025,75,6916,11846,High CLV Customers
+500,Jacob,Bailiss,jbailissdv@scientificamerican.com,Male,227.181.222.40,27/02/2025,30,9852,18209,High CLV Customers
+501,Codi,Kleinberer,ckleinbererdw@globo.com,Female,36.235.51.95,08/12/2024,70,9848,9232,Inactive > 90 Days
+502,Edie,Morten,emortendx@wiley.com,Female,3.250.14.25,20/11/2025,37,13177,5988,New Signups (Last 30 Days)
+503,Farlie,Latehouse,flatehousedy@imageshack.us,Non-binary,17.95.106.72,09/09/2025,68,10091,16176,New Signups (Last 30 Days)
+504,Margaret,Wytchard,mwytcharddz@sphinn.com,Female,148.33.16.90,25/05/2025,34,7019,8945,High CLV Customers
+505,Hermia,Rudderham,hrudderhame0@census.gov,Non-binary,146.162.218.239,07/02/2025,49,14286,7902,Churn Risk
+506,Mart,Grigore,mgrigoree1@comcast.net,Male,225.249.57.140,18/01/2025,68,1537,19751,High CLV Customers
+507,Colman,Dunphy,cdunphye2@parallels.com,Male,178.239.40.95,09/08/2025,68,11327,510,Inactive > 90 Days
+508,Garwood,McIlmorie,gmcilmoriee3@unc.edu,Male,18.61.199.7,21/11/2025,63,11062,14212,Inactive > 90 Days
+509,Gabriela,Dreinan,gdreinane4@mail.ru,Female,124.211.11.158,02/02/2025,63,4365,18540,Churn Risk
+510,Gabriella,Enefer,genefere5@indiatimes.com,Female,186.140.225.41,08/10/2025,39,14013,1416,Churn Risk
+511,Titus,Mundford,tmundforde6@cafepress.com,Male,243.187.213.232,12/09/2025,50,19958,12945,Churn Risk
+512,Siouxie,Chagg,schagge7@surveymonkey.com,Female,33.35.255.64,04/04/2025,26,17519,17662,New Signups (Last 30 Days)
+513,Skip,Boules,sboulese8@miitbeian.gov.cn,Male,53.148.149.168,20/07/2025,47,15267,11193,High CLV Customers
+514,Skipper,Rihanek,srihaneke9@tinypic.com,Male,89.167.34.23,17/12/2024,69,10322,17407,High CLV Customers
+515,Cassondra,Plank,cplankea@cam.ac.uk,Female,65.207.174.121,08/12/2024,69,4920,2469,High CLV Customers
+516,Angil,Kemble,akembleeb@adobe.com,Female,222.46.60.41,13/05/2025,79,7906,2955,High CLV Customers
+517,Ker,Schukert,kschukertec@eventbrite.com,Male,217.42.87.247,13/06/2025,67,5975,2787,Churn Risk
+518,Rockwell,Otson,rotsoned@pen.io,Male,221.33.11.224,24/09/2025,73,9837,2232,Churn Risk
+519,Ramsey,Avraam,ravraamee@si.edu,Male,143.56.39.161,25/09/2025,58,16435,19259,New Signups (Last 30 Days)
+520,Row,Verling,rverlingef@imageshack.us,Non-binary,201.16.226.62,08/10/2025,42,16097,8601,Inactive > 90 Days
+521,Tiffanie,Colter,tcoltereg@jiathis.com,Female,99.78.209.24,04/06/2025,57,13658,18719,High CLV Customers
+522,Damon,Branscombe,dbranscombeeh@studiopress.com,Male,20.53.170.125,21/03/2025,41,11070,8349,New Signups (Last 30 Days)
+523,Terrie,Wilkes,twilkesei@salon.com,Female,93.82.229.59,26/09/2025,36,8078,5817,High CLV Customers
+524,Christa,Lambie,clambieej@zimbio.com,Female,222.160.146.220,27/04/2025,26,5835,5572,High CLV Customers
+525,Shem,Kilbride,skilbrideek@bluehost.com,Male,248.57.21.221,21/10/2025,65,8920,11736,Churn Risk
+526,Witty,Flea,wfleael@macromedia.com,Male,68.183.9.37,12/09/2025,42,18463,16552,Inactive > 90 Days
+527,Berna,Mulqueeny,bmulqueenyem@e-recht24.de,Female,174.162.51.133,26/11/2025,51,1913,13688,Inactive > 90 Days
+528,Kimberly,Taylot,ktayloten@mapy.cz,Female,30.123.123.155,24/10/2025,68,16700,1204,New Signups (Last 30 Days)
+529,Bibby,Blanckley,bblanckleyeo@cmu.edu,Female,229.96.142.83,12/03/2025,27,3187,12089,Churn Risk
+530,Ana,Georgelin,ageorgelinep@w3.org,Female,31.87.139.205,08/07/2025,75,12009,13304,High CLV Customers
+531,Nickey,Gavagan,ngavaganeq@bing.com,Male,108.42.211.164,22/05/2025,20,8950,16129,New Signups (Last 30 Days)
+532,Geoffrey,Earngy,gearngyer@tinypic.com,Male,84.157.17.210,25/08/2025,51,1389,12206,Churn Risk
+533,Joete,Gregory,jgregoryes@webs.com,Female,18.197.152.138,22/04/2025,60,19560,1911,Churn Risk
+534,Brock,Dallewater,bdallewateret@tripod.com,Male,249.191.22.228,10/12/2024,76,16365,5937,Inactive > 90 Days
+535,Wallace,Wohler,wwohlereu@ted.com,Male,11.123.200.162,30/10/2025,62,2336,7497,Churn Risk
+536,Jaclyn,Bearcock,jbearcockev@so-net.ne.jp,Female,83.13.168.48,11/09/2025,18,16369,8762,High CLV Customers
+537,Shaw,Fillis,sfillisew@dagondesign.com,Male,66.188.225.97,27/04/2025,29,16912,17875,Inactive > 90 Days
+538,Alberta,Gerran,agerranex@squidoo.com,Female,1.86.82.152,30/08/2025,78,16797,17071,Inactive > 90 Days
+539,Angelina,Campaigne,acampaigneey@dedecms.com,Female,45.43.79.16,30/01/2025,29,4060,11132,New Signups (Last 30 Days)
+540,Birch,Bearne,bbearneez@wp.com,Male,248.44.122.80,26/12/2024,44,12354,11389,Inactive > 90 Days
+541,Irv,Vinden,ivindenf0@redcross.org,Male,28.30.125.190,14/06/2025,63,15313,19132,Churn Risk
+542,Josey,Bohin,jbohinf1@ucla.edu,Female,253.80.130.89,24/03/2025,21,18748,3288,High CLV Customers
+543,Rad,Hoggin,rhogginf2@pagesperso-orange.fr,Male,209.135.185.55,23/10/2025,32,15862,14398,New Signups (Last 30 Days)
+544,Goldina,Sifleet,gsifleetf3@nbcnews.com,Genderfluid,76.100.237.96,04/08/2025,21,16731,18417,Churn Risk
+545,Diannne,Bonick,dbonickf4@alibaba.com,Female,231.229.63.129,07/02/2025,66,19341,14094,Inactive > 90 Days
+546,Leroi,Spooner,lspoonerf5@people.com.cn,Male,27.191.81.40,21/05/2025,55,14551,8566,Inactive > 90 Days
+547,Kiersten,Matussov,kmatussovf6@thetimes.co.uk,Female,191.61.101.178,06/06/2025,19,8300,8385,High CLV Customers
+548,Ev,Aitcheson,eaitchesonf7@skype.com,Male,147.194.38.61,08/09/2025,76,8466,10307,Churn Risk
+549,Karie,Swadlinge,kswadlingef8@dmoz.org,Female,66.44.176.90,25/09/2025,53,7024,17597,High CLV Customers
+550,Harwilll,Sterley,hsterleyf9@lycos.com,Male,181.202.90.208,19/03/2025,53,8349,9026,High CLV Customers
+551,Adham,Ciotto,aciottofa@instagram.com,Genderqueer,21.122.225.231,17/07/2025,32,5871,16118,Churn Risk
+552,Rodie,Cockle,rcocklefb@feedburner.com,Female,167.38.97.91,15/08/2025,64,6680,10202,New Signups (Last 30 Days)
+553,Cher,Pentony,cpentonyfc@cnet.com,Female,136.80.50.15,16/07/2025,50,11349,961,High CLV Customers
+554,Wenona,Fenlon,wfenlonfd@twitter.com,Female,137.84.255.245,03/06/2025,75,12868,2783,Churn Risk
+555,Rhys,Earngy,rearngyfe@theatlantic.com,Male,137.218.91.121,26/03/2025,44,4497,1092,Churn Risk
+556,Aarika,Wrightem,awrightemff@spotify.com,Female,15.121.240.231,28/07/2025,66,13226,10662,High CLV Customers
+557,Benoit,Ingilson,bingilsonfg@cmu.edu,Male,189.172.65.237,08/11/2025,31,5250,449,New Signups (Last 30 Days)
+558,Zackariah,Gibbons,zgibbonsfh@mozilla.org,Male,194.47.46.53,06/08/2025,67,5636,10250,Inactive > 90 Days
+559,Suzy,Dumbar,sdumbarfi@wikispaces.com,Female,22.17.104.54,12/02/2025,22,1510,4191,Churn Risk
+560,Alva,Goodin,agoodinfj@deviantart.com,Male,183.48.181.191,14/11/2025,31,4001,19120,New Signups (Last 30 Days)
+561,Ajay,Methringham,amethringhamfk@bandcamp.com,Female,97.71.206.36,09/03/2025,61,4448,683,High CLV Customers
+562,Flint,Casterot,fcasterotfl@dmoz.org,Genderqueer,194.78.249.92,19/12/2024,62,16671,11599,High CLV Customers
+563,Egon,Mayhead,emayheadfm@state.gov,Male,175.126.208.12,30/04/2025,57,5592,4433,High CLV Customers
+564,Mason,Ollivier,mollivierfn@cam.ac.uk,Male,123.165.77.186,05/06/2025,54,13498,1732,Inactive > 90 Days
+565,Saunder,Cutford,scutfordfo@xing.com,Genderfluid,221.47.147.60,09/10/2025,64,16647,10421,Churn Risk
+566,Garth,Guillon,gguillonfp@jigsy.com,Male,199.143.241.209,03/10/2025,34,2169,227,Churn Risk
+567,Currey,Stoile,cstoilefq@aol.com,Male,108.144.237.72,21/07/2025,73,2694,16569,High CLV Customers
+568,Pincus,Mohring,pmohringfr@ocn.ne.jp,Male,168.169.248.178,03/01/2025,19,14684,18294,Churn Risk
+569,Catriona,Epilet,cepiletfs@g.co,Female,247.66.149.76,30/08/2025,22,397,403,High CLV Customers
+570,Nathalie,Korfmann,nkorfmannft@cargocollective.com,Female,32.250.125.143,30/07/2025,77,16708,18570,Inactive > 90 Days
+571,Rees,MacConnulty,rmacconnultyfu@dyndns.org,Agender,144.113.61.255,02/08/2025,69,3905,10904,High CLV Customers
+572,Torre,Rawling,trawlingfv@wired.com,Male,228.31.53.71,23/10/2025,68,8846,19042,Churn Risk
+573,Aloisia,Dobble,adobblefw@de.vu,Female,191.210.94.228,20/05/2025,58,3808,6792,Churn Risk
+574,Henry,Olsson,holssonfx@aol.com,Male,244.48.213.96,05/06/2025,53,12512,12453,Churn Risk
+575,Alex,Cheavin,acheavinfy@twitpic.com,Non-binary,199.207.113.63,10/09/2025,74,7402,18000,Inactive > 90 Days
+576,Valencia,Sutor,vsutorfz@cornell.edu,Female,15.150.151.84,19/08/2025,68,6312,11154,New Signups (Last 30 Days)
+577,Corri,Wymer,cwymerg0@paginegialle.it,Female,142.118.39.254,21/07/2025,69,16192,245,Inactive > 90 Days
+578,Candie,Dunlop,cdunlopg1@merriam-webster.com,Female,251.60.32.34,17/03/2025,73,7816,8633,Churn Risk
+579,Sherri,Battle,sbattleg2@networksolutions.com,Female,150.162.217.2,11/02/2025,22,9632,2369,New Signups (Last 30 Days)
+580,Garwin,McAlpin,gmcalping3@ox.ac.uk,Male,206.84.172.163,04/07/2025,33,1638,12159,Inactive > 90 Days
+581,Pamelina,Drinkhall,pdrinkhallg4@privacy.gov.au,Female,17.54.161.127,17/03/2025,52,14647,11040,Inactive > 90 Days
+582,Matty,Pavlovic,mpavlovicg5@behance.net,Female,251.199.52.3,29/01/2025,65,6794,18481,Inactive > 90 Days
+583,Nanon,Sunners,nsunnersg6@baidu.com,Female,254.184.143.169,04/05/2025,76,5659,4041,Churn Risk
+584,Humbert,Crasswell,hcrasswellg7@yelp.com,Polygender,79.89.168.233,22/08/2025,61,608,6865,New Signups (Last 30 Days)
+585,Brooks,Culp,bculpg8@barnesandnoble.com,Male,165.148.166.7,17/08/2025,28,17566,16823,Inactive > 90 Days
+586,Margeaux,Cressar,mcressarg9@bigcartel.com,Female,82.75.133.201,06/12/2025,46,3334,8860,New Signups (Last 30 Days)
+587,Norry,Lenihan,nlenihanga@twitpic.com,Female,189.49.183.244,20/02/2025,34,13245,18460,Churn Risk
+588,Lennard,Blaszczak,lblaszczakgb@exblog.jp,Bigender,91.116.233.209,28/07/2025,40,2539,1897,Churn Risk
+589,Gilbert,Mocher,gmochergc@lulu.com,Male,242.146.160.16,07/12/2025,60,12116,748,High CLV Customers
+590,Elnora,Whittle,ewhittlegd@earthlink.net,Female,181.117.116.145,27/10/2025,58,12122,7762,New Signups (Last 30 Days)
+591,Daryle,Kernaghan,dkernaghange@4shared.com,Male,193.144.82.204,15/01/2025,60,5441,14631,Churn Risk
+592,Gauthier,Biskup,gbiskupgf@livejournal.com,Male,141.199.109.42,06/04/2025,32,12994,914,Inactive > 90 Days
+593,Holly-anne,Brockington,hbrockingtongg@toplist.cz,Female,122.99.41.169,12/06/2025,70,6570,3539,Churn Risk
+594,Cam,Bransby,cbransbygh@github.io,Male,156.227.214.96,30/06/2025,76,7770,6123,Churn Risk
+595,Corie,Bernlin,cbernlingi@comcast.net,Female,78.115.9.186,28/10/2025,66,2808,9760,New Signups (Last 30 Days)
+596,Elvis,Chuter,echutergj@boston.com,Male,191.146.164.70,27/10/2025,64,8160,19650,Inactive > 90 Days
+597,Robbi,Borrington,rborringtongk@ycombinator.com,Genderqueer,202.196.248.255,29/06/2025,66,12499,8648,High CLV Customers
+598,Marty,Wellen,mwellengl@usnews.com,Male,136.215.132.93,30/07/2025,25,19788,2416,High CLV Customers
+599,Robinia,Torresi,rtorresigm@privacy.gov.au,Female,106.138.98.193,10/10/2025,67,19417,8394,New Signups (Last 30 Days)
+600,Gaultiero,Paolinelli,gpaolinellign@hatena.ne.jp,Male,85.151.157.88,23/10/2025,33,15506,12122,Inactive > 90 Days
+601,Alisun,Capitano,acapitanogo@printfriendly.com,Bigender,240.94.90.137,14/11/2025,43,16180,13496,New Signups (Last 30 Days)
+602,Charlean,Viggars,cviggarsgp@ihg.com,Female,23.10.132.134,01/03/2025,75,11220,10945,Churn Risk
+603,Mellie,Hurdedge,mhurdedgegq@arstechnica.com,Female,115.64.65.110,06/05/2025,31,1254,3807,Inactive > 90 Days
+604,Theo,Paliser,tpalisergr@diigo.com,Male,189.105.119.0,22/06/2025,29,15498,7340,Churn Risk
+605,Tuesday,Wattam,twattamgs@archive.org,Female,63.146.25.27,03/03/2025,24,14026,4525,Inactive > 90 Days
+606,Archie,Totterdell,atotterdellgt@shutterfly.com,Male,36.128.245.124,06/11/2025,71,4184,2972,Churn Risk
+607,Edithe,Gammet,egammetgu@jigsy.com,Female,209.113.79.91,08/12/2024,28,1828,2529,High CLV Customers
+608,Errol,Chislett,echislettgv@technorati.com,Male,170.87.209.22,14/12/2024,72,5616,18486,Churn Risk
+609,Vito,McCurrie,vmccurriegw@earthlink.net,Male,73.78.208.169,22/03/2025,56,8141,5612,New Signups (Last 30 Days)
+610,Norrie,Liddell,nliddellgx@epa.gov,Male,31.39.155.70,31/08/2025,76,12256,6926,Churn Risk
+611,Katleen,McTeer,kmcteergy@etsy.com,Female,151.16.209.68,14/11/2025,56,503,18369,New Signups (Last 30 Days)
+612,Eugenia,Highwood,ehighwoodgz@ow.ly,Female,232.101.108.7,09/02/2025,41,8893,3731,New Signups (Last 30 Days)
+613,Denny,Shilburne,dshilburneh0@webs.com,Male,214.46.29.236,08/06/2025,40,15876,1027,High CLV Customers
+614,Micheal,Gateland,mgatelandh1@ca.gov,Male,205.71.13.254,15/05/2025,61,18514,2588,Churn Risk
+615,Fancie,Licari,flicarih2@biglobe.ne.jp,Genderfluid,132.119.101.255,09/05/2025,46,5693,7068,Churn Risk
+616,Jacobo,Edland,jedlandh3@nationalgeographic.com,Male,206.137.67.139,04/09/2025,79,8721,15911,Churn Risk
+617,Dino,Hamson,dhamsonh4@google.cn,Male,97.182.171.180,01/06/2025,20,14750,14171,Churn Risk
+618,Galvin,Duggon,gduggonh5@wunderground.com,Male,191.81.48.250,29/12/2024,49,1210,2111,Inactive > 90 Days
+619,Del,Cantu,dcantuh6@google.com,Male,40.141.24.240,04/10/2025,18,5481,18559,Churn Risk
+620,Adele,Tritton,atrittonh7@rediff.com,Genderfluid,151.155.112.230,18/03/2025,35,3001,17568,Inactive > 90 Days
+621,Melinde,Crickmoor,mcrickmoorh8@illinois.edu,Female,191.133.208.8,05/01/2025,23,4764,2707,High CLV Customers
+622,Wren,Stanway,wstanwayh9@sogou.com,Female,219.140.129.195,19/05/2025,22,16263,17562,Inactive > 90 Days
+623,Gram,Aldrick,galdrickha@addtoany.com,Male,104.250.156.156,09/12/2024,37,5633,6836,Inactive > 90 Days
+624,Carlo,Gilpin,cgilpinhb@ow.ly,Male,16.110.60.131,24/09/2025,51,3276,14701,High CLV Customers
+625,Franzen,Blethin,fblethinhc@friendfeed.com,Male,134.217.191.133,27/08/2025,31,2780,19979,New Signups (Last 30 Days)
+626,Domenic,Coneley,dconeleyhd@chicagotribune.com,Male,68.34.180.102,01/11/2025,43,6586,13184,New Signups (Last 30 Days)
+627,Charlotta,Mann,cmannhe@gravatar.com,Female,211.207.182.89,08/08/2025,59,12437,3181,New Signups (Last 30 Days)
+628,Tera,Hadcock,thadcockhf@tuttocitta.it,Female,39.53.67.91,04/03/2025,44,16938,762,Inactive > 90 Days
+629,Meredeth,Alsobrook,malsobrookhg@house.gov,Male,98.29.167.50,07/08/2025,31,14918,4841,New Signups (Last 30 Days)
+630,Loutitia,Sinnott,lsinnotthh@youku.com,Female,33.58.251.136,18/10/2025,24,9692,1031,High CLV Customers
+631,Lowell,Jatczak,ljatczakhi@ameblo.jp,Male,234.245.240.169,16/06/2025,24,13449,16464,Inactive > 90 Days
+632,Corrianne,Lorkins,clorkinshj@google.ru,Female,115.210.219.199,05/06/2025,57,930,1061,Inactive > 90 Days
+633,Gerald,Hargrove,ghargrovehk@instagram.com,Male,47.80.20.49,01/10/2025,20,7017,9734,Inactive > 90 Days
+634,Judith,Nightingale,jnightingalehl@accuweather.com,Female,44.225.241.43,25/05/2025,43,6514,14757,Inactive > 90 Days
+635,Tomkin,Morpeth,tmorpethhm@meetup.com,Male,37.189.92.226,26/04/2025,43,5170,19761,New Signups (Last 30 Days)
+636,Denice,Eldred,deldredhn@wordpress.org,Female,9.119.18.149,24/03/2025,47,18490,2466,Churn Risk
+637,Ilise,Brabbs,ibrabbsho@ezinearticles.com,Female,102.187.3.194,30/05/2025,20,8172,7227,Inactive > 90 Days
+638,Ervin,Nuzzetti,enuzzettihp@marketwatch.com,Male,72.223.91.25,26/09/2025,29,5114,707,Churn Risk
+639,Tommie,Tart,ttarthq@netlog.com,Male,54.175.21.236,01/05/2025,58,10371,7090,Churn Risk
+640,Maximilianus,Dumbreck,mdumbreckhr@miibeian.gov.cn,Male,150.119.210.25,13/08/2025,75,1356,6011,Inactive > 90 Days
+641,Lenee,Varker,lvarkerhs@constantcontact.com,Female,246.242.80.80,06/05/2025,34,5506,13061,New Signups (Last 30 Days)
+642,Egan,Phillcock,ephillcockht@icio.us,Male,52.146.4.216,15/02/2025,46,3134,12609,New Signups (Last 30 Days)
+643,Devan,Codi,dcodihu@harvard.edu,Non-binary,174.39.11.166,05/06/2025,33,9022,16411,Churn Risk
+644,Barthel,Worlock,bworlockhv@adobe.com,Male,153.64.87.114,17/07/2025,76,11518,14140,Churn Risk
+645,Gaspard,Fynes,gfyneshw@drupal.org,Male,82.137.76.83,18/04/2025,50,12723,19943,Churn Risk
+646,Niccolo,Meritt,nmeritthx@forbes.com,Male,59.27.86.218,23/03/2025,34,5931,6318,Inactive > 90 Days
+647,Staffard,Sirr,ssirrhy@nymag.com,Male,10.57.87.131,13/09/2025,79,14783,19852,Inactive > 90 Days
+648,Brittany,Gaenor,bgaenorhz@sitemeter.com,Female,217.28.77.4,08/06/2025,39,6035,17461,New Signups (Last 30 Days)
+649,Binni,Blazek,bblazeki0@flavors.me,Female,152.129.72.28,12/01/2025,56,12629,12491,Churn Risk
+650,Kevina,Dyne,kdynei1@cdbaby.com,Female,2.27.212.204,11/07/2025,57,15559,5883,Inactive > 90 Days
+651,Nolly,Russi,nrussii2@disqus.com,Male,126.255.178.185,15/03/2025,69,1513,4602,High CLV Customers
+652,Annette,Ossenna,aossennai3@ustream.tv,Female,253.132.229.99,17/03/2025,74,14550,6372,New Signups (Last 30 Days)
+653,Fraser,Scrivener,fscriveneri4@indiatimes.com,Male,237.221.172.137,06/01/2025,29,10798,19164,Inactive > 90 Days
+654,Davida,Djokovic,ddjokovici5@over-blog.com,Female,253.15.138.38,24/01/2025,63,19577,18712,High CLV Customers
+655,Claude,McWhannel,cmcwhanneli6@deliciousdays.com,Agender,66.187.249.247,03/09/2025,18,6524,10123,Churn Risk
+656,Chuck,Duthy,cduthyi7@springer.com,Male,93.135.243.4,27/03/2025,77,15868,2349,New Signups (Last 30 Days)
+657,Arabela,Maillard,amaillardi8@howstuffworks.com,Female,247.135.247.249,15/09/2025,26,8033,9078,High CLV Customers
+658,Tybie,Bance,tbancei9@slideshare.net,Female,63.1.29.24,20/08/2025,57,9751,18713,Inactive > 90 Days
+659,Klara,Cordingley,kcordingleyia@clickbank.net,Female,159.227.201.24,04/05/2025,30,18069,5714,New Signups (Last 30 Days)
+660,Maximilian,Worpole,mworpoleib@cnbc.com,Male,35.127.254.58,23/04/2025,43,13666,15561,Inactive > 90 Days
+661,Demeter,Shrawley,dshrawleyic@google.com.au,Female,62.5.214.97,12/03/2025,56,13794,2702,New Signups (Last 30 Days)
+662,Tiff,Maddy,tmaddyid@whitehouse.gov,Female,69.192.49.90,09/11/2025,52,2894,14810,High CLV Customers
+663,Korry,Gerardin,kgerardinie@fda.gov,Female,30.234.98.244,03/04/2025,25,19217,6441,Churn Risk
+664,Justinn,Valens-Smith,jvalenssmithif@dyndns.org,Female,206.101.232.78,16/06/2025,68,19478,18645,New Signups (Last 30 Days)
+665,Caren,Jorden,cjordenig@soup.io,Female,29.208.61.232,28/06/2025,50,5937,12355,New Signups (Last 30 Days)
+666,Thekla,Methuen,tmethuenih@ftc.gov,Female,28.8.148.136,19/09/2025,60,1417,260,High CLV Customers
+667,Paige,Boag,pboagii@samsung.com,Female,129.120.9.72,07/02/2025,55,11900,6773,Inactive > 90 Days
+668,Winnie,Millam,wmillamij@springer.com,Male,68.19.178.191,29/10/2025,36,7986,3357,High CLV Customers
+669,Salaidh,Jefferys,sjefferysik@kickstarter.com,Female,250.132.172.94,22/07/2025,63,16317,12913,New Signups (Last 30 Days)
+670,Darell,Hearl,dhearlil@theguardian.com,Female,25.248.131.177,07/11/2025,60,962,17172,High CLV Customers
+671,Regan,Jakoviljevic,rjakoviljevicim@cdbaby.com,Bigender,6.247.223.11,05/11/2025,21,9846,13722,Inactive > 90 Days
+672,Oralle,Stranieri,ostranieriin@cisco.com,Female,14.10.38.177,22/07/2025,24,8579,16066,Inactive > 90 Days
+673,Stewart,Theseira,stheseiraio@1688.com,Male,16.231.22.170,11/04/2025,62,17213,11135,Churn Risk
+674,Kimball,Sterte,ksterteip@epa.gov,Male,243.179.31.10,08/09/2025,33,9404,10064,Churn Risk
+675,Rianon,Stendell,rstendelliq@gmpg.org,Female,221.164.69.39,06/01/2025,36,9302,8210,New Signups (Last 30 Days)
+676,Georgie,Jaqueminet,gjaqueminetir@4shared.com,Male,77.212.157.182,05/07/2025,74,6608,2509,Churn Risk
+677,Marissa,Speare,mspeareis@blogs.com,Female,100.73.55.177,27/11/2025,70,102,15402,High CLV Customers
+678,Tomas,Arnatt,tarnattit@mail.ru,Male,218.82.177.198,08/03/2025,31,9522,18951,New Signups (Last 30 Days)
+679,Cybill,Borel,cboreliu@nsw.gov.au,Female,76.209.9.8,06/12/2025,36,15089,5571,New Signups (Last 30 Days)
+680,Marmaduke,Lace,mlaceiv@devhub.com,Male,42.128.182.124,03/01/2025,76,17512,5349,New Signups (Last 30 Days)
+681,Carmel,Costock,ccostockiw@ucoz.com,Female,197.141.139.231,07/06/2025,27,4368,1591,Churn Risk
+682,Loren,Piatek,lpiatekix@creativecommons.org,Male,198.205.51.118,27/06/2025,35,15069,17398,Inactive > 90 Days
+683,Pieter,Rahill,prahilliy@about.com,Male,178.79.35.53,03/01/2025,20,6196,3922,New Signups (Last 30 Days)
+684,Amye,Philp,aphilpiz@amazon.de,Female,145.42.185.12,21/05/2025,59,11212,4314,Inactive > 90 Days
+685,Vinny,Darree,vdarreej0@yellowpages.com,Male,248.128.211.167,13/04/2025,73,15650,5481,Churn Risk
+686,Elie,Eliet,eelietj1@sciencedaily.com,Female,41.151.79.152,08/04/2025,43,19780,8407,Inactive > 90 Days
+687,Emiline,Derges,edergesj2@jalbum.net,Non-binary,28.29.169.204,13/02/2025,24,7409,2261,New Signups (Last 30 Days)
+688,Lulita,Tumulty,ltumultyj3@scientificamerican.com,Female,116.220.220.235,11/08/2025,18,16598,4691,Inactive > 90 Days
+689,Elbert,Hazart,ehazartj4@histats.com,Male,141.93.176.64,08/08/2025,51,17569,583,High CLV Customers
+690,Kacey,Gonneau,kgonneauj5@blogtalkradio.com,Female,153.3.221.66,30/05/2025,32,8139,17070,New Signups (Last 30 Days)
+691,Danya,Duncklee,ddunckleej6@engadget.com,Female,186.108.183.219,14/02/2025,46,9520,212,High CLV Customers
+692,Darbie,Shelbourne,dshelbournej7@biblegateway.com,Female,190.66.221.176,27/07/2025,67,13372,1478,High CLV Customers
+693,Sax,Fidelli,sfidellij8@un.org,Non-binary,175.186.56.218,04/07/2025,37,15527,19117,Inactive > 90 Days
+694,Yolanda,Battle,ybattlej9@nih.gov,Female,34.216.12.133,08/12/2024,38,3401,7916,New Signups (Last 30 Days)
+695,Edy,McInulty,emcinultyja@mysql.com,Genderqueer,1.70.181.28,20/07/2025,64,18901,12793,New Signups (Last 30 Days)
+696,Aridatha,Baudy,abaudyjb@yolasite.com,Female,152.244.213.189,16/12/2024,25,8160,9112,High CLV Customers
+697,Kasey,Stickens,kstickensjc@nydailynews.com,Female,41.53.199.82,23/05/2025,70,8786,16175,High CLV Customers
+698,Sanderson,Beldom,sbeldomjd@rakuten.co.jp,Male,52.40.36.126,04/11/2025,52,3974,5195,Churn Risk
+699,Catharina,Hext,chextje@boston.com,Female,236.244.42.237,02/11/2025,19,16603,3190,New Signups (Last 30 Days)
+700,Winni,Fandrich,wfandrichjf@gmpg.org,Female,192.163.144.99,31/05/2025,52,14799,8775,Churn Risk
+701,Price,Marney,pmarneyjg@nifty.com,Male,163.120.162.92,17/11/2025,68,12512,10046,Churn Risk
+702,Katy,Gatchel,kgatcheljh@bravesites.com,Female,57.214.180.214,01/12/2025,43,13544,6869,New Signups (Last 30 Days)
+703,Ambrosi,Robrose,arobroseji@bigcartel.com,Male,56.217.24.200,09/11/2025,54,14617,18382,New Signups (Last 30 Days)
+704,Clementius,Miskimmon,cmiskimmonjj@independent.co.uk,Bigender,17.59.154.173,29/07/2025,64,9247,14737,Inactive > 90 Days
+705,Saul,Stowers,sstowersjk@bloomberg.com,Male,186.172.7.178,23/12/2024,77,8761,9751,New Signups (Last 30 Days)
+706,Aila,Reinbeck,areinbeckjl@reuters.com,Female,247.24.16.147,29/08/2025,51,4729,18906,New Signups (Last 30 Days)
+707,Madlen,Fossitt,mfossittjm@techcrunch.com,Female,124.175.114.158,10/03/2025,31,16275,3227,New Signups (Last 30 Days)
+708,Phelia,Paradis,pparadisjn@amazon.co.jp,Female,6.176.253.0,17/05/2025,79,11296,5962,High CLV Customers
+709,Saundra,Mitrovic,smitrovicjo@cpanel.net,Male,28.209.214.217,10/06/2025,73,12888,3332,High CLV Customers
+710,Alfons,Ledrane,aledranejp@wunderground.com,Male,93.233.205.62,26/11/2025,34,1336,11223,High CLV Customers
+711,Caty,Fountian,cfountianjq@i2i.jp,Female,51.64.156.221,18/05/2025,40,12298,13877,New Signups (Last 30 Days)
+712,Arlana,McCarly,amccarlyjr@wsj.com,Female,94.133.181.97,16/06/2025,65,1760,19596,Inactive > 90 Days
+713,Kev,Knappitt,kknappittjs@icq.com,Male,31.159.229.155,22/08/2025,26,9710,2190,Inactive > 90 Days
+714,Sheelah,Inskipp,sinskippjt@sun.com,Female,90.155.36.93,01/02/2025,48,14235,6086,Churn Risk
+715,Yulma,Itzkov,yitzkovju@usda.gov,Male,13.9.79.248,22/06/2025,27,2399,13222,High CLV Customers
+716,Halette,Labern,hlabernjv@sitemeter.com,Polygender,96.41.60.154,12/01/2025,40,19353,14464,High CLV Customers
+717,Bondy,Vardie,bvardiejw@jigsy.com,Genderfluid,202.182.213.206,22/03/2025,45,6154,10554,New Signups (Last 30 Days)
+718,Ailbert,Nowland,anowlandjx@cam.ac.uk,Male,165.215.111.156,10/11/2025,24,14710,17505,High CLV Customers
+719,Courtney,Kasper,ckasperjy@admin.ch,Male,21.201.47.107,24/08/2025,57,7300,3822,Churn Risk
+720,Nial,Ovid,novidjz@nifty.com,Male,203.110.6.16,19/07/2025,33,8176,8768,New Signups (Last 30 Days)
+721,Obed,Clem,oclemk0@usda.gov,Polygender,189.215.32.255,05/06/2025,50,8927,155,New Signups (Last 30 Days)
+722,Loreen,Montfort,lmontfortk1@reverbnation.com,Female,224.134.228.197,09/06/2025,55,17120,7099,Inactive > 90 Days
+723,Jermaine,Franceschi,jfranceschik2@webmd.com,Female,233.91.81.175,24/09/2025,34,10459,8585,High CLV Customers
+724,Alane,Myrtle,amyrtlek3@jugem.jp,Non-binary,109.85.18.187,17/06/2025,22,2786,634,Churn Risk
+725,Willa,Napoleone,wnapoleonek4@ycombinator.com,Female,10.0.169.224,03/02/2025,71,18409,11067,Churn Risk
+726,Cleavland,Vasechkin,cvasechkink5@nhs.uk,Male,105.227.151.33,27/03/2025,73,13292,19728,New Signups (Last 30 Days)
+727,Debbi,Medlar,dmedlark6@twitter.com,Female,201.45.65.201,06/05/2025,35,16505,17753,High CLV Customers
+728,Whitby,Morde,wmordek7@booking.com,Male,43.169.5.29,07/06/2025,30,13348,10037,Churn Risk
+729,Tabby,Crosfeld,tcrosfeldk8@google.de,Female,174.252.199.213,16/01/2025,59,5528,15797,High CLV Customers
+730,Griswold,Grimsdale,ggrimsdalek9@altervista.org,Male,82.215.38.110,14/06/2025,43,940,9268,Inactive > 90 Days
+731,Ozzie,Gossart,ogossartka@chron.com,Male,31.70.116.93,04/02/2025,53,1267,12409,Inactive > 90 Days
+732,Jose,Chrstine,jchrstinekb@cyberchimps.com,Male,101.226.208.167,06/11/2025,42,16757,19675,Churn Risk
+733,Gizela,Tompkinson,gtompkinsonkc@cloudflare.com,Genderfluid,52.61.106.53,08/07/2025,32,7769,1435,High CLV Customers
+734,Edgardo,Haddrill,ehaddrillkd@amazon.co.jp,Bigender,245.194.131.72,09/01/2025,43,9881,19183,Inactive > 90 Days
+735,Dorothee,Baulcombe,dbaulcombeke@wix.com,Female,238.42.64.195,25/11/2025,70,18171,5863,Churn Risk
+736,Bryant,Sissland,bsisslandkf@cnet.com,Male,185.187.105.143,18/08/2025,72,12337,4826,Inactive > 90 Days
+737,Bran,Sevier,bsevierkg@indiegogo.com,Male,77.0.37.246,15/01/2025,56,9978,8387,High CLV Customers
+738,Lou,Ellwand,lellwandkh@wisc.edu,Female,106.72.33.48,01/05/2025,70,19168,11560,New Signups (Last 30 Days)
+739,Juana,Stare,jstareki@nba.com,Female,184.6.113.222,20/11/2025,62,5558,4756,Inactive > 90 Days
+740,Izak,Remirez,iremirezkj@wix.com,Male,31.202.158.188,07/05/2025,36,2510,17150,High CLV Customers
+741,Sigrid,Huggon,shuggonkk@berkeley.edu,Female,212.68.155.172,13/05/2025,47,14656,3164,High CLV Customers
+742,Ardelle,O' Cuolahan,aocuolahankl@disqus.com,Female,0.109.183.66,29/01/2025,26,1619,15152,Inactive > 90 Days
+743,Zelma,Thorald,zthoraldkm@miibeian.gov.cn,Female,175.164.244.240,22/12/2024,71,11793,11975,Churn Risk
+744,Lynsey,Pattullo,lpattullokn@washington.edu,Female,69.147.236.119,10/12/2024,51,3911,11494,Churn Risk
+745,Shurlock,Kempe,skempeko@booking.com,Male,202.38.222.244,12/08/2025,63,7226,5055,New Signups (Last 30 Days)
+746,Haily,Critchard,hcritchardkp@example.com,Female,63.99.7.192,20/04/2025,29,10638,7525,High CLV Customers
+747,Ethelda,Rountree,erountreekq@github.com,Agender,220.207.11.138,12/09/2025,72,10271,12053,Churn Risk
+748,Madeleine,Sharer,msharerkr@umn.edu,Female,212.176.15.151,27/10/2025,72,15030,4817,New Signups (Last 30 Days)
+749,Shanda,Isaacs,sisaacsks@google.pl,Female,79.206.249.231,08/11/2025,25,2602,17592,New Signups (Last 30 Days)
+750,Thaxter,Feige,tfeigekt@twitpic.com,Male,165.74.54.218,07/08/2025,64,1390,19609,High CLV Customers
+751,Glyn,Timmens,gtimmensku@amazon.co.jp,Female,126.213.154.47,09/08/2025,39,650,3285,Inactive > 90 Days
+752,Beitris,Haggis,bhaggiskv@un.org,Female,30.223.238.210,16/01/2025,56,19592,11245,New Signups (Last 30 Days)
+753,Luca,Raubenheimers,lraubenheimerskw@feedburner.com,Male,179.158.86.227,21/12/2024,24,6413,13667,Churn Risk
+754,Bartel,Abba,babbakx@nature.com,Male,58.212.127.252,05/04/2025,63,8312,10945,Inactive > 90 Days
+755,Marlon,Chalkly,mchalklyky@amazonaws.com,Male,163.125.134.104,13/02/2025,51,2067,14802,Inactive > 90 Days
+756,Brynna,Ianinotti,bianinottikz@histats.com,Female,117.200.167.187,26/08/2025,47,9542,11216,Churn Risk
+757,Garv,Sweatman,gsweatmanl0@dion.ne.jp,Male,81.83.228.92,20/09/2025,74,17272,8024,High CLV Customers
+758,Myrtia,Ossipenko,mossipenkol1@printfriendly.com,Female,86.36.234.247,25/08/2025,29,13963,6490,Inactive > 90 Days
+759,Ramsey,Drains,rdrainsl2@barnesandnoble.com,Male,150.119.60.233,26/02/2025,19,4925,501,Churn Risk
+760,Kamila,Docwra,kdocwral3@latimes.com,Female,178.100.111.102,06/08/2025,67,9884,3727,Inactive > 90 Days
+761,Enrica,Chazelle,echazellel4@tuttocitta.it,Female,169.255.143.32,24/04/2025,79,13418,9562,New Signups (Last 30 Days)
+762,Anastasie,Fremantle,afremantlel5@biglobe.ne.jp,Female,247.253.69.227,18/11/2025,48,5392,8021,Inactive > 90 Days
+763,Leigh,Plesing,lplesingl6@hud.gov,Female,160.103.115.216,21/05/2025,49,810,17350,Inactive > 90 Days
+764,Nissa,Stuttard,nstuttardl7@hostgator.com,Polygender,76.151.232.80,23/10/2025,71,134,12280,High CLV Customers
+765,Laney,Fibbitts,lfibbittsl8@ucla.edu,Female,120.37.17.158,03/05/2025,71,7040,10578,New Signups (Last 30 Days)
+766,Britta,Djakovic,bdjakovicl9@example.com,Female,84.183.176.160,23/06/2025,28,8193,18172,New Signups (Last 30 Days)
+767,Godart,Duckerin,gduckerinla@angelfire.com,Male,162.108.44.106,13/09/2025,53,19255,13629,New Signups (Last 30 Days)
+768,Zebadiah,Maus,zmauslb@geocities.jp,Male,248.225.123.196,24/11/2025,38,11513,16528,Churn Risk
+769,Colette,Truder,ctruderlc@chron.com,Female,241.240.15.34,25/11/2025,57,3149,2005,High CLV Customers
+770,Cordelie,Wainman,cwainmanld@google.co.jp,Female,254.226.30.34,20/05/2025,41,12753,2242,High CLV Customers
+771,Matthew,Di Ruggiero,mdiruggierole@mashable.com,Male,10.80.235.70,20/04/2025,59,17628,13481,High CLV Customers
+772,Teriann,Ruppel,truppellf@nba.com,Female,84.51.170.200,01/08/2025,44,4987,13621,New Signups (Last 30 Days)
+773,Thalia,Backen,tbackenlg@dell.com,Non-binary,166.199.66.67,08/03/2025,72,7449,3337,New Signups (Last 30 Days)
+774,Clari,Segar,csegarlh@reddit.com,Polygender,245.69.188.212,26/04/2025,19,6520,13147,New Signups (Last 30 Days)
+775,Curtice,Geraldez,cgeraldezli@opera.com,Male,252.208.134.178,07/04/2025,30,4821,15170,Churn Risk
+776,Monroe,Gaynsford,mgaynsfordlj@howstuffworks.com,Male,241.106.157.186,29/05/2025,29,11881,3816,Churn Risk
+777,Frederic,Lightowlers,flightowlerslk@google.de,Male,71.172.187.70,20/10/2025,79,10718,17889,New Signups (Last 30 Days)
+778,Rochell,Briar,rbriarll@shop-pro.jp,Female,216.65.233.33,06/05/2025,65,3657,2135,Churn Risk
+779,Jourdan,Cossins,jcossinslm@elpais.com,Female,19.235.78.49,08/05/2025,48,2655,12039,High CLV Customers
+780,George,Dow,gdowln@vk.com,Female,242.195.89.252,25/06/2025,25,13316,10190,High CLV Customers
+781,Ethyl,McCaster,emccasterlo@arizona.edu,Female,24.141.205.35,01/02/2025,72,2675,4546,New Signups (Last 30 Days)
+782,Kariotta,Setter,ksetterlp@washingtonpost.com,Female,179.27.214.195,20/04/2025,36,16108,13276,Churn Risk
+783,Benny,Kiffe,bkiffelq@eepurl.com,Genderfluid,116.208.249.253,15/03/2025,80,16916,6485,High CLV Customers
+784,Urban,Guilliland,uguillilandlr@answers.com,Male,145.87.108.209,04/10/2025,49,13832,15020,Inactive > 90 Days
+785,Dal,Talby,dtalbyls@xinhuanet.com,Male,202.57.187.235,11/07/2025,55,7688,18719,Churn Risk
+786,Kermy,McGuffog,kmcguffoglt@netlog.com,Male,36.82.230.188,19/08/2025,70,1987,11776,Churn Risk
+787,Nickey,McKeon,nmckeonlu@mac.com,Male,107.95.192.149,08/08/2025,72,4356,14532,Inactive > 90 Days
+788,Brinn,Sprade,bspradelv@flavors.me,Female,204.190.203.72,11/04/2025,43,13863,9840,New Signups (Last 30 Days)
+789,Karee,Morcomb,kmorcomblw@multiply.com,Female,198.175.214.50,22/08/2025,59,14388,9860,Churn Risk
+790,Nesta,Piggen,npiggenlx@ihg.com,Genderqueer,18.229.185.40,12/03/2025,21,19600,15922,New Signups (Last 30 Days)
+791,Denni,Haszard,dhaszardly@addthis.com,Female,98.132.188.90,19/02/2025,49,9832,12032,Inactive > 90 Days
+792,Gunner,Olifard,golifardlz@cloudflare.com,Male,147.115.68.81,26/10/2025,26,1358,3503,New Signups (Last 30 Days)
+793,Aubrie,Gymlett,agymlettm0@umn.edu,Female,97.248.123.48,29/05/2025,47,14665,15582,New Signups (Last 30 Days)
+794,Garald,Dyment,gdymentm1@salon.com,Male,31.40.72.249,10/07/2025,28,14023,19960,Inactive > 90 Days
+795,Patty,Bassano,pbassanom2@cpanel.net,Female,70.20.24.11,30/11/2025,22,4329,459,High CLV Customers
+796,Selene,Napton,snaptonm3@blogger.com,Female,39.81.5.230,25/02/2025,41,18629,304,New Signups (Last 30 Days)
+797,Nilson,MacCawley,nmaccawleym4@networksolutions.com,Male,50.157.159.171,04/03/2025,48,19236,9414,New Signups (Last 30 Days)
+798,Rahel,Cloy,rcloym5@hp.com,Female,163.80.253.163,24/12/2024,39,12011,709,Inactive > 90 Days
+799,Maribelle,Quaintance,mquaintancem6@xinhuanet.com,Female,139.218.62.20,31/10/2025,22,5756,10454,New Signups (Last 30 Days)
+800,Kathlin,Grishinov,kgrishinovm7@google.nl,Female,160.205.97.215,11/08/2025,35,11979,17427,Churn Risk
+801,Hedy,Anglin,hanglinm8@desdev.cn,Female,150.54.70.40,24/04/2025,79,14503,11724,Inactive > 90 Days
+802,Pia,Blackmuir,pblackmuirm9@joomla.org,Female,101.85.145.114,03/12/2025,70,15913,8981,New Signups (Last 30 Days)
+803,Holly,Gunter,hgunterma@ox.ac.uk,Female,226.98.183.108,24/03/2025,67,8750,7362,Churn Risk
+804,Papagena,Bearward,pbearwardmb@prnewswire.com,Female,33.170.156.114,28/06/2025,33,894,10929,Churn Risk
+805,Leona,Foltin,lfoltinmc@vistaprint.com,Female,99.253.240.96,17/11/2025,57,17815,1533,High CLV Customers
+806,Shepherd,Freak,sfreakmd@networkadvertising.org,Male,126.148.39.159,05/09/2025,55,10957,19996,Inactive > 90 Days
+807,Ruben,Grout,rgroutme@wikimedia.org,Male,235.41.182.184,09/06/2025,46,5883,17690,High CLV Customers
+808,Yanaton,Maytum,ymaytummf@ca.gov,Male,88.26.14.20,02/03/2025,38,7740,16884,New Signups (Last 30 Days)
+809,Antonin,Domney,adomneymg@feedburner.com,Male,61.157.53.25,12/07/2025,50,9294,15062,Churn Risk
+810,Leona,Studders,lstuddersmh@technorati.com,Female,130.133.141.159,16/01/2025,42,1412,11505,High CLV Customers
+811,Quintin,Pawlicki,qpawlickimi@youtu.be,Male,164.198.1.195,24/07/2025,19,13681,7227,High CLV Customers
+812,Brittne,Lapthorn,blapthornmj@simplemachines.org,Female,171.41.1.194,05/10/2025,66,16659,15899,Inactive > 90 Days
+813,Allianora,Camfield,acamfieldmk@cbsnews.com,Female,169.22.74.9,01/08/2025,51,12706,8656,Inactive > 90 Days
+814,Gerry,Ellison,gellisonml@washingtonpost.com,Male,23.64.246.233,15/12/2024,26,2797,4204,High CLV Customers
+815,Jeane,Sellars,jsellarsmm@printfriendly.com,Female,91.133.8.124,08/12/2024,19,8503,16757,Inactive > 90 Days
+816,Jonathan,Bielefeld,jbielefeldmn@networkadvertising.org,Male,66.245.95.49,27/03/2025,35,5364,11982,New Signups (Last 30 Days)
+817,Ronna,Shemming,rshemmingmo@multiply.com,Genderqueer,108.105.202.187,05/09/2025,41,13813,17483,High CLV Customers
+818,Avril,Momford,amomfordmp@shop-pro.jp,Female,64.83.208.73,11/03/2025,23,7236,4069,Churn Risk
+819,Anthiathia,Barsam,abarsammq@timesonline.co.uk,Female,253.135.131.137,12/02/2025,34,17095,2868,Churn Risk
+820,Ronald,Gall,rgallmr@wikispaces.com,Male,80.227.38.137,04/09/2025,49,9852,17784,High CLV Customers
+821,Robinet,Mahedy,rmahedyms@networkadvertising.org,Female,250.247.160.213,29/05/2025,36,12838,19920,Inactive > 90 Days
+822,Stanton,Pays,spaysmt@behance.net,Male,158.111.246.36,16/07/2025,18,2133,3521,Inactive > 90 Days
+823,Ford,Fluger,fflugermu@rambler.ru,Male,65.144.173.86,24/05/2025,75,4187,13738,Churn Risk
+824,Jacklin,Splevin,jsplevinmv@cdc.gov,Female,66.17.41.162,01/10/2025,18,15272,8295,Churn Risk
+825,Madalyn,Branton,mbrantonmw@yolasite.com,Female,191.26.3.14,18/01/2025,46,18950,2688,High CLV Customers
+826,Kay,Hartwright,khartwrightmx@va.gov,Female,236.188.212.212,10/07/2025,46,7972,673,Churn Risk
+827,Allyson,Spuner,aspunermy@ihg.com,Female,184.89.172.21,07/02/2025,58,19088,3503,New Signups (Last 30 Days)
+828,Em,Donaway,edonawaymz@diigo.com,Male,195.114.135.118,06/09/2025,24,2289,365,Inactive > 90 Days
+829,Pearce,Drackford,pdrackfordn0@bloglines.com,Male,63.174.120.90,07/02/2025,53,17207,13168,New Signups (Last 30 Days)
+830,Lyndsie,Osburn,losburnn1@ocn.ne.jp,Female,252.55.38.15,11/03/2025,29,19197,15967,New Signups (Last 30 Days)
+831,Aldwin,Antoszczyk,aantoszczykn2@ehow.com,Male,238.81.94.207,07/02/2025,40,15930,4956,Inactive > 90 Days
+832,Kylie,Ubsdall,kubsdalln3@statcounter.com,Female,159.131.188.236,30/05/2025,27,14643,422,Inactive > 90 Days
+833,Miles,Skey,mskeyn4@twitpic.com,Male,187.196.236.205,04/03/2025,45,4238,11080,High CLV Customers
+834,Tatiana,Le Lievre,tlelievren5@ebay.com,Female,173.218.167.77,07/11/2025,66,15274,16387,High CLV Customers
+835,Bogart,Aikett,baikettn6@amazon.com,Agender,243.244.157.22,11/01/2025,71,10512,17218,Inactive > 90 Days
+836,Inge,Feldmark,ifeldmarkn7@usgs.gov,Female,190.115.43.139,31/01/2025,65,9126,19587,Churn Risk
+837,Janean,Hannabuss,jhannabussn8@goo.ne.jp,Female,92.55.213.108,10/06/2025,62,3313,17219,Inactive > 90 Days
+838,Avram,Esberger,aesbergern9@g.co,Male,185.142.244.99,10/02/2025,49,3778,19935,High CLV Customers
+839,Raf,Cockrill,rcockrillna@google.co.jp,Female,94.228.177.41,06/10/2025,48,18431,8104,Inactive > 90 Days
+840,Yancy,Freckelton,yfreckeltonnb@naver.com,Agender,233.255.43.87,03/03/2025,47,15603,12659,New Signups (Last 30 Days)
+841,Denys,Bento,dbentonc@eventbrite.com,Male,120.57.36.126,14/05/2025,38,383,7177,Inactive > 90 Days
+842,Shaina,Ferne,sfernend@accuweather.com,Female,221.107.234.77,11/12/2024,41,8592,7734,Churn Risk
+843,Auberon,Thrift,athriftne@shutterfly.com,Male,170.78.89.182,21/03/2025,19,18837,13698,Inactive > 90 Days
+844,Aurilia,Martinot,amartinotnf@angelfire.com,Female,132.96.6.71,05/05/2025,25,1851,19290,Churn Risk
+845,Robena,Ashwood,rashwoodng@discuz.net,Female,165.206.57.164,07/10/2025,78,14364,7038,New Signups (Last 30 Days)
+846,Amil,Trice,atricenh@ow.ly,Agender,213.106.5.215,05/08/2025,34,15278,9459,High CLV Customers
+847,Sherrie,Starkey,sstarkeyni@usnews.com,Female,148.110.115.0,22/05/2025,63,11979,9923,High CLV Customers
+848,Edin,Rathbone,erathbonenj@virginia.edu,Female,232.0.130.92,09/11/2025,30,16577,7247,Inactive > 90 Days
+849,Rafaellle,Hugueville,rhuguevillenk@oaic.gov.au,Male,20.23.0.139,12/11/2025,59,12028,13592,New Signups (Last 30 Days)
+850,Martyn,Mcimmie,mmcimmienl@vimeo.com,Male,156.8.197.95,25/10/2025,30,1974,14240,High CLV Customers
+851,Starla,Lanchberry,slanchberrynm@latimes.com,Female,222.85.154.77,15/05/2025,19,12874,8072,New Signups (Last 30 Days)
+852,Aldric,Gilvary,agilvarynn@1688.com,Male,99.252.106.20,29/03/2025,41,5173,12274,Churn Risk
+853,Kim,Rappa,krappano@bing.com,Male,210.46.207.120,22/02/2025,62,9171,14007,Churn Risk
+854,Katlin,Vassall,kvassallnp@google.co.uk,Female,31.164.181.116,16/06/2025,28,13382,5731,Inactive > 90 Days
+855,Betsy,Miskelly,bmiskellynq@surveymonkey.com,Female,138.185.178.64,16/12/2024,30,7406,19555,Inactive > 90 Days
+856,Paola,Starie,pstarienr@rakuten.co.jp,Female,54.128.48.208,23/08/2025,22,7392,15446,High CLV Customers
+857,Emera,Wethered,ewetheredns@theglobeandmail.com,Female,9.110.80.246,26/09/2025,71,2535,3472,Churn Risk
+858,Hildegarde,Duchesne,hduchesnent@shop-pro.jp,Female,150.62.84.211,03/08/2025,59,11472,3152,Churn Risk
+859,Lisetta,Kelson,lkelsonnu@uol.com.br,Agender,143.87.29.32,02/08/2025,79,7799,5072,High CLV Customers
+860,Christel,Francesconi,cfrancesconinv@opensource.org,Female,15.45.12.179,14/07/2025,18,5698,6940,High CLV Customers
+861,Darrick,Stilliard,dstilliardnw@apache.org,Male,77.150.148.150,04/10/2025,44,3851,6641,Inactive > 90 Days
+862,Noby,Clemas,nclemasnx@mlb.com,Male,206.76.169.206,18/06/2025,52,7302,12030,High CLV Customers
+863,Jocko,Ashford,jashfordny@theguardian.com,Male,39.74.145.231,11/05/2025,56,12157,13815,Inactive > 90 Days
+864,Daveen,McClean,dmccleannz@webs.com,Female,16.100.226.229,12/04/2025,61,12845,13925,Inactive > 90 Days
+865,Kelli,Cazereau,kcazereauo0@un.org,Female,23.210.180.92,16/01/2025,45,1902,3132,Churn Risk
+866,Caro,Swalough,cswalougho1@hp.com,Female,53.150.163.240,13/06/2025,49,14874,7325,New Signups (Last 30 Days)
+867,Arther,O'Shiel,aoshielo2@ftc.gov,Male,48.174.204.88,19/07/2025,45,10643,17287,Inactive > 90 Days
+868,Jeni,Aulds,jauldso3@chronoengine.com,Female,35.95.194.174,24/01/2025,75,10845,8257,New Signups (Last 30 Days)
+869,Eada,Reford,erefordo4@godaddy.com,Female,14.90.162.204,22/11/2025,57,16365,9370,Churn Risk
+870,Frankie,Ralph,fralpho5@networksolutions.com,Male,203.163.84.6,19/08/2025,19,9235,2569,Inactive > 90 Days
+871,Hailee,Puckett,hpucketto6@foxnews.com,Female,248.168.167.177,15/02/2025,51,2075,4333,Inactive > 90 Days
+872,Codi,Longmore,clongmoreo7@sphinn.com,Male,127.177.96.164,08/11/2025,69,7885,12385,Churn Risk
+873,Ajay,Scandred,ascandredo8@narod.ru,Female,25.247.144.9,30/03/2025,56,4629,820,Churn Risk
+874,Taylor,Kenworthey,tkenwortheyo9@usgs.gov,Male,92.110.198.166,22/06/2025,68,16944,16763,New Signups (Last 30 Days)
+875,Wilona,Benner,wbenneroa@google.com,Female,36.32.164.202,12/12/2024,21,11781,4136,High CLV Customers
+876,Harris,Vatcher,hvatcherob@example.com,Male,188.3.121.174,06/06/2025,22,18746,13821,Churn Risk
+877,Ainslee,Serrels,aserrelsoc@opensource.org,Female,230.50.240.111,08/02/2025,40,5694,8705,High CLV Customers
+878,Alvis,Noyce,anoyceod@bizjournals.com,Male,27.132.22.121,19/10/2025,36,5857,13526,Inactive > 90 Days
+879,Byram,Bankes,bbankesoe@behance.net,Male,214.202.60.190,30/03/2025,42,5935,17930,New Signups (Last 30 Days)
+880,Aurea,Boyington,aboyingtonof@senate.gov,Female,254.96.158.232,23/05/2025,76,6713,11213,Inactive > 90 Days
+881,Jone,Widdup,jwiddupog@nytimes.com,Male,97.8.81.14,20/04/2025,61,1715,10556,High CLV Customers
+882,Delano,Delyth,ddelythoh@latimes.com,Male,86.40.242.217,07/10/2025,50,12626,19142,High CLV Customers
+883,Cheri,Boness,cbonessoi@columbia.edu,Female,10.173.106.67,04/08/2025,30,13701,13677,Inactive > 90 Days
+884,Glyn,Lincoln,glincolnoj@weebly.com,Male,58.137.189.242,29/03/2025,30,5596,12270,Inactive > 90 Days
+885,Ninon,Fyfe,nfyfeok@wikispaces.com,Female,216.228.150.57,14/08/2025,70,7650,3173,Inactive > 90 Days
+886,Loree,Rays,lraysol@bbb.org,Female,142.159.239.176,01/12/2025,69,3416,13674,High CLV Customers
+887,Staffard,Crewther,screwtherom@last.fm,Male,73.57.79.74,21/07/2025,29,791,14707,Churn Risk
+888,Holmes,Moxted,hmoxtedon@simplemachines.org,Male,42.85.167.37,13/10/2025,51,11527,19703,High CLV Customers
+889,Garek,Chesshire,gchesshireoo@upenn.edu,Male,229.147.92.217,15/11/2025,38,5848,7218,Churn Risk
+890,Carleton,Barrowcliff,cbarrowcliffop@paginegialle.it,Male,84.163.129.232,11/10/2025,76,10438,2534,New Signups (Last 30 Days)
+891,Nestor,Kentwell,nkentwelloq@nhs.uk,Male,0.58.83.186,10/09/2025,29,1022,8227,Churn Risk
+892,Janela,Bawden,jbawdenor@weibo.com,Female,87.166.161.51,16/05/2025,22,2201,18916,High CLV Customers
+893,Davida,Ketton,dkettonos@omniture.com,Female,5.15.171.43,13/01/2025,79,12849,19866,High CLV Customers
+894,Kat,Hamblett,khamblettot@geocities.com,Female,49.156.42.185,24/12/2024,51,19052,734,Inactive > 90 Days
+895,Marcelo,Rebillard,mrebillardou@usgs.gov,Male,241.168.95.51,02/01/2025,27,1731,2659,Churn Risk
+896,Marilin,Joisce,mjoisceov@constantcontact.com,Female,211.217.190.122,29/05/2025,78,7092,12698,New Signups (Last 30 Days)
+897,Gilles,Clackson,gclacksonow@dailymail.co.uk,Male,232.201.95.58,16/09/2025,32,282,16876,Churn Risk
+898,Brittany,Pirt,bpirtox@bizjournals.com,Female,167.0.255.82,20/12/2024,78,9248,2849,New Signups (Last 30 Days)
+899,Raimondo,Pregel,rpregeloy@sphinn.com,Male,219.74.41.253,05/10/2025,28,4010,11378,High CLV Customers
+900,Janessa,Shipperbottom,jshipperbottomoz@hc360.com,Female,146.56.145.90,15/01/2025,60,16398,4353,Churn Risk
+901,Alayne,Selwin,aselwinp0@de.vu,Agender,73.112.160.52,29/03/2025,52,12083,12477,Inactive > 90 Days
+902,Kayley,Woodhall,kwoodhallp1@google.nl,Female,156.50.77.208,12/09/2025,20,19422,12420,Churn Risk
+903,Valli,Sporgeon,vsporgeonp2@over-blog.com,Female,42.43.115.17,06/04/2025,51,557,3120,New Signups (Last 30 Days)
+904,Valene,Woollhead,vwoollheadp3@mediafire.com,Female,203.3.113.123,08/11/2025,67,18153,18189,Inactive > 90 Days
+905,Baxy,Mattisson,bmattissonp4@unc.edu,Male,195.202.243.211,15/03/2025,19,15250,17366,Inactive > 90 Days
+906,Janey,Venard,jvenardp5@aol.com,Female,149.145.50.164,10/05/2025,26,5451,9677,Inactive > 90 Days
+907,Antonietta,Gough,agoughp6@columbia.edu,Female,138.163.25.97,05/11/2025,30,19982,6760,High CLV Customers
+908,Dame,Brotherton,dbrothertonp7@paypal.com,Male,41.43.223.159,12/08/2025,38,15668,15153,Churn Risk
+909,Morris,Leek,mleekp8@princeton.edu,Male,180.30.91.8,17/03/2025,37,1231,16978,Churn Risk
+910,Courtenay,Grisbrook,cgrisbrookp9@mit.edu,Female,245.214.220.131,28/01/2025,48,3543,3421,Churn Risk
+911,Ethelyn,Schruyers,eschruyerspa@usgs.gov,Female,10.182.250.195,24/12/2024,58,10718,19440,Churn Risk
+912,Judie,Ventura,jventurapb@auda.org.au,Female,70.181.104.26,07/12/2025,39,15812,2073,Inactive > 90 Days
+913,Ossie,Oxford,ooxfordpc@sohu.com,Male,102.75.119.140,04/05/2025,55,161,18041,New Signups (Last 30 Days)
+914,Winnifred,Dorian,wdorianpd@dmoz.org,Female,170.131.158.30,03/10/2025,70,164,15095,Inactive > 90 Days
+915,Manolo,Heliar,mheliarpe@printfriendly.com,Male,126.199.24.70,15/01/2025,61,10711,5082,Inactive > 90 Days
+916,Bayard,Cale,bcalepf@discovery.com,Male,220.154.64.94,20/06/2025,22,2609,16824,Inactive > 90 Days
+917,Sherline,Bernth,sbernthpg@icq.com,Female,244.184.187.163,14/01/2025,71,15074,18372,New Signups (Last 30 Days)
+918,Hillie,Bowhay,hbowhayph@dion.ne.jp,Male,151.202.231.0,19/01/2025,31,13136,17458,Churn Risk
+919,Wilbert,Hepher,whepherpi@hp.com,Male,175.54.8.191,06/09/2025,20,405,5173,Churn Risk
+920,Riobard,Pinsent,rpinsentpj@g.co,Agender,48.77.238.89,23/08/2025,51,1846,5345,Inactive > 90 Days
+921,Ottilie,Larkworthy,olarkworthypk@soundcloud.com,Female,241.0.4.55,28/04/2025,19,6212,18022,Churn Risk
+922,Woodrow,Kitchenham,wkitchenhampl@vimeo.com,Male,151.136.95.176,06/12/2025,63,8976,2686,Inactive > 90 Days
+923,Austen,Romi,aromipm@noaa.gov,Male,160.86.19.11,20/08/2025,48,6688,17946,High CLV Customers
+924,Yale,McConville,ymcconvillepn@nyu.edu,Male,177.250.130.116,18/03/2025,61,19278,9237,High CLV Customers
+925,Ag,Bittlestone,abittlestonepo@privacy.gov.au,Female,110.196.151.218,29/01/2025,45,13174,15110,Inactive > 90 Days
+926,Des,McLeese,dmcleesepp@yelp.com,Male,79.243.248.192,12/01/2025,32,4661,8343,High CLV Customers
+927,Pate,Reddan,preddanpq@ucoz.ru,Male,43.194.113.46,27/06/2025,60,14847,324,Inactive > 90 Days
+928,Windham,O'Hickey,wohickeypr@cargocollective.com,Male,127.247.21.16,01/04/2025,25,2108,11099,Churn Risk
+929,Kendrick,Furlonge,kfurlongeps@uiuc.edu,Male,62.207.21.51,25/03/2025,38,17035,17423,Inactive > 90 Days
+930,Benny,Bowerbank,bbowerbankpt@jigsy.com,Female,221.244.71.45,27/11/2025,51,16580,393,Churn Risk
+931,Garrik,Demann,gdemannpu@statcounter.com,Male,142.79.41.226,04/10/2025,79,10755,11499,New Signups (Last 30 Days)
+932,Martelle,Alesi,malesipv@pcworld.com,Female,102.116.147.1,18/02/2025,26,19487,2155,New Signups (Last 30 Days)
+933,Ophelie,Cockrem,ocockrempw@imdb.com,Agender,247.175.203.181,03/04/2025,29,16395,397,Inactive > 90 Days
+934,Chloris,Sullivan,csullivanpx@walmart.com,Female,196.32.95.81,22/02/2025,67,1108,11099,High CLV Customers
+935,Chrystal,Counihan,ccounihanpy@dell.com,Female,146.82.159.12,08/07/2025,80,15779,3712,New Signups (Last 30 Days)
+936,Clarissa,Garretson,cgarretsonpz@upenn.edu,Female,159.69.64.230,15/08/2025,28,9161,3615,Inactive > 90 Days
+937,Taryn,Cammomile,tcammomileq0@nifty.com,Female,155.34.105.154,24/11/2025,41,4462,2591,Inactive > 90 Days
+938,Lizbeth,Heberden,lheberdenq1@washingtonpost.com,Female,171.129.242.103,30/12/2024,79,15250,6368,Churn Risk
+939,Romain,Adelsberg,radelsbergq2@npr.org,Male,81.108.108.10,15/01/2025,43,10015,18304,High CLV Customers
+940,Andriette,Thibodeaux,athibodeauxq3@gizmodo.com,Female,9.232.168.15,26/12/2024,26,6526,8150,New Signups (Last 30 Days)
+941,Lutero,Nortcliffe,lnortcliffeq4@ovh.net,Male,171.58.180.45,11/05/2025,24,1798,16771,High CLV Customers
+942,Ken,Reeves,kreevesq5@zimbio.com,Male,96.20.90.152,27/05/2025,28,17176,9963,Inactive > 90 Days
+943,Dulcy,Guarin,dguarinq6@devhub.com,Polygender,0.192.243.241,18/08/2025,32,9474,12696,High CLV Customers
+944,Shanan,Fitchell,sfitchellq7@comcast.net,Male,77.48.250.109,26/06/2025,68,15302,16743,High CLV Customers
+945,Rozamond,Ottiwill,rottiwillq8@liveinternet.ru,Female,242.146.166.27,12/08/2025,79,18839,14302,High CLV Customers
+946,Obie,Gascone,ogasconeq9@sakura.ne.jp,Male,193.91.130.34,08/03/2025,48,17473,2817,Inactive > 90 Days
+947,Bruno,Brugmann,bbrugmannqa@nbcnews.com,Male,56.110.59.71,16/09/2025,62,9804,14063,Churn Risk
+948,Carny,Rosewarne,crosewarneqb@shutterfly.com,Male,182.23.5.148,01/02/2025,69,9835,11556,High CLV Customers
+949,Belinda,Pavy,bpavyqc@friendfeed.com,Female,52.155.214.239,24/10/2025,55,5738,16055,Churn Risk
+950,Gabe,Keoghan,gkeoghanqd@mapy.cz,Male,116.82.172.157,05/08/2025,26,14783,5631,New Signups (Last 30 Days)
+951,Andros,Physick,aphysickqe@wired.com,Male,219.128.32.48,07/05/2025,50,12691,16839,High CLV Customers
+952,Colleen,Highman,chighmanqf@liveinternet.ru,Female,11.174.7.225,24/04/2025,57,4119,17509,Inactive > 90 Days
+953,Adina,Attril,aattrilqg@dyndns.org,Female,130.31.122.231,09/09/2025,19,13831,12859,Inactive > 90 Days
+954,Feliks,Websdale,fwebsdaleqh@facebook.com,Male,217.199.120.198,01/08/2025,45,9593,2885,New Signups (Last 30 Days)
+955,Guido,Boughtwood,gboughtwoodqi@bbb.org,Male,46.94.140.156,22/03/2025,24,7521,1330,Inactive > 90 Days
+956,Rouvin,Soutar,rsoutarqj@shareasale.com,Male,230.201.120.225,05/03/2025,79,13396,18743,Inactive > 90 Days
+957,Prent,Fawson,pfawsonqk@reverbnation.com,Male,61.164.213.45,01/05/2025,31,9300,13443,High CLV Customers
+958,Jelene,Fidelus,jfidelusql@shinystat.com,Female,1.97.236.73,20/03/2025,79,12431,9585,High CLV Customers
+959,Lamar,Sidle,lsidleqm@accuweather.com,Male,110.85.52.93,22/02/2025,59,16638,12508,Churn Risk
+960,Marsh,Mandres,mmandresqn@cbslocal.com,Male,192.246.155.88,25/01/2025,36,7512,10820,New Signups (Last 30 Days)
+961,Kellby,Elsie,kelsieqo@noaa.gov,Male,14.147.250.154,22/09/2025,24,1434,15879,New Signups (Last 30 Days)
+962,Leandra,Pughe,lpugheqp@free.fr,Female,93.64.38.40,10/09/2025,65,818,12049,Churn Risk
+963,Priscilla,St. Clair,pstclairqq@cocolog-nifty.com,Female,111.156.47.231,03/11/2025,38,938,1393,Churn Risk
+964,Valentia,Brockherst,vbrockherstqr@answers.com,Female,224.102.137.252,19/04/2025,80,14680,13358,New Signups (Last 30 Days)
+965,Reagan,Scedall,rscedallqs@nasa.gov,Male,196.95.246.187,13/09/2025,39,10973,10304,Inactive > 90 Days
+966,Libbie,Wayon,lwayonqt@studiopress.com,Female,22.6.210.155,10/05/2025,77,5933,12294,High CLV Customers
+967,Minny,Jowitt,mjowittqu@chicagotribune.com,Female,143.90.198.141,28/02/2025,50,266,11385,New Signups (Last 30 Days)
+968,Tyson,Smitten,tsmittenqv@creativecommons.org,Male,173.38.128.65,20/02/2025,40,15136,7815,Churn Risk
+969,Tristam,Ronisch,tronischqw@mozilla.org,Male,87.118.166.131,22/08/2025,26,16654,5571,Inactive > 90 Days
+970,Alane,Lott,alottqx@qq.com,Female,214.99.234.158,26/11/2025,68,18895,4473,New Signups (Last 30 Days)
+971,Afton,Siddens,asiddensqy@paypal.com,Female,216.10.63.84,08/07/2025,59,4689,5888,Churn Risk
+972,Quill,Devany,qdevanyqz@thetimes.co.uk,Male,244.182.124.62,28/12/2024,68,4005,14323,Inactive > 90 Days
+973,Berry,Iddens,biddensr0@squidoo.com,Female,225.181.107.20,21/08/2025,79,6872,2956,Churn Risk
+974,Alisander,Stegers,astegersr1@cisco.com,Male,107.52.137.208,20/01/2025,30,3791,4588,New Signups (Last 30 Days)
+975,Umeko,Boxill,uboxillr2@weibo.com,Female,116.49.142.23,11/04/2025,66,3901,4519,Inactive > 90 Days
+976,Carena,Kitteman,ckittemanr3@bloglines.com,Female,35.113.147.9,06/04/2025,77,18167,3992,High CLV Customers
+977,Abe,Imm,aimmr4@springer.com,Male,163.145.197.233,25/09/2025,37,13799,9394,New Signups (Last 30 Days)
+978,Josias,Curless,jcurlessr5@newyorker.com,Male,223.110.132.188,09/12/2024,22,6514,12793,Inactive > 90 Days
+979,Arabel,Lafford,alaffordr6@youku.com,Female,71.124.76.1,01/12/2025,25,11726,8860,High CLV Customers
+980,Cordelie,McCarroll,cmccarrollr7@dyndns.org,Female,46.201.247.239,26/07/2025,33,7500,853,High CLV Customers
+981,Archambault,Eagles,aeaglesr8@xrea.com,Male,23.252.234.243,16/08/2025,75,13521,3580,Churn Risk
+982,Cinda,Ades,cadesr9@google.com,Female,21.181.58.156,24/03/2025,69,717,16114,Inactive > 90 Days
+983,Mellie,Kingsley,mkingsleyra@example.com,Female,220.99.145.0,21/08/2025,69,2988,3597,High CLV Customers
+984,Wilhelmine,Baudon,wbaudonrb@ezinearticles.com,Genderfluid,192.209.224.117,10/08/2025,30,9967,9690,Churn Risk
+985,Amalle,Dauney,adauneyrc@rakuten.co.jp,Female,22.57.14.125,23/05/2025,36,6794,4952,Churn Risk
+986,Mathias,Limmer,mlimmerrd@cloudflare.com,Male,133.123.180.191,25/06/2025,79,11978,12649,Churn Risk
+987,Raoul,Stear,rstearre@theguardian.com,Male,163.138.192.17,04/04/2025,40,10689,3903,New Signups (Last 30 Days)
+988,Raquela,Jiruca,rjirucarf@is.gd,Female,74.228.146.150,13/11/2025,71,2183,9507,New Signups (Last 30 Days)
+989,Almeta,Croyser,acroyserrg@plala.or.jp,Female,130.181.11.171,19/01/2025,27,6489,5715,Churn Risk
+990,Farra,Fischer,ffischerrh@dailymotion.com,Female,32.72.161.134,05/03/2025,36,5980,17738,Churn Risk
+991,Jozef,Smead,jsmeadri@printfriendly.com,Male,123.159.53.51,30/05/2025,57,8630,16658,High CLV Customers
+992,Florencia,Cumberpatch,fcumberpatchrj@umn.edu,Female,167.62.76.38,18/08/2025,24,3797,6895,New Signups (Last 30 Days)
+993,Lucien,Tatterton,ltattertonrk@chronoengine.com,Male,170.64.190.101,09/07/2025,41,8677,14589,New Signups (Last 30 Days)
+994,Sidonnie,Gilfether,sgilfetherrl@tuttocitta.it,Female,119.235.210.231,14/10/2025,34,3463,15373,High CLV Customers
+995,Minni,Core,mcorerm@cnet.com,Female,35.55.153.1,20/02/2025,75,4165,12197,Inactive > 90 Days
+996,Dorene,Burgne,dburgnern@ihg.com,Genderfluid,206.158.230.151,06/04/2025,53,15422,18380,Inactive > 90 Days
+997,Lonnard,Cudby,lcudbyro@japanpost.jp,Male,219.86.225.3,28/05/2025,79,15490,2278,Churn Risk
+998,Hayley,Falvey,hfalveyrp@stumbleupon.com,Female,127.81.118.43,29/03/2025,77,10783,14910,New Signups (Last 30 Days)
+999,Sayres,Tarn,starnrq@cafepress.com,Male,120.40.89.213,29/12/2024,60,8491,12001,Churn Risk
+1000,Den,Traut,dtrautrr@creativecommons.org,Male,220.90.130.212,30/11/2025,49,17913,11548,Churn Risk
