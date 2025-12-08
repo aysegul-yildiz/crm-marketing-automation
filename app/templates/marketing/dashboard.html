@@ -1,5 +1,602 @@
-{% extends "base.html" %}
-{% block content %}
-<h1>Marketing Automation Dashboard</h1>
+{% extends "base.html" %} {% block content %}
+
+<style>
+  :root {
+    --bg: #f4f6fb;
+    --card-bg: #ffffff;
+    --primary: #6366f1;
+    --primary-soft: #eef2ff;
+    --accent: #10b981;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --border-subtle: #e5e7eb;
+    --radius-lg: 18px;
+    --shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  body {
+    background: var(--bg);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+  }
+
+  .crm-dashboard {
+    display: flex;
+    gap: 24px;
+    padding: 16px 24px 24px;
+    box-sizing: border-box;
+  }
+
+  /* Sidebar */
+  .crm-sidebar {
+    width: 220px;
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .crm-sidebar-logo {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+
+  .crm-sidebar-section-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .crm-sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .crm-sidebar-menu li a {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .crm-sidebar-menu li a.is-active,
+  .crm-sidebar-menu li a:hover {
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  .crm-sidebar-cta {
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .crm-sidebar-cta strong {
+    color: var(--text-main);
+  }
+
+  .crm-sidebar-cta-btn {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+
+  /* Main area */
+  .crm-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .crm-header-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .crm-header-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  .crm-header-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .btn-pill {
+    border-radius: 999px;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  .btn-pill-primary {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .btn-pill-outline {
+    background: #fff;
+    color: var(--primary);
+    border: 1px solid var(--primary-soft);
+  }
+
+  /* KPI cards */
+  .crm-kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .crm-kpi-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+    padding: 10px 14px;
+  }
+
+  .crm-kpi-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+
+  .crm-kpi-value {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  .crm-kpi-caption {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  /* Grid for cards below KPIs */
+  .crm-grid {
+    display: grid;
+    grid-template-columns: 2.2fr 1.1fr;
+    gap: 16px;
+  }
+
+  .crm-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    padding: 12px 14px;
+  }
+
+  .crm-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+
+  .crm-card-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  .crm-card-subtitle {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  .crm-tabs {
+    display: inline-flex;
+    gap: 4px;
+    background: #f3f4ff;
+    border-radius: 999px;
+    padding: 2px;
+  }
+
+  .crm-tab {
+    border-radius: 999px;
+    border: none;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    background: transparent;
+    color: var(--text-muted);
+  }
+
+  .crm-tab.is-active {
+    background: #fff;
+    color: var(--primary);
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+  }
+
+  .crm-chart-wrap {
+    margin-top: 6px;
+  }
+
+  .analytics-chart {
+    height: 180px !important;
+  }
+
+  .mini-chart {
+    height: 150px !important;
+  }
+
+  /* Bottom row: campaigns & activity */
+  .crm-bottom-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1.4fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  table.crm-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+  }
+
+  table.crm-table thead {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+
+  table.crm-table thead th {
+    padding: 4px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    text-align: left;
+  }
+
+  table.crm-table tbody td {
+    padding: 4px 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  table.crm-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .activity-item {
+    font-size: 0.8rem;
+    color: var(--text-main);
+    margin-bottom: 6px;
+  }
+
+  .activity-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 6px;
+  }
+
+  .small-link {
+    font-size: 0.78rem;
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .small-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive-ish */
+  @media (max-width: 992px) {
+    .crm-dashboard {
+      flex-direction: column;
+    }
+    .crm-sidebar {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .crm-grid {
+      grid-template-columns: 1fr;
+    }
+    .crm-bottom-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="crm-dashboard">
+  <!-- Sidebar -->
+  <aside class="crm-sidebar">
+    <div>
+      <div class="crm-sidebar-logo">CRM Marketing</div>
+      <div class="crm-sidebar-section-title">Navigation</div>
+      <ul class="crm-sidebar-menu">
+        <li><a href="#" class="is-active">Overview</a></li>
+        <li><a href="#">Segments</a></li>
+        <li><a href="#">Campaigns</a></li>
+        <li><a href="#">Workflows</a></li>
+        <li><a href="#">Analytics</a></li>
+      </ul>
+    </div>
+
+    <div class="crm-sidebar-cta">
+      <div>Ready to launch a new flow?</div>
+      <a href="#" class="crm-sidebar-cta-btn">New Campaign</a>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="crm-main">
+    <!-- Header card -->
+    <section class="crm-header-card">
+      <div>
+        <div class="crm-header-title">Marketing Overview</div>
+        <div class="crm-header-subtitle">
+          {% if username %}Signed in as <strong>{{ username }}</strong>.{% endif
+          %} Snapshot of segments, campaigns and performance.
+        </div>
+      </div>
+      <div class="d-flex" style="display: flex; gap: 8px">
+        <button class="btn-pill btn-pill-outline">Create Segment</button>
+        <button class="btn-pill btn-pill-primary">New Campaign</button>
+      </div>
+    </section>
+
+    <!-- KPI row -->
+    <section class="crm-kpi-row">
+      <div class="crm-kpi-card">
+        <div class="crm-kpi-label">Total Customers</div>
+        <div class="crm-kpi-value">{{ kpis.total_customers }}</div>
+        <div class="crm-kpi-caption">All reachable profiles</div>
+      </div>
+      <div class="crm-kpi-card">
+        <div class="crm-kpi-label">Segments</div>
+        <div class="crm-kpi-value">{{ kpis.total_segments }}</div>
+        <div class="crm-kpi-caption">Audience groupings</div>
+      </div>
+      <div class="crm-kpi-card">
+        <div class="crm-kpi-label">Active Campaigns</div>
+        <div class="crm-kpi-value">{{ kpis.active_campaigns }}</div>
+        <div class="crm-kpi-caption">Currently running flows</div>
+      </div>
+      <div class="crm-kpi-card">
+        <div class="crm-kpi-label">Marketing ROI</div>
+        <div class="crm-kpi-value">{{ kpis.roi }}%</div>
+        <div class="crm-kpi-caption">Attributed to campaigns</div>
+      </div>
+    </section>
+
+    <!-- Main grid: big analytics card + audience breakdown -->
+    <section class="crm-grid">
+      <!-- Big analytics card -->
+      <div class="crm-card">
+        <div class="crm-card-header">
+          <div>
+            <div class="crm-card-title">Campaign Performance</div>
+            <div class="crm-card-subtitle">High-level engagement metrics.</div>
+          </div>
+          <div class="crm-tabs" id="analyticsTabs">
+            <button class="crm-tab is-active" data-chart-target="chart-funnel">
+              Funnel
+            </button>
+            <button class="crm-tab" data-chart-target="chart-revenue">
+              Revenue
+            </button>
+          </div>
+        </div>
+        <div class="crm-chart-wrap">
+          <canvas id="chart-funnel" class="analytics-chart"></canvas>
+          <canvas id="chart-revenue" class="analytics-chart d-none"></canvas>
+        </div>
+        <div
+          style="
+            margin-top: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <small class="crm-card-subtitle"
+            >Data from active + recent campaigns.</small
+          >
+          <a href="#" class="small-link">Open detailed analytics →</a>
+        </div>
+      </div>
+
+      <!-- Audience card -->
+      <div class="crm-card">
+        <div class="crm-card-header">
+          <div>
+            <div class="crm-card-title">Audience Breakdown</div>
+            <div class="crm-card-subtitle">Top segments by customer count.</div>
+          </div>
+        </div>
+        <div class="crm-chart-wrap">
+          <canvas id="segmentsChart" class="mini-chart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom row: recent campaigns + activity -->
+    <section class="crm-bottom-grid">
+      <!-- Recent campaigns -->
+      <div class="crm-card">
+        <div class="crm-card-header">
+          <div>
+            <div class="crm-card-title">Recent Campaigns</div>
+            <div class="crm-card-subtitle">Last few campaigns with status.</div>
+          </div>
+          <a href="#" class="small-link">See all →</a>
+        </div>
+        <table class="crm-table">
+          <thead>
+            <tr>
+              <th>Campaign</th>
+              <th class="text-right">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for c in campaigns[:5] %}
+            <tr>
+              <td>{{ c.name }}</td>
+              <td class="text-right">{{ c.status }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Recent activity -->
+      <div class="crm-card">
+        <div class="crm-card-header">
+          <div>
+            <div class="crm-card-title">Recent Activity</div>
+            <div class="crm-card-subtitle">Latest automated events.</div>
+          </div>
+        </div>
+        <ul class="activity-list">
+          {% for item in recent_activity %}
+          <li class="activity-item">
+            <span class="activity-dot"></span>{{ item }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Data from backend
+  const FUNNEL_LABELS = {{ conversion_funnel.labels | tojson }};
+  const FUNNEL_VALUES = {{ conversion_funnel["values"] | tojson }};
+  const REVENUE_LABELS = {{ revenue_over_time.labels | tojson }};
+  const REVENUE_VALUES = {{ revenue_over_time["values"] | tojson }};
+  const SEGMENT_NAMES = {{ segment_names | tojson }};
+  const SEGMENT_COUNTS = {{ segment_counts | tojson }};
+
+  // Big analytics charts
+  const funnelCtx = document.getElementById('chart-funnel').getContext('2d');
+  const revenueCtx = document.getElementById('chart-revenue').getContext('2d');
+
+  const funnelChart = new Chart(funnelCtx, {
+    type: 'bar',
+    data: {
+      labels: FUNNEL_LABELS,
+      datasets: [{
+        label: 'Customers',
+        data: FUNNEL_VALUES,
+        backgroundColor: '#a5b4fc'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true } }
+    }
+  });
+
+  const revenueChart = new Chart(revenueCtx, {
+    type: 'line',
+    data: {
+      labels: REVENUE_LABELS,
+      datasets: [{
+        label: 'Revenue',
+        data: REVENUE_VALUES,
+        borderColor: '#6366f1',
+        backgroundColor: 'rgba(99,102,241,0.15)',
+        tension: 0.3,
+        fill: true
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true } }
+    }
+  });
+
+  // Audience chart
+  const segmentsCtx = document.getElementById('segmentsChart').getContext('2d');
+  const segmentsChart = new Chart(segmentsCtx, {
+    type: 'bar',
+    data: {
+      labels: SEGMENT_NAMES,
+      datasets: [{
+        label: 'Customers',
+        data: SEGMENT_COUNTS,
+        backgroundColor: '#22c55e'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true } }
+    }
+  });
+
+  // Tab switching
+  const tabButtons = document.querySelectorAll('#analyticsTabs .crm-tab');
+  const funnelCanvas = document.getElementById('chart-funnel');
+  const revenueCanvas = document.getElementById('chart-revenue');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      tabButtons.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      const target = btn.getAttribute('data-chart-target');
+      if (target === 'chart-funnel') {
+        funnelCanvas.classList.remove('d-none');
+        revenueCanvas.classList.add('d-none');
+      } else {
+        revenueCanvas.classList.remove('d-none');
+        funnelCanvas.classList.add('d-none');
+      }
+    });
+  });
+</script>
 
 {% endblock %}
