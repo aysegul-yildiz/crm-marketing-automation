@@ -1,7 +1,15 @@
-CREATE TABLE IF NOT EXISTS User (
+CREATE TABLE IF NOT EXISTS StaffUser (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
-    surname VARCHAR(50)  NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(20) NOT NULL DEFAULT 'MARKETER'
+);
+
+CREATE TABLE IF NOT EXISTS Customer (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    surname VARCHAR(50) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL
 );
 
@@ -27,11 +35,12 @@ CREATE TABLE IF NOT EXISTS listing_segmentation (
         ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS user_segmentation (
-    user_id INT,
+
+CREATE TABLE IF NOT EXISTS customer_segmentation (
+    customer_id INT,
     segmentation_id INT,
-    PRIMARY KEY(user_id, segmentation_id),
-    FOREIGN KEY(user_id) REFERENCES User(id)
+    PRIMARY KEY(customer_id, segmentation_id),
+    FOREIGN KEY(customer_id) REFERENCES Customer(id)
         ON DELETE CASCADE,
     FOREIGN KEY(segmentation_id) REFERENCES segmentation_group(id)
         ON DELETE CASCADE
@@ -77,36 +86,37 @@ CREATE TABLE workflow_step (
     CHECK(status IN ('PENDING', 'DONE', 'FAILED'))
 );
 
-CREATE TABLE user_event (
+CREATE TABLE customer_event (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT,
-    event_type VARCHAR(50), -- signup, purchase, page_view, abandoned_cart
+    customer_id INT,
+    event_type VARCHAR(50),
     event_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     metadata JSON,
-    FOREIGN KEY(user_id) REFERENCES User(id)
+    FOREIGN KEY(customer_id) REFERENCES Customer(id)
 );
 
 
 CREATE TABLE campaign_event (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT,
+    customer_id INT,
     campaign_id INT,
     step_id INT,
-    event_type VARCHAR(50), -- sent, opened, clicked, bounced, converted
+    event_type VARCHAR(50),
     event_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY(user_id) REFERENCES User(id),
+    FOREIGN KEY(customer_id) REFERENCES Customer(id),
     FOREIGN KEY(campaign_id) REFERENCES campaign(id),
     FOREIGN KEY(step_id) REFERENCES workflow_step(id)
 );
 
+
 CREATE TABLE conversion_event (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT,
+    customer_id INT,
     listing_id INT,
-    campaign_id INT, -- nullable if not campaign-driven
+    campaign_id INT,
     revenue FLOAT NOT NULL,
     occurred_at DATETIME NOT NULL,
     FOREIGN KEY (listing_id) REFERENCES listing(id),
     FOREIGN KEY (campaign_id) REFERENCES campaign(id),
-    FOREIGN KEY (user_id) REFERENCES User(id)
+    FOREIGN KEY (customer_id) REFERENCES Customer(id)
 );

@@ -1,5 +1,6 @@
 import sqlite3
-from app.models.user import User
+from app.models.CustomerModel import Customer
+
 
 DB_PATH = "crm.db"
 
@@ -16,7 +17,7 @@ def find_by_email(email: str):
     conn.close()
 
     if row:
-        return User(*row)
+        return Customer(*row)
     return None
 
 

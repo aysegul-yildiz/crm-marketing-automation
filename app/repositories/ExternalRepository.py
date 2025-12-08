@@ -2,7 +2,7 @@
 
 from typing import Optional
 from database import get_connection
-from app.models.UserModel import UserModel
+from app.models.CustomerModel import Customer
 
 class ExternalRepository:
 
@@ -23,7 +23,7 @@ class ExternalRepository:
         conn.close()
     
     @staticmethod
-    def getUserByID(id: int) -> UserModel:
+    def getUserByID(id: int) -> Customer:
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -36,7 +36,7 @@ class ExternalRepository:
         if not row:
             return None
 
-        return UserModel(
+        return Customer(
             id = row["id"],
             name = row["name"],
             email = row["email"]

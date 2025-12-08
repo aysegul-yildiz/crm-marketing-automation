@@ -15,3 +15,7 @@ def get_connection():
     except Error as e:
         print(f"MySQL connection error: {e}")
         raise
+
+def get_db():
+    
+    return get_connection()
