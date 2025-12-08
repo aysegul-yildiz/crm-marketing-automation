@@ -88,6 +88,18 @@ CREATE TABLE campaign_event (
     FOREIGN KEY(step_id) REFERENCES workflow_step(id)
 );
 
+CREATE TABLE conversion_event (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    listing_id INT,
+    campaign_id INT, -- nullable if not campaign-driven
+    revenue FLOAT NOT NULL,
+    occurred_at DATETIME NOT NULL,
+    FOREIGN KEY (listing_id) REFERENCES listing(id),
+    FOREIGN KEY (campaign_id) REFERENCES campaign(id),
+    FOREIGN KEY (user_id) REFERENCES User(id)
+);
+
 CREATE TABLE segmentation_rule (
     id INT PRIMARY KEY AUTO_INCREMENT,
     segmentation_id INT,

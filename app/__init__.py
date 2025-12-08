@@ -1,13 +1,16 @@
 import os
 from flask import Flask, redirect, url_for, session
+from dotenv import load_dotenv
 
 from .auth.routes import auth_bp
 from .marketing.routes import marketing_bp
 
-
 def create_app():
+    # Load environment variables
+    load_dotenv()
+
     app = Flask(__name__)
-    app.secret_key = os.environ.get("SECRET_KEY", "dev-change-me")
+    app.secret_key = os.getenv("SECRET_KEY", "dev-change-me")
 
     # register modules
     app.register_blueprint(auth_bp)
@@ -20,4 +23,3 @@ def create_app():
         return redirect(url_for("auth.login"))
 
     return app
-
