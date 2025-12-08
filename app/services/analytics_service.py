@@ -1,0 +1,255 @@
+# app/services/analytics_service.py
+
+from pathlib import Path
+from typing import List, Dict
+import pandas as pd
+
+# -------------------------------------------------------------------
+# Always load CSVs from:  app/data/
+# -------------------------------------------------------------------
+BASE_DIR = Path(__file__).resolve().parents[1]     # -> app/
+DATA_DIR = BASE_DIR / "data"                       # -> app/data/
+
+
+def _load_csv(filename: str) -> pd.DataFrame:
+    """
+    Loads a mock CSV from app/data with safe error messages.
+    """
+    path = DATA_DIR / filename
+    if not path.exists():
+        raise FileNotFoundError(f"[analytics_service] CSV not found: {path}")
+    return pd.read_csv(path)
+
+
+# ---- CSV loaders --------------------------------------------------- #
+
+def load_customers() -> pd.DataFrame:
+    return _load_csv("customer_data.csv")
+
+
+def load_campaigns() -> pd.DataFrame:
+    return _load_csv("campaign_data.csv")
+
+
+def load_campaign_events() -> pd.DataFrame:
+    return _load_csv("campaign_event_data.csv")
+
+
+def load_conversion_events() -> pd.DataFrame:
+    return _load_csv("conversion_event_data.csv")
+
+
+# ---- High-level KPIs ----------------------------------------------- #
+
+def get_kpis() -> Dict:
+    """
+    Returns top-level KPIs for the dashboard:
+      - total_customers
+      - total_segments
+      - active_campaigns
+      - roi (very simple mock)
+    """
+    customers = load_customers()
+    campaigns = load_campaigns()
+    conversions = load_conversion_events()
+
+    # total customers
+    total_customers = len(customers)
+
+    # number of segments
+    seg_col = "segment" if "segment" in customers.columns else None
+    total_segments = customers[seg_col].nunique() if seg_col else 0
+
+    # active campaigns
+    if "status" in campaigns.columns:
+        active_campaigns = int((campaigns["status"] == "Active").sum())
+    else:
+        active_campaigns = 0
+
+    # ROI mock = total revenue / total budget (if exists)
+    total_revenue = conversions["revenue"].sum() if "revenue" in conversions.columns else 0.0
+    if "budget" in campaigns.columns:
+        total_budget = campaigns["budget"].sum()
+        roi = (total_revenue / total_budget * 100) if total_budget > 0 else 0.0
+    else:
+        roi = 0.0
+
+    return {
+        "total_customers": int(total_customers),
+        "total_segments": int(total_segments),
+        "active_campaigns": int(active_campaigns),
+        "roi": round(float(roi), 1),
+    }
+
+
+# ---- Segment distribution ------------------------------------------ #
+
+def get_segment_distribution() -> Dict:
+    """
+    Returns names and counts per segment for the 'Audience Breakdown' chart.
+    """
+    customers = load_customers()
+    seg_col = None
+    if "segment" in customers.columns:
+        seg_col = "segment"
+    elif "Segment" in customers.columns:
+        seg_col = "Segment"
+
+    if not seg_col:
+        return {"names": [], "counts": []}
+
+    vc = customers[seg_col].value_counts()
+
+    return {
+        "names": vc.index.tolist(),
+        "counts": [int(v) for v in vc.values],
+    }
+
+
+# ---- Conversion funnel --------------------------------------------- #
+
+def get_conversion_funnel() -> Dict:
+    """
+    Overall funnel totals across all campaigns.
+    Expects campaign_event_data.csv to have column 'event_type'
+    with values like: delivered, opened, clicked, converted.
+    """
+    events = load_campaign_events()
+    if "event_type" not in events.columns:
+        return {"labels": [], "values": []}
+
+    stages = ["delivered", "opened", "clicked", "converted"]
+    counts = [
+        int((events["event_type"] == stage).sum())
+        for stage in stages
+    ]
+
+    return {"labels": stages, "values": counts}
+
+
+# ---- Revenue over time --------------------------------------------- #
+
+def get_revenue_over_time() -> Dict:
+    """
+    Revenue aggregated by conversion_date (string or date).
+    Expects conversion_event_data.csv to have 'conversion_date' and 'revenue'.
+    """
+    conversions = load_conversion_events()
+    if "conversion_date" not in conversions.columns or "revenue" not in conversions.columns:
+        return {"labels": [], "values": []}
+
+    # Parse to datetime if possible
+    conversions["conversion_date"] = pd.to_datetime(
+        conversions["conversion_date"], errors="coerce"
+    )
+    series = (
+        conversions.dropna(subset=["conversion_date"])
+        .groupby(conversions["conversion_date"].dt.date)["revenue"]
+        .sum()
+        .sort_index()
+    )
+
+    return {
+        "labels": [str(d) for d in series.index],
+        "values": [float(v) for v in series.values],
+    }
+
+
+# ---- Campaign effectiveness ---------------------------------------- #
+
+def get_campaign_effectiveness() -> List[Dict]:
+    """
+    Returns one row per campaign with:
+      - sent (delivered)
+      - opened
+      - clicked
+      - converted
+      - open_rate, click_rate, conversion_rate  (as %)
+      - revenue  (sum of conversion_event.revenue)
+    """
+    campaigns = load_campaigns()
+    events = load_campaign_events()
+    conversions = load_conversion_events()
+
+    # If we don't have minimal structure, bail out gracefully
+    if "id" not in campaigns.columns:
+        return []
+
+    # Group events by campaign_id & event_type
+    if {"campaign_id", "event_type"}.issubset(events.columns):
+        grouped = (
+            events.groupby(["campaign_id", "event_type"])["id"]
+            .count()
+            .unstack(fill_value=0)
+        )
+    else:
+        grouped = pd.DataFrame()
+
+    # Ensure required columns exist
+    for col in ["delivered", "opened", "clicked", "converted"]:
+        if col not in grouped.columns:
+            grouped[col] = 0
+
+    grouped = grouped.rename(
+        columns={
+            "delivered": "sent",
+            "opened": "opened",
+            "clicked": "clicked",
+            "converted": "converted",
+        }
+    )
+
+    # Revenue per campaign
+    if {"campaign_id", "revenue"}.issubset(conversions.columns):
+        revenue_by_campaign = (
+            conversions.groupby("campaign_id")["revenue"]
+            .sum()
+            .rename("revenue")
+        )
+    else:
+        revenue_by_campaign = pd.Series(dtype=float, name="revenue")
+
+    # Merge everything with the campaigns table
+    df = campaigns.set_index("id")
+    if not grouped.empty:
+        df = df.join(grouped, how="left")
+    if not revenue_by_campaign.empty:
+        df = df.join(revenue_by_campaign, how="left")
+
+    # Fill missing numeric columns
+    for col in ["sent", "opened", "clicked", "converted", "revenue"]:
+        if col not in df.columns:
+            df[col] = 0
+        df[col] = df[col].fillna(0)
+
+    # Compute rates (avoid division by zero)
+    sent = df["sent"].replace(0, pd.NA)
+    df["open_rate"] = (df["opened"] / sent * 100).fillna(0)
+    df["click_rate"] = (df["clicked"] / sent * 100).fillna(0)
+    df["conversion_rate"] = (df["converted"] / sent * 100).fillna(0)
+
+    # Round for display
+    df["open_rate"] = df["open_rate"].round(1)
+    df["click_rate"] = df["click_rate"].round(1)
+    df["conversion_rate"] = df["conversion_rate"].round(1)
+    df["revenue"] = df["revenue"].round(2)
+
+    # Build list of dicts for the template
+    results: List[Dict] = []
+    for _, row in df.reset_index().iterrows():
+        results.append(
+            {
+                "id": int(row["id"]),
+                "name": row.get("name", ""),
+                "objective": row.get("objective", ""),
+                "segment": row.get("segment", ""),
+                "status": row.get("status", ""),
+                "sent": int(row["sent"]),
+                "open_rate": float(row["open_rate"]),
+                "click_rate": float(row["click_rate"]),
+                "conversion_rate": float(row["conversion_rate"]),
+                "revenue": float(row["revenue"]),
+            }
+        )
+
+    return results

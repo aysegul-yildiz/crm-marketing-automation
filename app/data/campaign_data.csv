@@ -1,1001 +1,1001 @@
-id,segment,name,objective,status,start_date,end_date
-1,Churn Risk,Loyalty Reminder,special day,scheduled,21/03/2024,10/22/2025
-2,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,completed,25/01/2025,8/10/2024
-3,New Signups (Last 30 Days),Welcome Series - Step 2,winback,scheduled,18/01/2024,11/6/2023
-4,New Signups (Last 30 Days),New Signup Nurture,special day,active,04/12/2023,1/25/2024
-5,High CLV Customers,VIP Rewards,seasonal,active,27/04/2024,8/13/2025
-6,Inactive > 90 Days,Inactivity Reactivation Flow,winback,active,22/06/2023,7/30/2024
-7,Inactive > 90 Days,Come-Back Offer,seasonal,active,11/08/2025,2/9/2024
-8,High CLV Customers,Premium Features Upsell,loyalty,scheduled,05/03/2023,3/1/2024
-9,High CLV Customers,VIP Rewards,loyalty,completed,09/05/2025,11/15/2023
-10,High CLV Customers,Premium Features Upsell,upsell,active,31/08/2024,9/15/2024
-11,Inactive > 90 Days,Deep Winback,welcome,scheduled,06/07/2025,8/3/2024
-12,Inactive > 90 Days,Come-Back Offer,upsell,completed,02/10/2024,6/20/2025
-13,Inactive > 90 Days,Come-Back Offer,winback,active,24/01/2024,10/14/2025
-14,High CLV Customers,Premium Features Upsell,welcome,completed,21/07/2025,7/12/2025
-15,Churn Risk,We Miss You,special day,completed,16/08/2025,1/15/2025
-16,Churn Risk,We Miss You,welcome,scheduled,20/04/2025,10/6/2025
-17,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,completed,26/09/2023,2/13/2025
-18,Churn Risk,Reactivation Journey,loyalty,scheduled,15/08/2023,11/27/2024
-19,Inactive > 90 Days,Come-Back Offer,winback,scheduled,13/05/2023,12/23/2024
-20,High CLV Customers,VIP Rewards,welcome,active,30/05/2023,6/18/2024
-21,Inactive > 90 Days,Deep Winback,upsell,completed,25/12/2024,3/13/2025
-22,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,scheduled,02/12/2025,6/18/2024
-23,High CLV Customers,End-of-Year Upsell,upsell,completed,17/07/2024,2/24/2024
-24,Churn Risk,Loyalty Reminder,special day,active,14/04/2024,10/26/2024
-25,Churn Risk,Winback Flow,loyalty,active,20/07/2025,3/9/2024
-26,Churn Risk,Loyalty Reminder,loyalty,completed,20/11/2024,4/29/2024
-27,New Signups (Last 30 Days),Welcome Series - Step 1,special day,scheduled,29/04/2024,5/2/2025
-28,High CLV Customers,Exclusive Member Upgrade,loyalty,completed,15/11/2025,11/8/2024
-29,New Signups (Last 30 Days),New Signup Nurture,seasonal,scheduled,08/09/2025,8/20/2024
-30,Inactive > 90 Days,Come-Back Offer,upsell,scheduled,10/04/2024,8/10/2024
-31,New Signups (Last 30 Days),Getting Started Journey,welcome,scheduled,30/05/2025,6/26/2024
-32,Churn Risk,We Miss You,winback,scheduled,14/09/2023,8/2/2023
-33,New Signups (Last 30 Days),Welcome Series - Step 2,winback,scheduled,10/11/2024,10/14/2023
-34,New Signups (Last 30 Days),Getting Started Journey,upsell,scheduled,07/09/2023,7/19/2025
-35,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,scheduled,17/09/2024,11/8/2024
-36,Inactive > 90 Days,Inactivity Reactivation Flow,special day,active,13/05/2023,10/12/2023
-37,Churn Risk,Loyalty Reminder,welcome,completed,06/09/2024,11/8/2024
-38,Inactive > 90 Days,Come-Back Offer,special day,active,30/11/2025,2/22/2024
-39,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,active,17/08/2025,12/31/2023
-40,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,completed,06/08/2024,10/12/2025
-41,New Signups (Last 30 Days),Welcome Series - Step 1,winback,completed,21/09/2025,7/27/2024
-42,Churn Risk,Reactivation Journey,loyalty,active,10/05/2025,11/20/2025
-43,Churn Risk,Reactivation Journey,welcome,scheduled,03/12/2025,2/27/2025
-44,Inactive > 90 Days,Come-Back Offer,welcome,completed,08/08/2023,6/22/2025
-45,Churn Risk,Loyalty Reminder,seasonal,scheduled,11/04/2024,2/22/2024
-46,New Signups (Last 30 Days),New Signup Nurture,seasonal,completed,15/02/2024,9/28/2025
-47,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,active,18/10/2023,5/25/2025
-48,Inactive > 90 Days,Come-Back Offer,loyalty,scheduled,07/01/2024,9/15/2025
-49,Churn Risk,Winback Flow,seasonal,active,04/08/2025,2/22/2024
-50,New Signups (Last 30 Days),Getting Started Journey,special day,scheduled,08/03/2024,9/20/2023
-51,High CLV Customers,End-of-Year Upsell,welcome,completed,08/10/2025,7/8/2025
-52,New Signups (Last 30 Days),Getting Started Journey,special day,active,25/04/2025,4/21/2025
-53,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,17/12/2023,9/3/2024
-54,High CLV Customers,Exclusive Member Upgrade,special day,completed,27/10/2025,8/23/2025
-55,Inactive > 90 Days,Come-Back Offer,upsell,active,20/06/2024,8/25/2024
-56,Inactive > 90 Days,Come-Back Offer,seasonal,scheduled,04/09/2025,9/11/2024
-57,Inactive > 90 Days,Come-Back Offer,welcome,active,30/11/2025,10/27/2025
-58,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,completed,01/02/2024,2/16/2024
-59,New Signups (Last 30 Days),Welcome Series - Step 2,winback,active,01/06/2023,5/15/2024
-60,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,active,17/06/2025,10/30/2025
-61,High CLV Customers,VIP Rewards,loyalty,completed,17/06/2025,12/20/2023
-62,Inactive > 90 Days,Deep Winback,seasonal,scheduled,18/12/2023,5/21/2025
-63,High CLV Customers,Exclusive Member Upgrade,upsell,scheduled,10/02/2024,12/13/2024
-64,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,completed,15/07/2025,11/4/2023
-65,New Signups (Last 30 Days),New Signup Nurture,seasonal,completed,30/11/2024,2/3/2024
-66,Churn Risk,Winback Flow,upsell,scheduled,15/03/2023,4/20/2024
-67,Inactive > 90 Days,Come-Back Offer,welcome,active,11/04/2025,4/21/2025
-68,New Signups (Last 30 Days),Getting Started Journey,upsell,active,13/04/2025,9/30/2023
-69,New Signups (Last 30 Days),New Signup Nurture,seasonal,active,26/12/2024,2/18/2025
-70,New Signups (Last 30 Days),New Signup Nurture,welcome,scheduled,18/06/2025,1/18/2025
-71,New Signups (Last 30 Days),Welcome Series - Step 2,winback,completed,26/03/2023,10/2/2023
-72,High CLV Customers,Premium Features Upsell,welcome,active,19/07/2023,11/8/2025
-73,Inactive > 90 Days,Come-Back Offer,loyalty,scheduled,07/02/2024,9/12/2025
-74,High CLV Customers,Premium Features Upsell,upsell,active,27/05/2025,9/23/2025
-75,Churn Risk,Reactivation Journey,seasonal,scheduled,06/08/2025,7/5/2024
-76,High CLV Customers,Premium Features Upsell,loyalty,active,23/04/2023,8/18/2025
-77,Inactive > 90 Days,Come-Back Offer,welcome,active,25/09/2024,3/15/2025
-78,Inactive > 90 Days,Inactivity Reactivation Flow,winback,active,22/06/2024,2/11/2024
-79,New Signups (Last 30 Days),New Signup Nurture,special day,completed,09/10/2024,11/25/2023
-80,New Signups (Last 30 Days),New Signup Nurture,welcome,scheduled,26/04/2023,8/24/2023
-81,High CLV Customers,Exclusive Member Upgrade,winback,active,03/08/2023,4/29/2025
-82,Inactive > 90 Days,Deep Winback,winback,completed,10/02/2024,4/15/2025
-83,Churn Risk,Winback Flow,upsell,active,29/12/2024,2/27/2025
-84,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,active,03/09/2023,1/28/2025
-85,Inactive > 90 Days,Come-Back Offer,seasonal,active,24/04/2025,5/16/2025
-86,Churn Risk,We Miss You,upsell,scheduled,17/12/2023,9/2/2023
-87,Inactive > 90 Days,Come-Back Offer,welcome,active,11/06/2025,8/19/2024
-88,Churn Risk,We Miss You,winback,active,20/08/2024,11/26/2024
-89,Churn Risk,We Miss You,winback,scheduled,14/07/2024,6/22/2025
-90,Inactive > 90 Days,Inactivity Reactivation Flow,winback,active,11/01/2024,7/9/2024
-91,Inactive > 90 Days,Come-Back Offer,special day,active,29/01/2024,6/5/2024
-92,Inactive > 90 Days,Deep Winback,loyalty,active,09/07/2025,9/17/2024
-93,Inactive > 90 Days,Come-Back Offer,upsell,active,18/01/2025,4/23/2025
-94,Churn Risk,Loyalty Reminder,welcome,scheduled,13/10/2024,10/7/2025
-95,Inactive > 90 Days,Deep Winback,seasonal,scheduled,05/10/2024,4/13/2024
-96,Churn Risk,Loyalty Reminder,loyalty,completed,02/04/2024,4/5/2025
-97,New Signups (Last 30 Days),Welcome Series - Step 1,loyalty,scheduled,06/05/2025,5/23/2025
-98,High CLV Customers,Exclusive Member Upgrade,loyalty,scheduled,22/06/2024,10/11/2023
-99,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,completed,16/12/2024,2/23/2024
-100,Churn Risk,Winback Flow,seasonal,active,26/04/2024,11/14/2025
-101,Inactive > 90 Days,Deep Winback,special day,active,21/08/2024,10/24/2024
-102,New Signups (Last 30 Days),Getting Started Journey,winback,completed,25/12/2024,1/17/2025
-103,Churn Risk,Reactivation Journey,loyalty,active,13/05/2025,7/23/2025
-104,Inactive > 90 Days,Inactivity Reactivation Flow,special day,completed,18/09/2023,11/14/2024
-105,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,completed,08/01/2025,8/19/2023
-106,Churn Risk,Winback Flow,winback,scheduled,04/04/2024,7/8/2024
-107,High CLV Customers,VIP Rewards,welcome,completed,27/01/2025,9/5/2023
-108,New Signups (Last 30 Days),Getting Started Journey,winback,scheduled,14/02/2024,12/17/2023
-109,Churn Risk,We Miss You,special day,scheduled,28/07/2025,5/15/2025
-110,Churn Risk,Loyalty Reminder,winback,scheduled,01/12/2024,9/12/2023
-111,High CLV Customers,VIP Rewards,upsell,active,27/08/2024,5/15/2025
-112,Churn Risk,Winback Flow,upsell,scheduled,21/01/2024,8/6/2025
-113,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,completed,08/04/2024,9/24/2024
-114,New Signups (Last 30 Days),Getting Started Journey,winback,completed,14/03/2024,3/12/2025
-115,Inactive > 90 Days,Deep Winback,special day,completed,07/03/2025,6/1/2025
-116,High CLV Customers,VIP Rewards,winback,scheduled,14/10/2023,12/21/2024
-117,High CLV Customers,End-of-Year Upsell,loyalty,active,23/06/2025,6/28/2024
-118,Churn Risk,Reactivation Journey,loyalty,scheduled,16/08/2023,3/13/2024
-119,High CLV Customers,End-of-Year Upsell,winback,completed,01/12/2025,8/6/2024
-120,Churn Risk,We Miss You,winback,scheduled,26/12/2024,10/5/2023
-121,Inactive > 90 Days,Deep Winback,special day,completed,15/06/2024,5/15/2025
-122,Inactive > 90 Days,Inactivity Reactivation Flow,special day,completed,17/05/2024,3/29/2024
-123,New Signups (Last 30 Days),Welcome Series - Step 1,winback,completed,11/07/2023,3/12/2024
-124,Churn Risk,Loyalty Reminder,winback,completed,08/12/2023,6/12/2024
-125,Churn Risk,Loyalty Reminder,welcome,scheduled,22/05/2024,11/29/2024
-126,Inactive > 90 Days,Come-Back Offer,loyalty,active,02/05/2023,1/12/2024
-127,New Signups (Last 30 Days),Getting Started Journey,seasonal,active,06/12/2024,11/20/2023
-128,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,active,29/08/2024,12/6/2025
-129,Inactive > 90 Days,Inactivity Reactivation Flow,special day,scheduled,23/07/2024,6/10/2025
-130,Inactive > 90 Days,Deep Winback,welcome,active,03/02/2025,9/18/2023
-131,High CLV Customers,Premium Features Upsell,winback,scheduled,31/10/2023,6/21/2024
-132,Churn Risk,Loyalty Reminder,upsell,active,05/12/2025,12/30/2024
-133,High CLV Customers,Exclusive Member Upgrade,special day,active,20/09/2024,8/19/2024
-134,Inactive > 90 Days,Deep Winback,upsell,scheduled,22/04/2025,1/23/2025
-135,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,scheduled,18/03/2024,7/12/2024
-136,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,active,13/07/2024,11/28/2024
-137,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,active,24/07/2025,5/6/2024
-138,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,scheduled,17/03/2023,11/24/2024
-139,Inactive > 90 Days,Come-Back Offer,upsell,active,24/12/2023,9/8/2024
-140,New Signups (Last 30 Days),New Signup Nurture,winback,active,11/07/2023,1/4/2024
-141,Churn Risk,We Miss You,winback,scheduled,16/05/2023,1/24/2025
-142,Inactive > 90 Days,Come-Back Offer,winback,completed,24/03/2024,3/31/2025
-143,Churn Risk,Winback Flow,special day,active,24/09/2024,4/2/2024
-144,Inactive > 90 Days,Come-Back Offer,special day,active,20/03/2023,8/9/2023
-145,Inactive > 90 Days,Deep Winback,welcome,scheduled,10/03/2023,2/1/2025
-146,New Signups (Last 30 Days),Welcome Series - Step 2,winback,active,08/08/2025,2/24/2024
-147,Inactive > 90 Days,Come-Back Offer,welcome,completed,07/07/2024,12/24/2024
-148,Inactive > 90 Days,Come-Back Offer,loyalty,scheduled,25/05/2023,8/7/2025
-149,Churn Risk,Winback Flow,welcome,scheduled,20/07/2023,2/14/2024
-150,High CLV Customers,Premium Features Upsell,winback,scheduled,10/05/2023,7/22/2024
-151,High CLV Customers,End-of-Year Upsell,upsell,scheduled,04/01/2025,8/20/2023
-152,Churn Risk,We Miss You,welcome,active,16/11/2023,12/17/2024
-153,High CLV Customers,End-of-Year Upsell,special day,active,15/06/2024,12/31/2024
-154,Churn Risk,Loyalty Reminder,special day,completed,04/12/2023,8/26/2024
-155,New Signups (Last 30 Days),New Signup Nurture,loyalty,scheduled,15/11/2025,2/23/2024
-156,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,completed,13/03/2025,12/13/2024
-157,New Signups (Last 30 Days),Getting Started Journey,loyalty,active,07/03/2025,8/7/2024
-158,Inactive > 90 Days,Inactivity Reactivation Flow,special day,active,24/07/2025,11/29/2024
-159,Churn Risk,We Miss You,seasonal,completed,15/10/2025,8/26/2023
-160,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,scheduled,09/11/2024,7/12/2025
-161,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,active,21/11/2024,8/20/2025
-162,Churn Risk,Loyalty Reminder,winback,scheduled,22/04/2023,4/27/2025
-163,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,scheduled,15/11/2024,5/31/2025
-164,Churn Risk,Loyalty Reminder,seasonal,scheduled,20/09/2025,2/24/2025
-165,High CLV Customers,End-of-Year Upsell,seasonal,scheduled,13/10/2023,1/6/2024
-166,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,active,31/03/2025,8/25/2023
-167,Churn Risk,We Miss You,upsell,completed,16/08/2023,8/26/2024
-168,Inactive > 90 Days,Deep Winback,winback,completed,06/05/2025,2/3/2024
-169,High CLV Customers,End-of-Year Upsell,winback,completed,27/12/2023,6/28/2024
-170,New Signups (Last 30 Days),New Signup Nurture,seasonal,completed,08/01/2025,11/8/2023
-171,High CLV Customers,Exclusive Member Upgrade,welcome,scheduled,07/02/2024,8/26/2025
-172,Churn Risk,We Miss You,loyalty,active,28/04/2024,8/18/2023
-173,High CLV Customers,Premium Features Upsell,special day,scheduled,31/10/2024,4/25/2024
-174,Churn Risk,Reactivation Journey,winback,completed,22/04/2024,1/1/2024
-175,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,completed,10/04/2023,5/17/2024
-176,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,scheduled,30/08/2025,10/23/2025
-177,New Signups (Last 30 Days),New Signup Nurture,special day,active,18/02/2024,10/26/2025
-178,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,14/08/2024,9/3/2025
-179,New Signups (Last 30 Days),Getting Started Journey,loyalty,active,12/02/2025,10/27/2023
-180,Churn Risk,We Miss You,welcome,scheduled,28/07/2025,12/2/2025
-181,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,29/09/2025,7/15/2025
-182,Inactive > 90 Days,Inactivity Reactivation Flow,winback,scheduled,13/12/2023,11/3/2023
-183,High CLV Customers,Exclusive Member Upgrade,welcome,scheduled,31/03/2024,1/19/2025
-184,Inactive > 90 Days,Come-Back Offer,seasonal,completed,28/10/2024,8/16/2025
-185,High CLV Customers,Exclusive Member Upgrade,welcome,completed,11/03/2024,10/4/2025
-186,New Signups (Last 30 Days),New Signup Nurture,special day,scheduled,01/03/2025,5/17/2024
-187,High CLV Customers,VIP Rewards,loyalty,scheduled,04/08/2023,12/7/2023
-188,Inactive > 90 Days,Come-Back Offer,welcome,completed,18/06/2025,11/6/2023
-189,New Signups (Last 30 Days),Welcome Series - Step 2,special day,active,05/11/2025,9/16/2025
-190,New Signups (Last 30 Days),Getting Started Journey,special day,active,16/11/2024,9/30/2025
-191,New Signups (Last 30 Days),Welcome Series - Step 1,special day,active,18/11/2025,9/10/2023
-192,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,active,26/10/2024,10/18/2023
-193,New Signups (Last 30 Days),Welcome Series - Step 1,winback,scheduled,16/10/2025,12/10/2024
-194,New Signups (Last 30 Days),Getting Started Journey,special day,active,21/11/2024,9/13/2023
-195,New Signups (Last 30 Days),Welcome Series - Step 1,winback,active,03/06/2024,1/20/2025
-196,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,completed,20/10/2024,4/27/2024
-197,Inactive > 90 Days,Come-Back Offer,welcome,scheduled,25/04/2024,3/1/2024
-198,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,active,23/05/2023,6/29/2025
-199,Inactive > 90 Days,Deep Winback,special day,active,31/05/2025,7/1/2024
-200,High CLV Customers,Exclusive Member Upgrade,special day,active,20/08/2025,3/7/2025
-201,High CLV Customers,Exclusive Member Upgrade,upsell,completed,23/03/2025,12/17/2023
-202,High CLV Customers,End-of-Year Upsell,loyalty,scheduled,02/04/2023,11/3/2023
-203,Churn Risk,Reactivation Journey,upsell,scheduled,10/04/2023,1/24/2024
-204,New Signups (Last 30 Days),Welcome Series - Step 2,winback,scheduled,30/01/2024,1/5/2024
-205,Inactive > 90 Days,Deep Winback,upsell,active,11/02/2025,10/6/2024
-206,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,scheduled,26/09/2023,7/13/2025
-207,High CLV Customers,Premium Features Upsell,upsell,scheduled,11/08/2025,6/19/2024
-208,Churn Risk,Loyalty Reminder,special day,active,12/02/2025,11/8/2023
-209,Inactive > 90 Days,Deep Winback,upsell,completed,10/03/2024,4/4/2025
-210,High CLV Customers,Premium Features Upsell,seasonal,scheduled,10/05/2025,6/25/2025
-211,Churn Risk,Loyalty Reminder,upsell,completed,19/11/2024,1/13/2025
-212,High CLV Customers,End-of-Year Upsell,seasonal,scheduled,20/07/2025,1/26/2024
-213,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,completed,02/04/2023,5/22/2025
-214,Churn Risk,We Miss You,welcome,scheduled,29/11/2025,4/14/2025
-215,Churn Risk,We Miss You,winback,scheduled,12/12/2024,6/10/2024
-216,Churn Risk,Winback Flow,welcome,active,01/09/2024,9/5/2025
-217,Churn Risk,Winback Flow,loyalty,active,03/11/2024,6/11/2024
-218,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,active,28/08/2024,8/17/2025
-219,New Signups (Last 30 Days),Getting Started Journey,upsell,completed,05/07/2023,12/21/2023
-220,High CLV Customers,Premium Features Upsell,welcome,scheduled,09/11/2024,8/1/2023
-221,New Signups (Last 30 Days),Welcome Series - Step 2,winback,active,29/11/2024,12/15/2024
-222,New Signups (Last 30 Days),New Signup Nurture,special day,active,03/06/2024,6/25/2025
-223,Churn Risk,We Miss You,winback,active,24/03/2023,6/7/2025
-224,High CLV Customers,Premium Features Upsell,welcome,active,22/08/2024,12/12/2024
-225,High CLV Customers,End-of-Year Upsell,loyalty,scheduled,19/11/2023,5/18/2025
-226,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,completed,18/05/2025,11/7/2024
-227,Churn Risk,Loyalty Reminder,special day,active,06/02/2025,7/20/2025
-228,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,active,25/08/2025,11/17/2025
-229,Churn Risk,Reactivation Journey,special day,active,12/01/2024,12/22/2023
-230,Inactive > 90 Days,Come-Back Offer,winback,active,16/05/2025,5/15/2025
-231,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,10/05/2023,10/28/2024
-232,Inactive > 90 Days,Deep Winback,special day,active,10/07/2023,2/14/2024
-233,New Signups (Last 30 Days),Getting Started Journey,welcome,active,27/02/2024,2/4/2025
-234,New Signups (Last 30 Days),Getting Started Journey,special day,completed,12/04/2025,11/13/2025
-235,New Signups (Last 30 Days),Welcome Series - Step 2,winback,completed,03/08/2024,7/15/2024
-236,High CLV Customers,End-of-Year Upsell,winback,scheduled,21/02/2025,12/27/2023
-237,Inactive > 90 Days,Come-Back Offer,loyalty,scheduled,20/12/2023,10/27/2025
-238,Churn Risk,Winback Flow,loyalty,active,27/04/2023,3/14/2025
-239,High CLV Customers,End-of-Year Upsell,special day,completed,21/11/2024,10/14/2025
-240,Churn Risk,Reactivation Journey,loyalty,active,15/03/2023,7/5/2024
-241,Churn Risk,Winback Flow,seasonal,active,16/02/2024,6/21/2025
-242,High CLV Customers,VIP Rewards,loyalty,active,29/10/2024,10/18/2024
-243,Churn Risk,Winback Flow,winback,completed,05/10/2024,9/2/2025
-244,Churn Risk,We Miss You,upsell,scheduled,14/11/2023,4/19/2024
-245,New Signups (Last 30 Days),Welcome Series - Step 2,winback,completed,27/08/2024,11/25/2025
-246,High CLV Customers,Exclusive Member Upgrade,seasonal,active,04/09/2023,9/30/2024
-247,Churn Risk,Winback Flow,loyalty,scheduled,23/09/2024,3/21/2024
-248,High CLV Customers,End-of-Year Upsell,upsell,active,12/12/2024,8/20/2025
-249,High CLV Customers,Exclusive Member Upgrade,upsell,completed,03/10/2023,11/7/2024
-250,Churn Risk,Winback Flow,welcome,completed,27/12/2024,1/13/2024
-251,High CLV Customers,VIP Rewards,welcome,active,18/09/2025,2/11/2025
-252,New Signups (Last 30 Days),Getting Started Journey,loyalty,active,29/09/2024,7/28/2024
-253,New Signups (Last 30 Days),Getting Started Journey,seasonal,active,21/06/2025,7/15/2024
-254,High CLV Customers,Exclusive Member Upgrade,loyalty,active,16/05/2025,4/18/2024
-255,Churn Risk,Reactivation Journey,seasonal,active,11/10/2025,11/20/2023
-256,Inactive > 90 Days,Deep Winback,winback,completed,18/10/2025,5/26/2025
-257,High CLV Customers,Premium Features Upsell,welcome,active,07/07/2023,2/7/2025
-258,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,completed,22/07/2023,1/22/2025
-259,High CLV Customers,Premium Features Upsell,seasonal,scheduled,25/05/2024,4/26/2024
-260,Inactive > 90 Days,Come-Back Offer,welcome,completed,26/11/2023,11/6/2025
-261,Churn Risk,Winback Flow,welcome,scheduled,20/01/2025,8/11/2023
-262,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,completed,03/05/2023,9/19/2024
-263,Churn Risk,Loyalty Reminder,upsell,scheduled,01/08/2024,5/10/2025
-264,New Signups (Last 30 Days),New Signup Nurture,welcome,scheduled,26/04/2025,5/24/2024
-265,High CLV Customers,Premium Features Upsell,loyalty,active,30/04/2024,7/25/2025
-266,Churn Risk,Reactivation Journey,seasonal,scheduled,02/05/2025,7/7/2024
-267,High CLV Customers,Premium Features Upsell,welcome,completed,27/08/2023,6/10/2025
-268,Inactive > 90 Days,Deep Winback,seasonal,completed,04/01/2024,8/17/2024
-269,Inactive > 90 Days,Inactivity Reactivation Flow,special day,completed,01/09/2023,10/9/2023
-270,Inactive > 90 Days,Deep Winback,welcome,active,10/01/2025,10/19/2024
-271,High CLV Customers,VIP Rewards,welcome,completed,07/09/2023,10/16/2023
-272,Inactive > 90 Days,Come-Back Offer,seasonal,scheduled,14/12/2024,10/4/2025
-273,Churn Risk,Reactivation Journey,upsell,completed,28/11/2025,12/6/2023
-274,New Signups (Last 30 Days),Welcome Series - Step 1,winback,active,27/10/2023,7/11/2024
-275,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,completed,12/03/2024,8/9/2023
-276,Churn Risk,Winback Flow,upsell,completed,29/08/2024,3/18/2024
-277,High CLV Customers,Exclusive Member Upgrade,seasonal,scheduled,13/09/2023,6/4/2024
-278,High CLV Customers,VIP Rewards,welcome,completed,25/03/2024,9/4/2025
-279,New Signups (Last 30 Days),New Signup Nurture,winback,completed,22/12/2023,9/24/2024
-280,High CLV Customers,Exclusive Member Upgrade,welcome,completed,08/09/2023,8/24/2023
-281,New Signups (Last 30 Days),Welcome Series - Step 1,winback,scheduled,08/04/2025,6/19/2025
-282,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,scheduled,06/01/2025,6/27/2024
-283,New Signups (Last 30 Days),New Signup Nurture,special day,scheduled,18/02/2024,1/9/2024
-284,New Signups (Last 30 Days),Welcome Series - Step 1,special day,active,21/07/2024,9/22/2025
-285,High CLV Customers,Exclusive Member Upgrade,seasonal,scheduled,07/08/2025,9/14/2024
-286,Inactive > 90 Days,Deep Winback,welcome,completed,09/01/2025,12/15/2023
-287,New Signups (Last 30 Days),New Signup Nurture,loyalty,completed,21/07/2025,8/5/2025
-288,Inactive > 90 Days,Deep Winback,welcome,active,25/10/2023,8/14/2025
-289,New Signups (Last 30 Days),New Signup Nurture,seasonal,completed,13/04/2024,10/4/2025
-290,Inactive > 90 Days,Come-Back Offer,seasonal,completed,21/04/2025,1/23/2024
-291,High CLV Customers,End-of-Year Upsell,winback,scheduled,16/02/2024,11/9/2023
-292,Inactive > 90 Days,Come-Back Offer,upsell,scheduled,31/01/2025,10/29/2024
-293,Churn Risk,Winback Flow,special day,scheduled,12/09/2025,5/4/2024
-294,High CLV Customers,VIP Rewards,upsell,scheduled,30/12/2024,5/14/2025
-295,Inactive > 90 Days,Come-Back Offer,winback,completed,26/01/2025,11/25/2024
-296,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,10/07/2025,9/13/2024
-297,Inactive > 90 Days,Come-Back Offer,welcome,active,18/04/2024,6/25/2024
-298,New Signups (Last 30 Days),Getting Started Journey,welcome,scheduled,26/01/2024,10/18/2024
-299,Inactive > 90 Days,Come-Back Offer,special day,completed,04/02/2025,5/27/2024
-300,New Signups (Last 30 Days),New Signup Nurture,winback,completed,29/03/2025,6/29/2024
-301,Inactive > 90 Days,Deep Winback,loyalty,scheduled,19/04/2023,8/27/2025
-302,High CLV Customers,Exclusive Member Upgrade,winback,scheduled,14/05/2024,12/2/2025
-303,Inactive > 90 Days,Deep Winback,seasonal,scheduled,18/07/2024,8/23/2024
-304,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,active,29/05/2024,9/27/2024
-305,Churn Risk,Loyalty Reminder,welcome,completed,27/03/2023,5/11/2025
-306,Churn Risk,We Miss You,special day,scheduled,23/03/2023,5/27/2024
-307,High CLV Customers,End-of-Year Upsell,seasonal,completed,09/11/2025,9/11/2025
-308,High CLV Customers,Exclusive Member Upgrade,upsell,scheduled,28/11/2024,2/8/2024
-309,Churn Risk,Loyalty Reminder,winback,active,19/09/2023,12/14/2023
-310,Churn Risk,Winback Flow,upsell,completed,30/12/2023,3/15/2024
-311,Inactive > 90 Days,Deep Winback,special day,scheduled,14/12/2023,2/26/2024
-312,Churn Risk,Winback Flow,winback,scheduled,15/02/2024,11/5/2025
-313,Churn Risk,Winback Flow,winback,completed,09/07/2024,3/22/2025
-314,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,active,06/09/2025,9/22/2024
-315,High CLV Customers,Premium Features Upsell,winback,scheduled,19/03/2023,11/2/2023
-316,New Signups (Last 30 Days),Getting Started Journey,special day,active,31/01/2024,10/25/2024
-317,Inactive > 90 Days,Deep Winback,upsell,completed,09/08/2023,9/14/2024
-318,High CLV Customers,End-of-Year Upsell,loyalty,scheduled,22/01/2025,4/28/2024
-319,New Signups (Last 30 Days),Welcome Series - Step 1,winback,scheduled,05/11/2025,9/23/2025
-320,High CLV Customers,End-of-Year Upsell,upsell,scheduled,20/09/2025,9/27/2023
-321,Churn Risk,Loyalty Reminder,seasonal,completed,16/10/2024,5/25/2025
-322,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,scheduled,19/01/2025,10/14/2023
-323,New Signups (Last 30 Days),New Signup Nurture,welcome,active,02/06/2024,8/18/2024
-324,Inactive > 90 Days,Deep Winback,upsell,completed,25/04/2025,4/2/2025
-325,Churn Risk,Winback Flow,special day,completed,10/03/2025,7/19/2024
-326,Churn Risk,Reactivation Journey,winback,completed,06/09/2024,9/6/2024
-327,High CLV Customers,Premium Features Upsell,loyalty,completed,29/09/2024,10/30/2024
-328,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,completed,13/06/2024,10/19/2023
-329,New Signups (Last 30 Days),Welcome Series - Step 2,special day,active,03/03/2025,2/2/2024
-330,Churn Risk,We Miss You,special day,completed,16/05/2025,10/26/2024
-331,High CLV Customers,End-of-Year Upsell,seasonal,active,29/10/2024,4/15/2024
-332,Inactive > 90 Days,Come-Back Offer,upsell,scheduled,03/07/2024,9/3/2024
-333,High CLV Customers,End-of-Year Upsell,loyalty,active,12/08/2024,8/12/2023
-334,Churn Risk,Loyalty Reminder,loyalty,active,29/06/2025,6/29/2025
-335,High CLV Customers,Exclusive Member Upgrade,welcome,completed,17/04/2024,11/3/2023
-336,Inactive > 90 Days,Deep Winback,winback,scheduled,24/05/2023,3/10/2025
-337,High CLV Customers,VIP Rewards,loyalty,scheduled,14/06/2023,2/9/2024
-338,Churn Risk,We Miss You,seasonal,active,16/03/2024,7/25/2025
-339,High CLV Customers,VIP Rewards,seasonal,completed,25/04/2023,6/29/2024
-340,New Signups (Last 30 Days),Welcome Series - Step 1,winback,completed,06/12/2024,2/5/2025
-341,High CLV Customers,Exclusive Member Upgrade,special day,completed,20/09/2024,12/27/2024
-342,High CLV Customers,End-of-Year Upsell,seasonal,completed,26/04/2024,7/29/2025
-343,New Signups (Last 30 Days),Getting Started Journey,seasonal,scheduled,10/12/2023,6/2/2024
-344,High CLV Customers,VIP Rewards,seasonal,completed,01/05/2024,12/12/2023
-345,New Signups (Last 30 Days),Getting Started Journey,winback,completed,06/03/2025,3/12/2025
-346,High CLV Customers,VIP Rewards,special day,completed,04/12/2024,8/7/2024
-347,Inactive > 90 Days,Inactivity Reactivation Flow,special day,scheduled,21/06/2023,8/6/2025
-348,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,active,08/01/2025,11/25/2024
-349,Inactive > 90 Days,Deep Winback,welcome,completed,15/10/2024,9/4/2025
-350,Churn Risk,Reactivation Journey,welcome,scheduled,29/03/2025,2/1/2024
-351,Churn Risk,Winback Flow,welcome,scheduled,31/03/2023,8/4/2024
-352,New Signups (Last 30 Days),New Signup Nurture,loyalty,completed,03/01/2025,8/31/2024
-353,High CLV Customers,VIP Rewards,winback,scheduled,15/12/2024,2/25/2024
-354,Inactive > 90 Days,Inactivity Reactivation Flow,special day,active,11/06/2023,1/30/2025
-355,High CLV Customers,Exclusive Member Upgrade,seasonal,scheduled,11/11/2025,3/9/2025
-356,New Signups (Last 30 Days),Getting Started Journey,seasonal,completed,21/01/2024,9/25/2025
-357,New Signups (Last 30 Days),New Signup Nurture,upsell,active,11/04/2024,10/18/2024
-358,High CLV Customers,Premium Features Upsell,winback,scheduled,25/09/2025,3/26/2025
-359,New Signups (Last 30 Days),New Signup Nurture,special day,active,19/07/2024,3/5/2025
-360,Inactive > 90 Days,Come-Back Offer,seasonal,scheduled,07/07/2023,12/7/2025
-361,High CLV Customers,Premium Features Upsell,seasonal,active,19/04/2025,1/3/2025
-362,Churn Risk,Reactivation Journey,winback,scheduled,07/08/2023,1/12/2025
-363,High CLV Customers,VIP Rewards,seasonal,scheduled,15/04/2025,10/30/2023
-364,Churn Risk,Reactivation Journey,special day,active,24/04/2025,2/22/2025
-365,Churn Risk,We Miss You,welcome,completed,15/03/2023,1/24/2024
-366,Churn Risk,Winback Flow,loyalty,scheduled,27/06/2023,11/16/2025
-367,Churn Risk,Winback Flow,seasonal,active,16/10/2023,10/25/2023
-368,New Signups (Last 30 Days),New Signup Nurture,seasonal,completed,18/03/2023,10/21/2023
-369,Churn Risk,Loyalty Reminder,loyalty,active,06/05/2024,12/17/2023
-370,Churn Risk,Reactivation Journey,loyalty,scheduled,21/12/2023,8/22/2025
-371,Inactive > 90 Days,Come-Back Offer,upsell,scheduled,06/04/2025,10/8/2025
-372,High CLV Customers,Premium Features Upsell,winback,scheduled,28/03/2023,7/7/2025
-373,High CLV Customers,End-of-Year Upsell,upsell,completed,16/04/2023,3/11/2025
-374,High CLV Customers,VIP Rewards,upsell,active,25/12/2024,4/10/2025
-375,High CLV Customers,Premium Features Upsell,welcome,scheduled,29/11/2024,12/23/2024
-376,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,completed,17/02/2025,5/28/2025
-377,High CLV Customers,End-of-Year Upsell,winback,active,05/12/2023,8/22/2024
-378,High CLV Customers,Premium Features Upsell,welcome,scheduled,02/01/2024,12/4/2024
-379,Inactive > 90 Days,Come-Back Offer,loyalty,scheduled,09/10/2025,3/28/2025
-380,High CLV Customers,Exclusive Member Upgrade,welcome,active,27/07/2024,2/5/2025
-381,High CLV Customers,End-of-Year Upsell,special day,scheduled,28/06/2023,11/25/2024
-382,Churn Risk,Winback Flow,special day,completed,05/04/2025,4/4/2025
-383,Inactive > 90 Days,Come-Back Offer,winback,active,24/07/2024,2/22/2024
-384,High CLV Customers,End-of-Year Upsell,upsell,completed,10/10/2023,4/11/2025
-385,Inactive > 90 Days,Come-Back Offer,upsell,active,18/12/2023,4/30/2025
-386,New Signups (Last 30 Days),New Signup Nurture,seasonal,active,25/03/2025,10/30/2023
-387,Inactive > 90 Days,Inactivity Reactivation Flow,winback,completed,15/02/2025,10/20/2024
-388,Inactive > 90 Days,Come-Back Offer,welcome,scheduled,19/12/2024,8/23/2023
-389,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,active,06/02/2025,2/6/2025
-390,High CLV Customers,Premium Features Upsell,loyalty,scheduled,13/05/2024,8/2/2024
-391,Churn Risk,We Miss You,special day,completed,08/12/2023,4/17/2025
-392,Inactive > 90 Days,Deep Winback,special day,scheduled,22/02/2025,7/28/2024
-393,High CLV Customers,VIP Rewards,winback,active,18/06/2024,5/13/2025
-394,High CLV Customers,Premium Features Upsell,special day,scheduled,09/04/2025,3/1/2024
-395,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,completed,11/08/2023,12/24/2024
-396,Inactive > 90 Days,Come-Back Offer,seasonal,completed,19/02/2024,12/4/2024
-397,Churn Risk,We Miss You,upsell,active,16/11/2024,9/15/2023
-398,New Signups (Last 30 Days),Getting Started Journey,special day,active,21/08/2025,9/13/2024
-399,High CLV Customers,End-of-Year Upsell,welcome,scheduled,06/03/2023,11/24/2024
-400,New Signups (Last 30 Days),New Signup Nurture,upsell,completed,19/03/2024,10/20/2024
-401,Inactive > 90 Days,Come-Back Offer,upsell,active,07/04/2024,7/19/2024
-402,Inactive > 90 Days,Come-Back Offer,upsell,completed,26/05/2023,2/26/2025
-403,New Signups (Last 30 Days),Welcome Series - Step 2,winback,completed,18/03/2025,5/12/2024
-404,Churn Risk,Loyalty Reminder,loyalty,completed,23/10/2024,3/25/2025
-405,Inactive > 90 Days,Deep Winback,upsell,completed,14/06/2025,1/28/2025
-406,Churn Risk,Winback Flow,special day,active,29/10/2024,1/21/2025
-407,Inactive > 90 Days,Come-Back Offer,special day,completed,25/09/2025,6/12/2024
-408,New Signups (Last 30 Days),New Signup Nurture,special day,active,31/08/2024,10/1/2023
-409,Churn Risk,We Miss You,winback,active,16/10/2024,1/13/2024
-410,High CLV Customers,Exclusive Member Upgrade,winback,active,17/07/2023,2/8/2024
-411,Churn Risk,We Miss You,loyalty,completed,21/06/2025,9/19/2023
-412,New Signups (Last 30 Days),Welcome Series - Step 2,winback,active,14/08/2024,8/10/2023
-413,Inactive > 90 Days,Come-Back Offer,loyalty,scheduled,18/10/2025,5/20/2025
-414,Inactive > 90 Days,Come-Back Offer,seasonal,scheduled,26/07/2023,8/2/2023
-415,High CLV Customers,Exclusive Member Upgrade,loyalty,scheduled,16/03/2025,9/23/2025
-416,New Signups (Last 30 Days),Welcome Series - Step 1,special day,scheduled,13/05/2025,9/16/2025
-417,Churn Risk,Loyalty Reminder,winback,active,08/10/2025,5/16/2024
-418,Churn Risk,Winback Flow,special day,scheduled,06/05/2024,6/24/2025
-419,Churn Risk,Loyalty Reminder,special day,scheduled,03/03/2025,8/26/2025
-420,High CLV Customers,VIP Rewards,welcome,completed,06/07/2025,1/24/2025
-421,Inactive > 90 Days,Come-Back Offer,loyalty,completed,17/03/2025,4/11/2025
-422,New Signups (Last 30 Days),Getting Started Journey,loyalty,active,12/02/2024,8/9/2025
-423,High CLV Customers,Premium Features Upsell,loyalty,active,24/10/2023,1/3/2025
-424,High CLV Customers,Premium Features Upsell,upsell,scheduled,25/08/2024,10/7/2025
-425,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,scheduled,17/03/2023,7/18/2025
-426,High CLV Customers,Exclusive Member Upgrade,special day,active,28/04/2024,1/23/2024
-427,High CLV Customers,Exclusive Member Upgrade,loyalty,scheduled,03/09/2023,4/28/2025
-428,New Signups (Last 30 Days),Getting Started Journey,special day,completed,11/06/2023,6/24/2025
-429,Inactive > 90 Days,Deep Winback,upsell,scheduled,22/06/2024,6/19/2024
-430,Churn Risk,Reactivation Journey,special day,active,07/06/2024,11/28/2024
-431,New Signups (Last 30 Days),Welcome Series - Step 1,winback,active,03/04/2023,1/17/2024
-432,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,scheduled,07/10/2023,8/11/2025
-433,Churn Risk,Loyalty Reminder,loyalty,scheduled,23/06/2025,11/9/2023
-434,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,scheduled,01/12/2023,11/15/2025
-435,Inactive > 90 Days,Deep Winback,seasonal,scheduled,11/11/2024,1/20/2024
-436,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,active,13/07/2024,3/28/2024
-437,Inactive > 90 Days,Come-Back Offer,special day,scheduled,30/04/2025,11/3/2025
-438,New Signups (Last 30 Days),Welcome Series - Step 1,special day,completed,18/07/2024,1/25/2025
-439,New Signups (Last 30 Days),Welcome Series - Step 2,winback,completed,25/10/2025,12/29/2023
-440,New Signups (Last 30 Days),Welcome Series - Step 2,winback,scheduled,21/11/2025,6/16/2025
-441,Churn Risk,Loyalty Reminder,seasonal,completed,28/12/2024,2/1/2025
-442,Churn Risk,Loyalty Reminder,winback,scheduled,22/08/2023,11/17/2023
-443,High CLV Customers,VIP Rewards,special day,active,13/06/2025,9/17/2023
-444,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,scheduled,24/07/2024,3/31/2024
-445,Inactive > 90 Days,Come-Back Offer,upsell,active,08/09/2025,6/4/2025
-446,High CLV Customers,VIP Rewards,seasonal,active,18/06/2024,8/29/2024
-447,New Signups (Last 30 Days),New Signup Nurture,welcome,scheduled,25/04/2023,2/12/2024
-448,High CLV Customers,Exclusive Member Upgrade,upsell,scheduled,09/10/2023,9/26/2025
-449,Inactive > 90 Days,Deep Winback,loyalty,scheduled,21/08/2025,1/19/2025
-450,New Signups (Last 30 Days),Getting Started Journey,loyalty,active,01/10/2025,6/13/2024
-451,Inactive > 90 Days,Deep Winback,special day,completed,19/07/2025,6/2/2025
-452,Churn Risk,Loyalty Reminder,loyalty,active,29/06/2023,11/3/2024
-453,New Signups (Last 30 Days),Getting Started Journey,seasonal,active,04/03/2024,4/5/2025
-454,High CLV Customers,End-of-Year Upsell,seasonal,scheduled,17/08/2024,2/24/2025
-455,Inactive > 90 Days,Deep Winback,seasonal,active,16/03/2025,2/12/2025
-456,New Signups (Last 30 Days),Getting Started Journey,seasonal,scheduled,22/07/2024,5/29/2025
-457,Inactive > 90 Days,Inactivity Reactivation Flow,winback,active,07/02/2025,11/20/2023
-458,Churn Risk,Winback Flow,upsell,active,04/09/2025,9/10/2023
-459,Churn Risk,We Miss You,winback,scheduled,09/12/2023,9/28/2024
-460,High CLV Customers,End-of-Year Upsell,seasonal,active,03/05/2023,12/16/2023
-461,High CLV Customers,Premium Features Upsell,welcome,completed,12/02/2024,3/17/2024
-462,New Signups (Last 30 Days),New Signup Nurture,seasonal,active,24/01/2024,11/5/2025
-463,New Signups (Last 30 Days),Getting Started Journey,winback,completed,28/09/2025,6/29/2024
-464,Churn Risk,Winback Flow,welcome,scheduled,09/04/2025,1/29/2025
-465,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,completed,29/10/2023,3/21/2025
-466,Inactive > 90 Days,Deep Winback,seasonal,completed,02/08/2024,3/2/2025
-467,High CLV Customers,VIP Rewards,welcome,completed,15/05/2024,3/19/2024
-468,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,active,20/04/2024,8/9/2025
-469,Inactive > 90 Days,Come-Back Offer,loyalty,completed,06/04/2025,10/12/2024
-470,High CLV Customers,Premium Features Upsell,welcome,scheduled,26/09/2024,3/9/2024
-471,Inactive > 90 Days,Come-Back Offer,welcome,completed,10/06/2024,3/15/2024
-472,High CLV Customers,End-of-Year Upsell,loyalty,active,11/02/2024,4/28/2024
-473,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,scheduled,15/11/2023,4/5/2024
-474,Inactive > 90 Days,Deep Winback,winback,completed,13/04/2025,1/16/2024
-475,High CLV Customers,End-of-Year Upsell,winback,scheduled,02/04/2024,7/17/2025
-476,High CLV Customers,Exclusive Member Upgrade,upsell,active,26/01/2025,1/29/2024
-477,Churn Risk,Reactivation Journey,upsell,active,23/11/2025,11/2/2024
-478,New Signups (Last 30 Days),Welcome Series - Step 2,special day,completed,27/02/2024,5/17/2025
-479,Inactive > 90 Days,Come-Back Offer,welcome,completed,23/11/2024,10/2/2025
-480,Churn Risk,Reactivation Journey,upsell,active,22/06/2023,1/30/2025
-481,High CLV Customers,End-of-Year Upsell,seasonal,active,24/08/2025,2/28/2024
-482,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,scheduled,17/12/2024,8/1/2024
-483,Inactive > 90 Days,Deep Winback,special day,active,12/12/2023,9/12/2023
-484,High CLV Customers,End-of-Year Upsell,seasonal,active,19/07/2024,8/10/2023
-485,New Signups (Last 30 Days),Getting Started Journey,seasonal,completed,04/08/2023,5/22/2024
-486,High CLV Customers,VIP Rewards,winback,completed,19/12/2024,7/2/2025
-487,New Signups (Last 30 Days),New Signup Nurture,seasonal,active,27/11/2023,10/10/2023
-488,Inactive > 90 Days,Inactivity Reactivation Flow,winback,active,17/02/2024,7/31/2025
-489,High CLV Customers,End-of-Year Upsell,upsell,scheduled,06/05/2023,7/25/2025
-490,New Signups (Last 30 Days),New Signup Nurture,welcome,completed,11/11/2024,3/16/2025
-491,New Signups (Last 30 Days),Getting Started Journey,special day,scheduled,06/06/2025,12/24/2024
-492,New Signups (Last 30 Days),Welcome Series - Step 1,winback,completed,12/10/2024,6/7/2025
-493,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,completed,01/05/2025,9/29/2024
-494,Churn Risk,We Miss You,loyalty,scheduled,27/08/2025,3/15/2025
-495,High CLV Customers,Premium Features Upsell,special day,active,12/05/2024,10/24/2025
-496,High CLV Customers,End-of-Year Upsell,upsell,scheduled,25/07/2023,11/10/2023
-497,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,completed,15/06/2023,10/4/2024
-498,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,scheduled,19/11/2025,4/27/2025
-499,Inactive > 90 Days,Come-Back Offer,upsell,active,06/03/2024,3/27/2025
-500,Churn Risk,Reactivation Journey,seasonal,completed,23/01/2025,12/16/2024
-501,Inactive > 90 Days,Inactivity Reactivation Flow,winback,scheduled,06/12/2025,9/10/2025
-502,Inactive > 90 Days,Deep Winback,special day,scheduled,15/11/2023,7/23/2024
-503,High CLV Customers,VIP Rewards,loyalty,scheduled,19/01/2024,4/17/2024
-504,High CLV Customers,Premium Features Upsell,winback,scheduled,06/06/2023,4/13/2025
-505,High CLV Customers,Premium Features Upsell,special day,scheduled,29/06/2025,8/23/2025
-506,Churn Risk,Winback Flow,loyalty,active,05/12/2024,7/5/2024
-507,New Signups (Last 30 Days),Welcome Series - Step 1,winback,scheduled,07/10/2025,3/3/2024
-508,High CLV Customers,VIP Rewards,winback,scheduled,10/12/2023,3/26/2025
-509,Inactive > 90 Days,Deep Winback,welcome,completed,28/08/2025,11/25/2024
-510,High CLV Customers,VIP Rewards,special day,active,20/01/2024,8/26/2024
-511,Inactive > 90 Days,Come-Back Offer,special day,active,26/05/2025,12/31/2024
-512,Churn Risk,We Miss You,winback,scheduled,12/12/2024,3/14/2024
-513,Inactive > 90 Days,Come-Back Offer,special day,active,05/09/2025,2/10/2024
-514,High CLV Customers,VIP Rewards,loyalty,completed,14/08/2024,6/24/2024
-515,Churn Risk,Reactivation Journey,seasonal,completed,07/04/2024,9/18/2024
-516,Churn Risk,Loyalty Reminder,loyalty,scheduled,05/04/2023,6/21/2024
-517,Churn Risk,Reactivation Journey,upsell,active,21/05/2025,2/1/2025
-518,New Signups (Last 30 Days),Welcome Series - Step 1,winback,scheduled,24/02/2025,9/12/2025
-519,High CLV Customers,Premium Features Upsell,welcome,scheduled,15/04/2023,2/24/2024
-520,Inactive > 90 Days,Deep Winback,loyalty,scheduled,31/07/2024,7/31/2025
-521,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,03/09/2025,11/3/2024
-522,Churn Risk,We Miss You,winback,active,19/08/2023,4/17/2025
-523,Churn Risk,Loyalty Reminder,seasonal,active,08/01/2025,2/18/2025
-524,Inactive > 90 Days,Deep Winback,loyalty,completed,18/07/2025,7/18/2025
-525,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,completed,29/05/2024,8/29/2024
-526,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,22/11/2024,2/19/2024
-527,High CLV Customers,Exclusive Member Upgrade,loyalty,completed,02/07/2025,8/19/2023
-528,High CLV Customers,VIP Rewards,upsell,completed,17/12/2023,11/9/2023
-529,Churn Risk,Winback Flow,special day,completed,23/02/2024,9/15/2023
-530,Churn Risk,Winback Flow,welcome,completed,12/07/2024,8/29/2024
-531,Churn Risk,We Miss You,seasonal,scheduled,07/02/2025,1/12/2025
-532,Inactive > 90 Days,Deep Winback,seasonal,active,12/07/2024,10/19/2024
-533,Churn Risk,We Miss You,seasonal,active,14/10/2025,5/5/2025
-534,New Signups (Last 30 Days),Welcome Series - Step 2,special day,scheduled,17/07/2024,6/6/2025
-535,Inactive > 90 Days,Come-Back Offer,upsell,scheduled,27/10/2023,12/29/2023
-536,New Signups (Last 30 Days),Welcome Series - Step 1,winback,active,21/09/2023,1/8/2025
-537,High CLV Customers,Exclusive Member Upgrade,special day,completed,21/04/2024,4/19/2025
-538,Inactive > 90 Days,Come-Back Offer,welcome,active,03/11/2025,11/17/2023
-539,Churn Risk,Reactivation Journey,upsell,scheduled,23/02/2025,10/25/2023
-540,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,scheduled,22/04/2023,1/9/2024
-541,Inactive > 90 Days,Come-Back Offer,loyalty,completed,06/04/2025,3/2/2025
-542,Churn Risk,Loyalty Reminder,welcome,completed,19/04/2025,10/19/2024
-543,Inactive > 90 Days,Come-Back Offer,welcome,scheduled,12/09/2024,10/5/2023
-544,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,completed,07/05/2023,7/16/2024
-545,Inactive > 90 Days,Deep Winback,seasonal,completed,13/09/2024,11/14/2024
-546,Churn Risk,Loyalty Reminder,special day,active,02/02/2025,1/8/2024
-547,Churn Risk,We Miss You,special day,active,12/04/2025,9/12/2024
-548,Inactive > 90 Days,Deep Winback,seasonal,active,02/08/2025,8/19/2024
-549,Churn Risk,Winback Flow,upsell,completed,11/08/2023,8/6/2025
-550,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,scheduled,22/11/2025,3/2/2025
-551,Churn Risk,Reactivation Journey,seasonal,completed,23/02/2025,9/21/2025
-552,Inactive > 90 Days,Come-Back Offer,winback,scheduled,28/08/2024,12/5/2025
-553,High CLV Customers,Exclusive Member Upgrade,seasonal,active,05/01/2024,11/1/2024
-554,New Signups (Last 30 Days),New Signup Nurture,upsell,scheduled,14/07/2024,4/21/2024
-555,Churn Risk,Reactivation Journey,loyalty,active,28/02/2024,10/17/2024
-556,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,completed,31/03/2024,12/4/2025
-557,Inactive > 90 Days,Come-Back Offer,special day,active,07/02/2024,8/30/2023
-558,Churn Risk,Loyalty Reminder,welcome,scheduled,09/11/2025,6/19/2024
-559,Churn Risk,Loyalty Reminder,seasonal,active,01/10/2023,9/4/2024
-560,Inactive > 90 Days,Come-Back Offer,special day,completed,13/09/2023,10/19/2023
-561,New Signups (Last 30 Days),New Signup Nurture,winback,completed,24/09/2024,12/10/2023
-562,Inactive > 90 Days,Come-Back Offer,special day,completed,31/08/2023,11/18/2024
-563,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,scheduled,09/11/2025,3/11/2025
-564,High CLV Customers,Premium Features Upsell,special day,completed,18/04/2024,4/16/2024
-565,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,scheduled,16/07/2023,10/22/2023
-566,High CLV Customers,VIP Rewards,seasonal,active,09/03/2024,5/8/2024
-567,Churn Risk,Winback Flow,loyalty,completed,06/04/2025,6/26/2025
-568,Inactive > 90 Days,Deep Winback,winback,scheduled,29/03/2025,4/21/2024
-569,Churn Risk,Loyalty Reminder,seasonal,active,02/10/2024,7/29/2025
-570,Inactive > 90 Days,Come-Back Offer,special day,completed,16/07/2025,8/18/2024
-571,Inactive > 90 Days,Deep Winback,upsell,completed,27/06/2024,9/8/2025
-572,Inactive > 90 Days,Come-Back Offer,loyalty,completed,13/08/2024,6/20/2024
-573,Churn Risk,Winback Flow,seasonal,active,30/12/2023,7/8/2024
-574,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,active,09/05/2025,4/26/2025
-575,Inactive > 90 Days,Come-Back Offer,special day,active,09/08/2025,5/16/2024
-576,High CLV Customers,Premium Features Upsell,seasonal,completed,07/11/2023,5/26/2024
-577,High CLV Customers,End-of-Year Upsell,special day,completed,21/03/2024,2/19/2024
-578,Inactive > 90 Days,Deep Winback,seasonal,scheduled,18/04/2025,8/16/2025
-579,Churn Risk,Loyalty Reminder,winback,active,01/05/2023,4/3/2024
-580,Churn Risk,Loyalty Reminder,seasonal,completed,03/12/2023,8/29/2025
-581,New Signups (Last 30 Days),New Signup Nurture,seasonal,active,25/09/2023,12/6/2023
-582,High CLV Customers,VIP Rewards,winback,scheduled,29/11/2025,9/16/2025
-583,High CLV Customers,End-of-Year Upsell,welcome,active,27/01/2025,4/3/2025
-584,Churn Risk,Winback Flow,winback,completed,01/04/2025,11/19/2025
-585,New Signups (Last 30 Days),New Signup Nurture,special day,scheduled,20/09/2025,5/1/2024
-586,New Signups (Last 30 Days),Welcome Series - Step 1,loyalty,completed,29/10/2023,3/23/2024
-587,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,completed,25/11/2023,3/24/2024
-588,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,completed,14/02/2025,10/7/2025
-589,High CLV Customers,Premium Features Upsell,winback,scheduled,04/09/2023,8/16/2023
-590,Churn Risk,Loyalty Reminder,seasonal,active,30/04/2024,6/7/2025
-591,Churn Risk,Loyalty Reminder,winback,active,20/11/2025,8/9/2023
-592,Churn Risk,Reactivation Journey,winback,completed,22/03/2023,2/8/2024
-593,Inactive > 90 Days,Inactivity Reactivation Flow,special day,completed,07/07/2024,8/7/2024
-594,High CLV Customers,VIP Rewards,winback,scheduled,02/11/2025,10/26/2024
-595,New Signups (Last 30 Days),Welcome Series - Step 1,winback,scheduled,30/06/2024,10/4/2024
-596,Churn Risk,We Miss You,welcome,active,15/04/2024,8/11/2023
-597,New Signups (Last 30 Days),Getting Started Journey,special day,active,24/10/2025,9/22/2024
-598,Inactive > 90 Days,Deep Winback,special day,completed,22/12/2024,10/22/2025
-599,Inactive > 90 Days,Inactivity Reactivation Flow,winback,active,27/07/2023,5/15/2024
-600,New Signups (Last 30 Days),Getting Started Journey,welcome,scheduled,05/10/2023,11/4/2025
-601,Churn Risk,Winback Flow,loyalty,scheduled,28/12/2024,6/4/2024
-602,New Signups (Last 30 Days),New Signup Nurture,upsell,active,09/03/2023,5/19/2025
-603,New Signups (Last 30 Days),Welcome Series - Step 2,winback,scheduled,17/08/2025,8/5/2023
-604,Inactive > 90 Days,Deep Winback,winback,scheduled,09/08/2025,3/4/2024
-605,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,active,12/09/2024,11/14/2024
-606,Inactive > 90 Days,Come-Back Offer,special day,completed,07/08/2024,12/22/2023
-607,New Signups (Last 30 Days),Welcome Series - Step 2,winback,scheduled,21/03/2023,8/27/2025
-608,High CLV Customers,Premium Features Upsell,seasonal,scheduled,11/07/2023,9/4/2025
-609,Inactive > 90 Days,Come-Back Offer,special day,completed,26/05/2025,9/25/2025
-610,High CLV Customers,Exclusive Member Upgrade,seasonal,scheduled,26/02/2024,10/10/2023
-611,New Signups (Last 30 Days),New Signup Nurture,winback,active,15/05/2023,9/15/2024
-612,High CLV Customers,End-of-Year Upsell,loyalty,scheduled,20/06/2024,9/25/2025
-613,High CLV Customers,Premium Features Upsell,welcome,active,16/12/2024,8/9/2025
-614,High CLV Customers,End-of-Year Upsell,seasonal,completed,10/06/2025,5/21/2024
-615,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,completed,10/10/2024,6/28/2024
-616,Churn Risk,Loyalty Reminder,welcome,scheduled,27/07/2025,5/10/2025
-617,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,active,27/10/2024,3/11/2024
-618,Churn Risk,Reactivation Journey,seasonal,scheduled,18/02/2025,9/5/2024
-619,New Signups (Last 30 Days),New Signup Nurture,seasonal,scheduled,06/02/2024,11/18/2025
-620,Inactive > 90 Days,Come-Back Offer,loyalty,completed,27/08/2023,6/9/2025
-621,Inactive > 90 Days,Come-Back Offer,seasonal,scheduled,05/10/2024,8/21/2023
-622,Churn Risk,We Miss You,seasonal,scheduled,17/09/2025,1/18/2024
-623,High CLV Customers,End-of-Year Upsell,winback,completed,13/11/2025,5/21/2025
-624,Churn Risk,Reactivation Journey,winback,active,12/07/2024,9/17/2023
-625,High CLV Customers,Premium Features Upsell,seasonal,active,07/10/2025,6/29/2025
-626,Churn Risk,Loyalty Reminder,winback,active,01/06/2025,1/11/2024
-627,High CLV Customers,VIP Rewards,winback,completed,28/08/2025,6/12/2025
-628,Inactive > 90 Days,Come-Back Offer,seasonal,completed,25/06/2023,10/7/2023
-629,Churn Risk,Loyalty Reminder,loyalty,scheduled,04/04/2024,4/15/2025
-630,High CLV Customers,VIP Rewards,upsell,scheduled,20/08/2025,3/19/2024
-631,High CLV Customers,Exclusive Member Upgrade,loyalty,scheduled,06/01/2024,10/25/2025
-632,New Signups (Last 30 Days),New Signup Nurture,upsell,completed,06/06/2025,12/2/2023
-633,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,completed,14/06/2025,8/24/2024
-634,Inactive > 90 Days,Come-Back Offer,winback,active,07/04/2024,8/29/2024
-635,Churn Risk,Reactivation Journey,loyalty,active,07/07/2023,5/10/2025
-636,New Signups (Last 30 Days),Getting Started Journey,winback,completed,17/09/2023,10/2/2024
-637,High CLV Customers,VIP Rewards,winback,scheduled,13/11/2024,10/26/2023
-638,Churn Risk,Loyalty Reminder,loyalty,active,22/10/2025,1/18/2025
-639,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,completed,15/09/2024,8/31/2024
-640,Inactive > 90 Days,Deep Winback,special day,active,09/06/2024,3/20/2024
-641,New Signups (Last 30 Days),Getting Started Journey,winback,scheduled,08/07/2023,10/6/2025
-642,Churn Risk,Reactivation Journey,winback,completed,09/11/2024,1/20/2024
-643,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,active,11/06/2023,4/3/2025
-644,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,active,27/06/2023,10/25/2025
-645,High CLV Customers,Exclusive Member Upgrade,winback,active,04/06/2023,10/9/2023
-646,Inactive > 90 Days,Come-Back Offer,seasonal,scheduled,16/03/2024,6/15/2024
-647,Inactive > 90 Days,Deep Winback,loyalty,active,26/05/2023,9/10/2023
-648,Churn Risk,Reactivation Journey,special day,scheduled,14/07/2025,9/27/2024
-649,Inactive > 90 Days,Deep Winback,loyalty,active,07/01/2025,1/30/2024
-650,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,completed,23/08/2025,4/12/2025
-651,Inactive > 90 Days,Deep Winback,seasonal,completed,09/06/2024,12/28/2024
-652,New Signups (Last 30 Days),Getting Started Journey,seasonal,completed,03/07/2024,10/22/2023
-653,Inactive > 90 Days,Deep Winback,upsell,scheduled,23/01/2024,8/16/2023
-654,Inactive > 90 Days,Deep Winback,seasonal,scheduled,23/05/2024,7/11/2024
-655,Inactive > 90 Days,Deep Winback,welcome,active,24/11/2024,5/15/2025
-656,Inactive > 90 Days,Deep Winback,upsell,completed,22/09/2024,9/3/2023
-657,High CLV Customers,End-of-Year Upsell,special day,active,25/10/2024,1/6/2024
-658,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,active,28/06/2023,7/13/2024
-659,Inactive > 90 Days,Come-Back Offer,seasonal,scheduled,22/11/2023,9/23/2023
-660,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,completed,07/07/2023,9/18/2024
-661,Inactive > 90 Days,Come-Back Offer,special day,completed,12/04/2023,4/19/2025
-662,New Signups (Last 30 Days),Welcome Series - Step 2,special day,scheduled,21/10/2024,8/18/2023
-663,Inactive > 90 Days,Come-Back Offer,seasonal,completed,28/04/2023,8/17/2024
-664,Churn Risk,We Miss You,winback,scheduled,13/09/2023,1/19/2025
-665,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,scheduled,03/04/2023,4/21/2025
-666,New Signups (Last 30 Days),Welcome Series - Step 1,loyalty,active,15/10/2025,8/23/2025
-667,High CLV Customers,Exclusive Member Upgrade,loyalty,completed,30/09/2023,11/11/2023
-668,New Signups (Last 30 Days),New Signup Nurture,seasonal,active,23/06/2023,11/2/2023
-669,Churn Risk,Loyalty Reminder,special day,scheduled,31/05/2025,12/6/2023
-670,Churn Risk,Loyalty Reminder,seasonal,scheduled,20/05/2024,5/21/2025
-671,Churn Risk,Winback Flow,winback,completed,08/07/2023,6/13/2024
-672,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,active,24/01/2024,5/9/2024
-673,High CLV Customers,Exclusive Member Upgrade,upsell,scheduled,22/10/2024,5/19/2025
-674,High CLV Customers,VIP Rewards,special day,active,09/06/2024,4/27/2024
-675,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,active,02/04/2025,9/12/2024
-676,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,scheduled,15/07/2023,10/3/2025
-677,Churn Risk,Winback Flow,welcome,active,13/10/2024,9/7/2025
-678,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,completed,11/07/2023,5/23/2025
-679,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,active,25/03/2023,2/8/2025
-680,Churn Risk,We Miss You,upsell,completed,05/05/2024,4/18/2025
-681,Inactive > 90 Days,Come-Back Offer,welcome,completed,26/09/2025,9/20/2025
-682,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,active,23/03/2023,2/15/2024
-683,High CLV Customers,VIP Rewards,loyalty,completed,22/11/2023,8/16/2024
-684,Churn Risk,Reactivation Journey,upsell,scheduled,08/10/2025,2/22/2024
-685,Inactive > 90 Days,Deep Winback,upsell,active,12/06/2023,7/26/2024
-686,Churn Risk,Reactivation Journey,upsell,active,14/09/2025,9/29/2024
-687,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,completed,09/05/2025,9/22/2025
-688,High CLV Customers,VIP Rewards,loyalty,active,25/03/2023,7/8/2025
-689,New Signups (Last 30 Days),New Signup Nurture,winback,scheduled,28/03/2024,10/23/2024
-690,Churn Risk,Winback Flow,welcome,active,05/03/2024,4/7/2025
-691,Churn Risk,Reactivation Journey,winback,scheduled,17/10/2025,11/28/2024
-692,Churn Risk,We Miss You,special day,scheduled,22/07/2023,11/14/2025
-693,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,completed,13/09/2025,12/28/2023
-694,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,scheduled,06/12/2024,6/8/2025
-695,Churn Risk,Loyalty Reminder,welcome,completed,01/11/2023,5/17/2024
-696,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,completed,03/12/2025,11/10/2024
-697,New Signups (Last 30 Days),Getting Started Journey,loyalty,completed,05/09/2024,7/24/2024
-698,Inactive > 90 Days,Inactivity Reactivation Flow,special day,completed,25/08/2023,3/21/2025
-699,High CLV Customers,Premium Features Upsell,seasonal,active,07/06/2024,10/16/2024
-700,New Signups (Last 30 Days),Getting Started Journey,welcome,completed,28/11/2025,10/17/2023
-701,Churn Risk,Reactivation Journey,loyalty,scheduled,18/08/2023,10/15/2025
-702,New Signups (Last 30 Days),Welcome Series - Step 1,loyalty,scheduled,23/09/2025,9/12/2024
-703,Churn Risk,Winback Flow,seasonal,completed,23/01/2024,10/4/2025
-704,Churn Risk,We Miss You,loyalty,active,17/02/2025,9/16/2024
-705,Churn Risk,Loyalty Reminder,upsell,active,22/05/2023,2/6/2024
-706,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,completed,25/07/2023,6/14/2025
-707,High CLV Customers,End-of-Year Upsell,upsell,active,14/08/2023,5/5/2024
-708,New Signups (Last 30 Days),Getting Started Journey,loyalty,scheduled,13/07/2024,8/25/2025
-709,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,active,14/07/2024,11/7/2024
-710,Churn Risk,Winback Flow,seasonal,completed,18/12/2024,2/10/2025
-711,High CLV Customers,End-of-Year Upsell,loyalty,scheduled,03/03/2024,11/1/2023
-712,High CLV Customers,VIP Rewards,welcome,active,22/12/2024,6/26/2025
-713,Churn Risk,Winback Flow,seasonal,active,08/06/2025,11/24/2025
-714,Churn Risk,Winback Flow,seasonal,active,12/11/2023,12/5/2024
-715,New Signups (Last 30 Days),New Signup Nurture,upsell,scheduled,22/06/2023,1/25/2025
-716,Churn Risk,We Miss You,loyalty,active,20/09/2024,7/13/2024
-717,Churn Risk,Loyalty Reminder,loyalty,scheduled,16/10/2025,8/20/2025
-718,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,completed,12/06/2025,8/15/2023
-719,High CLV Customers,Premium Features Upsell,special day,scheduled,23/03/2024,10/30/2023
-720,Inactive > 90 Days,Come-Back Offer,loyalty,scheduled,10/08/2023,7/26/2025
-721,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,completed,09/05/2024,4/23/2025
-722,Churn Risk,Reactivation Journey,special day,completed,27/12/2023,4/12/2025
-723,Churn Risk,Loyalty Reminder,winback,completed,05/11/2025,4/10/2024
-724,High CLV Customers,Exclusive Member Upgrade,loyalty,completed,15/06/2025,12/11/2023
-725,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,01/08/2025,12/14/2024
-726,Inactive > 90 Days,Deep Winback,welcome,active,04/03/2024,3/1/2024
-727,Churn Risk,We Miss You,loyalty,active,06/11/2024,2/1/2024
-728,High CLV Customers,Exclusive Member Upgrade,winback,completed,09/02/2025,2/16/2025
-729,Churn Risk,Reactivation Journey,loyalty,active,25/08/2025,7/24/2025
-730,High CLV Customers,VIP Rewards,welcome,scheduled,27/11/2023,4/12/2025
-731,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,active,28/06/2023,5/21/2025
-732,Churn Risk,Reactivation Journey,welcome,completed,08/04/2023,12/12/2024
-733,Inactive > 90 Days,Deep Winback,loyalty,scheduled,05/09/2024,7/10/2025
-734,Inactive > 90 Days,Deep Winback,loyalty,completed,03/03/2025,7/29/2025
-735,Inactive > 90 Days,Come-Back Offer,welcome,active,27/02/2024,6/7/2024
-736,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,active,22/02/2024,10/15/2023
-737,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,active,20/12/2023,1/14/2024
-738,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,completed,28/09/2025,5/5/2025
-739,New Signups (Last 30 Days),New Signup Nurture,loyalty,scheduled,05/12/2023,2/22/2024
-740,Churn Risk,We Miss You,upsell,scheduled,09/08/2025,12/26/2024
-741,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,scheduled,22/02/2025,9/13/2024
-742,Churn Risk,Reactivation Journey,loyalty,active,29/05/2024,8/10/2023
-743,Inactive > 90 Days,Come-Back Offer,welcome,active,21/10/2023,11/18/2025
-744,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,scheduled,27/03/2025,1/11/2024
-745,Inactive > 90 Days,Deep Winback,welcome,scheduled,04/07/2025,2/26/2025
-746,High CLV Customers,Exclusive Member Upgrade,winback,scheduled,11/10/2024,11/3/2024
-747,Churn Risk,Reactivation Journey,welcome,completed,05/08/2025,8/10/2023
-748,High CLV Customers,VIP Rewards,winback,completed,26/01/2024,7/28/2024
-749,High CLV Customers,Exclusive Member Upgrade,loyalty,scheduled,19/08/2023,5/24/2025
-750,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,scheduled,04/06/2024,12/27/2023
-751,High CLV Customers,Exclusive Member Upgrade,welcome,active,04/05/2025,10/3/2024
-752,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,scheduled,05/01/2025,9/15/2024
-753,New Signups (Last 30 Days),New Signup Nurture,special day,completed,08/06/2023,9/18/2023
-754,Churn Risk,Winback Flow,upsell,scheduled,21/06/2024,2/29/2024
-755,High CLV Customers,Exclusive Member Upgrade,winback,active,10/10/2025,5/25/2025
-756,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,active,21/05/2023,3/17/2025
-757,Inactive > 90 Days,Deep Winback,upsell,completed,29/06/2025,8/1/2025
-758,New Signups (Last 30 Days),Getting Started Journey,winback,active,02/01/2025,4/13/2025
-759,New Signups (Last 30 Days),New Signup Nurture,loyalty,scheduled,10/09/2023,10/8/2024
-760,Churn Risk,Winback Flow,seasonal,completed,06/01/2024,11/28/2024
-761,Inactive > 90 Days,Deep Winback,welcome,active,05/05/2023,12/3/2024
-762,High CLV Customers,Premium Features Upsell,loyalty,scheduled,11/05/2025,4/15/2024
-763,Churn Risk,Loyalty Reminder,upsell,completed,09/03/2025,5/29/2025
-764,Churn Risk,We Miss You,upsell,active,24/06/2025,6/16/2024
-765,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,scheduled,01/07/2024,11/15/2024
-766,Churn Risk,Loyalty Reminder,upsell,completed,29/12/2023,7/1/2025
-767,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,scheduled,03/05/2023,2/23/2025
-768,New Signups (Last 30 Days),New Signup Nurture,loyalty,scheduled,21/03/2025,4/5/2025
-769,Inactive > 90 Days,Inactivity Reactivation Flow,special day,active,17/04/2025,1/27/2025
-770,High CLV Customers,Premium Features Upsell,loyalty,scheduled,08/03/2025,8/3/2023
-771,High CLV Customers,Premium Features Upsell,upsell,active,02/11/2023,11/12/2024
-772,High CLV Customers,Exclusive Member Upgrade,winback,active,08/02/2024,6/27/2024
-773,Churn Risk,We Miss You,special day,active,10/12/2023,11/26/2025
-774,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,16/05/2023,7/26/2024
-775,New Signups (Last 30 Days),Welcome Series - Step 1,loyalty,scheduled,27/04/2024,1/30/2025
-776,Inactive > 90 Days,Deep Winback,special day,active,23/04/2024,6/5/2025
-777,Churn Risk,We Miss You,seasonal,active,13/12/2024,9/12/2024
-778,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,completed,03/04/2024,6/2/2025
-779,Churn Risk,Loyalty Reminder,seasonal,completed,19/04/2025,8/27/2024
-780,High CLV Customers,Exclusive Member Upgrade,welcome,active,25/09/2024,10/17/2024
-781,High CLV Customers,Premium Features Upsell,winback,completed,28/12/2024,4/8/2024
-782,New Signups (Last 30 Days),Welcome Series - Step 1,winback,active,20/08/2025,12/26/2024
-783,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,active,22/06/2024,2/7/2024
-784,High CLV Customers,VIP Rewards,welcome,completed,24/02/2024,9/5/2024
-785,High CLV Customers,Exclusive Member Upgrade,special day,active,24/05/2023,5/21/2025
-786,Churn Risk,Reactivation Journey,welcome,active,11/03/2024,9/5/2025
-787,Inactive > 90 Days,Deep Winback,loyalty,scheduled,23/10/2023,10/25/2024
-788,Inactive > 90 Days,Come-Back Offer,welcome,scheduled,11/10/2025,5/1/2024
-789,New Signups (Last 30 Days),Getting Started Journey,loyalty,active,28/05/2025,11/25/2024
-790,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,scheduled,25/07/2024,11/22/2024
-791,New Signups (Last 30 Days),New Signup Nurture,special day,scheduled,15/09/2023,8/2/2024
-792,Churn Risk,Winback Flow,upsell,completed,04/07/2023,3/11/2025
-793,New Signups (Last 30 Days),New Signup Nurture,winback,scheduled,03/11/2024,6/21/2025
-794,High CLV Customers,Premium Features Upsell,loyalty,scheduled,21/05/2023,8/26/2024
-795,High CLV Customers,VIP Rewards,loyalty,completed,13/04/2025,5/26/2024
-796,Inactive > 90 Days,Deep Winback,special day,scheduled,18/10/2025,3/20/2025
-797,Inactive > 90 Days,Come-Back Offer,welcome,completed,01/10/2025,8/30/2025
-798,Churn Risk,Winback Flow,welcome,active,01/10/2024,5/16/2025
-799,New Signups (Last 30 Days),New Signup Nurture,seasonal,active,17/11/2024,8/10/2024
-800,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,completed,20/03/2025,12/21/2023
-801,Inactive > 90 Days,Come-Back Offer,seasonal,scheduled,24/10/2025,4/8/2024
-802,New Signups (Last 30 Days),Getting Started Journey,welcome,active,06/02/2025,8/17/2025
-803,New Signups (Last 30 Days),Welcome Series - Step 2,seasonal,active,17/02/2024,2/9/2024
-804,Inactive > 90 Days,Come-Back Offer,loyalty,active,25/09/2024,12/6/2023
-805,Inactive > 90 Days,Inactivity Reactivation Flow,winback,completed,06/01/2025,2/6/2025
-806,Inactive > 90 Days,Deep Winback,welcome,scheduled,31/03/2023,9/9/2023
-807,High CLV Customers,Exclusive Member Upgrade,winback,completed,05/12/2023,4/23/2025
-808,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,scheduled,11/02/2024,5/30/2025
-809,Churn Risk,We Miss You,seasonal,scheduled,26/05/2024,11/23/2024
-810,New Signups (Last 30 Days),New Signup Nurture,welcome,active,23/04/2024,9/28/2025
-811,High CLV Customers,Premium Features Upsell,special day,scheduled,29/04/2023,12/5/2023
-812,High CLV Customers,Exclusive Member Upgrade,winback,completed,30/05/2024,8/24/2023
-813,High CLV Customers,VIP Rewards,loyalty,completed,07/10/2024,4/20/2025
-814,Churn Risk,Winback Flow,welcome,scheduled,01/03/2025,1/27/2025
-815,High CLV Customers,Premium Features Upsell,seasonal,completed,01/04/2023,8/18/2024
-816,New Signups (Last 30 Days),Welcome Series - Step 1,winback,scheduled,25/04/2025,10/18/2023
-817,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,completed,13/09/2025,1/22/2024
-818,Inactive > 90 Days,Come-Back Offer,welcome,scheduled,09/04/2025,7/25/2025
-819,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,completed,07/11/2023,5/20/2024
-820,New Signups (Last 30 Days),Welcome Series - Step 1,winback,active,21/11/2024,3/2/2024
-821,High CLV Customers,End-of-Year Upsell,welcome,active,16/07/2023,12/19/2024
-822,Churn Risk,Winback Flow,seasonal,scheduled,27/03/2024,1/20/2025
-823,Churn Risk,We Miss You,welcome,active,12/08/2023,3/27/2025
-824,Churn Risk,Winback Flow,seasonal,active,29/03/2024,7/17/2025
-825,Churn Risk,Winback Flow,upsell,active,27/05/2024,4/11/2024
-826,High CLV Customers,End-of-Year Upsell,seasonal,scheduled,14/02/2025,8/22/2024
-827,High CLV Customers,Exclusive Member Upgrade,welcome,scheduled,29/11/2023,5/25/2025
-828,Churn Risk,Loyalty Reminder,welcome,completed,15/11/2024,11/11/2023
-829,High CLV Customers,Exclusive Member Upgrade,welcome,scheduled,12/09/2025,10/14/2024
-830,High CLV Customers,End-of-Year Upsell,loyalty,scheduled,22/05/2023,7/24/2025
-831,Churn Risk,Winback Flow,upsell,scheduled,09/05/2024,8/23/2025
-832,Inactive > 90 Days,Come-Back Offer,upsell,completed,24/10/2024,9/13/2023
-833,Inactive > 90 Days,Come-Back Offer,winback,active,09/10/2023,7/23/2024
-834,High CLV Customers,Premium Features Upsell,winback,completed,10/05/2025,10/28/2023
-835,New Signups (Last 30 Days),Getting Started Journey,special day,completed,02/04/2023,9/17/2024
-836,Inactive > 90 Days,Come-Back Offer,seasonal,scheduled,03/12/2023,2/2/2025
-837,Inactive > 90 Days,Come-Back Offer,seasonal,active,28/06/2024,3/21/2024
-838,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,completed,10/03/2023,8/5/2025
-839,New Signups (Last 30 Days),Getting Started Journey,upsell,completed,12/10/2024,10/30/2023
-840,High CLV Customers,VIP Rewards,seasonal,scheduled,03/09/2024,9/13/2024
-841,New Signups (Last 30 Days),Getting Started Journey,upsell,scheduled,06/06/2023,6/16/2025
-842,Churn Risk,Loyalty Reminder,upsell,scheduled,23/01/2024,2/22/2024
-843,Churn Risk,Loyalty Reminder,winback,scheduled,19/10/2025,8/14/2025
-844,Inactive > 90 Days,Inactivity Reactivation Flow,winback,completed,14/04/2025,5/20/2024
-845,Churn Risk,Loyalty Reminder,welcome,completed,01/08/2023,12/4/2025
-846,High CLV Customers,Premium Features Upsell,welcome,completed,08/10/2024,7/21/2025
-847,High CLV Customers,Exclusive Member Upgrade,seasonal,active,27/02/2025,3/6/2024
-848,Inactive > 90 Days,Come-Back Offer,special day,completed,15/08/2024,12/26/2024
-849,Churn Risk,Winback Flow,loyalty,active,28/07/2024,11/4/2024
-850,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,scheduled,10/03/2023,1/27/2024
-851,High CLV Customers,End-of-Year Upsell,winback,scheduled,09/12/2023,3/25/2025
-852,High CLV Customers,Exclusive Member Upgrade,seasonal,active,09/05/2023,3/10/2025
-853,High CLV Customers,End-of-Year Upsell,special day,completed,12/04/2025,3/7/2025
-854,Churn Risk,Winback Flow,winback,active,21/02/2025,10/25/2023
-855,New Signups (Last 30 Days),Getting Started Journey,seasonal,completed,13/03/2025,11/28/2025
-856,Inactive > 90 Days,Come-Back Offer,upsell,active,25/07/2023,1/23/2024
-857,High CLV Customers,End-of-Year Upsell,special day,scheduled,28/05/2023,12/9/2024
-858,Churn Risk,Winback Flow,special day,completed,03/02/2025,11/18/2024
-859,Inactive > 90 Days,Come-Back Offer,winback,scheduled,25/09/2023,9/22/2023
-860,Churn Risk,Winback Flow,seasonal,completed,17/03/2023,6/21/2025
-861,New Signups (Last 30 Days),Welcome Series - Step 2,winback,active,22/08/2024,11/9/2025
-862,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,scheduled,22/05/2024,9/10/2023
-863,High CLV Customers,VIP Rewards,upsell,scheduled,25/11/2023,2/24/2024
-864,Churn Risk,Loyalty Reminder,seasonal,active,01/09/2024,5/10/2024
-865,High CLV Customers,VIP Rewards,special day,scheduled,07/12/2024,9/11/2025
-866,New Signups (Last 30 Days),Getting Started Journey,welcome,active,18/02/2024,4/30/2024
-867,Churn Risk,We Miss You,seasonal,completed,13/10/2025,2/25/2025
-868,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,scheduled,25/04/2025,11/21/2023
-869,Inactive > 90 Days,Deep Winback,seasonal,active,31/01/2024,12/25/2023
-870,High CLV Customers,VIP Rewards,seasonal,completed,25/06/2023,7/22/2025
-871,Inactive > 90 Days,Come-Back Offer,special day,completed,02/05/2024,3/21/2024
-872,Inactive > 90 Days,Come-Back Offer,seasonal,completed,30/03/2024,5/26/2025
-873,Inactive > 90 Days,Deep Winback,loyalty,scheduled,30/04/2023,8/22/2025
-874,Inactive > 90 Days,Inactivity Reactivation Flow,winback,active,25/09/2024,9/23/2024
-875,High CLV Customers,VIP Rewards,welcome,active,21/10/2023,12/25/2024
-876,New Signups (Last 30 Days),Getting Started Journey,winback,active,08/07/2025,9/26/2025
-877,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,completed,07/10/2025,6/29/2024
-878,Churn Risk,Loyalty Reminder,seasonal,completed,15/01/2024,9/28/2023
-879,Inactive > 90 Days,Deep Winback,welcome,scheduled,16/11/2023,10/5/2023
-880,Churn Risk,We Miss You,loyalty,scheduled,04/09/2025,11/28/2025
-881,New Signups (Last 30 Days),Welcome Series - Step 1,winback,completed,16/06/2023,9/3/2023
-882,Churn Risk,Loyalty Reminder,seasonal,active,26/09/2025,4/4/2025
-883,Churn Risk,Winback Flow,loyalty,scheduled,19/05/2024,10/21/2023
-884,Churn Risk,Loyalty Reminder,loyalty,active,05/06/2024,8/31/2024
-885,High CLV Customers,VIP Rewards,loyalty,completed,17/08/2024,12/10/2023
-886,High CLV Customers,VIP Rewards,upsell,scheduled,31/03/2023,6/5/2025
-887,High CLV Customers,Exclusive Member Upgrade,upsell,completed,13/02/2024,7/1/2025
-888,Churn Risk,Winback Flow,upsell,active,23/08/2023,10/21/2025
-889,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,completed,16/03/2023,9/3/2024
-890,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,scheduled,04/11/2023,8/18/2024
-891,Inactive > 90 Days,Come-Back Offer,seasonal,completed,04/10/2024,4/8/2025
-892,Inactive > 90 Days,Deep Winback,loyalty,completed,15/03/2023,7/3/2025
-893,Churn Risk,Loyalty Reminder,special day,completed,26/11/2025,11/5/2023
-894,High CLV Customers,Exclusive Member Upgrade,seasonal,scheduled,29/11/2025,10/20/2024
-895,New Signups (Last 30 Days),New Signup Nurture,winback,active,10/05/2024,10/15/2023
-896,New Signups (Last 30 Days),New Signup Nurture,special day,completed,25/09/2024,8/3/2025
-897,New Signups (Last 30 Days),Getting Started Journey,upsell,completed,04/03/2025,3/8/2024
-898,Inactive > 90 Days,Come-Back Offer,special day,completed,13/03/2024,8/4/2025
-899,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,completed,23/08/2025,3/11/2024
-900,Inactive > 90 Days,Deep Winback,winback,scheduled,16/05/2025,11/12/2024
-901,New Signups (Last 30 Days),New Signup Nurture,upsell,active,14/05/2025,8/29/2025
-902,Inactive > 90 Days,Inactivity Reactivation Flow,special day,scheduled,30/07/2025,8/22/2025
-903,Churn Risk,Winback Flow,winback,completed,20/11/2025,9/11/2024
-904,New Signups (Last 30 Days),New Signup Nurture,upsell,active,20/01/2024,6/29/2024
-905,Churn Risk,Reactivation Journey,seasonal,active,06/08/2025,2/21/2025
-906,Inactive > 90 Days,Deep Winback,seasonal,completed,16/06/2025,10/27/2023
-907,New Signups (Last 30 Days),New Signup Nurture,winback,scheduled,13/08/2023,10/20/2023
-908,New Signups (Last 30 Days),Welcome Series - Step 1,upsell,active,03/05/2025,7/18/2025
-909,Inactive > 90 Days,Inactivity Reactivation Flow,welcome,active,08/08/2025,5/21/2025
-910,Churn Risk,Loyalty Reminder,upsell,completed,01/04/2025,5/18/2025
-911,High CLV Customers,VIP Rewards,upsell,scheduled,06/02/2025,5/5/2025
-912,Churn Risk,We Miss You,upsell,scheduled,20/11/2025,10/22/2025
-913,High CLV Customers,Exclusive Member Upgrade,special day,completed,08/04/2023,10/28/2024
-914,New Signups (Last 30 Days),Welcome Series - Step 1,winback,scheduled,06/12/2023,9/24/2023
-915,High CLV Customers,Exclusive Member Upgrade,seasonal,scheduled,11/06/2024,9/4/2024
-916,High CLV Customers,End-of-Year Upsell,winback,active,14/10/2023,8/24/2023
-917,Churn Risk,Winback Flow,welcome,completed,12/12/2023,2/18/2025
-918,New Signups (Last 30 Days),Getting Started Journey,welcome,active,10/06/2023,11/4/2024
-919,New Signups (Last 30 Days),Getting Started Journey,seasonal,active,26/03/2024,1/21/2025
-920,Churn Risk,Reactivation Journey,upsell,active,23/10/2024,7/21/2024
-921,Churn Risk,We Miss You,welcome,active,21/01/2025,1/26/2024
-922,New Signups (Last 30 Days),Welcome Series - Step 2,winback,scheduled,06/10/2023,1/17/2025
-923,Inactive > 90 Days,Inactivity Reactivation Flow,special day,completed,14/07/2023,8/6/2023
-924,New Signups (Last 30 Days),Welcome Series - Step 1,special day,scheduled,07/11/2025,5/17/2024
-925,New Signups (Last 30 Days),Getting Started Journey,loyalty,active,24/02/2024,12/5/2023
-926,Churn Risk,Loyalty Reminder,seasonal,completed,19/05/2024,9/23/2024
-927,Churn Risk,Winback Flow,winback,active,24/10/2025,8/31/2023
-928,Churn Risk,We Miss You,winback,completed,15/08/2024,12/3/2023
-929,Churn Risk,Reactivation Journey,winback,completed,06/09/2023,10/5/2025
-930,Churn Risk,Reactivation Journey,welcome,scheduled,17/12/2023,11/16/2023
-931,New Signups (Last 30 Days),New Signup Nurture,winback,completed,29/07/2023,10/1/2024
-932,Inactive > 90 Days,Come-Back Offer,loyalty,scheduled,04/05/2024,9/23/2025
-933,High CLV Customers,VIP Rewards,seasonal,scheduled,24/07/2024,7/8/2024
-934,Inactive > 90 Days,Deep Winback,upsell,completed,08/02/2025,10/3/2025
-935,New Signups (Last 30 Days),Welcome Series - Step 2,loyalty,scheduled,07/10/2024,2/6/2024
-936,High CLV Customers,Premium Features Upsell,upsell,scheduled,09/09/2025,10/8/2024
-937,Inactive > 90 Days,Deep Winback,seasonal,active,09/11/2025,11/9/2023
-938,New Signups (Last 30 Days),Welcome Series - Step 2,welcome,active,16/07/2025,5/8/2025
-939,Churn Risk,Winback Flow,special day,scheduled,16/09/2023,7/9/2024
-940,Inactive > 90 Days,Deep Winback,winback,completed,28/08/2023,11/28/2023
-941,High CLV Customers,VIP Rewards,welcome,active,19/05/2025,8/30/2024
-942,High CLV Customers,End-of-Year Upsell,upsell,active,09/04/2024,1/7/2024
-943,High CLV Customers,Premium Features Upsell,upsell,completed,28/11/2023,12/20/2024
-944,Inactive > 90 Days,Deep Winback,special day,scheduled,20/11/2024,1/25/2024
-945,Inactive > 90 Days,Deep Winback,special day,completed,20/05/2025,8/30/2024
-946,Churn Risk,Loyalty Reminder,seasonal,active,04/10/2025,4/18/2025
-947,New Signups (Last 30 Days),Getting Started Journey,upsell,completed,13/08/2024,11/6/2024
-948,Churn Risk,Reactivation Journey,upsell,scheduled,18/12/2024,3/13/2024
-949,New Signups (Last 30 Days),Welcome Series - Step 2,upsell,active,10/11/2024,7/25/2024
-950,High CLV Customers,VIP Rewards,upsell,completed,16/08/2025,2/10/2025
-951,Churn Risk,Winback Flow,loyalty,scheduled,03/01/2024,1/6/2025
-952,Churn Risk,Winback Flow,welcome,active,31/10/2025,8/15/2025
-953,Churn Risk,Reactivation Journey,loyalty,scheduled,10/01/2024,9/23/2024
-954,New Signups (Last 30 Days),Welcome Series - Step 2,special day,completed,27/08/2024,5/25/2025
-955,Inactive > 90 Days,Come-Back Offer,special day,active,10/10/2023,3/22/2024
-956,Inactive > 90 Days,Inactivity Reactivation Flow,loyalty,completed,14/09/2025,7/19/2025
-957,New Signups (Last 30 Days),New Signup Nurture,loyalty,completed,28/12/2024,6/29/2025
-958,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,completed,10/07/2025,8/3/2024
-959,Churn Risk,Reactivation Journey,winback,scheduled,04/08/2025,8/18/2023
-960,New Signups (Last 30 Days),Getting Started Journey,loyalty,active,24/11/2024,1/2/2024
-961,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,scheduled,10/12/2023,7/7/2024
-962,New Signups (Last 30 Days),Getting Started Journey,seasonal,scheduled,25/06/2023,1/27/2024
-963,New Signups (Last 30 Days),New Signup Nurture,welcome,active,18/09/2023,9/5/2024
-964,Churn Risk,Winback Flow,loyalty,completed,20/02/2024,1/5/2025
-965,New Signups (Last 30 Days),New Signup Nurture,seasonal,scheduled,31/03/2023,7/26/2025
-966,Churn Risk,Loyalty Reminder,seasonal,completed,15/03/2023,8/12/2024
-967,New Signups (Last 30 Days),New Signup Nurture,upsell,active,23/10/2024,5/26/2024
-968,High CLV Customers,VIP Rewards,welcome,completed,26/09/2024,11/4/2025
-969,Inactive > 90 Days,Inactivity Reactivation Flow,special day,completed,27/07/2024,3/15/2025
-970,Inactive > 90 Days,Deep Winback,special day,scheduled,18/11/2025,8/12/2025
-971,Churn Risk,Loyalty Reminder,winback,completed,20/03/2025,1/28/2025
-972,Inactive > 90 Days,Inactivity Reactivation Flow,winback,scheduled,29/09/2025,2/25/2025
-973,New Signups (Last 30 Days),New Signup Nurture,winback,completed,20/05/2024,7/31/2024
-974,New Signups (Last 30 Days),Welcome Series - Step 1,seasonal,scheduled,24/06/2023,9/1/2024
-975,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,16/01/2025,4/16/2025
-976,Churn Risk,Winback Flow,loyalty,scheduled,15/05/2023,11/8/2023
-977,New Signups (Last 30 Days),Welcome Series - Step 1,welcome,scheduled,29/06/2025,7/24/2024
-978,New Signups (Last 30 Days),Welcome Series - Step 2,special day,scheduled,12/01/2025,2/6/2025
-979,High CLV Customers,Exclusive Member Upgrade,seasonal,scheduled,24/04/2024,11/23/2024
-980,Churn Risk,Loyalty Reminder,seasonal,active,21/05/2023,9/2/2023
-981,New Signups (Last 30 Days),Getting Started Journey,loyalty,active,30/11/2023,6/8/2024
-982,New Signups (Last 30 Days),Welcome Series - Step 2,special day,active,01/07/2023,5/17/2024
-983,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,completed,03/11/2024,8/28/2025
-984,Churn Risk,Loyalty Reminder,welcome,completed,14/11/2023,11/21/2024
-985,High CLV Customers,Exclusive Member Upgrade,special day,scheduled,17/03/2025,11/30/2025
-986,New Signups (Last 30 Days),New Signup Nurture,seasonal,active,06/05/2024,10/18/2025
-987,High CLV Customers,Premium Features Upsell,loyalty,active,17/11/2025,6/17/2024
-988,New Signups (Last 30 Days),Getting Started Journey,seasonal,active,15/09/2024,11/4/2025
-989,High CLV Customers,End-of-Year Upsell,welcome,active,16/09/2024,4/29/2025
-990,Churn Risk,We Miss You,seasonal,scheduled,07/10/2024,1/9/2024
-991,Churn Risk,Winback Flow,special day,scheduled,25/10/2024,2/21/2024
-992,Churn Risk,Loyalty Reminder,welcome,completed,13/05/2023,7/3/2024
-993,Inactive > 90 Days,Inactivity Reactivation Flow,upsell,active,05/08/2024,12/2/2025
-994,High CLV Customers,End-of-Year Upsell,special day,active,19/11/2023,6/10/2025
-995,High CLV Customers,Premium Features Upsell,loyalty,scheduled,06/05/2023,3/22/2024
-996,Inactive > 90 Days,Deep Winback,seasonal,scheduled,18/06/2025,5/2/2024
-997,New Signups (Last 30 Days),New Signup Nurture,winback,scheduled,21/10/2024,2/25/2025
-998,New Signups (Last 30 Days),Getting Started Journey,special day,active,12/01/2024,2/9/2025
-999,Inactive > 90 Days,Inactivity Reactivation Flow,seasonal,scheduled,29/06/2025,2/19/2025
-1000,High CLV Customers,Exclusive Member Upgrade,winback,active,15/09/2023,6/9/2024
+id,segment,name,status,end_date,start_date,budget,spend
+1,Churn Risk,We Miss You,Scheduled,12/1/2025,7/9/2025,98918,81487
+2,New Signups (Last 30 Days),New Signup Nurture,Completed,4/24/2025,12/6/2025,90054,98004
+3,Inactive > 90 Days,Come-Back Offer,Scheduled,8/6/2025,9/5/2025,65779,56825
+4,Churn Risk,We Miss You,Scheduled,8/24/2025,11/22/2025,72369,77818
+5,Churn Risk,Loyalty Reminder,Active,6/11/2025,6/2/2025,10028,10821
+6,New Signups (Last 30 Days),Getting Started Journey,Scheduled,3/19/2025,4/2/2025,14338,12682
+7,New Signups (Last 30 Days),New Signup Nurture,Active,8/23/2025,2/4/2025,9548,7834
+8,High CLV Customers,VIP Rewards,Completed,9/10/2025,10/18/2025,98054,83406
+9,High CLV Customers,End-of-Year Upsell,Active,2/24/2025,8/7/2025,67528,47474
+10,New Signups (Last 30 Days),New Signup Nurture,Active,10/17/2025,7/6/2025,12526,12889
+11,Inactive > 90 Days,Inactivity Reactivation Flow,Active,8/19/2025,10/8/2025,21349,22365
+12,Churn Risk,Loyalty Reminder,Scheduled,12/29/2024,10/17/2025,97285,105708
+13,Inactive > 90 Days,Deep Winback,Active,6/18/2025,8/20/2025,79131,84776
+14,High CLV Customers,VIP Rewards,Completed,3/26/2025,3/8/2025,72066,60191
+15,Churn Risk,We Miss You,Active,6/23/2025,2/7/2025,64041,66830
+16,Churn Risk,Winback Flow,Active,8/2/2025,3/26/2025,89810,82378
+17,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,5/5/2025,9/20/2025,86020,84137
+18,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,7/21/2025,10/12/2025,81854,58472
+19,Churn Risk,Reactivation Journey,Completed,9/29/2025,9/13/2025,16724,13115
+20,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,4/9/2025,9/7/2025,54868,49242
+21,High CLV Customers,Premium Features Upsell,Active,11/5/2025,11/3/2025,62073,61644
+22,High CLV Customers,Premium Features Upsell,Scheduled,8/15/2025,6/4/2025,14524,10819
+23,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,5/9/2025,11/29/2025,28821,27321
+24,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,12/3/2025,3/30/2025,77337,77211
+25,High CLV Customers,VIP Rewards,Active,10/26/2025,12/4/2025,85932,73772
+26,Inactive > 90 Days,Deep Winback,Completed,6/28/2025,11/5/2025,82969,88191
+27,Inactive > 90 Days,Deep Winback,Scheduled,4/21/2025,6/23/2025,82526,88333
+28,Inactive > 90 Days,Deep Winback,Completed,10/23/2025,9/21/2025,44243,42560
+29,Inactive > 90 Days,Come-Back Offer,Scheduled,8/25/2025,1/26/2025,79341,55868
+30,Inactive > 90 Days,Deep Winback,Active,7/1/2025,5/8/2025,34459,34375
+31,Churn Risk,Loyalty Reminder,Completed,6/5/2025,12/29/2024,76068,72955
+32,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,3/2/2025,12/16/2024,26379,27439
+33,New Signups (Last 30 Days),Welcome Series – Step 1,Active,7/7/2025,8/13/2025,18034,18767
+34,High CLV Customers,VIP Rewards,Completed,11/28/2025,8/5/2025,43883,43330
+35,Churn Risk,We Miss You,Active,6/9/2025,2/1/2025,2037,2088
+36,High CLV Customers,Exclusive Member Upgrade,Scheduled,12/27/2024,2/7/2025,78816,56931
+37,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,6/15/2025,8/2/2025,77586,63252
+38,Churn Risk,Loyalty Reminder,Active,8/27/2025,2/28/2025,61986,56633
+39,New Signups (Last 30 Days),Getting Started Journey,Completed,2/22/2025,2/22/2025,55211,55116
+40,Inactive > 90 Days,Deep Winback,Active,12/8/2025,10/26/2025,42500,42620
+41,New Signups (Last 30 Days),Getting Started Journey,Scheduled,9/6/2025,9/13/2025,13173,11701
+42,Churn Risk,Reactivation Journey,Scheduled,5/10/2025,8/29/2025,83446,71533
+43,High CLV Customers,Premium Features Upsell,Scheduled,5/27/2025,1/24/2025,70369,51466
+44,New Signups (Last 30 Days),Getting Started Journey,Completed,8/15/2025,4/11/2025,24932,20815
+45,Inactive > 90 Days,Deep Winback,Active,2/18/2025,8/21/2025,79098,67272
+46,Inactive > 90 Days,Come-Back Offer,Scheduled,8/31/2025,8/1/2025,59690,61289
+47,Churn Risk,Reactivation Journey,Scheduled,2/13/2025,2/7/2025,24322,17704
+48,High CLV Customers,Exclusive Member Upgrade,Scheduled,1/13/2025,4/6/2025,64368,56753
+49,Churn Risk,Winback Flow,Scheduled,4/21/2025,4/12/2025,60685,50224
+50,Inactive > 90 Days,Deep Winback,Completed,4/18/2025,4/6/2025,42302,43491
+51,High CLV Customers,Exclusive Member Upgrade,Completed,11/12/2025,7/27/2025,57909,61051
+52,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,4/30/2025,10/25/2025,84213,73703
+53,New Signups (Last 30 Days),Welcome Series – Step 1,Active,1/11/2025,12/30/2024,79125,57802
+54,Churn Risk,Reactivation Journey,Scheduled,12/8/2025,12/20/2024,61701,47187
+55,Inactive > 90 Days,Come-Back Offer,Scheduled,12/7/2025,5/21/2025,28018,21123
+56,New Signups (Last 30 Days),Getting Started Journey,Scheduled,12/4/2025,6/16/2025,21176,15234
+57,Churn Risk,We Miss You,Active,8/14/2025,2/24/2025,51953,37442
+58,New Signups (Last 30 Days),New Signup Nurture,Scheduled,11/13/2025,9/15/2025,98001,98278
+59,New Signups (Last 30 Days),Getting Started Journey,Scheduled,2/21/2025,10/7/2025,96509,68139
+60,New Signups (Last 30 Days),Welcome Series – Step 2,Active,3/24/2025,2/11/2025,35738,35853
+61,New Signups (Last 30 Days),Getting Started Journey,Active,4/4/2025,8/13/2025,93724,80796
+62,Inactive > 90 Days,Deep Winback,Scheduled,3/9/2025,1/26/2025,93711,75353
+63,Churn Risk,Winback Flow,Active,2/12/2025,6/13/2025,61332,55580
+64,Churn Risk,Reactivation Journey,Completed,2/21/2025,5/4/2025,92230,78517
+65,Inactive > 90 Days,Deep Winback,Scheduled,12/10/2024,11/30/2025,71441,55688
+66,New Signups (Last 30 Days),New Signup Nurture,Active,3/9/2025,10/9/2025,52910,40019
+67,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,3/10/2025,2/7/2025,49494,46499
+68,Churn Risk,Reactivation Journey,Active,5/18/2025,12/21/2024,33179,32163
+69,High CLV Customers,Exclusive Member Upgrade,Scheduled,7/26/2025,6/26/2025,39341,42938
+70,High CLV Customers,VIP Rewards,Completed,7/14/2025,3/1/2025,34172,32810
+71,New Signups (Last 30 Days),New Signup Nurture,Completed,9/10/2025,3/31/2025,93007,72708
+72,High CLV Customers,Premium Features Upsell,Completed,9/26/2025,1/3/2025,53052,39759
+73,Churn Risk,Reactivation Journey,Active,7/4/2025,10/30/2025,56561,61590
+74,Inactive > 90 Days,Inactivity Reactivation Flow,Active,6/24/2025,11/1/2025,78412,61982
+75,Inactive > 90 Days,Deep Winback,Active,1/21/2025,5/11/2025,4754,4434
+76,Inactive > 90 Days,Deep Winback,Completed,1/11/2025,10/24/2025,97029,100245
+77,New Signups (Last 30 Days),Getting Started Journey,Active,12/25/2024,5/27/2025,65498,56391
+78,Inactive > 90 Days,Deep Winback,Scheduled,12/4/2025,5/28/2025,85359,67248
+79,New Signups (Last 30 Days),Getting Started Journey,Completed,7/29/2025,2/26/2025,2894,2638
+80,Churn Risk,Reactivation Journey,Active,2/3/2025,1/27/2025,91334,96142
+81,New Signups (Last 30 Days),New Signup Nurture,Scheduled,9/19/2025,11/12/2025,87570,63829
+82,New Signups (Last 30 Days),Getting Started Journey,Scheduled,2/17/2025,3/5/2025,28303,21404
+83,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,3/18/2025,4/13/2025,36258,38150
+84,Inactive > 90 Days,Inactivity Reactivation Flow,Active,8/10/2025,3/14/2025,62030,57524
+85,Churn Risk,Reactivation Journey,Scheduled,2/19/2025,8/6/2025,8936,8660
+86,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,7/28/2025,7/25/2025,43631,38658
+87,New Signups (Last 30 Days),New Signup Nurture,Active,1/30/2025,9/12/2025,92729,93317
+88,Churn Risk,We Miss You,Completed,3/30/2025,5/3/2025,22906,23672
+89,High CLV Customers,End-of-Year Upsell,Completed,6/4/2025,1/10/2025,42190,30576
+90,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,2/27/2025,6/24/2025,91181,85939
+91,Churn Risk,Reactivation Journey,Scheduled,8/30/2025,10/2/2025,34132,28128
+92,High CLV Customers,VIP Rewards,Scheduled,8/13/2025,11/7/2025,63141,58441
+93,Churn Risk,Reactivation Journey,Completed,8/2/2025,12/10/2024,69748,67285
+94,Churn Risk,Loyalty Reminder,Active,10/29/2025,2/24/2025,62295,61271
+95,Churn Risk,Loyalty Reminder,Scheduled,11/8/2025,11/9/2025,76700,80886
+96,New Signups (Last 30 Days),Getting Started Journey,Completed,6/27/2025,7/15/2025,42176,33016
+97,Inactive > 90 Days,Come-Back Offer,Scheduled,11/4/2025,10/30/2025,77389,54459
+98,New Signups (Last 30 Days),Welcome Series – Step 2,Active,8/9/2025,11/2/2025,90030,97181
+99,High CLV Customers,Premium Features Upsell,Scheduled,8/2/2025,9/24/2025,46243,40483
+100,High CLV Customers,Premium Features Upsell,Active,3/22/2025,3/9/2025,94800,98398
+101,High CLV Customers,Premium Features Upsell,Completed,1/8/2025,9/26/2025,8752,6127
+102,New Signups (Last 30 Days),Getting Started Journey,Scheduled,8/21/2025,1/13/2025,96199,79692
+103,High CLV Customers,Exclusive Member Upgrade,Completed,7/2/2025,1/1/2025,93983,78267
+104,Inactive > 90 Days,Deep Winback,Scheduled,11/24/2025,12/18/2024,90943,72665
+105,Inactive > 90 Days,Deep Winback,Scheduled,8/28/2025,11/24/2025,5289,5757
+106,High CLV Customers,Premium Features Upsell,Active,3/30/2025,2/1/2025,99658,82884
+107,High CLV Customers,End-of-Year Upsell,Active,3/13/2025,6/13/2025,46736,49379
+108,Inactive > 90 Days,Inactivity Reactivation Flow,Active,10/12/2025,3/2/2025,23639,17105
+109,New Signups (Last 30 Days),Welcome Series – Step 2,Active,10/2/2025,6/1/2025,96964,79848
+110,Inactive > 90 Days,Come-Back Offer,Completed,4/13/2025,11/3/2025,77546,68956
+111,High CLV Customers,VIP Rewards,Completed,4/23/2025,12/11/2024,20889,21359
+112,Churn Risk,Reactivation Journey,Active,6/22/2025,1/27/2025,74347,61864
+113,High CLV Customers,Exclusive Member Upgrade,Active,1/6/2025,11/5/2025,50622,43504
+114,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,5/8/2025,7/7/2025,16693,11711
+115,Inactive > 90 Days,Deep Winback,Active,1/10/2025,9/21/2025,70051,64008
+116,High CLV Customers,VIP Rewards,Active,9/10/2025,6/3/2025,43394,41295
+117,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,1/19/2025,5/3/2025,42424,36327
+118,New Signups (Last 30 Days),Getting Started Journey,Active,5/7/2025,3/21/2025,63494,55033
+119,Churn Risk,Winback Flow,Completed,4/3/2025,4/29/2025,54823,59303
+120,Churn Risk,Loyalty Reminder,Active,3/26/2025,12/3/2025,32341,32195
+121,High CLV Customers,Exclusive Member Upgrade,Completed,4/29/2025,12/16/2024,73815,72733
+122,Inactive > 90 Days,Come-Back Offer,Active,4/3/2025,4/28/2025,2601,1869
+123,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,10/4/2025,5/21/2025,67820,59163
+124,New Signups (Last 30 Days),New Signup Nurture,Completed,1/10/2025,6/29/2025,80593,62202
+125,Churn Risk,Winback Flow,Active,2/8/2025,3/10/2025,54845,42913
+126,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,8/9/2025,7/28/2025,25222,25060
+127,Churn Risk,Winback Flow,Active,5/15/2025,4/22/2025,18397,16136
+128,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,7/7/2025,1/25/2025,98548,76091
+129,Churn Risk,Loyalty Reminder,Scheduled,5/14/2025,9/17/2025,60894,51445
+130,High CLV Customers,End-of-Year Upsell,Completed,8/21/2025,11/17/2025,96679,91697
+131,Inactive > 90 Days,Deep Winback,Scheduled,6/8/2025,11/22/2025,67258,62910
+132,High CLV Customers,Premium Features Upsell,Active,1/27/2025,11/9/2025,18314,16374
+133,Inactive > 90 Days,Come-Back Offer,Scheduled,5/17/2025,6/11/2025,25609,18520
+134,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,12/16/2024,3/30/2025,78364,73261
+135,New Signups (Last 30 Days),Getting Started Journey,Active,4/3/2025,12/5/2025,23804,21810
+136,Churn Risk,Reactivation Journey,Completed,5/5/2025,7/26/2025,92267,93293
+137,New Signups (Last 30 Days),Getting Started Journey,Active,11/10/2025,7/4/2025,85010,85684
+138,Inactive > 90 Days,Deep Winback,Scheduled,9/13/2025,2/6/2025,59637,59214
+139,Inactive > 90 Days,Come-Back Offer,Completed,3/1/2025,12/22/2024,55800,40873
+140,Churn Risk,We Miss You,Completed,2/11/2025,11/16/2025,83334,61761
+141,Churn Risk,Winback Flow,Active,6/19/2025,5/3/2025,99261,96435
+142,Churn Risk,We Miss You,Scheduled,8/23/2025,6/27/2025,9284,7465
+143,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,11/2/2025,12/26/2024,52334,54378
+144,New Signups (Last 30 Days),Getting Started Journey,Completed,1/16/2025,6/22/2025,45322,44831
+145,Churn Risk,Winback Flow,Completed,1/18/2025,11/23/2025,81700,80436
+146,Inactive > 90 Days,Come-Back Offer,Completed,8/27/2025,10/10/2025,15660,13601
+147,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,8/6/2025,1/8/2025,70257,68127
+148,Churn Risk,Loyalty Reminder,Active,8/30/2025,10/20/2025,53060,41778
+149,Inactive > 90 Days,Come-Back Offer,Active,5/13/2025,5/28/2025,43328,39298
+150,New Signups (Last 30 Days),Welcome Series – Step 2,Active,6/5/2025,7/12/2025,8220,7643
+151,Inactive > 90 Days,Come-Back Offer,Completed,12/10/2024,1/27/2025,84825,77190
+152,Inactive > 90 Days,Deep Winback,Scheduled,3/24/2025,11/26/2025,33128,31315
+153,Churn Risk,We Miss You,Active,5/16/2025,8/30/2025,12232,10853
+154,New Signups (Last 30 Days),New Signup Nurture,Active,2/23/2025,10/25/2025,12691,9113
+155,High CLV Customers,VIP Rewards,Active,9/15/2025,3/4/2025,24411,24865
+156,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,8/15/2025,3/27/2025,50278,38893
+157,New Signups (Last 30 Days),Getting Started Journey,Scheduled,1/7/2025,7/18/2025,8355,7358
+158,Churn Risk,We Miss You,Scheduled,8/9/2025,1/18/2025,39511,31152
+159,New Signups (Last 30 Days),New Signup Nurture,Active,6/6/2025,3/9/2025,66843,70930
+160,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,7/14/2025,2/12/2025,50568,39997
+161,High CLV Customers,Premium Features Upsell,Scheduled,4/18/2025,1/29/2025,46669,44245
+162,New Signups (Last 30 Days),Getting Started Journey,Completed,10/3/2025,1/5/2025,50488,52505
+163,Churn Risk,Winback Flow,Completed,11/6/2025,8/8/2025,91907,76048
+164,New Signups (Last 30 Days),New Signup Nurture,Completed,9/25/2025,7/6/2025,58655,55107
+165,Churn Risk,Reactivation Journey,Completed,2/6/2025,1/18/2025,12883,12032
+166,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,1/3/2025,11/10/2025,94816,72307
+167,Inactive > 90 Days,Deep Winback,Scheduled,2/21/2025,2/13/2025,74677,79034
+168,Inactive > 90 Days,Deep Winback,Scheduled,12/27/2024,1/6/2025,73148,66680
+169,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,7/21/2025,2/15/2025,48258,52720
+170,Churn Risk,We Miss You,Active,4/14/2025,8/18/2025,89307,75904
+171,Churn Risk,Loyalty Reminder,Completed,8/10/2025,7/15/2025,36492,27081
+172,Churn Risk,We Miss You,Completed,5/31/2025,7/24/2025,40570,28702
+173,New Signups (Last 30 Days),Getting Started Journey,Scheduled,9/28/2025,9/4/2025,20764,17484
+174,Churn Risk,Loyalty Reminder,Active,11/8/2025,6/15/2025,43102,37122
+175,High CLV Customers,End-of-Year Upsell,Scheduled,9/1/2025,12/12/2024,71233,58399
+176,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,11/24/2025,11/4/2025,50886,45982
+177,High CLV Customers,End-of-Year Upsell,Active,10/27/2025,10/29/2025,7157,6181
+178,High CLV Customers,VIP Rewards,Active,5/23/2025,11/9/2025,88766,83242
+179,Inactive > 90 Days,Inactivity Reactivation Flow,Active,8/26/2025,1/23/2025,92487,98706
+180,High CLV Customers,Exclusive Member Upgrade,Completed,11/8/2025,6/12/2025,80729,56856
+181,Inactive > 90 Days,Come-Back Offer,Scheduled,7/5/2025,10/28/2025,78599,78432
+182,New Signups (Last 30 Days),New Signup Nurture,Completed,2/10/2025,1/9/2025,76999,63232
+183,High CLV Customers,Premium Features Upsell,Scheduled,5/12/2025,4/15/2025,12212,8880
+184,High CLV Customers,Premium Features Upsell,Scheduled,4/8/2025,8/15/2025,12900,10195
+185,Inactive > 90 Days,Deep Winback,Active,12/31/2024,3/11/2025,71276,55675
+186,High CLV Customers,Premium Features Upsell,Completed,12/6/2025,2/19/2025,65632,56759
+187,High CLV Customers,Exclusive Member Upgrade,Active,1/19/2025,3/25/2025,52359,47950
+188,High CLV Customers,Premium Features Upsell,Active,5/5/2025,3/19/2025,33311,34257
+189,Churn Risk,We Miss You,Scheduled,8/27/2025,8/13/2025,5216,3739
+190,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,11/15/2025,10/25/2025,34844,24688
+191,Churn Risk,Winback Flow,Active,3/10/2025,8/23/2025,38216,34948
+192,New Signups (Last 30 Days),New Signup Nurture,Active,8/4/2025,2/7/2025,17475,13556
+193,High CLV Customers,End-of-Year Upsell,Active,5/6/2025,11/12/2025,47786,35662
+194,Churn Risk,We Miss You,Completed,1/30/2025,1/2/2025,39988,40445
+195,High CLV Customers,Exclusive Member Upgrade,Active,10/22/2025,9/14/2025,9525,7724
+196,New Signups (Last 30 Days),Getting Started Journey,Active,11/5/2025,11/7/2025,8088,8811
+197,Inactive > 90 Days,Come-Back Offer,Active,12/21/2024,11/3/2025,84129,76009
+198,High CLV Customers,End-of-Year Upsell,Completed,11/27/2025,5/4/2025,22200,21485
+199,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,2/13/2025,10/18/2025,73599,72339
+200,Churn Risk,Winback Flow,Completed,3/12/2025,3/31/2025,42084,35595
+201,New Signups (Last 30 Days),Getting Started Journey,Completed,9/23/2025,5/4/2025,8240,5839
+202,New Signups (Last 30 Days),New Signup Nurture,Completed,6/2/2025,7/17/2025,73487,60270
+203,High CLV Customers,Exclusive Member Upgrade,Active,11/10/2025,2/26/2025,27047,26998
+204,Inactive > 90 Days,Deep Winback,Active,3/16/2025,12/4/2025,78345,70464
+205,New Signups (Last 30 Days),Getting Started Journey,Active,3/21/2025,2/19/2025,42272,34025
+206,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,7/15/2025,9/13/2025,18206,17042
+207,High CLV Customers,End-of-Year Upsell,Completed,4/13/2025,6/10/2025,22070,22289
+208,New Signups (Last 30 Days),Getting Started Journey,Scheduled,8/11/2025,2/10/2025,1076,1150
+209,New Signups (Last 30 Days),Welcome Series – Step 2,Active,1/8/2025,1/27/2025,9196,9059
+210,Inactive > 90 Days,Deep Winback,Completed,3/18/2025,1/4/2025,17671,15566
+211,High CLV Customers,Premium Features Upsell,Scheduled,6/25/2025,12/14/2024,41194,36518
+212,Inactive > 90 Days,Deep Winback,Completed,2/17/2025,11/28/2025,37092,26065
+213,High CLV Customers,VIP Rewards,Active,7/27/2025,4/4/2025,80455,56854
+214,High CLV Customers,VIP Rewards,Completed,3/14/2025,9/28/2025,45573,48562
+215,Churn Risk,Winback Flow,Completed,3/16/2025,11/7/2025,65762,59768
+216,New Signups (Last 30 Days),Getting Started Journey,Active,9/6/2025,5/22/2025,57782,59177
+217,Inactive > 90 Days,Come-Back Offer,Completed,10/1/2025,5/22/2025,13827,9885
+218,New Signups (Last 30 Days),Getting Started Journey,Scheduled,6/4/2025,8/27/2025,24483,18669
+219,Churn Risk,We Miss You,Active,12/10/2024,2/12/2025,32039,29741
+220,Churn Risk,Reactivation Journey,Active,5/12/2025,10/29/2025,6174,4463
+221,Inactive > 90 Days,Deep Winback,Scheduled,4/19/2025,10/10/2025,66693,60328
+222,High CLV Customers,VIP Rewards,Scheduled,9/14/2025,3/15/2025,91183,81233
+223,New Signups (Last 30 Days),New Signup Nurture,Scheduled,7/28/2025,5/10/2025,64561,60598
+224,Inactive > 90 Days,Come-Back Offer,Scheduled,4/19/2025,4/17/2025,14164,10419
+225,Inactive > 90 Days,Come-Back Offer,Active,9/13/2025,1/1/2025,92015,84115
+226,Churn Risk,We Miss You,Completed,3/15/2025,2/11/2025,51288,51025
+227,High CLV Customers,Premium Features Upsell,Active,1/31/2025,8/25/2025,46202,42816
+228,Churn Risk,Winback Flow,Scheduled,6/6/2025,3/11/2025,14839,12107
+229,Churn Risk,We Miss You,Active,8/12/2025,7/5/2025,15074,15134
+230,Churn Risk,Winback Flow,Scheduled,12/24/2024,5/29/2025,89523,90026
+231,High CLV Customers,VIP Rewards,Active,12/14/2024,9/27/2025,35329,28433
+232,High CLV Customers,Premium Features Upsell,Completed,12/16/2024,3/4/2025,31060,24621
+233,High CLV Customers,Premium Features Upsell,Completed,4/11/2025,4/26/2025,65356,55337
+234,High CLV Customers,End-of-Year Upsell,Completed,9/23/2025,10/6/2025,80096,71737
+235,New Signups (Last 30 Days),New Signup Nurture,Completed,9/13/2025,10/20/2025,85826,86243
+236,Inactive > 90 Days,Deep Winback,Active,9/30/2025,10/6/2025,65580,55982
+237,New Signups (Last 30 Days),Getting Started Journey,Active,8/26/2025,12/21/2024,49448,41181
+238,Inactive > 90 Days,Come-Back Offer,Completed,7/13/2025,1/28/2025,53088,49920
+239,Churn Risk,Loyalty Reminder,Scheduled,2/10/2025,4/28/2025,44842,36659
+240,High CLV Customers,VIP Rewards,Scheduled,12/31/2024,10/19/2025,86669,65580
+241,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,6/4/2025,2/8/2025,64480,53554
+242,Churn Risk,Loyalty Reminder,Completed,10/29/2025,6/3/2025,73056,73980
+243,High CLV Customers,Premium Features Upsell,Active,1/31/2025,7/1/2025,45246,45263
+244,High CLV Customers,VIP Rewards,Active,9/8/2025,12/27/2024,99378,100045
+245,Inactive > 90 Days,Inactivity Reactivation Flow,Active,4/10/2025,10/3/2025,88980,81289
+246,New Signups (Last 30 Days),Getting Started Journey,Active,3/9/2025,12/1/2025,79492,81636
+247,Churn Risk,Winback Flow,Scheduled,1/28/2025,6/1/2025,92706,94740
+248,New Signups (Last 30 Days),Getting Started Journey,Completed,12/25/2024,7/3/2025,2964,2543
+249,New Signups (Last 30 Days),Getting Started Journey,Scheduled,1/4/2025,5/7/2025,75110,53408
+250,Inactive > 90 Days,Deep Winback,Completed,2/28/2025,8/2/2025,34335,26327
+251,Churn Risk,Winback Flow,Completed,5/2/2025,3/30/2025,89189,71581
+252,Churn Risk,Winback Flow,Scheduled,4/28/2025,11/17/2025,60963,52087
+253,New Signups (Last 30 Days),Welcome Series – Step 2,Active,12/24/2024,12/12/2024,64293,66687
+254,Churn Risk,Loyalty Reminder,Completed,10/15/2025,12/8/2025,91191,72050
+255,Churn Risk,Loyalty Reminder,Active,3/1/2025,6/1/2025,8999,9344
+256,Inactive > 90 Days,Come-Back Offer,Completed,10/18/2025,11/12/2025,10429,9203
+257,Churn Risk,We Miss You,Active,2/21/2025,12/1/2025,42822,41890
+258,High CLV Customers,VIP Rewards,Scheduled,2/27/2025,9/16/2025,67987,70849
+259,New Signups (Last 30 Days),New Signup Nurture,Active,3/23/2025,3/16/2025,55301,48574
+260,Churn Risk,Loyalty Reminder,Active,12/22/2024,12/18/2024,94099,68492
+261,Inactive > 90 Days,Deep Winback,Scheduled,4/23/2025,5/7/2025,42486,44925
+262,New Signups (Last 30 Days),New Signup Nurture,Active,11/27/2025,8/23/2025,75835,59329
+263,New Signups (Last 30 Days),New Signup Nurture,Scheduled,3/15/2025,1/9/2025,23280,17412
+264,New Signups (Last 30 Days),New Signup Nurture,Active,12/23/2024,1/8/2025,70152,51129
+265,Churn Risk,Winback Flow,Completed,4/1/2025,6/5/2025,51951,55117
+266,Churn Risk,Loyalty Reminder,Active,1/5/2025,3/9/2025,89986,96962
+267,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,1/15/2025,12/5/2025,75893,70449
+268,High CLV Customers,End-of-Year Upsell,Completed,12/27/2024,7/21/2025,53060,55031
+269,Churn Risk,Loyalty Reminder,Scheduled,7/28/2025,8/23/2025,51607,42509
+270,Churn Risk,Loyalty Reminder,Completed,3/29/2025,11/8/2025,23875,18740
+271,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,1/21/2025,7/10/2025,54760,51898
+272,New Signups (Last 30 Days),Welcome Series – Step 2,Active,5/19/2025,11/14/2025,67317,67175
+273,High CLV Customers,VIP Rewards,Active,1/6/2025,11/13/2025,45727,39112
+274,High CLV Customers,End-of-Year Upsell,Completed,6/20/2025,11/17/2025,97973,75259
+275,Churn Risk,Loyalty Reminder,Active,1/25/2025,12/27/2024,15846,11860
+276,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,4/21/2025,12/18/2024,22220,23959
+277,High CLV Customers,Exclusive Member Upgrade,Scheduled,10/6/2025,3/20/2025,47406,36600
+278,Inactive > 90 Days,Inactivity Reactivation Flow,Active,12/27/2024,12/14/2024,63578,48319
+279,Churn Risk,Reactivation Journey,Scheduled,4/24/2025,9/15/2025,94707,94952
+280,Churn Risk,Reactivation Journey,Completed,3/31/2025,2/25/2025,21718,16872
+281,Churn Risk,Winback Flow,Scheduled,8/4/2025,5/16/2025,42469,39780
+282,High CLV Customers,Premium Features Upsell,Scheduled,8/27/2025,12/1/2025,34371,26731
+283,Inactive > 90 Days,Inactivity Reactivation Flow,Active,3/1/2025,3/14/2025,52828,53793
+284,High CLV Customers,VIP Rewards,Completed,4/9/2025,7/2/2025,33845,31717
+285,Churn Risk,Reactivation Journey,Active,9/7/2025,1/27/2025,72885,55358
+286,Churn Risk,We Miss You,Completed,4/13/2025,2/19/2025,62123,67073
+287,High CLV Customers,Exclusive Member Upgrade,Scheduled,8/10/2025,12/1/2025,16861,16109
+288,Inactive > 90 Days,Come-Back Offer,Active,5/26/2025,3/8/2025,68250,65090
+289,Churn Risk,Loyalty Reminder,Completed,12/23/2024,1/18/2025,30768,32571
+290,High CLV Customers,End-of-Year Upsell,Completed,5/5/2025,10/11/2025,15220,10730
+291,High CLV Customers,VIP Rewards,Scheduled,2/5/2025,5/1/2025,86290,66810
+292,Churn Risk,Winback Flow,Scheduled,11/5/2025,7/15/2025,16943,14043
+293,Churn Risk,Winback Flow,Completed,7/18/2025,12/3/2025,3562,2878
+294,High CLV Customers,Exclusive Member Upgrade,Completed,6/21/2025,7/3/2025,97453,106976
+295,High CLV Customers,Exclusive Member Upgrade,Active,10/14/2025,12/1/2025,15528,11788
+296,New Signups (Last 30 Days),Welcome Series – Step 1,Active,2/4/2025,9/25/2025,67976,65181
+297,High CLV Customers,Premium Features Upsell,Active,9/25/2025,5/25/2025,26588,20792
+298,Inactive > 90 Days,Come-Back Offer,Completed,1/8/2025,7/30/2025,86515,91453
+299,High CLV Customers,VIP Rewards,Active,10/9/2025,7/9/2025,63606,69167
+300,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,3/30/2025,8/15/2025,10406,11404
+301,Churn Risk,Reactivation Journey,Completed,5/11/2025,12/11/2024,42102,37364
+302,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,11/4/2025,2/12/2025,73752,57500
+303,Inactive > 90 Days,Deep Winback,Scheduled,7/12/2025,4/6/2025,34281,26748
+304,High CLV Customers,End-of-Year Upsell,Completed,3/6/2025,6/1/2025,37955,28121
+305,Churn Risk,Winback Flow,Active,12/22/2024,3/7/2025,33077,30163
+306,High CLV Customers,Exclusive Member Upgrade,Scheduled,4/8/2025,9/29/2025,45665,47314
+307,High CLV Customers,VIP Rewards,Completed,10/27/2025,6/18/2025,50119,40828
+308,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,7/7/2025,12/13/2024,74976,58442
+309,New Signups (Last 30 Days),New Signup Nurture,Active,3/10/2025,7/5/2025,6258,4999
+310,Inactive > 90 Days,Come-Back Offer,Completed,8/1/2025,6/28/2025,43516,32828
+311,Churn Risk,Reactivation Journey,Completed,4/8/2025,4/11/2025,47869,44733
+312,Inactive > 90 Days,Deep Winback,Completed,9/2/2025,3/7/2025,39286,42701
+313,Inactive > 90 Days,Deep Winback,Active,2/5/2025,1/28/2025,74491,72238
+314,Churn Risk,Reactivation Journey,Scheduled,8/24/2025,3/19/2025,99521,106193
+315,High CLV Customers,Premium Features Upsell,Completed,2/19/2025,7/8/2025,30957,28441
+316,High CLV Customers,End-of-Year Upsell,Completed,1/21/2025,4/23/2025,70520,55661
+317,New Signups (Last 30 Days),Getting Started Journey,Completed,3/18/2025,6/13/2025,94749,103276
+318,New Signups (Last 30 Days),New Signup Nurture,Completed,3/19/2025,7/30/2025,88005,80118
+319,Churn Risk,Winback Flow,Scheduled,6/7/2025,4/6/2025,34896,24430
+320,Inactive > 90 Days,Inactivity Reactivation Flow,Active,8/8/2025,8/9/2025,57628,56663
+321,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,2/23/2025,6/3/2025,28651,22827
+322,Inactive > 90 Days,Deep Winback,Completed,4/10/2025,1/5/2025,97433,89946
+323,Churn Risk,We Miss You,Active,7/25/2025,5/16/2025,40248,32058
+324,Churn Risk,We Miss You,Active,9/30/2025,8/29/2025,5256,5357
+325,Churn Risk,Winback Flow,Scheduled,4/11/2025,2/18/2025,23882,21717
+326,High CLV Customers,Premium Features Upsell,Scheduled,6/22/2025,7/11/2025,59295,55610
+327,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,12/14/2024,8/31/2025,37321,40330
+328,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,7/9/2025,10/23/2025,39822,29294
+329,New Signups (Last 30 Days),Getting Started Journey,Active,12/11/2024,6/3/2025,65833,60978
+330,New Signups (Last 30 Days),New Signup Nurture,Completed,3/22/2025,5/21/2025,46543,50867
+331,High CLV Customers,Exclusive Member Upgrade,Scheduled,12/26/2024,9/2/2025,34759,28074
+332,High CLV Customers,Premium Features Upsell,Scheduled,4/14/2025,7/29/2025,58697,44743
+333,Churn Risk,Winback Flow,Completed,9/12/2025,8/20/2025,76602,71275
+334,Inactive > 90 Days,Deep Winback,Active,5/6/2025,6/25/2025,89305,72176
+335,New Signups (Last 30 Days),Getting Started Journey,Completed,10/31/2025,2/5/2025,86900,65671
+336,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,3/16/2025,11/5/2025,93109,80229
+337,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,4/20/2025,11/9/2025,32148,27424
+338,Inactive > 90 Days,Inactivity Reactivation Flow,Active,10/2/2025,10/26/2025,11534,9542
+339,Churn Risk,Reactivation Journey,Active,4/11/2025,12/8/2025,89514,66470
+340,New Signups (Last 30 Days),Welcome Series – Step 2,Active,2/1/2025,10/5/2025,21832,19661
+341,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,1/27/2025,1/26/2025,16072,16688
+342,Inactive > 90 Days,Inactivity Reactivation Flow,Active,11/23/2025,5/2/2025,27560,26162
+343,Churn Risk,We Miss You,Active,1/13/2025,7/13/2025,66955,62036
+344,High CLV Customers,VIP Rewards,Active,11/13/2025,2/2/2025,81692,75921
+345,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,8/19/2025,6/27/2025,56708,61800
+346,Inactive > 90 Days,Deep Winback,Active,10/19/2025,1/14/2025,68937,63302
+347,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,12/7/2025,10/26/2025,63185,53391
+348,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,11/16/2025,5/4/2025,45344,33388
+349,Churn Risk,Winback Flow,Completed,4/5/2025,9/26/2025,42912,39786
+350,Churn Risk,We Miss You,Active,9/24/2025,6/7/2025,31842,30655
+351,High CLV Customers,Premium Features Upsell,Active,10/8/2025,11/18/2025,32266,33124
+352,New Signups (Last 30 Days),New Signup Nurture,Scheduled,8/12/2025,7/25/2025,52556,44654
+353,Inactive > 90 Days,Come-Back Offer,Scheduled,4/9/2025,2/3/2025,67666,68098
+354,Inactive > 90 Days,Deep Winback,Scheduled,1/25/2025,7/10/2025,88690,82657
+355,New Signups (Last 30 Days),New Signup Nurture,Scheduled,9/28/2025,4/27/2025,1793,1833
+356,Churn Risk,Loyalty Reminder,Completed,1/9/2025,7/2/2025,79598,86521
+357,Churn Risk,Reactivation Journey,Active,1/7/2025,7/20/2025,6718,4847
+358,Inactive > 90 Days,Come-Back Offer,Completed,7/9/2025,8/6/2025,7507,6295
+359,High CLV Customers,Premium Features Upsell,Scheduled,5/28/2025,6/29/2025,26014,24561
+360,Churn Risk,Reactivation Journey,Active,5/7/2025,7/13/2025,9427,8771
+361,Inactive > 90 Days,Deep Winback,Active,8/17/2025,7/8/2025,21269,15337
+362,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,12/4/2025,10/31/2025,53829,42591
+363,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,5/7/2025,4/19/2025,4162,3107
+364,New Signups (Last 30 Days),Welcome Series – Step 1,Active,11/26/2025,4/9/2025,44465,39267
+365,Inactive > 90 Days,Deep Winback,Scheduled,10/9/2025,2/24/2025,11433,11170
+366,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,9/2/2025,12/20/2024,50661,45824
+367,High CLV Customers,Premium Features Upsell,Scheduled,1/3/2025,3/23/2025,4055,3719
+368,New Signups (Last 30 Days),Getting Started Journey,Completed,3/16/2025,10/6/2025,97496,102447
+369,Churn Risk,Winback Flow,Active,11/23/2025,7/15/2025,33140,28701
+370,High CLV Customers,Exclusive Member Upgrade,Completed,6/18/2025,7/28/2025,36986,32832
+371,Churn Risk,We Miss You,Completed,8/19/2025,7/4/2025,21356,21499
+372,Churn Risk,We Miss You,Scheduled,6/20/2025,11/12/2025,49699,35785
+373,Churn Risk,Loyalty Reminder,Scheduled,7/27/2025,9/24/2025,36213,34840
+374,Inactive > 90 Days,Deep Winback,Scheduled,8/2/2025,10/14/2025,55468,54858
+375,Inactive > 90 Days,Deep Winback,Scheduled,1/15/2025,8/17/2025,32973,30921
+376,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,1/28/2025,2/21/2025,80645,74679
+377,High CLV Customers,Exclusive Member Upgrade,Completed,12/5/2025,3/6/2025,69800,53808
+378,Inactive > 90 Days,Come-Back Offer,Active,9/23/2025,5/30/2025,82543,78913
+379,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,4/26/2025,8/23/2025,93196,94973
+380,New Signups (Last 30 Days),Getting Started Journey,Active,10/11/2025,9/15/2025,63258,66345
+381,Inactive > 90 Days,Come-Back Offer,Scheduled,5/2/2025,2/2/2025,30500,23242
+382,High CLV Customers,Exclusive Member Upgrade,Scheduled,6/14/2025,2/16/2025,36320,26485
+383,Churn Risk,Winback Flow,Scheduled,5/31/2025,2/27/2025,9991,9702
+384,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,1/29/2025,1/19/2025,91725,94698
+385,Inactive > 90 Days,Come-Back Offer,Completed,5/3/2025,3/27/2025,91407,74559
+386,High CLV Customers,Exclusive Member Upgrade,Completed,5/5/2025,10/29/2025,60969,46441
+387,Inactive > 90 Days,Deep Winback,Completed,2/4/2025,8/4/2025,40590,42558
+388,Churn Risk,Winback Flow,Active,12/12/2024,1/12/2025,23286,23632
+389,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,10/25/2025,3/17/2025,6812,5613
+390,Churn Risk,We Miss You,Scheduled,6/12/2025,2/15/2025,92547,73628
+391,New Signups (Last 30 Days),Getting Started Journey,Scheduled,1/21/2025,3/20/2025,67780,49204
+392,New Signups (Last 30 Days),Getting Started Journey,Active,3/8/2025,12/21/2024,19069,16928
+393,Churn Risk,Winback Flow,Completed,10/24/2025,8/3/2025,38535,31692
+394,New Signups (Last 30 Days),New Signup Nurture,Completed,10/29/2025,11/7/2025,58161,40823
+395,New Signups (Last 30 Days),Welcome Series – Step 2,Active,4/7/2025,9/17/2025,13100,11314
+396,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,5/19/2025,5/11/2025,5495,5732
+397,Inactive > 90 Days,Come-Back Offer,Active,4/28/2025,6/2/2025,42913,46606
+398,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,5/4/2025,9/22/2025,96929,73908
+399,Inactive > 90 Days,Inactivity Reactivation Flow,Active,9/1/2025,9/26/2025,30152,32153
+400,New Signups (Last 30 Days),Getting Started Journey,Completed,3/23/2025,12/3/2025,30832,30188
+401,Churn Risk,Loyalty Reminder,Active,4/24/2025,1/16/2025,53632,39284
+402,Churn Risk,Loyalty Reminder,Completed,8/2/2025,9/12/2025,38317,29660
+403,Churn Risk,Loyalty Reminder,Scheduled,6/23/2025,4/3/2025,44079,31917
+404,Churn Risk,We Miss You,Scheduled,2/13/2025,6/24/2025,74055,59967
+405,New Signups (Last 30 Days),New Signup Nurture,Active,4/12/2025,2/19/2025,84912,63362
+406,Inactive > 90 Days,Deep Winback,Completed,3/17/2025,8/11/2025,28874,22668
+407,New Signups (Last 30 Days),Getting Started Journey,Scheduled,11/11/2025,2/27/2025,41195,34332
+408,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,9/18/2025,7/2/2025,32432,33378
+409,Churn Risk,Reactivation Journey,Completed,10/20/2025,8/20/2025,87816,69688
+410,High CLV Customers,Exclusive Member Upgrade,Scheduled,11/19/2025,7/12/2025,50070,44128
+411,Churn Risk,Loyalty Reminder,Completed,5/17/2025,3/10/2025,63373,44684
+412,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,4/11/2025,5/7/2025,81747,88432
+413,New Signups (Last 30 Days),Getting Started Journey,Scheduled,5/5/2025,12/7/2025,2656,2833
+414,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,9/12/2025,12/5/2025,2061,1828
+415,Churn Risk,Reactivation Journey,Completed,10/27/2025,2/2/2025,82614,67917
+416,Inactive > 90 Days,Deep Winback,Scheduled,8/26/2025,11/26/2025,81919,83329
+417,New Signups (Last 30 Days),New Signup Nurture,Scheduled,5/10/2025,4/28/2025,32522,26929
+418,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,2/3/2025,3/16/2025,50006,53855
+419,High CLV Customers,End-of-Year Upsell,Completed,8/10/2025,9/29/2025,24366,21381
+420,Churn Risk,Winback Flow,Completed,10/3/2025,11/7/2025,77835,72452
+421,New Signups (Last 30 Days),Welcome Series – Step 2,Active,4/11/2025,12/7/2025,66859,55830
+422,Churn Risk,Reactivation Journey,Active,9/27/2025,11/27/2025,54894,41615
+423,High CLV Customers,VIP Rewards,Completed,4/9/2025,9/22/2025,77082,78372
+424,Inactive > 90 Days,Come-Back Offer,Scheduled,9/11/2025,4/5/2025,96218,79164
+425,New Signups (Last 30 Days),Getting Started Journey,Scheduled,1/22/2025,7/15/2025,26347,22425
+426,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,1/7/2025,4/5/2025,12309,9114
+427,New Signups (Last 30 Days),Getting Started Journey,Completed,11/13/2025,7/6/2025,61873,57273
+428,Churn Risk,We Miss You,Active,11/22/2025,6/16/2025,80477,84240
+429,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,5/21/2025,11/6/2025,80821,72407
+430,Inactive > 90 Days,Come-Back Offer,Completed,11/23/2025,6/18/2025,29272,29580
+431,High CLV Customers,Exclusive Member Upgrade,Scheduled,11/16/2025,4/9/2025,93254,93622
+432,High CLV Customers,End-of-Year Upsell,Active,8/18/2025,6/10/2025,40691,29970
+433,New Signups (Last 30 Days),Welcome Series – Step 2,Active,3/26/2025,4/21/2025,25715,18868
+434,New Signups (Last 30 Days),Welcome Series – Step 1,Active,4/18/2025,3/24/2025,3771,2928
+435,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,10/26/2025,3/14/2025,82196,63588
+436,New Signups (Last 30 Days),Getting Started Journey,Completed,5/5/2025,11/2/2025,23743,20166
+437,Churn Risk,Loyalty Reminder,Active,12/25/2024,2/20/2025,69427,58846
+438,Churn Risk,Loyalty Reminder,Scheduled,6/13/2025,10/10/2025,8111,5745
+439,High CLV Customers,Premium Features Upsell,Scheduled,3/25/2025,4/16/2025,9155,7740
+440,Churn Risk,We Miss You,Scheduled,10/18/2025,4/29/2025,89851,72275
+441,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,8/11/2025,2/27/2025,88911,86470
+442,Churn Risk,We Miss You,Active,3/20/2025,8/31/2025,49237,41755
+443,New Signups (Last 30 Days),New Signup Nurture,Completed,9/12/2025,7/14/2025,95657,88506
+444,Inactive > 90 Days,Come-Back Offer,Completed,12/14/2024,11/17/2025,43359,35686
+445,New Signups (Last 30 Days),Welcome Series – Step 2,Active,3/30/2025,7/11/2025,19974,19811
+446,Inactive > 90 Days,Come-Back Offer,Completed,4/16/2025,8/8/2025,24263,17762
+447,High CLV Customers,Premium Features Upsell,Active,3/18/2025,7/18/2025,89963,95133
+448,High CLV Customers,End-of-Year Upsell,Active,9/22/2025,3/21/2025,14715,11754
+449,High CLV Customers,Premium Features Upsell,Completed,8/8/2025,12/23/2024,38856,39329
+450,Churn Risk,Loyalty Reminder,Active,5/16/2025,11/18/2025,69440,68384
+451,Churn Risk,Reactivation Journey,Scheduled,12/18/2024,7/6/2025,31902,24859
+452,Churn Risk,We Miss You,Scheduled,1/20/2025,6/12/2025,76636,82239
+453,New Signups (Last 30 Days),Getting Started Journey,Active,3/12/2025,4/10/2025,9066,8751
+454,New Signups (Last 30 Days),New Signup Nurture,Active,4/27/2025,1/27/2025,42598,46739
+455,High CLV Customers,Premium Features Upsell,Active,5/24/2025,11/6/2025,45150,46364
+456,Churn Risk,Reactivation Journey,Active,1/26/2025,8/21/2025,9930,8985
+457,New Signups (Last 30 Days),New Signup Nurture,Scheduled,10/3/2025,11/24/2025,14528,15965
+458,New Signups (Last 30 Days),Getting Started Journey,Active,1/31/2025,3/9/2025,99128,98134
+459,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,8/21/2025,7/29/2025,28857,27312
+460,High CLV Customers,End-of-Year Upsell,Active,6/19/2025,1/21/2025,67667,54087
+461,New Signups (Last 30 Days),Getting Started Journey,Scheduled,1/13/2025,9/28/2025,41004,37761
+462,New Signups (Last 30 Days),Getting Started Journey,Completed,1/13/2025,1/3/2025,95619,86587
+463,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,6/25/2025,4/26/2025,38617,30986
+464,High CLV Customers,Exclusive Member Upgrade,Scheduled,4/30/2025,5/25/2025,78454,68390
+465,New Signups (Last 30 Days),New Signup Nurture,Completed,1/31/2025,3/23/2025,73205,73402
+466,High CLV Customers,Exclusive Member Upgrade,Scheduled,12/20/2024,8/19/2025,40086,38356
+467,Inactive > 90 Days,Come-Back Offer,Scheduled,3/20/2025,11/8/2025,3456,3433
+468,High CLV Customers,VIP Rewards,Completed,12/26/2024,2/20/2025,44982,45788
+469,Churn Risk,We Miss You,Active,5/5/2025,12/10/2024,43024,47091
+470,Inactive > 90 Days,Deep Winback,Completed,4/20/2025,4/11/2025,59197,64420
+471,High CLV Customers,Premium Features Upsell,Completed,2/20/2025,9/27/2025,71216,75498
+472,High CLV Customers,Premium Features Upsell,Active,10/8/2025,12/6/2025,44241,46803
+473,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,11/24/2025,7/29/2025,79957,75262
+474,High CLV Customers,Premium Features Upsell,Completed,4/8/2025,7/13/2025,83603,72528
+475,High CLV Customers,Premium Features Upsell,Active,2/1/2025,7/16/2025,92124,86104
+476,High CLV Customers,Exclusive Member Upgrade,Completed,9/28/2025,9/16/2025,41976,38011
+477,Inactive > 90 Days,Inactivity Reactivation Flow,Active,5/21/2025,8/21/2025,57547,58279
+478,Inactive > 90 Days,Come-Back Offer,Completed,7/26/2025,7/31/2025,74943,54029
+479,High CLV Customers,Exclusive Member Upgrade,Active,4/2/2025,6/28/2025,19613,20978
+480,High CLV Customers,Premium Features Upsell,Completed,3/12/2025,7/21/2025,40114,29204
+481,New Signups (Last 30 Days),Getting Started Journey,Completed,7/25/2025,1/13/2025,24252,20687
+482,Churn Risk,We Miss You,Active,10/5/2025,2/25/2025,92656,100885
+483,Inactive > 90 Days,Come-Back Offer,Completed,4/26/2025,10/24/2025,80401,86962
+484,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,4/23/2025,8/16/2025,83557,76219
+485,High CLV Customers,End-of-Year Upsell,Active,2/9/2025,12/1/2025,36538,29688
+486,High CLV Customers,Premium Features Upsell,Scheduled,3/23/2025,6/3/2025,39573,42663
+487,Inactive > 90 Days,Come-Back Offer,Active,8/7/2025,11/20/2025,50997,51814
+488,New Signups (Last 30 Days),Welcome Series – Step 1,Active,8/27/2025,10/11/2025,96913,75858
+489,High CLV Customers,End-of-Year Upsell,Completed,2/28/2025,10/5/2025,3151,3261
+490,Churn Risk,Reactivation Journey,Active,7/23/2025,3/13/2025,57437,46507
+491,Inactive > 90 Days,Inactivity Reactivation Flow,Active,6/24/2025,1/27/2025,63607,46406
+492,Inactive > 90 Days,Deep Winback,Scheduled,11/4/2025,3/18/2025,48303,43870
+493,High CLV Customers,VIP Rewards,Completed,6/26/2025,5/8/2025,79456,85006
+494,High CLV Customers,VIP Rewards,Active,8/21/2025,7/30/2025,62413,67819
+495,Inactive > 90 Days,Come-Back Offer,Scheduled,10/26/2025,4/6/2025,11557,11470
+496,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,5/24/2025,5/8/2025,66643,47435
+497,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,4/2/2025,6/23/2025,99407,83858
+498,Inactive > 90 Days,Come-Back Offer,Scheduled,4/17/2025,1/20/2025,29823,21358
+499,Inactive > 90 Days,Come-Back Offer,Completed,7/22/2025,6/14/2025,75779,55476
+500,High CLV Customers,Premium Features Upsell,Scheduled,6/19/2025,12/18/2024,1301,1205
+501,New Signups (Last 30 Days),Welcome Series – Step 1,Active,2/17/2025,5/8/2025,25608,27003
+502,High CLV Customers,Premium Features Upsell,Completed,2/10/2025,10/24/2025,36893,28121
+503,Inactive > 90 Days,Come-Back Offer,Scheduled,8/27/2025,4/5/2025,12520,13572
+504,Inactive > 90 Days,Deep Winback,Scheduled,9/10/2025,5/2/2025,60584,59339
+505,High CLV Customers,VIP Rewards,Completed,1/27/2025,1/8/2025,92916,89595
+506,Churn Risk,Reactivation Journey,Completed,7/14/2025,6/19/2025,27434,26301
+507,Inactive > 90 Days,Come-Back Offer,Active,8/19/2025,11/30/2025,16567,12948
+508,Churn Risk,Loyalty Reminder,Completed,5/24/2025,4/30/2025,90513,83576
+509,Inactive > 90 Days,Deep Winback,Active,10/29/2025,6/7/2025,88324,77820
+510,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,10/12/2025,12/29/2024,40474,32520
+511,Churn Risk,Loyalty Reminder,Completed,10/10/2025,12/29/2024,67443,55108
+512,New Signups (Last 30 Days),New Signup Nurture,Active,9/28/2025,3/27/2025,40577,37063
+513,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,11/12/2025,7/14/2025,59524,45577
+514,High CLV Customers,Exclusive Member Upgrade,Scheduled,7/6/2025,7/23/2025,77854,61451
+515,New Signups (Last 30 Days),Getting Started Journey,Completed,11/22/2025,6/22/2025,12644,13800
+516,Churn Risk,Winback Flow,Active,10/25/2025,10/9/2025,10757,8852
+517,Inactive > 90 Days,Deep Winback,Active,1/29/2025,7/11/2025,16298,17331
+518,Churn Risk,Loyalty Reminder,Scheduled,5/4/2025,3/23/2025,75027,55415
+519,New Signups (Last 30 Days),New Signup Nurture,Scheduled,9/18/2025,3/25/2025,9730,9772
+520,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,6/24/2025,7/5/2025,88570,90636
+521,Churn Risk,Reactivation Journey,Completed,10/6/2025,4/5/2025,56127,40337
+522,New Signups (Last 30 Days),New Signup Nurture,Scheduled,8/30/2025,11/12/2025,53761,52543
+523,High CLV Customers,End-of-Year Upsell,Active,5/7/2025,4/18/2025,13409,11849
+524,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,9/18/2025,12/7/2025,39038,38973
+525,Inactive > 90 Days,Deep Winback,Scheduled,9/10/2025,9/26/2025,61723,49685
+526,High CLV Customers,VIP Rewards,Active,11/21/2025,11/22/2025,70622,75618
+527,New Signups (Last 30 Days),Welcome Series – Step 2,Active,2/23/2025,12/11/2024,35427,36892
+528,High CLV Customers,VIP Rewards,Active,11/7/2025,7/17/2025,84164,82627
+529,High CLV Customers,End-of-Year Upsell,Active,12/6/2025,10/13/2025,40427,39673
+530,High CLV Customers,Premium Features Upsell,Scheduled,10/31/2025,10/21/2025,83537,68209
+531,Churn Risk,Reactivation Journey,Completed,3/29/2025,9/27/2025,98141,97655
+532,Inactive > 90 Days,Come-Back Offer,Completed,7/15/2025,2/20/2025,12266,12205
+533,New Signups (Last 30 Days),New Signup Nurture,Completed,5/2/2025,8/2/2025,37730,31563
+534,Churn Risk,Loyalty Reminder,Active,8/7/2025,4/24/2025,60865,46284
+535,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,2/28/2025,4/5/2025,29551,31390
+536,Inactive > 90 Days,Come-Back Offer,Active,2/17/2025,2/18/2025,40840,42160
+537,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,12/13/2024,2/11/2025,96242,68610
+538,Churn Risk,Loyalty Reminder,Scheduled,8/31/2025,1/11/2025,71833,65631
+539,High CLV Customers,Exclusive Member Upgrade,Active,7/7/2025,6/17/2025,95306,84797
+540,Inactive > 90 Days,Deep Winback,Completed,12/2/2025,10/3/2025,22376,21262
+541,Churn Risk,Winback Flow,Completed,11/17/2025,6/25/2025,74457,53512
+542,Churn Risk,We Miss You,Completed,7/5/2025,10/4/2025,30906,29281
+543,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,11/30/2025,3/6/2025,33200,23881
+544,High CLV Customers,Exclusive Member Upgrade,Scheduled,4/30/2025,10/21/2025,44057,44604
+545,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,2/22/2025,9/10/2025,98654,69179
+546,Inactive > 90 Days,Deep Winback,Active,12/20/2024,5/8/2025,35254,30862
+547,New Signups (Last 30 Days),New Signup Nurture,Completed,4/15/2025,1/29/2025,51938,54374
+548,Churn Risk,Reactivation Journey,Scheduled,8/23/2025,8/12/2025,80098,68473
+549,Inactive > 90 Days,Come-Back Offer,Scheduled,6/25/2025,3/12/2025,49400,41244
+550,Inactive > 90 Days,Come-Back Offer,Completed,8/24/2025,3/25/2025,78610,58249
+551,Churn Risk,Loyalty Reminder,Completed,12/6/2025,7/3/2025,42361,37016
+552,High CLV Customers,Exclusive Member Upgrade,Active,8/29/2025,10/14/2025,82233,76010
+553,Churn Risk,We Miss You,Scheduled,12/3/2025,7/18/2025,43755,33273
+554,High CLV Customers,Premium Features Upsell,Completed,11/2/2025,12/30/2024,18195,13628
+555,High CLV Customers,Premium Features Upsell,Scheduled,11/12/2025,12/4/2025,76320,83572
+556,Churn Risk,Reactivation Journey,Scheduled,11/26/2025,8/29/2025,89959,67424
+557,High CLV Customers,VIP Rewards,Completed,8/22/2025,3/2/2025,47633,38742
+558,High CLV Customers,End-of-Year Upsell,Active,9/1/2025,7/5/2025,58307,59124
+559,High CLV Customers,Exclusive Member Upgrade,Active,5/23/2025,6/28/2025,49549,41842
+560,Churn Risk,We Miss You,Scheduled,12/12/2024,10/6/2025,5329,5587
+561,Churn Risk,Winback Flow,Active,9/28/2025,7/5/2025,21890,16249
+562,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,9/17/2025,8/6/2025,65635,52454
+563,Churn Risk,Loyalty Reminder,Scheduled,1/12/2025,6/27/2025,86856,75052
+564,High CLV Customers,End-of-Year Upsell,Active,6/25/2025,12/7/2025,4336,3543
+565,New Signups (Last 30 Days),New Signup Nurture,Active,12/15/2024,4/8/2025,72328,59472
+566,Inactive > 90 Days,Deep Winback,Completed,10/12/2025,8/14/2025,86245,84558
+567,High CLV Customers,Exclusive Member Upgrade,Completed,9/7/2025,1/20/2025,84694,67679
+568,Churn Risk,Loyalty Reminder,Active,10/30/2025,6/27/2025,21520,22843
+569,New Signups (Last 30 Days),New Signup Nurture,Active,2/2/2025,11/14/2025,58614,60776
+570,New Signups (Last 30 Days),Getting Started Journey,Completed,6/24/2025,5/7/2025,29892,21948
+571,High CLV Customers,VIP Rewards,Completed,11/19/2025,10/10/2025,31777,32685
+572,Churn Risk,Winback Flow,Scheduled,2/25/2025,7/10/2025,61569,46387
+573,Inactive > 90 Days,Come-Back Offer,Completed,9/10/2025,2/11/2025,69684,55740
+574,Churn Risk,Winback Flow,Completed,7/2/2025,1/31/2025,93616,77209
+575,Inactive > 90 Days,Deep Winback,Scheduled,8/24/2025,8/26/2025,48192,46927
+576,High CLV Customers,Exclusive Member Upgrade,Active,8/4/2025,5/22/2025,52812,54999
+577,Churn Risk,Winback Flow,Scheduled,9/17/2025,11/13/2025,73119,74406
+578,Churn Risk,We Miss You,Scheduled,5/1/2025,7/2/2025,16247,14848
+579,Churn Risk,Loyalty Reminder,Scheduled,7/16/2025,2/15/2025,12212,10346
+580,Churn Risk,Loyalty Reminder,Completed,7/13/2025,3/31/2025,17948,14445
+581,High CLV Customers,Premium Features Upsell,Scheduled,5/17/2025,8/6/2025,51293,51972
+582,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,7/25/2025,9/3/2025,75245,72430
+583,High CLV Customers,Premium Features Upsell,Completed,1/8/2025,3/7/2025,75270,69301
+584,Inactive > 90 Days,Deep Winback,Scheduled,4/19/2025,12/27/2024,1720,1678
+585,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,4/15/2025,7/25/2025,23217,24169
+586,New Signups (Last 30 Days),Welcome Series – Step 1,Active,8/28/2025,1/11/2025,90510,76170
+587,Inactive > 90 Days,Come-Back Offer,Scheduled,7/10/2025,9/1/2025,11471,12309
+588,Inactive > 90 Days,Come-Back Offer,Scheduled,7/11/2025,8/5/2025,78298,68112
+589,Churn Risk,Winback Flow,Completed,9/17/2025,2/15/2025,36742,36917
+590,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,6/18/2025,11/11/2025,18518,18324
+591,High CLV Customers,End-of-Year Upsell,Completed,2/26/2025,1/30/2025,33963,32524
+592,High CLV Customers,VIP Rewards,Completed,7/20/2025,2/21/2025,55309,45325
+593,Churn Risk,Loyalty Reminder,Scheduled,1/30/2025,10/19/2025,5898,5407
+594,High CLV Customers,Exclusive Member Upgrade,Active,8/23/2025,6/19/2025,67685,49334
+595,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,4/12/2025,3/24/2025,14332,12848
+596,Churn Risk,Reactivation Journey,Active,2/3/2025,4/6/2025,20533,14970
+597,Churn Risk,We Miss You,Completed,2/28/2025,8/16/2025,84106,75704
+598,Inactive > 90 Days,Inactivity Reactivation Flow,Active,12/12/2024,2/12/2025,16423,12001
+599,New Signups (Last 30 Days),Welcome Series – Step 1,Active,6/24/2025,3/9/2025,49773,42703
+600,New Signups (Last 30 Days),New Signup Nurture,Completed,12/20/2024,11/28/2025,72313,72339
+601,New Signups (Last 30 Days),New Signup Nurture,Completed,3/17/2025,2/16/2025,60059,58331
+602,Churn Risk,Loyalty Reminder,Active,8/28/2025,9/25/2025,53163,37296
+603,High CLV Customers,Exclusive Member Upgrade,Completed,6/19/2025,3/14/2025,74402,79492
+604,High CLV Customers,Exclusive Member Upgrade,Scheduled,10/27/2025,12/20/2024,51792,44134
+605,High CLV Customers,VIP Rewards,Completed,6/22/2025,6/4/2025,65477,53802
+606,Inactive > 90 Days,Deep Winback,Scheduled,6/8/2025,7/19/2025,88879,71428
+607,High CLV Customers,Premium Features Upsell,Scheduled,3/2/2025,7/5/2025,84832,80251
+608,High CLV Customers,Exclusive Member Upgrade,Scheduled,4/28/2025,11/29/2025,40330,33748
+609,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,2/17/2025,4/13/2025,96552,73384
+610,High CLV Customers,Premium Features Upsell,Scheduled,12/1/2025,9/22/2025,59855,60071
+611,Inactive > 90 Days,Deep Winback,Active,10/20/2025,6/21/2025,63050,66792
+612,New Signups (Last 30 Days),Getting Started Journey,Scheduled,6/16/2025,7/23/2025,1924,1992
+613,Churn Risk,Reactivation Journey,Completed,12/20/2024,3/21/2025,1724,1738
+614,Churn Risk,Loyalty Reminder,Completed,4/11/2025,2/20/2025,33561,24591
+615,Churn Risk,Winback Flow,Active,9/2/2025,7/31/2025,46840,36621
+616,High CLV Customers,End-of-Year Upsell,Scheduled,1/14/2025,8/11/2025,50624,40888
+617,New Signups (Last 30 Days),New Signup Nurture,Active,5/5/2025,9/26/2025,43003,45821
+618,High CLV Customers,Premium Features Upsell,Active,11/6/2025,1/10/2025,98994,76887
+619,New Signups (Last 30 Days),Getting Started Journey,Active,1/28/2025,9/17/2025,2659,1966
+620,Churn Risk,Reactivation Journey,Completed,5/18/2025,11/18/2025,36878,39711
+621,Inactive > 90 Days,Come-Back Offer,Scheduled,2/28/2025,12/25/2024,92072,72389
+622,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,7/10/2025,3/1/2025,37541,36347
+623,High CLV Customers,Exclusive Member Upgrade,Active,6/29/2025,10/18/2025,62616,61607
+624,Inactive > 90 Days,Come-Back Offer,Active,10/5/2025,3/17/2025,83990,67190
+625,New Signups (Last 30 Days),New Signup Nurture,Active,3/7/2025,8/14/2025,27672,24305
+626,Churn Risk,We Miss You,Completed,3/24/2025,10/5/2025,82696,66746
+627,Churn Risk,Reactivation Journey,Completed,9/17/2025,12/1/2025,33022,29709
+628,Inactive > 90 Days,Deep Winback,Scheduled,2/17/2025,4/9/2025,8805,7570
+629,High CLV Customers,Premium Features Upsell,Completed,6/23/2025,12/8/2025,66257,62105
+630,High CLV Customers,End-of-Year Upsell,Active,1/8/2025,2/20/2025,60051,59190
+631,New Signups (Last 30 Days),New Signup Nurture,Active,9/14/2025,9/15/2025,53518,42735
+632,High CLV Customers,End-of-Year Upsell,Completed,1/16/2025,1/23/2025,92659,65331
+633,High CLV Customers,End-of-Year Upsell,Active,7/28/2025,10/7/2025,44073,39726
+634,Inactive > 90 Days,Deep Winback,Scheduled,11/22/2025,12/12/2024,6994,5760
+635,Inactive > 90 Days,Come-Back Offer,Completed,5/26/2025,4/30/2025,89274,64715
+636,High CLV Customers,VIP Rewards,Completed,10/17/2025,8/9/2025,8293,6786
+637,Inactive > 90 Days,Deep Winback,Scheduled,7/23/2025,6/9/2025,99139,97927
+638,Inactive > 90 Days,Deep Winback,Completed,8/4/2025,7/14/2025,86160,91617
+639,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,11/17/2025,3/14/2025,51833,50719
+640,High CLV Customers,End-of-Year Upsell,Completed,6/25/2025,6/18/2025,26072,19340
+641,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,12/21/2024,9/18/2025,94964,93318
+642,Inactive > 90 Days,Inactivity Reactivation Flow,Active,3/17/2025,6/30/2025,53402,48710
+643,High CLV Customers,End-of-Year Upsell,Active,12/6/2025,11/11/2025,27102,27484
+644,High CLV Customers,VIP Rewards,Active,5/22/2025,11/14/2025,81141,80562
+645,Churn Risk,Loyalty Reminder,Scheduled,9/28/2025,2/10/2025,11400,8629
+646,High CLV Customers,Exclusive Member Upgrade,Scheduled,12/19/2024,11/2/2025,31929,26355
+647,High CLV Customers,Exclusive Member Upgrade,Scheduled,5/21/2025,10/9/2025,17617,18237
+648,High CLV Customers,Exclusive Member Upgrade,Scheduled,11/12/2025,7/14/2025,8212,8941
+649,Churn Risk,Winback Flow,Active,3/21/2025,12/3/2025,93729,85022
+650,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,4/10/2025,7/23/2025,41467,45404
+651,Churn Risk,Loyalty Reminder,Scheduled,3/9/2025,11/8/2025,53055,49360
+652,Inactive > 90 Days,Inactivity Reactivation Flow,Active,3/16/2025,11/23/2025,95998,70494
+653,Churn Risk,Winback Flow,Completed,4/23/2025,8/18/2025,70562,58621
+654,High CLV Customers,VIP Rewards,Scheduled,1/23/2025,8/5/2025,64439,56692
+655,New Signups (Last 30 Days),New Signup Nurture,Scheduled,12/22/2024,4/9/2025,23114,25125
+656,New Signups (Last 30 Days),New Signup Nurture,Completed,3/12/2025,6/1/2025,7286,5609
+657,Churn Risk,Winback Flow,Scheduled,7/11/2025,10/25/2025,27478,28287
+658,Inactive > 90 Days,Come-Back Offer,Scheduled,12/23/2024,3/17/2025,90472,92813
+659,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,7/12/2025,5/5/2025,3048,3053
+660,High CLV Customers,Exclusive Member Upgrade,Active,10/21/2025,7/25/2025,85619,63356
+661,Churn Risk,We Miss You,Active,2/6/2025,5/25/2025,9431,6884
+662,Inactive > 90 Days,Deep Winback,Active,12/1/2025,5/5/2025,91395,95979
+663,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,2/3/2025,1/8/2025,40193,28937
+664,High CLV Customers,Premium Features Upsell,Active,8/15/2025,8/31/2025,47566,43064
+665,High CLV Customers,VIP Rewards,Scheduled,7/14/2025,7/3/2025,83350,68421
+666,New Signups (Last 30 Days),New Signup Nurture,Completed,5/17/2025,11/2/2025,21999,20595
+667,Inactive > 90 Days,Come-Back Offer,Active,11/20/2025,8/31/2025,81343,74987
+668,New Signups (Last 30 Days),Getting Started Journey,Completed,2/11/2025,9/6/2025,18766,16118
+669,High CLV Customers,End-of-Year Upsell,Completed,8/24/2025,10/18/2025,94125,82309
+670,Churn Risk,We Miss You,Active,4/8/2025,2/10/2025,74319,52909
+671,High CLV Customers,Premium Features Upsell,Active,1/8/2025,6/7/2025,68975,69533
+672,New Signups (Last 30 Days),Getting Started Journey,Scheduled,4/12/2025,3/1/2025,7272,6448
+673,Inactive > 90 Days,Deep Winback,Scheduled,7/7/2025,11/9/2025,66034,47069
+674,High CLV Customers,Exclusive Member Upgrade,Completed,1/7/2025,9/3/2025,70138,56090
+675,New Signups (Last 30 Days),Getting Started Journey,Scheduled,8/8/2025,11/10/2025,87715,82184
+676,Churn Risk,Winback Flow,Scheduled,5/7/2025,7/11/2025,56166,42293
+677,New Signups (Last 30 Days),Getting Started Journey,Scheduled,7/15/2025,3/20/2025,75281,61298
+678,High CLV Customers,End-of-Year Upsell,Completed,7/24/2025,9/25/2025,61985,59934
+679,Churn Risk,Loyalty Reminder,Scheduled,9/10/2025,6/9/2025,9811,10535
+680,New Signups (Last 30 Days),Welcome Series – Step 2,Active,8/21/2025,10/1/2025,91943,68523
+681,New Signups (Last 30 Days),Getting Started Journey,Scheduled,8/10/2025,3/3/2025,45815,38181
+682,Churn Risk,We Miss You,Active,3/21/2025,10/31/2025,21253,21926
+683,Churn Risk,Loyalty Reminder,Active,5/9/2025,11/9/2025,54524,57201
+684,New Signups (Last 30 Days),Welcome Series – Step 2,Active,8/7/2025,6/13/2025,55796,59367
+685,High CLV Customers,Exclusive Member Upgrade,Scheduled,7/8/2025,3/15/2025,47902,51635
+686,Inactive > 90 Days,Come-Back Offer,Scheduled,9/17/2025,6/23/2025,51907,40941
+687,Churn Risk,Loyalty Reminder,Scheduled,1/15/2025,10/9/2025,1416,1460
+688,Churn Risk,Reactivation Journey,Scheduled,3/23/2025,4/21/2025,67138,71888
+689,Churn Risk,Loyalty Reminder,Scheduled,10/1/2025,12/4/2025,6386,4534
+690,New Signups (Last 30 Days),New Signup Nurture,Scheduled,9/25/2025,12/22/2024,85605,72112
+691,High CLV Customers,VIP Rewards,Completed,2/17/2025,3/30/2025,76486,62290
+692,High CLV Customers,Exclusive Member Upgrade,Completed,2/19/2025,7/30/2025,46871,51003
+693,Churn Risk,Reactivation Journey,Active,12/14/2024,10/16/2025,22681,20318
+694,High CLV Customers,End-of-Year Upsell,Active,9/7/2025,12/5/2025,3327,3520
+695,Inactive > 90 Days,Inactivity Reactivation Flow,Active,8/30/2025,3/11/2025,74682,63235
+696,New Signups (Last 30 Days),Welcome Series – Step 1,Active,9/13/2025,5/21/2025,59209,63809
+697,Churn Risk,Winback Flow,Active,1/19/2025,8/25/2025,1319,1232
+698,Churn Risk,Winback Flow,Active,7/30/2025,2/16/2025,17865,17054
+699,Churn Risk,Reactivation Journey,Active,5/29/2025,9/5/2025,94163,67969
+700,Churn Risk,Loyalty Reminder,Completed,9/29/2025,5/23/2025,24132,16973
+701,Inactive > 90 Days,Come-Back Offer,Active,3/12/2025,1/25/2025,25883,25191
+702,New Signups (Last 30 Days),New Signup Nurture,Completed,11/8/2025,3/14/2025,65935,65744
+703,New Signups (Last 30 Days),New Signup Nurture,Completed,9/1/2025,11/19/2025,16460,17719
+704,Inactive > 90 Days,Deep Winback,Completed,1/23/2025,3/1/2025,93184,90597
+705,Inactive > 90 Days,Deep Winback,Completed,8/19/2025,4/7/2025,71959,56707
+706,High CLV Customers,VIP Rewards,Completed,1/20/2025,12/20/2024,50275,48794
+707,High CLV Customers,Exclusive Member Upgrade,Active,7/26/2025,3/12/2025,89371,79733
+708,Inactive > 90 Days,Deep Winback,Completed,8/24/2025,10/8/2025,43133,33555
+709,New Signups (Last 30 Days),New Signup Nurture,Completed,6/6/2025,11/13/2025,91243,92104
+710,High CLV Customers,End-of-Year Upsell,Active,2/23/2025,10/27/2025,5561,4151
+711,New Signups (Last 30 Days),Getting Started Journey,Completed,8/12/2025,1/16/2025,3375,2458
+712,Churn Risk,We Miss You,Completed,2/20/2025,12/10/2024,88995,93524
+713,Inactive > 90 Days,Come-Back Offer,Active,1/27/2025,9/8/2025,92355,66347
+714,Inactive > 90 Days,Deep Winback,Active,5/11/2025,12/10/2024,72890,79431
+715,Inactive > 90 Days,Come-Back Offer,Scheduled,2/14/2025,2/9/2025,7862,6144
+716,New Signups (Last 30 Days),Getting Started Journey,Completed,1/28/2025,3/15/2025,23430,22656
+717,Churn Risk,We Miss You,Completed,4/16/2025,3/12/2025,98228,106663
+718,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,6/8/2025,12/12/2024,70225,56838
+719,New Signups (Last 30 Days),New Signup Nurture,Completed,3/17/2025,7/31/2025,14509,15413
+720,New Signups (Last 30 Days),Getting Started Journey,Completed,4/16/2025,10/17/2025,99472,83233
+721,Churn Risk,Winback Flow,Completed,4/22/2025,12/3/2025,76876,62715
+722,High CLV Customers,Exclusive Member Upgrade,Active,1/22/2025,7/23/2025,72292,70137
+723,New Signups (Last 30 Days),Welcome Series – Step 1,Active,6/25/2025,4/10/2025,36483,33663
+724,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,5/8/2025,4/13/2025,4497,4502
+725,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,11/15/2025,12/28/2024,86086,63263
+726,New Signups (Last 30 Days),Getting Started Journey,Completed,5/9/2025,5/27/2025,52583,39952
+727,Churn Risk,Winback Flow,Completed,4/27/2025,7/17/2025,81115,85245
+728,Churn Risk,Reactivation Journey,Active,11/16/2025,3/4/2025,16381,16473
+729,Churn Risk,Reactivation Journey,Completed,1/1/2025,10/24/2025,34401,35074
+730,New Signups (Last 30 Days),Getting Started Journey,Scheduled,5/31/2025,10/20/2025,32580,25706
+731,High CLV Customers,Exclusive Member Upgrade,Scheduled,8/6/2025,1/18/2025,20881,21509
+732,High CLV Customers,Exclusive Member Upgrade,Completed,1/15/2025,2/13/2025,18810,19286
+733,New Signups (Last 30 Days),New Signup Nurture,Scheduled,3/29/2025,10/7/2025,53816,38349
+734,High CLV Customers,VIP Rewards,Scheduled,6/22/2025,9/14/2025,82344,66101
+735,Churn Risk,Winback Flow,Completed,2/23/2025,9/27/2025,69497,58666
+736,Inactive > 90 Days,Deep Winback,Scheduled,12/7/2025,6/4/2025,42982,44148
+737,High CLV Customers,VIP Rewards,Active,6/26/2025,2/25/2025,39960,40135
+738,Churn Risk,Loyalty Reminder,Scheduled,9/22/2025,11/20/2025,43851,36148
+739,High CLV Customers,End-of-Year Upsell,Completed,10/24/2025,3/17/2025,6715,7172
+740,Churn Risk,Reactivation Journey,Completed,4/26/2025,4/16/2025,41961,37244
+741,Churn Risk,Loyalty Reminder,Completed,6/7/2025,12/7/2025,39560,34770
+742,Inactive > 90 Days,Come-Back Offer,Completed,9/18/2025,3/29/2025,38410,39110
+743,High CLV Customers,End-of-Year Upsell,Active,7/3/2025,4/10/2025,97187,96454
+744,Churn Risk,Winback Flow,Scheduled,3/23/2025,12/26/2024,80560,60482
+745,Inactive > 90 Days,Inactivity Reactivation Flow,Active,1/18/2025,8/18/2025,18261,19506
+746,Churn Risk,Loyalty Reminder,Active,6/22/2025,11/2/2025,77946,64643
+747,New Signups (Last 30 Days),Getting Started Journey,Scheduled,1/27/2025,1/10/2025,32419,30552
+748,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,7/12/2025,6/15/2025,98057,81753
+749,Churn Risk,Winback Flow,Active,6/27/2025,6/29/2025,50019,38917
+750,Inactive > 90 Days,Inactivity Reactivation Flow,Active,9/3/2025,6/20/2025,96910,100665
+751,Inactive > 90 Days,Come-Back Offer,Active,7/30/2025,4/9/2025,27468,22791
+752,Inactive > 90 Days,Come-Back Offer,Scheduled,7/28/2025,12/25/2024,28672,25616
+753,High CLV Customers,Premium Features Upsell,Scheduled,12/13/2024,5/19/2025,81936,81232
+754,New Signups (Last 30 Days),Getting Started Journey,Completed,4/4/2025,5/8/2025,92581,65630
+755,Inactive > 90 Days,Deep Winback,Active,9/18/2025,7/5/2025,75253,69262
+756,High CLV Customers,Exclusive Member Upgrade,Scheduled,3/8/2025,12/25/2024,63205,53812
+757,Churn Risk,Loyalty Reminder,Scheduled,9/19/2025,12/22/2024,95785,84154
+758,Churn Risk,Loyalty Reminder,Active,6/12/2025,6/22/2025,90406,96834
+759,Inactive > 90 Days,Deep Winback,Completed,11/30/2025,3/14/2025,78353,85965
+760,New Signups (Last 30 Days),Welcome Series – Step 1,Active,2/2/2025,12/24/2024,76761,64511
+761,Inactive > 90 Days,Come-Back Offer,Active,2/23/2025,8/28/2025,6308,6661
+762,High CLV Customers,Premium Features Upsell,Scheduled,4/18/2025,4/8/2025,93728,101996
+763,High CLV Customers,Premium Features Upsell,Scheduled,5/19/2025,12/6/2025,62820,62721
+764,High CLV Customers,VIP Rewards,Scheduled,3/30/2025,1/28/2025,10333,7892
+765,High CLV Customers,VIP Rewards,Scheduled,9/23/2025,5/6/2025,51911,45585
+766,Churn Risk,Loyalty Reminder,Scheduled,7/6/2025,5/13/2025,27643,29928
+767,High CLV Customers,End-of-Year Upsell,Scheduled,2/3/2025,12/4/2025,94551,86513
+768,Churn Risk,Reactivation Journey,Completed,5/9/2025,2/6/2025,30202,24162
+769,High CLV Customers,Exclusive Member Upgrade,Scheduled,5/18/2025,6/17/2025,56360,55581
+770,Inactive > 90 Days,Come-Back Offer,Completed,6/14/2025,12/30/2024,88621,86766
+771,High CLV Customers,Exclusive Member Upgrade,Completed,12/30/2024,1/30/2025,51038,40805
+772,Churn Risk,Loyalty Reminder,Completed,7/12/2025,1/8/2025,97953,82985
+773,High CLV Customers,Premium Features Upsell,Active,10/18/2025,7/5/2025,35591,38784
+774,New Signups (Last 30 Days),New Signup Nurture,Scheduled,5/2/2025,6/12/2025,60463,54315
+775,Inactive > 90 Days,Come-Back Offer,Scheduled,4/14/2025,3/29/2025,54532,58148
+776,High CLV Customers,End-of-Year Upsell,Scheduled,2/26/2025,9/24/2025,63324,54164
+777,Churn Risk,Winback Flow,Scheduled,2/22/2025,1/8/2025,42064,40230
+778,Inactive > 90 Days,Come-Back Offer,Completed,1/7/2025,4/18/2025,27721,25428
+779,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,2/24/2025,12/25/2024,23446,24707
+780,High CLV Customers,VIP Rewards,Active,1/17/2025,9/6/2025,58780,55789
+781,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,7/14/2025,1/26/2025,53951,55814
+782,High CLV Customers,Exclusive Member Upgrade,Scheduled,4/19/2025,11/5/2025,73143,61865
+783,High CLV Customers,Exclusive Member Upgrade,Completed,3/26/2025,9/6/2025,71060,71711
+784,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,3/25/2025,2/9/2025,33914,33503
+785,Inactive > 90 Days,Come-Back Offer,Scheduled,10/14/2025,8/3/2025,45016,40383
+786,Churn Risk,Reactivation Journey,Active,11/24/2025,7/17/2025,10757,9691
+787,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,8/23/2025,6/21/2025,5023,4656
+788,Inactive > 90 Days,Deep Winback,Scheduled,9/1/2025,8/13/2025,69734,57249
+789,High CLV Customers,VIP Rewards,Scheduled,12/22/2024,5/22/2025,79811,61824
+790,Inactive > 90 Days,Come-Back Offer,Scheduled,11/11/2025,3/18/2025,42924,44782
+791,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,3/9/2025,11/19/2025,57839,55318
+792,High CLV Customers,Premium Features Upsell,Scheduled,11/20/2025,1/21/2025,56124,45875
+793,Inactive > 90 Days,Deep Winback,Completed,1/20/2025,11/16/2025,61768,45403
+794,High CLV Customers,Exclusive Member Upgrade,Active,11/3/2025,5/15/2025,25090,24193
+795,Inactive > 90 Days,Come-Back Offer,Completed,8/4/2025,8/2/2025,24605,22723
+796,New Signups (Last 30 Days),Getting Started Journey,Active,1/12/2025,6/11/2025,94990,103110
+797,Churn Risk,Winback Flow,Scheduled,12/5/2025,6/22/2025,9326,8622
+798,Churn Risk,Loyalty Reminder,Completed,1/13/2025,3/12/2025,87578,87732
+799,New Signups (Last 30 Days),Welcome Series – Step 2,Active,2/11/2025,11/10/2025,12062,11482
+800,High CLV Customers,Exclusive Member Upgrade,Completed,3/5/2025,12/20/2024,47185,40188
+801,Churn Risk,Reactivation Journey,Scheduled,3/26/2025,2/15/2025,67578,61904
+802,High CLV Customers,End-of-Year Upsell,Active,10/26/2025,12/12/2024,78996,82393
+803,Inactive > 90 Days,Deep Winback,Active,6/12/2025,2/12/2025,10906,10206
+804,High CLV Customers,Premium Features Upsell,Active,5/19/2025,5/16/2025,51202,42507
+805,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,3/31/2025,3/5/2025,87511,78176
+806,New Signups (Last 30 Days),New Signup Nurture,Scheduled,4/13/2025,3/9/2025,7811,7976
+807,New Signups (Last 30 Days),Welcome Series – Step 2,Active,10/11/2025,3/7/2025,95509,76196
+808,Inactive > 90 Days,Deep Winback,Scheduled,8/13/2025,9/2/2025,32850,28401
+809,High CLV Customers,Exclusive Member Upgrade,Active,5/22/2025,6/17/2025,94389,69622
+810,Churn Risk,We Miss You,Active,10/5/2025,1/30/2025,81484,66819
+811,Churn Risk,Winback Flow,Completed,5/10/2025,4/22/2025,6104,4275
+812,New Signups (Last 30 Days),Welcome Series – Step 2,Active,1/13/2025,11/27/2025,13633,9610
+813,Churn Risk,Loyalty Reminder,Active,3/23/2025,9/13/2025,42721,30429
+814,Inactive > 90 Days,Come-Back Offer,Active,11/1/2025,12/22/2024,49397,45529
+815,High CLV Customers,Premium Features Upsell,Completed,1/10/2025,5/23/2025,65406,71934
+816,Churn Risk,We Miss You,Active,11/13/2025,11/6/2025,47544,40061
+817,New Signups (Last 30 Days),New Signup Nurture,Active,1/18/2025,10/25/2025,79285,58707
+818,Inactive > 90 Days,Deep Winback,Active,11/28/2025,4/3/2025,63851,67538
+819,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,11/22/2025,9/23/2025,80442,60143
+820,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,1/1/2025,11/12/2025,18936,15196
+821,Inactive > 90 Days,Deep Winback,Completed,7/23/2025,9/3/2025,48347,48253
+822,High CLV Customers,VIP Rewards,Completed,2/4/2025,6/5/2025,15908,11191
+823,Churn Risk,Winback Flow,Active,10/20/2025,11/18/2025,30216,30909
+824,Inactive > 90 Days,Come-Back Offer,Scheduled,7/31/2025,1/27/2025,80084,77363
+825,Churn Risk,Winback Flow,Active,12/11/2024,12/8/2025,42347,41856
+826,Churn Risk,Loyalty Reminder,Completed,10/24/2025,6/7/2025,9130,9937
+827,High CLV Customers,End-of-Year Upsell,Completed,9/3/2025,11/26/2025,57719,60484
+828,Churn Risk,Reactivation Journey,Scheduled,3/26/2025,8/9/2025,23808,16944
+829,Churn Risk,Loyalty Reminder,Active,11/16/2025,1/26/2025,76075,83025
+830,High CLV Customers,Premium Features Upsell,Scheduled,11/13/2025,12/15/2024,62904,44988
+831,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,3/31/2025,4/30/2025,19249,16622
+832,New Signups (Last 30 Days),Welcome Series – Step 2,Completed,5/15/2025,2/7/2025,33134,27208
+833,High CLV Customers,Premium Features Upsell,Scheduled,3/6/2025,9/13/2025,46125,33535
+834,Churn Risk,Loyalty Reminder,Completed,7/6/2025,9/22/2025,93562,99463
+835,Churn Risk,We Miss You,Scheduled,5/29/2025,10/18/2025,15996,14801
+836,New Signups (Last 30 Days),New Signup Nurture,Active,10/27/2025,8/27/2025,63229,55096
+837,New Signups (Last 30 Days),New Signup Nurture,Completed,6/22/2025,4/12/2025,73056,56432
+838,High CLV Customers,Exclusive Member Upgrade,Completed,8/1/2025,6/22/2025,84688,62779
+839,New Signups (Last 30 Days),New Signup Nurture,Scheduled,10/19/2025,6/11/2025,79289,57788
+840,New Signups (Last 30 Days),Welcome Series – Step 1,Completed,6/26/2025,9/23/2025,52894,39895
+841,Inactive > 90 Days,Come-Back Offer,Scheduled,1/2/2025,5/11/2025,79367,74809
+842,New Signups (Last 30 Days),Getting Started Journey,Active,5/15/2025,5/11/2025,30074,26563
+843,Inactive > 90 Days,Deep Winback,Scheduled,11/3/2025,8/26/2025,78362,69412
+844,High CLV Customers,VIP Rewards,Active,4/4/2025,8/21/2025,24471,19635
+845,High CLV Customers,End-of-Year Upsell,Completed,10/5/2025,5/25/2025,4801,3528
+846,Inactive > 90 Days,Deep Winback,Scheduled,2/4/2025,9/26/2025,14725,15938
+847,High CLV Customers,Premium Features Upsell,Scheduled,5/18/2025,2/12/2025,24385,23790
+848,New Signups (Last 30 Days),Welcome Series – Step 2,Active,5/30/2025,1/17/2025,75214,79947
+849,Churn Risk,Reactivation Journey,Scheduled,9/21/2025,1/13/2025,43085,45121
+850,Churn Risk,Loyalty Reminder,Active,1/27/2025,12/1/2025,35473,36126
+851,High CLV Customers,End-of-Year Upsell,Active,2/2/2025,12/30/2024,67405,63159
+852,Churn Risk,We Miss You,Active,7/23/2025,3/7/2025,4938,3975
+853,High CLV Customers,Premium Features Upsell,Completed,1/14/2025,1/1/2025,8350,6178
+854,Churn Risk,We Miss You,Scheduled,5/16/2025,6/12/2025,57614,49996
+855,New Signups (Last 30 Days),Welcome Series – Step 1,Active,5/14/2025,7/26/2025,21761,18596
+856,High CLV Customers,End-of-Year Upsell,Completed,8/15/2025,2/18/2025,98230,75275
+857,Inactive > 90 Days,Come-Back Offer,Completed,8/29/2025,3/7/2025,3360,2937
+858,Inactive > 90 Days,Inactivity Reactivation Flow,Active,12/21/2024,3/23/2025,35377,28126
+859,Churn Risk,Loyalty Reminder,Scheduled,6/5/2025,1/8/2025,73278,56038
+860,New Signups (Last 30 Days),Getting Started Journey,Active,12/25/2024,10/25/2025,69993,62974
+861,High CLV Customers,Exclusive Member Upgrade,Active,5/9/2025,5/29/2025,57262,61032
+862,High CLV Customers,Exclusive Member Upgrade,Scheduled,9/12/2025,7/26/2025,5967,5753
+863,Inactive > 90 Days,Inactivity Reactivation Flow,Active,2/24/2025,1/29/2025,81859,84021
+864,High CLV Customers,End-of-Year Upsell,Completed,10/4/2025,12/5/2025,5454,5499
+865,Churn Risk,Winback Flow,Completed,5/3/2025,8/26/2025,63829,59427
+866,New Signups (Last 30 Days),Welcome Series – Step 1,Active,8/27/2025,2/4/2025,96067,78361
+867,New Signups (Last 30 Days),New Signup Nurture,Completed,1/11/2025,7/19/2025,53543,47100
+868,Churn Risk,Loyalty Reminder,Completed,11/27/2025,6/17/2025,96477,89144
+869,New Signups (Last 30 Days),New Signup Nurture,Active,2/25/2025,5/15/2025,16222,16681
+870,Churn Risk,Loyalty Reminder,Completed,2/20/2025,12/12/2024,1173,1201
+871,Inactive > 90 Days,Come-Back Offer,Completed,8/27/2025,10/20/2025,67178,49921
+872,Inactive > 90 Days,Inactivity Reactivation Flow,Active,7/26/2025,6/28/2025,86419,91381
+873,Inactive > 90 Days,Come-Back Offer,Active,8/23/2025,9/9/2025,29410,29823
+874,Churn Risk,Loyalty Reminder,Completed,11/30/2025,10/30/2025,58805,59180
+875,New Signups (Last 30 Days),Getting Started Journey,Scheduled,5/31/2025,5/30/2025,27530,19311
+876,High CLV Customers,End-of-Year Upsell,Scheduled,12/11/2024,3/17/2025,31273,22131
+877,Churn Risk,We Miss You,Completed,7/28/2025,10/1/2025,34252,34860
+878,New Signups (Last 30 Days),Getting Started Journey,Completed,10/27/2025,5/7/2025,64048,47350
+879,New Signups (Last 30 Days),Welcome Series – Step 1,Active,2/5/2025,4/27/2025,98802,106615
+880,High CLV Customers,Premium Features Upsell,Active,5/19/2025,1/21/2025,2255,1888
+881,Churn Risk,Winback Flow,Active,6/27/2025,4/25/2025,29712,30004
+882,High CLV Customers,End-of-Year Upsell,Scheduled,9/1/2025,3/8/2025,30916,30558
+883,High CLV Customers,VIP Rewards,Completed,7/8/2025,2/7/2025,52358,56159
+884,High CLV Customers,End-of-Year Upsell,Scheduled,9/10/2025,5/3/2025,54812,51977
+885,New Signups (Last 30 Days),New Signup Nurture,Scheduled,12/5/2025,12/30/2024,46248,49258
+886,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,5/27/2025,7/7/2025,5580,4682
+887,High CLV Customers,Exclusive Member Upgrade,Active,11/14/2025,12/29/2024,37849,35327
+888,High CLV Customers,Exclusive Member Upgrade,Active,3/1/2025,7/1/2025,28220,22460
+889,New Signups (Last 30 Days),Getting Started Journey,Active,6/20/2025,7/27/2025,72207,64677
+890,Inactive > 90 Days,Come-Back Offer,Completed,5/23/2025,9/18/2025,91782,66897
+891,Churn Risk,Winback Flow,Completed,11/11/2025,2/19/2025,97607,79979
+892,Churn Risk,We Miss You,Scheduled,1/24/2025,1/14/2025,30029,21489
+893,Churn Risk,Loyalty Reminder,Active,2/25/2025,6/30/2025,81780,70859
+894,High CLV Customers,Exclusive Member Upgrade,Active,5/13/2025,1/2/2025,12740,9005
+895,Inactive > 90 Days,Inactivity Reactivation Flow,Active,12/19/2024,5/13/2025,18364,17639
+896,High CLV Customers,Premium Features Upsell,Scheduled,2/16/2025,6/23/2025,70620,69950
+897,Inactive > 90 Days,Deep Winback,Active,11/24/2025,5/1/2025,51737,38438
+898,Churn Risk,Loyalty Reminder,Scheduled,5/29/2025,4/16/2025,44800,46815
+899,New Signups (Last 30 Days),Getting Started Journey,Active,11/26/2025,8/26/2025,28744,29655
+900,High CLV Customers,End-of-Year Upsell,Completed,2/20/2025,3/14/2025,31675,32811
+901,New Signups (Last 30 Days),New Signup Nurture,Completed,3/31/2025,9/15/2025,17463,16092
+902,High CLV Customers,End-of-Year Upsell,Scheduled,4/19/2025,2/4/2025,56086,61238
+903,Churn Risk,We Miss You,Active,12/1/2025,1/25/2025,23057,24259
+904,New Signups (Last 30 Days),New Signup Nurture,Completed,11/26/2025,3/29/2025,47082,49168
+905,Inactive > 90 Days,Come-Back Offer,Active,7/1/2025,9/29/2025,11234,11091
+906,New Signups (Last 30 Days),Getting Started Journey,Completed,5/22/2025,3/6/2025,88596,62134
+907,High CLV Customers,VIP Rewards,Active,11/16/2025,1/28/2025,35269,38517
+908,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,6/26/2025,9/19/2025,82098,84991
+909,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,11/2/2025,4/28/2025,67226,55235
+910,New Signups (Last 30 Days),New Signup Nurture,Completed,3/24/2025,6/20/2025,94517,69007
+911,New Signups (Last 30 Days),Getting Started Journey,Completed,10/30/2025,8/17/2025,45193,37928
+912,New Signups (Last 30 Days),Getting Started Journey,Completed,10/18/2025,2/2/2025,54961,55015
+913,High CLV Customers,Premium Features Upsell,Active,2/11/2025,12/31/2024,82606,90620
+914,High CLV Customers,Premium Features Upsell,Scheduled,9/11/2025,11/19/2025,77358,54987
+915,New Signups (Last 30 Days),Getting Started Journey,Completed,7/31/2025,3/26/2025,88775,92490
+916,New Signups (Last 30 Days),Getting Started Journey,Scheduled,12/6/2025,8/24/2025,20517,20478
+917,Churn Risk,We Miss You,Active,4/19/2025,1/1/2025,20668,18902
+918,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,6/10/2025,4/20/2025,13899,10413
+919,New Signups (Last 30 Days),Getting Started Journey,Completed,10/29/2025,3/20/2025,28538,24404
+920,New Signups (Last 30 Days),Getting Started Journey,Completed,4/3/2025,6/30/2025,26551,25101
+921,Churn Risk,We Miss You,Scheduled,8/10/2025,11/10/2025,20031,16817
+922,Inactive > 90 Days,Come-Back Offer,Active,10/30/2025,9/26/2025,34076,24207
+923,Churn Risk,Loyalty Reminder,Scheduled,8/27/2025,9/20/2025,67851,62622
+924,High CLV Customers,Exclusive Member Upgrade,Scheduled,2/28/2025,1/6/2025,17264,16738
+925,Inactive > 90 Days,Deep Winback,Completed,1/2/2025,10/12/2025,25189,25735
+926,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,6/16/2025,3/20/2025,87348,64781
+927,High CLV Customers,End-of-Year Upsell,Scheduled,2/17/2025,5/1/2025,22407,21775
+928,New Signups (Last 30 Days),New Signup Nurture,Completed,7/26/2025,3/30/2025,30245,26404
+929,New Signups (Last 30 Days),Welcome Series – Step 2,Active,6/14/2025,6/14/2025,1952,1879
+930,Inactive > 90 Days,Inactivity Reactivation Flow,Active,1/10/2025,12/21/2024,43581,44923
+931,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,8/17/2025,9/20/2025,71041,54075
+932,Churn Risk,Loyalty Reminder,Active,7/31/2025,2/7/2025,45267,36921
+933,Churn Risk,We Miss You,Scheduled,8/20/2025,10/9/2025,85849,68475
+934,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,10/27/2025,9/18/2025,98859,71772
+935,Churn Risk,We Miss You,Completed,4/16/2025,1/4/2025,78808,64629
+936,Inactive > 90 Days,Come-Back Offer,Scheduled,5/17/2025,2/26/2025,2147,2110
+937,Churn Risk,We Miss You,Completed,4/18/2025,1/26/2025,95257,97170
+938,Churn Risk,Winback Flow,Active,12/8/2025,10/23/2025,72684,71741
+939,Inactive > 90 Days,Inactivity Reactivation Flow,Completed,5/4/2025,4/2/2025,50644,41763
+940,Churn Risk,Loyalty Reminder,Active,1/4/2025,4/12/2025,72228,69020
+941,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,5/3/2025,2/15/2025,85671,81866
+942,Churn Risk,Winback Flow,Scheduled,2/12/2025,6/14/2025,21729,15783
+943,Churn Risk,Winback Flow,Scheduled,4/4/2025,10/6/2025,24272,22909
+944,High CLV Customers,Premium Features Upsell,Active,11/25/2025,11/16/2025,29809,30844
+945,High CLV Customers,End-of-Year Upsell,Completed,4/6/2025,10/20/2025,47413,46444
+946,New Signups (Last 30 Days),New Signup Nurture,Scheduled,9/1/2025,9/13/2025,49587,43596
+947,High CLV Customers,End-of-Year Upsell,Scheduled,1/4/2025,10/28/2025,2444,1835
+948,New Signups (Last 30 Days),New Signup Nurture,Completed,7/19/2025,3/24/2025,32980,31331
+949,New Signups (Last 30 Days),Getting Started Journey,Active,1/19/2025,6/3/2025,49800,37130
+950,Inactive > 90 Days,Come-Back Offer,Active,3/16/2025,8/13/2025,39386,37971
+951,High CLV Customers,Premium Features Upsell,Active,11/9/2025,10/15/2025,22321,18699
+952,Churn Risk,Reactivation Journey,Completed,5/23/2025,6/23/2025,97673,89940
+953,High CLV Customers,End-of-Year Upsell,Completed,8/18/2025,7/21/2025,20764,17593
+954,Churn Risk,Winback Flow,Active,6/29/2025,3/3/2025,16881,17360
+955,Churn Risk,Loyalty Reminder,Active,10/6/2025,1/11/2025,14918,11927
+956,Churn Risk,We Miss You,Scheduled,6/29/2025,12/5/2025,92051,84047
+957,New Signups (Last 30 Days),Getting Started Journey,Active,2/6/2025,9/27/2025,29206,24111
+958,High CLV Customers,Premium Features Upsell,Completed,4/29/2025,8/21/2025,44209,31737
+959,High CLV Customers,End-of-Year Upsell,Completed,12/16/2024,1/27/2025,31432,25185
+960,Inactive > 90 Days,Inactivity Reactivation Flow,Scheduled,10/13/2025,9/16/2025,88032,78401
+961,Churn Risk,We Miss You,Completed,8/15/2025,10/16/2025,53201,54298
+962,New Signups (Last 30 Days),Welcome Series – Step 2,Scheduled,6/11/2025,2/26/2025,99474,102229
+963,Inactive > 90 Days,Come-Back Offer,Scheduled,1/16/2025,9/25/2025,33209,27009
+964,Churn Risk,We Miss You,Scheduled,3/7/2025,10/27/2025,97896,100325
+965,New Signups (Last 30 Days),Welcome Series – Step 1,Active,8/29/2025,9/28/2025,90998,72718
+966,High CLV Customers,Premium Features Upsell,Active,1/6/2025,12/13/2024,48102,48169
+967,Churn Risk,We Miss You,Active,2/17/2025,1/26/2025,69902,76217
+968,Inactive > 90 Days,Deep Winback,Scheduled,8/14/2025,8/29/2025,23557,19158
+969,New Signups (Last 30 Days),Getting Started Journey,Completed,4/6/2025,4/8/2025,46263,36872
+970,Churn Risk,Winback Flow,Scheduled,4/27/2025,10/26/2025,27437,22284
+971,New Signups (Last 30 Days),Getting Started Journey,Active,3/25/2025,5/28/2025,71119,54994
+972,Inactive > 90 Days,Deep Winback,Scheduled,3/2/2025,4/3/2025,22808,16481
+973,Churn Risk,Loyalty Reminder,Completed,11/13/2025,4/3/2025,41803,37307
+974,New Signups (Last 30 Days),Welcome Series – Step 1,Active,7/30/2025,8/6/2025,32666,26294
+975,High CLV Customers,End-of-Year Upsell,Completed,4/13/2025,2/28/2025,46240,41260
+976,High CLV Customers,VIP Rewards,Completed,6/29/2025,7/27/2025,1980,1862
+977,Inactive > 90 Days,Deep Winback,Active,11/18/2025,3/22/2025,77023,84453
+978,New Signups (Last 30 Days),New Signup Nurture,Scheduled,7/7/2025,8/9/2025,34307,31208
+979,Inactive > 90 Days,Inactivity Reactivation Flow,Active,8/28/2025,2/1/2025,64263,69053
+980,New Signups (Last 30 Days),Getting Started Journey,Completed,3/11/2025,2/16/2025,73256,74482
+981,Churn Risk,Winback Flow,Scheduled,3/14/2025,10/17/2025,4141,3205
+982,New Signups (Last 30 Days),New Signup Nurture,Scheduled,4/21/2025,1/10/2025,70639,72994
+983,High CLV Customers,VIP Rewards,Completed,9/13/2025,6/24/2025,60030,64211
+984,Churn Risk,Reactivation Journey,Active,11/16/2025,10/4/2025,70925,65206
+985,Churn Risk,Loyalty Reminder,Completed,10/17/2025,10/30/2025,19079,18071
+986,Churn Risk,Reactivation Journey,Active,10/6/2025,5/24/2025,80207,69589
+987,Churn Risk,We Miss You,Active,11/23/2025,9/5/2025,49343,35946
+988,Inactive > 90 Days,Deep Winback,Completed,4/17/2025,2/9/2025,99195,96525
+989,Inactive > 90 Days,Come-Back Offer,Completed,8/26/2025,9/15/2025,15571,15673
+990,Inactive > 90 Days,Inactivity Reactivation Flow,Active,3/8/2025,6/27/2025,70936,51880
+991,High CLV Customers,Exclusive Member Upgrade,Completed,10/21/2025,3/7/2025,55646,53996
+992,Churn Risk,Loyalty Reminder,Scheduled,4/7/2025,9/17/2025,1584,1641
+993,Inactive > 90 Days,Deep Winback,Scheduled,3/12/2025,10/6/2025,48481,51669
+994,High CLV Customers,Exclusive Member Upgrade,Active,11/10/2025,1/13/2025,48477,39073
+995,Churn Risk,Loyalty Reminder,Active,7/26/2025,7/1/2025,19906,19676
+996,Churn Risk,Reactivation Journey,Active,6/1/2025,4/28/2025,76712,81721
+997,Inactive > 90 Days,Deep Winback,Scheduled,4/1/2025,7/13/2025,79576,55814
+998,High CLV Customers,Exclusive Member Upgrade,Completed,11/16/2025,6/23/2025,77774,62899
+999,New Signups (Last 30 Days),Welcome Series – Step 1,Scheduled,11/27/2025,12/25/2024,61712,53022
+1000,Inactive > 90 Days,Come-Back Offer,Scheduled,12/8/2025,2/28/2025,13475,10804
