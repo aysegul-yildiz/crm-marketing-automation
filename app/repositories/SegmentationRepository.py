@@ -1,18 +1,22 @@
 from typing import Optional
 from database import get_connection
 from app.models.SegmentationRuleModel import SegmentationRuleModel
+from app.models.ListingSegmentationModel import ListingSegmentationModel
+from app.models.SegmentationGroupModel import SegmentationGroupModel
+from app.models.CustomerSegmentationModel import CustomerSegmentationModel
 
 class SegmentationRepository:
 
     @staticmethod
-    def createSegmentationRule(segmentation_id: int, field: str, operator: str, target_value: str, add_or_remove: bool) -> int:
+    def createSegmentationRule(SegmentationRule: SegmentationRuleModel) -> int:
         conn = get_connection()
         cursor = conn.cursor(dictionary=True)
 
+        s = SegmentationRule
         cursor.execute(
             "INSERT INTO segmentation_rule (segmentation_id, field, operator, target_value, add_or_remove) "
             "VALUES (%s, %s, %s, %s, %s);",
-            (segmentation_id, field, operator, target_value, add_or_remove)
+            (s.segmentation_id, s.field, s.operator, s.target_value, s.add_or_remove)
         )
         conn.commit()
         rule_id = cursor.lastrowid
@@ -43,4 +47,61 @@ class SegmentationRepository:
             target_value=row["target_value"],
             add_or_remove=row["add_or_remove"]
         )
+
+    @staticmethod
+    def addListingToSegment(ListingSegmentation: ListingSegmentationModel):
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute(
+            "INSERT INTO listing_segmentation (listing_id, segmentation_id) VALUES (%s, %s);",
+            (ListingSegmentation.listing_id, ListingSegmentation.segmentation_id)
+        )
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+    @staticmethod
+    def getSegmentsForListing(listing_id: int) -> list[int]:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute(
+            "SELECT segmentation_id FROM listing_segmentation WHERE listing_id = %s;",
+            (listing_id,)
+        )
+        rows = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        return [row[0] for row in rows]
     
+    @staticmethod
+    def addCustomerToSegment(CustomerSegmentation: CustomerSegmentationModel):
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute(
+            "INSERT INTO customer_segmentation (customer_id, segmentation_id) VALUES (%s, %s);",
+            (user_id, segmentation_id)
+        )
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+    @staticmethod
+    def getSegmentsForCustomer(customer_id: int) -> list[int]:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute(
+            "SELECT segmentation_id FROM user_segmentation WHERE customer_id = %s;",
+            (user_id,)
+        )
+        rows = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        return [row[0] for row in rows]

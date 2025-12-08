@@ -7,12 +7,12 @@ from app.models.CustomerModel import Customer
 class ExternalRepository:
 
     @staticmethod
-    def createUser(name: str, surname: str, email: str):
+    def createCustomer(name: str, surname: str, email: str):
         conn = get_connection()
         cursor = conn.cursor()
 
         cursor.execute(
-            "INSERT INTO User (name, surname, email) VALUES (%s, %s, %s);",
+            "INSERT INTO Customer (name, surname, email) VALUES (%s, %s, %s);",
             (name, surname, email)
         )
         conn.commit()
@@ -23,11 +23,11 @@ class ExternalRepository:
         conn.close()
     
     @staticmethod
-    def getUserByID(id: int) -> Customer:
+    def getCustomerByID(id: int) -> Customer:
         conn = get_connection()
         cursor = conn.cursor()
 
-        cursor.execute("SELECT * FROM User WHERE id = %s;", (user_id, ))
+        cursor.execute("SELECT * FROM Customer WHERE id = %s;", (id, ))
         row = cursor.fetchone()
 
         cursor.close()
