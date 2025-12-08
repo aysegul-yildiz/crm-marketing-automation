@@ -83,7 +83,8 @@ CREATE TABLE workflow_step (
     status VARCHAR(20),
     FOREIGN KEY(workflow_id) REFERENCES workflow(id),
     CHECK(step_order > 0),
-    CHECK(status IN ('PENDING', 'DONE', 'FAILED'))
+    CHECK(status IN ('PENDING', 'DONE', 'FAILED')),
+    UNIQUE(workflow_id, step_order)
 );
 
 CREATE TABLE customer_event (
