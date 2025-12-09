@@ -1,6 +1,7 @@
 from app.database import get_connection
 from app.models.CampaignModel import CampaignModel
 from app.models.WorkflowStepModel import WorkflowStepModel
+from app.models.WorkflowModel import WorkflowModel
 
 class CampaignRepository:
 
@@ -39,6 +40,70 @@ class CampaignRepository:
             name=row["name"],
             status=row["status"]
         )
+
+    @staticmethod
+    def createWorkflow(name: str, campaign_id: int) -> int:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        query = "INSERT INTO workflow(name, campaign_id) VALUES(%s, %s);"
+        cursor.execute(query, (name, campaign_id))
+        conn.commit()
+
+        new_id = cursor.lastrowid
+        cursor.close()
+        conn.close()
+        return new_id
+
+    @staticmethod
+    def getWorkflowByID(workflow_id) -> WorkflowModel:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        query = "SELECT * FROM workflow WHERE id = %s;"
+        cursor.execute(query, (workflow_id,))
+        row = cursor.fetchone()
+
+        cursor.close()
+        conn.close()
+
+        if not row:
+            return None
+
+        return WorkflowModel(
+            id = row["id"]
+            name = row["name"]
+            campaign_id = row["campaign_id"]
+            creation_time = row["creation_time"]
+            execution_start_time = row["execution_start_time"]
+        )
+
+    @staticmethod
+    # returns array of WorkflowModel
+    def getWorkflowsByCampaignID(campaign_id):
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        query = "SELECT * FROM workflow WHERE campaign_id = %s;"
+        cursor.execute(query, (campaign_id,))
+        rows = cursor.fetchone()
+
+        cursor.close()
+        conn.close()
+
+        result = []
+
+        for(row in rows):
+            model = WorkflowModel(
+                id = row["id"]
+                name = row["name"]
+                campaign_id = row["campaign_id"]
+                creation_time = row["creation_time"]
+                execution_start_time = row["execution_start_time"]
+            )
+            result.append(model)
+
+        return result
 
     @staticmethod
     def createWorkflowStep(workflow_id: int, step_order: int,
