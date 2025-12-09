@@ -1,0 +1,489 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+      "Segoe UI", sans-serif;
+    background: #f5f7ff;
+  }
+
+  .app-shell {
+    display: flex;
+    min-height: calc(100vh - 40px); /* base.html nav + hr */
+    background: #f5f7ff;
+  }
+
+  .sidebar {
+    width: 230px;
+    background: #ffffff;
+    border-right: 1px solid rgba(15, 23, 42, 0.06);
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sidebar-brand {
+    font-weight: 700;
+    font-size: 17px;
+    color: #4f46e5;
+  }
+
+  .sidebar-section-title {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    margin-bottom: 6px;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sidebar-link {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 9px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #4b5563;
+  }
+
+  .sidebar-link.active {
+    background: #eef2ff;
+    color: #4338ca;
+    font-weight: 600;
+  }
+
+  .sidebar-bottom {
+    margin-top: auto;
+    font-size: 12px;
+    color: #9ca3af;
+  }
+
+  .sidebar-bottom a {
+    color: #4f46e5;
+    text-decoration: none;
+  }
+
+  .main-area {
+    flex: 1;
+    padding: 18px 26px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .main-subtitle {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 4px;
+  }
+
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .kpi-card {
+    background: white;
+    border-radius: 16px;
+    padding: 14px 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  }
+
+  .kpi-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #9ca3af;
+    margin-bottom: 4px;
+  }
+
+  .kpi-value {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .kpi-caption {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 2px;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+    gap: 16px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+    padding: 16px 18px 14px;
+  }
+
+  .card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+
+  .card-title {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+    color: #9ca3af;
+  }
+
+  .chart-container {
+    position: relative;
+    height: 260px;
+  }
+
+  .wide-chart {
+    height: 260px;
+  }
+
+  .table-wrapper {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    background: white;
+  }
+
+  table.campaign-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+
+  table.campaign-table thead {
+    background: #f9fafb;
+  }
+
+  table.campaign-table th,
+  table.campaign-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #f1f5f9;
+    white-space: nowrap;
+  }
+
+  table.campaign-table th {
+    font-weight: 600;
+    color: #6b7280;
+    text-align: left;
+  }
+
+  table.campaign-table td.num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  table.campaign-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .badge-status {
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 11px;
+  }
+  .badge-active {
+    background: #dcfce7;
+    color: #15803d;
+  }
+  .badge-scheduled {
+    background: #e0f2fe;
+    color: #0369a1;
+  }
+  .badge-completed {
+    background: #e5e7eb;
+    color: #374151;
+  }
+  .badge-other {
+    background: #fef3c7;
+    color: #92400e;
+  }
+</style>
+
+<div class="app-shell">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">CRM Marketing</div>
+
+    <div>
+      <div class="sidebar-section-title">Navigation</div>
+      <div class="sidebar-nav">
+        <a href="{{ url_for('marketing.dashboard') }}" class="sidebar-link">
+          Overview
+        </a>
+        <a href="#" class="sidebar-link">Segments</a>
+        <a href="{{ url_for('marketing.campaigns') }}" class="sidebar-link">
+          Campaigns
+        </a>
+        <a href="#" class="sidebar-link">Workflows</a>
+        <a href="{{ url_for('marketing.analytics') }}" class="sidebar-link active">
+          Analytics
+        </a>
+      </div>
+    </div>
+
+    <div class="sidebar-bottom">
+      Deep-dive into performance.<br />
+      <a href="{{ url_for('marketing.campaigns') }}">Back to campaigns</a>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main-area">
+    <div class="main-header">
+      <div>
+        <h1 class="main-title">Marketing Analytics</h1>
+        <p class="main-subtitle">
+          Funnel performance, revenue attribution, and lead conversion across all
+          campaigns.
+        </p>
+      </div>
+    </div>
+
+    <!-- KPI row -->
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-label">Total Revenue</div>
+        <div class="kpi-value">₺{{ total_revenue|round(0) }}</div>
+        <div class="kpi-caption">Attributed to campaigns</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Total Spend</div>
+        <div class="kpi-value">₺{{ total_spend|round(0) }}</div>
+        <div class="kpi-caption">Campaign media & automation costs</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Overall Marketing ROI</div>
+        <div class="kpi-value">{{ overall_roi|round(1) }}%</div>
+        <div class="kpi-caption">((Revenue − Spend) / Spend)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Lead Performance</div>
+        <div class="kpi-value">
+          {{ converted_leads }} / {{ total_leads }}
+        </div>
+        <div class="kpi-caption">Converted leads vs. total generated</div>
+      </div>
+    </div>
+
+    <!-- Funnel + Revenue by segment -->
+    <section class="grid-2">
+      <div class="card">
+        <div class="card-header-row">
+          <div>
+            <div class="card-title">Conversion Funnel</div>
+            <div class="card-subtitle">
+              Delivered → opened → clicked → converted (all campaigns).
+            </div>
+          </div>
+        </div>
+        <div class="chart-container">
+          <canvas id="funnelChart"></canvas>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header-row">
+          <div>
+            <div class="card-title">Revenue by Segment</div>
+            <div class="card-subtitle">Attribution by audience grouping.</div>
+          </div>
+        </div>
+        <div class="chart-container">
+          <canvas id="revenueSegmentChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Revenue over time -->
+    <section class="card">
+      <div class="card-header-row">
+        <div>
+          <div class="card-title">Revenue Over Time</div>
+          <div class="card-subtitle">
+            Daily revenue from all conversion events linked to campaigns.
+          </div>
+        </div>
+      </div>
+      <div class="chart-container wide-chart">
+        <canvas id="revenueTimeChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Top campaigns table -->
+    <section class="card">
+      <div class="card-header-row">
+        <div>
+          <div class="card-title">Top Campaigns by Revenue</div>
+          <div class="card-subtitle">
+            Highest-performing flows by revenue and ROI.
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="campaign-table">
+          <thead>
+            <tr>
+              <th>Campaign</th>
+              <th>Segment</th>
+              <th>Status</th>
+              <th class="num">Sent</th>
+              <th class="num">Open&nbsp;%</th>
+              <th class="num">Click&nbsp;%</th>
+              <th class="num">Conv.&nbsp;%</th>
+              <th class="num">Leads</th>
+              <th class="num">Lead Conv.&nbsp;%</th>
+              <th class="num">Revenue</th>
+              <th class="num">Spend</th>
+              <th class="num">ROI&nbsp;%</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for c in top_campaigns %}
+            <tr>
+              <td>{{ c.name }}</td>
+              <td>{{ c.segment }}</td>
+              <td>
+                {% if c.status == "Active" %}
+                <span class="badge-status badge-active">{{ c.status }}</span>
+                {% elif c.status == "Scheduled" %}
+                <span class="badge-status badge-scheduled">{{ c.status }}</span>
+                {% elif c.status == "Completed" %}
+                <span class="badge-status badge-completed">{{ c.status }}</span>
+                {% else %}
+                <span class="badge-status badge-other">{{ c.status }}</span>
+                {% endif %}
+              </td>
+              <td class="num">{{ c.sent }}</td>
+              <td class="num">{{ c.open_rate|round(1) }}%</td>
+              <td class="num">{{ c.click_rate|round(1) }}%</td>
+              <td class="num">{{ c.conversion_rate|round(1) }}%</td>
+              <td class="num">{{ c.leads }}</td>
+              <td class="num">{{ c.lead_conversion_rate|round(1) }}%</td>
+              <td class="num">₺{{ c.revenue|round(0) }}</td>
+              <td class="num">₺{{ c.spend|round(0) }}</td>
+              <td class="num">{{ c.roi|round(1) }}%</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const funnelLabels = {{ funnel_labels|tojson }};
+  const funnelValues = {{ funnel_values|tojson }};
+  const revenueTimeLabels = {{ rev_time_labels|tojson }};
+  const revenueTimeValues = {{ rev_time_values|tojson }};
+  const revSegNames = {{ rev_seg_names|tojson }};
+  const revSegValues = {{ rev_seg_values|tojson }};
+
+  // Funnel chart
+  new Chart(document.getElementById("funnelChart"), {
+    type: "bar",
+    data: {
+      labels: funnelLabels,
+      datasets: [
+        {
+          label: "Events",
+          data: funnelValues,
+          borderWidth: 1,
+          backgroundColor: "rgba(129, 140, 248, 0.6)",
+        },
+      ],
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true, ticks: { stepSize: 10000 } },
+      },
+    },
+  });
+
+  // Revenue by segment
+  new Chart(document.getElementById("revenueSegmentChart"), {
+    type: "bar",
+    data: {
+      labels: revSegNames,
+      datasets: [
+        {
+          label: "Revenue (₺)",
+          data: revSegValues,
+          borderWidth: 1,
+          backgroundColor: "rgba(34, 197, 94, 0.7)",
+        },
+      ],
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      indexAxis: "y",
+      scales: {
+        x: { beginAtZero: true },
+      },
+    },
+  });
+
+  // Revenue over time
+  new Chart(document.getElementById("revenueTimeChart"), {
+    type: "line",
+    data: {
+      labels: revenueTimeLabels,
+      datasets: [
+        {
+          label: "Revenue (₺)",
+          data: revenueTimeValues,
+          fill: true,
+          tension: 0.25,
+          borderWidth: 2,
+          backgroundColor: "rgba(129, 140, 248, 0.2)",
+          borderColor: "rgba(79, 70, 229, 1)",
+          pointRadius: 0,
+        },
+      ],
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true },
+        x: { ticks: { maxTicksLimit: 8 } },
+      },
+    },
+  });
+</script>
+
+{% endblock %}

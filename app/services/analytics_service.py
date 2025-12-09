@@ -379,27 +379,7 @@ def get_segment_options() -> list[str]:
 
 
 def get_lead_conversion_by_campaign() -> Dict[int, Dict]:
-    """
-    Compute lead-conversion metrics per campaign.
 
-    Definition:
-      - Leads = customers in segment "New Signups (Last 30 Days)".
-      - Lead touched by campaign C  =
-          lead has at least one campaign_event row with campaign_id = C.
-      - Lead converted by campaign C =
-          lead has at least one conversion_event row with campaign_id = C.
-
-    Returns a dict keyed by campaign_id, e.g.
-      {
-        1: {
-          "leads_touched": 52,
-          "leads_converted": 7,
-          "lead_conversion_rate": 13.5,   # %
-          "lead_revenue": 18420.0,
-        },
-        ...
-      }
-    """
     customers = load_customers()
     campaigns = load_campaigns()
     events = load_campaign_events()
@@ -477,3 +457,4 @@ def get_lead_conversion_by_campaign() -> Dict[int, Dict]:
         }
 
     return metrics
+
