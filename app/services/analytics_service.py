@@ -171,7 +171,6 @@ def get_campaign_effectiveness() -> List[Dict]:
     events = load_campaign_events()
     conversions = load_conversion_events()
 
-    # If we don't have minimal structure, bail out gracefully
     if "id" not in campaigns.columns:
         return []
 
@@ -185,7 +184,7 @@ def get_campaign_effectiveness() -> List[Dict]:
     else:
         grouped = pd.DataFrame()
 
-    # Ensure required columns exist
+
     for col in ["delivered", "opened", "clicked", "converted"]:
         if col not in grouped.columns:
             grouped[col] = 0
@@ -222,19 +221,17 @@ def get_campaign_effectiveness() -> List[Dict]:
             df[col] = 0
         df[col] = df[col].fillna(0)
 
-    # Compute rates (avoid division by zero)
     sent = df["sent"].replace(0, pd.NA)
     df["open_rate"] = (df["opened"] / sent * 100).fillna(0)
     df["click_rate"] = (df["clicked"] / sent * 100).fillna(0)
     df["conversion_rate"] = (df["converted"] / sent * 100).fillna(0)
 
-    # Round for display
+
     df["open_rate"] = df["open_rate"].round(1)
     df["click_rate"] = df["click_rate"].round(1)
     df["conversion_rate"] = df["conversion_rate"].round(1)
     df["revenue"] = df["revenue"].round(2)
 
-    # Build list of dicts for the template
     results: List[Dict] = []
     for _, row in df.reset_index().iterrows():
         results.append(
@@ -253,3 +250,66 @@ def get_campaign_effectiveness() -> List[Dict]:
         )
 
     return results
+
+def get_campaign_listing():
+    """
+    Return all campaigns with basic effectiveness metrics
+    for the 'See all campaigns' page.
+    """
+    campaigns = load_campaigns()
+    events = load_campaign_events()
+    conversions = load_conversion_events()
+
+    rows = []
+    for _, camp in campaigns.iterrows():
+        cid = camp["id"]
+
+        ev = events[events["campaign_id"] == cid]
+        conv = conversions[conversions["campaign_id"] == cid]
+
+        delivered = (ev["event_type"] == "delivered").sum()
+        opened = (ev["event_type"] == "opened").sum()
+        clicked = (ev["event_type"] == "clicked").sum()
+        converted = (ev["event_type"] == "converted").sum()
+
+        revenue = float(conv["revenue"].sum()) if not conv.empty else 0.0
+        spend = float(camp.get("spend", 0) or 0)
+
+        open_rate = opened / delivered if delivered else 0
+        click_rate = clicked / delivered if delivered else 0
+        conv_rate = converted / delivered if delivered else 0
+        roi = ((revenue - spend) / spend * 100) if spend > 0 else 0
+
+        # be defensive for optional columns
+        segment = camp["segment"] if "segment" in campaigns.columns else ""
+        status = camp["status"] if "status" in campaigns.columns else ""
+
+        rows.append(
+            {
+                "id": int(cid),
+                "name": camp.get("name", f"Campaign {cid}"),
+                # "objective":  <-- removed
+                "segment": segment,
+                "status": status,
+                "sent": int(delivered),
+                "open_rate": round(open_rate * 100, 1),
+                "click_rate": round(click_rate * 100, 1),
+                "conversion_rate": round(conv_rate * 100, 1),
+                "revenue": round(revenue, 2),
+                "spend": round(spend, 2),
+                "roi": round(roi, 1),
+                "start_date": camp.get("start_date"),
+            }
+        )
+
+    # optional: sort by start_date if available
+    try:
+        rows = sorted(
+            rows,
+            key=lambda r: r["start_date"] or "",
+            reverse=True,
+        )
+    except Exception:
+        pass
+
+    return rows

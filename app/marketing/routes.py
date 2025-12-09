@@ -7,6 +7,7 @@ from app.services.analytics_service import (
     get_conversion_funnel,
     get_revenue_over_time,
     get_segment_distribution,
+    get_campaign_listing,
 )
 
 marketing_bp = Blueprint(
@@ -45,4 +46,16 @@ def dashboard():
         segment_names=seg_dist["names"],
         segment_counts=seg_dist["counts"],
         recent_activity=recent_activity,
+    )
+
+@marketing_bp.route("/campaigns")
+@login_required
+def campaigns():
+    campaigns = get_campaign_listing()
+    username = session.get("username")
+
+    return render_template(
+        "marketing/campaigns.html",
+        campaigns=campaigns,
+        username=username,
     )

@@ -352,7 +352,8 @@
       <ul class="crm-sidebar-menu">
         <li><a href="#" class="is-active">Overview</a></li>
         <li><a href="#">Segments</a></li>
-        <li><a href="#">Campaigns</a></li>
+        <a href="{{ url_for('marketing.campaigns') }}">Campaigns</a>
+
         <li><a href="#">Workflows</a></li>
         <li><a href="#">Analytics</a></li>
       </ul>
@@ -465,7 +466,9 @@
             <div class="crm-card-title">Recent Campaigns</div>
             <div class="crm-card-subtitle">Last few campaigns with status.</div>
           </div>
-          <a href="#" class="small-link">See all →</a>
+          <a href="{{ url_for('marketing.campaigns') }}" class="see-all-link"
+            >See all →</a
+          >
         </div>
         <table class="crm-table">
           <thead>

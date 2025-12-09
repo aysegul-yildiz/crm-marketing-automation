@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CRM Marketing Automation</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <meta charset="UTF-8" />
 
+    <title>CRM Marketing Automation</title>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- (Optional) Main CSS for your dashboard -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
   </head>
+
   <body>
+    <!-- NAV -->
     <nav>
       {% if session.email %} Logged in as {{ session.username }} |
       <a href="{{ url_for('marketing.dashboard') }}">Marketing</a> |
@@ -13,7 +27,10 @@
       {% else %}
       <a href="{{ url_for('auth.login') }}">Login</a> | {% endif %}
     </nav>
+
     <hr />
+
+    <!-- CONTENT -->
     {% block content %}{% endblock %}
   </body>
 </html>
