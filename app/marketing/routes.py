@@ -9,6 +9,7 @@ from app.services.analytics_service import (
     get_revenue_over_time,
     get_segment_distribution,
     get_campaign_listing,
+    get_segment_options,
 )
 
 marketing_bp = Blueprint(
@@ -48,7 +49,6 @@ def dashboard():
         recent_activity=recent_activity,
     )
 
-
 @marketing_bp.route("/campaigns")
 @login_required
 def campaigns():
@@ -60,6 +60,9 @@ def campaigns():
         segment_filter=segment_filter,
     )
 
+    # NEW: all distinct segments for the dropdown
+    segment_options = get_segment_options()
+
     username = session.get("username") or session.get("email")
 
     return render_template(
@@ -68,4 +71,5 @@ def campaigns():
         campaigns=campaigns,
         status_filter=status_filter,
         segment_filter=segment_filter,
+        segment_options=segment_options,   # <-- pass here
     )

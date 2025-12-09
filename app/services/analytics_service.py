@@ -11,6 +11,7 @@ BASE_DIR = Path(__file__).resolve().parents[1]     # -> app/
 DATA_DIR = BASE_DIR / "data"                       # -> app/data/
 
 
+
 def _load_csv(filename: str) -> pd.DataFrame:
     """
     Loads a mock CSV from app/data with safe error messages.
@@ -132,24 +133,26 @@ def get_conversion_funnel() -> Dict:
     return {"labels": stages, "values": counts}
 
 
-# ---- Revenue over time --------------------------------------------- #
-
 def get_revenue_over_time() -> Dict:
-    """
-    Revenue aggregated by conversion_date (string or date).
-    Expects conversion_event_data.csv to have 'conversion_date' and 'revenue'.
-    """
     conversions = load_conversion_events()
-    if "conversion_date" not in conversions.columns or "revenue" not in conversions.columns:
+
+    # Support both 'conversion_date' and 'event_date'
+    date_col = None
+    if "conversion_date" in conversions.columns:
+        date_col = "conversion_date"
+    elif "event_date" in conversions.columns:
+        date_col = "event_date"
+
+    if not date_col or "revenue" not in conversions.columns:
         return {"labels": [], "values": []}
 
-    # Parse to datetime if possible
-    conversions["conversion_date"] = pd.to_datetime(
-        conversions["conversion_date"], errors="coerce"
+    conversions[date_col] = pd.to_datetime(
+        conversions[date_col], errors="coerce", dayfirst=True
     )
+
     series = (
-        conversions.dropna(subset=["conversion_date"])
-        .groupby(conversions["conversion_date"].dt.date)["revenue"]
+        conversions.dropna(subset=[date_col])
+        .groupby(conversions[date_col].dt.date)["revenue"]
         .sum()
         .sort_index()
     )
@@ -329,3 +332,25 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
         pass
 
     return rows
+
+
+def get_segment_options() -> list[str]:
+    """
+    Return a sorted list of distinct segment names from campaign_data.csv,
+    used to populate the 'Segment' filter dropdown.
+    """
+    campaigns = load_campaigns()
+
+    if "segment" not in campaigns.columns:
+        return []
+
+    # unique, non-empty segments
+    segs = (
+        campaigns["segment"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+    )
+    segs = [s for s in segs.unique().tolist() if s]
+
+    return sorted(segs)
