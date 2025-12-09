@@ -305,12 +305,14 @@
       </div>
     </div>
 
-    <!-- KPI row (computed in Jinja from campaigns list) -->
     {% set total = campaigns|length %} {% set active_list =
     campaigns|selectattr('status', 'equalto', 'Active')|list %} {% set
-    active_count = active_list|length %} {% set ns = namespace(roi_sum=0) %} {%
-    for c in campaigns %} {% set ns.roi_sum = ns.roi_sum + c.roi %} {% endfor %}
-    {% set avg_roi = (ns.roi_sum / (total or 1))|round(1) %}
+    active_count = active_list|length %} {# compute global ROI = total revenue /
+    total spend * 100 #} {% set ns = namespace(total_rev=0, total_spend=0) %} {%
+    for c in campaigns %} {% set ns.total_rev = ns.total_rev + c.revenue %} {%
+    set ns.total_spend = ns.total_spend + c.spend %} {% endfor %} {% if
+    ns.total_spend > 0 %} {% set avg_roi = (ns.total_rev / ns.total_spend *
+    100)|round(1) %} {% else %} {% set avg_roi = 0 %} {% endif %}
 
     <div class="kpi-row">
       <div class="kpi-card">
@@ -326,7 +328,7 @@
       <div class="kpi-card">
         <div class="kpi-label">Average ROI</div>
         <div class="kpi-value">{{ avg_roi }}%</div>
-        <div class="kpi-caption">Revenue vs. spend (mock data)</div>
+        <div class="kpi-caption">Revenue vs. spend</div>
       </div>
     </div>
 
@@ -339,22 +341,46 @@
         </div>
       </div>
 
-      <!-- simple static “filters” (visual only for now) -->
-      <div class="filters-row">
+            <!-- Filters that actually submit to the server -->
+      <form class="filters-row" method="get">
         <span style="color: #9ca3af">View:</span>
-        <select>
-          <option>All campaigns</option>
-          <option>Active only</option>
-          <option>Completed only</option>
+
+        <!-- Status filter -->
+        <select name="status">
+          <option value="all"
+            {% if status_filter == 'all' %}selected{% endif %}>
+            All campaigns
+          </option>
+          <option value="active"
+            {% if status_filter == 'active' %}selected{% endif %}>
+            Active only
+          </option>
+          <option value="completed"
+            {% if status_filter == 'completed' %}selected{% endif %}>
+            Completed only
+          </option>
         </select>
-        <select>
-          <option>All segments</option>
-          <option>High CLV Customers</option>
-          <option>New Signups (Last 30 Days)</option>
-          <option>Churn Risk</option>
-          <option>Inactive &gt; 90 Days</option>
+
+        <!-- Segment filter -->
+        <select name="segment">
+          <option value="all"
+            {% if segment_filter == 'all' %}selected{% endif %}>
+            All segments
+          </option>
+          {% for seg in segment_options %}
+          <option value="{{ seg }}"
+            {% if segment_filter == seg %}selected{% endif %}>
+            {{ seg }}
+          </option>
+          {% endfor %}
         </select>
-      </div>
+
+        <button type="submit" class="btn-pill btn-outline-pill"
+                style="padding: 4px 10px; font-size: 12px;">
+          Apply
+        </button>
+      </form>
+
 
       <div class="table-wrapper">
         <table class="campaign-table">

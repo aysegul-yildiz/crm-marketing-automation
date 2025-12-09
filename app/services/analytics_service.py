@@ -66,15 +66,20 @@ def get_kpis() -> Dict:
     else:
         active_campaigns = 0
 
-    # ROI mock = total revenue / total budget (if exists)
+       # ROI = total revenue / total spend * 100 (never negative)
     total_revenue = conversions["revenue"].sum() if "revenue" in conversions.columns else 0.0
-    if "budget" in campaigns.columns:
-        total_budget = campaigns["budget"].sum()
-        roi = (total_revenue / total_budget * 100) if total_budget > 0 else 0.0
-    else:
-        roi = 0.0
 
-    return {
+    # prefer 'spend'; fall back to 'budget' if needed
+    if "spend" in campaigns.columns:
+        total_spend = campaigns["spend"].sum()
+    elif "budget" in campaigns.columns:
+        total_spend = campaigns["budget"].sum()
+    else:
+        total_spend = 0.0
+
+    roi = (total_revenue / total_spend * 100) if total_spend > 0 else 0.0
+
+    return{
         "total_customers": int(total_customers),
         "total_segments": int(total_segments),
         "active_campaigns": int(active_campaigns),
@@ -251,10 +256,13 @@ def get_campaign_effectiveness() -> List[Dict]:
 
     return results
 
-def get_campaign_listing():
+def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"):
     """
     Return all campaigns with basic effectiveness metrics
     for the 'See all campaigns' page.
+
+    status_filter: "all" | "active" | "completed"
+    segment_filter: "all" | <exact segment name>
     """
     campaigns = load_campaigns()
     events = load_campaign_events()
@@ -284,23 +292,30 @@ def get_campaign_listing():
         segment = camp["segment"] if "segment" in campaigns.columns else ""
         status = camp["status"] if "status" in campaigns.columns else ""
 
-        rows.append(
-            {
-                "id": int(cid),
-                "name": camp.get("name", f"Campaign {cid}"),
-                # "objective":  <-- removed
-                "segment": segment,
-                "status": status,
-                "sent": int(delivered),
-                "open_rate": round(open_rate * 100, 1),
-                "click_rate": round(click_rate * 100, 1),
-                "conversion_rate": round(conv_rate * 100, 1),
-                "revenue": round(revenue, 2),
-                "spend": round(spend, 2),
-                "roi": round(roi, 1),
-                "start_date": camp.get("start_date"),
-            }
-        )
+        row = {
+            "id": int(cid),
+            "name": camp.get("name", f"Campaign {cid}"),
+            "segment": segment,
+            "status": status,
+            "sent": int(delivered),
+            "open_rate": round(open_rate * 100, 1),
+            "click_rate": round(click_rate * 100, 1),
+            "conversion_rate": round(conv_rate * 100, 1),
+            "revenue": round(revenue, 2),
+            "spend": round(spend, 2),
+            "roi": round(roi, 1),
+            "start_date": camp.get("start_date"),
+        }
+
+        rows.append(row)
+
+    # --- apply filters -------------------------------------------------
+    if status_filter != "all":
+        sf = status_filter.lower()
+        rows = [r for r in rows if r["status"].lower() == sf]
+
+    if segment_filter != "all":
+        rows = [r for r in rows if r["segment"] == segment_filter]
 
     # optional: sort by start_date if available
     try:
@@ -310,6 +325,7 @@ def get_campaign_listing():
             reverse=True,
         )
     except Exception:
+        # if dates are weird, just leave unsorted
         pass
 
     return rows

@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template, session
+# app/marketing/routes.py
+from flask import Blueprint, render_template, session, request
 from app.auth.decorators import login_required
 
 from app.services.analytics_service import (
@@ -13,7 +14,7 @@ from app.services.analytics_service import (
 marketing_bp = Blueprint(
     "marketing",
     __name__,
-    url_prefix="/marketing"
+    url_prefix="/marketing",
 )
 
 
@@ -28,14 +29,13 @@ def dashboard():
     seg_dist = get_segment_distribution()
 
     # 2) Simple "Recent activity" derived from top campaigns
-    recent_activity = []
-    for c in campaigns[:5]:
-        recent_activity.append(
-            f'Campaign "{c["name"]}" ({c["status"]}) – '
-            f'{c["open_rate"]}% open, {c["click_rate"]}% click'
-        )
+    recent_activity = [
+        f'Campaign "{c["name"]}" ({c["status"]}) – '
+        f'{c["open_rate"]}% open, {c["click_rate"]}% click'
+        for c in campaigns[:5]
+    ]
 
-    # 3) Render dashboard with everything the template expects
+    # 3) Render dashboard
     return render_template(
         "marketing/dashboard.html",
         username=session.get("username"),
@@ -48,14 +48,24 @@ def dashboard():
         recent_activity=recent_activity,
     )
 
+
 @marketing_bp.route("/campaigns")
 @login_required
 def campaigns():
-    campaigns = get_campaign_listing()
-    username = session.get("username")
+    status_filter = request.args.get("status", "all")
+    segment_filter = request.args.get("segment", "all")
+
+    campaigns = get_campaign_listing(
+        status_filter=status_filter,
+        segment_filter=segment_filter,
+    )
+
+    username = session.get("username") or session.get("email")
 
     return render_template(
         "marketing/campaigns.html",
-        campaigns=campaigns,
         username=username,
+        campaigns=campaigns,
+        status_filter=status_filter,
+        segment_filter=segment_filter,
     )
