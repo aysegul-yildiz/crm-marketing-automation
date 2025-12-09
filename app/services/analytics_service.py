@@ -21,6 +21,9 @@ def _load_csv(filename: str) -> pd.DataFrame:
         raise FileNotFoundError(f"[analytics_service] CSV not found: {path}")
     return pd.read_csv(path)
 
+def load_leads() -> pd.DataFrame:
+    return _load_csv("lead_data.csv")
+
 
 # ---- CSV loaders --------------------------------------------------- #
 
@@ -258,6 +261,7 @@ def get_campaign_effectiveness() -> List[Dict]:
         )
 
     return results
+
 def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"):
     """
     Return all campaigns with basic effectiveness metrics
@@ -269,13 +273,30 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
     campaigns = load_campaigns()
     events = load_campaign_events()
     conversions = load_conversion_events()
+    leads_df = load_leads()
 
-    # --- NEW: pre-compute lead metrics keyed by campaign_id ---------
-    lead_metrics = get_lead_conversion_by_campaign()
+    # ---- pre-aggregate leads ---------------------------------------- #
+    if not leads_df.empty and {"campaign_id", "id"}.issubset(leads_df.columns):
+        leads_by_campaign = (
+            leads_df.groupby("campaign_id")["id"].count().to_dict()
+        )
+        if "is_converted" in leads_df.columns:
+            converted_leads_by_campaign = (
+                leads_df[leads_df["is_converted"] == 1]
+                .groupby("campaign_id")["id"]
+                .count()
+                .to_dict()
+            )
+        else:
+            converted_leads_by_campaign = {}
+    else:
+        leads_by_campaign = {}
+        converted_leads_by_campaign = {}
 
     rows = []
+
     for _, camp in campaigns.iterrows():
-        cid = int(camp["id"])
+        cid = camp["id"]
 
         ev = events[events["campaign_id"] == cid]
         conv = conversions[conversions["campaign_id"] == cid]
@@ -293,16 +314,13 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
         conv_rate = converted / delivered if delivered else 0
         roi = ((revenue - spend) / spend * 100) if spend > 0 else 0
 
-        # be defensive for optional columns
+        # leads & lead conversion
+        leads = int(leads_by_campaign.get(cid, 0))
+        converted_leads = int(converted_leads_by_campaign.get(cid, 0))
+        lead_conv_rate = (converted_leads / leads * 100) if leads else 0.0
+
         segment = camp["segment"] if "segment" in campaigns.columns else ""
         status = camp["status"] if "status" in campaigns.columns else ""
-
-        # --- NEW: get lead metrics for this campaign -----------------
-        lm = lead_metrics.get(cid, {})
-        leads_touched = lm.get("leads_touched", 0)
-        leads_converted = lm.get("leads_converted", 0)
-        lead_conv_rate = lm.get("lead_conversion_rate", 0.0)
-        lead_revenue = lm.get("lead_revenue", 0.0)
 
         row = {
             "id": int(cid),
@@ -317,12 +335,8 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
             "spend": round(spend, 2),
             "roi": round(roi, 1),
             "start_date": camp.get("start_date"),
-
-            # --- NEW FIELDS for lead conversion ----------------------
-            "leads_touched": int(leads_touched),
-            "leads_converted": int(leads_converted),
-            "lead_conversion_rate": float(lead_conv_rate),
-            "lead_revenue": float(lead_revenue),
+            "leads": leads,
+            "lead_conversion_rate": round(lead_conv_rate, 1),
         }
 
         rows.append(row)
@@ -335,18 +349,12 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
     if segment_filter != "all":
         rows = [r for r in rows if r["segment"] == segment_filter]
 
-    # optional: sort by start_date if available
     try:
-        rows = sorted(
-            rows,
-            key=lambda r: r["start_date"] or "",
-            reverse=True,
-        )
+        rows = sorted(rows, key=lambda r: r["start_date"] or "", reverse=True)
     except Exception:
         pass
 
     return rows
-
 
 def get_segment_options() -> list[str]:
     """
