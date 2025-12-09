@@ -395,6 +395,9 @@
               <th class="num">Conv.&nbsp;%</th>
               <th class="num">Revenue</th>
               <th class="num">Spend</th>
+                
+             <th class="num">Leads</th>
+            <th class="num">Lead&nbsp;Conv.&nbsp;%</th>
               <th class="num">ROI&nbsp;%</th>
             </tr>
           </thead>
@@ -420,6 +423,8 @@
               <td class="num">{{ c.conversion_rate|round(1) }}%</td>
               <td class="num">₺{{ c.revenue|round(0) }}</td>
               <td class="num">₺{{ c.spend|round(0) }}</td>
+              <td class="num">{{ c.leads_touched }}</td>
+<td class="num">{{ c.lead_conversion_rate|round(1) }}%</td>
               <td class="num">{{ c.roi|round(1) }}%</td>
             </tr>
             {% endfor %}

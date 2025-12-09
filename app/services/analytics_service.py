@@ -258,7 +258,6 @@ def get_campaign_effectiveness() -> List[Dict]:
         )
 
     return results
-
 def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"):
     """
     Return all campaigns with basic effectiveness metrics
@@ -271,9 +270,12 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
     events = load_campaign_events()
     conversions = load_conversion_events()
 
+    # --- NEW: pre-compute lead metrics keyed by campaign_id ---------
+    lead_metrics = get_lead_conversion_by_campaign()
+
     rows = []
     for _, camp in campaigns.iterrows():
-        cid = camp["id"]
+        cid = int(camp["id"])
 
         ev = events[events["campaign_id"] == cid]
         conv = conversions[conversions["campaign_id"] == cid]
@@ -295,6 +297,13 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
         segment = camp["segment"] if "segment" in campaigns.columns else ""
         status = camp["status"] if "status" in campaigns.columns else ""
 
+        # --- NEW: get lead metrics for this campaign -----------------
+        lm = lead_metrics.get(cid, {})
+        leads_touched = lm.get("leads_touched", 0)
+        leads_converted = lm.get("leads_converted", 0)
+        lead_conv_rate = lm.get("lead_conversion_rate", 0.0)
+        lead_revenue = lm.get("lead_revenue", 0.0)
+
         row = {
             "id": int(cid),
             "name": camp.get("name", f"Campaign {cid}"),
@@ -308,6 +317,12 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
             "spend": round(spend, 2),
             "roi": round(roi, 1),
             "start_date": camp.get("start_date"),
+
+            # --- NEW FIELDS for lead conversion ----------------------
+            "leads_touched": int(leads_touched),
+            "leads_converted": int(leads_converted),
+            "lead_conversion_rate": float(lead_conv_rate),
+            "lead_revenue": float(lead_revenue),
         }
 
         rows.append(row)
@@ -328,7 +343,6 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
             reverse=True,
         )
     except Exception:
-        # if dates are weird, just leave unsorted
         pass
 
     return rows
@@ -354,3 +368,104 @@ def get_segment_options() -> list[str]:
     segs = [s for s in segs.unique().tolist() if s]
 
     return sorted(segs)
+
+
+def get_lead_conversion_by_campaign() -> Dict[int, Dict]:
+    """
+    Compute lead-conversion metrics per campaign.
+
+    Definition:
+      - Leads = customers in segment "New Signups (Last 30 Days)".
+      - Lead touched by campaign C  =
+          lead has at least one campaign_event row with campaign_id = C.
+      - Lead converted by campaign C =
+          lead has at least one conversion_event row with campaign_id = C.
+
+    Returns a dict keyed by campaign_id, e.g.
+      {
+        1: {
+          "leads_touched": 52,
+          "leads_converted": 7,
+          "lead_conversion_rate": 13.5,   # %
+          "lead_revenue": 18420.0,
+        },
+        ...
+      }
+    """
+    customers = load_customers()
+    campaigns = load_campaigns()
+    events = load_campaign_events()
+    conversions = load_conversion_events()
+
+    # figure out which column holds segment name
+    seg_col = None
+    if "segment" in customers.columns:
+        seg_col = "segment"
+    elif "Segment" in customers.columns:
+        seg_col = "Segment"
+
+    if not seg_col:
+        # we can't compute lead metrics without segment info
+        return {}
+
+    # Leads = "New Signups (Last 30 Days)"
+    lead_mask = customers[seg_col] == "New Signups (Last 30 Days)"
+    leads_df = customers[lead_mask]
+
+    if leads_df.empty:
+        return {}
+
+    lead_ids = set(leads_df["id"].astype(int).tolist())
+
+    # Events that involve leads only
+    if not {"customer_id", "campaign_id"}.issubset(events.columns):
+        return {}
+
+    events["customer_id"] = events["customer_id"].astype(int)
+    events["campaign_id"] = events["campaign_id"].astype(int)
+
+    lead_events = events[events["customer_id"].isin(lead_ids)]
+
+    # Conversions that involve leads only
+    if not {"customer_id", "campaign_id"}.issubset(conversions.columns):
+        return {}
+
+    conversions["customer_id"] = conversions["customer_id"].astype(int)
+    conversions["campaign_id"] = conversions["campaign_id"].astype(int)
+
+    lead_conversions = conversions[conversions["customer_id"].isin(lead_ids)]
+
+    metrics: Dict[int, Dict] = {}
+
+    for _, camp in campaigns.iterrows():
+        cid = int(camp["id"])
+
+        # all leads this campaign touched (any event type)
+        ev_camp = lead_events[lead_events["campaign_id"] == cid]
+        leads_touched_ids = ev_camp["customer_id"].dropna().unique()
+        leads_touched = int(len(leads_touched_ids))
+
+        # leads that actually converted, attributed to this campaign id
+        conv_camp = lead_conversions[lead_conversions["campaign_id"] == cid]
+        leads_converted_ids = conv_camp["customer_id"].dropna().unique()
+        leads_converted = int(len(leads_converted_ids))
+
+        if leads_touched > 0:
+            lead_conv_rate = leads_converted / leads_touched * 100.0
+        else:
+            lead_conv_rate = 0.0
+
+        lead_revenue = (
+            float(conv_camp["revenue"].sum())
+            if "revenue" in conv_camp.columns and not conv_camp.empty
+            else 0.0
+        )
+
+        metrics[cid] = {
+            "leads_touched": leads_touched,
+            "leads_converted": leads_converted,
+            "lead_conversion_rate": round(lead_conv_rate, 1),
+            "lead_revenue": round(lead_revenue, 2),
+        }
+
+    return metrics
