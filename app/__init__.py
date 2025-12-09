@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 
 from .auth.routes import auth_bp
 from .marketing.routes import marketing_bp
+from .campaign.routes import campaign_bp 
 
 def create_app():
     # Load environment variables
@@ -15,6 +16,7 @@ def create_app():
     # register modules
     app.register_blueprint(auth_bp)
     app.register_blueprint(marketing_bp)
+    app.register_blueprint(campaign_bp)
 
     @app.route("/")
     def index():

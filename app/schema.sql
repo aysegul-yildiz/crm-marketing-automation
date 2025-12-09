@@ -64,6 +64,16 @@ CREATE TABLE IF NOT EXISTS campaign (
     CHECK(status IN ('PLANNED', 'ACTIVE', 'CLOSED'))
 );
 
+CREATE TABLE IF NOT EXISTS campaign_has_segment(
+    campaign_id INT,
+    segmentation_id INT,
+    PRIMARY KEY(campaign_id, segmentation_id),
+    FOREIGN KEY(campaign_id) REFERENCES campaign(id)
+        ON DELETE CASCADE,
+    FOREIGN KEY(segmentation_id) REFERENCES segmentation_group(id)
+        ON DELETE CASCADE
+);
+
 CREATE TABLE IF NOT EXISTS workflow (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
