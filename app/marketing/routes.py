@@ -1,6 +1,7 @@
 # app/marketing/routes.py
 from flask import Blueprint, render_template, session, request
 from app.auth.decorators import login_required
+from datetime import datetime
 
 from app.services.analytics_service import (
     get_kpis,
@@ -10,6 +11,12 @@ from app.services.analytics_service import (
     get_segment_distribution,
     get_campaign_listing,
     get_segment_options,
+    get_analytics_totals,
+    get_conversion_funnel_filtered,
+    get_revenue_over_time_filtered,
+    get_revenue_by_segment_filtered,
+    get_top_campaigns_by_revenue_filtered,
+    load_campaigns, 
 )
 
 marketing_bp = Blueprint(
@@ -77,78 +84,117 @@ def campaigns():
 @marketing_bp.route("/analytics")
 @login_required
 def analytics():
-    # High-level metrics
-    kpis = get_kpis()
-    funnel = get_conversion_funnel()
-    revenue_time = get_revenue_over_time()
-    seg_dist = get_segment_distribution()
+    """
+    Detailed marketing analytics with filters:
+    - from (YYYY-MM-DD)
+    - to   (YYYY-MM-DD)
+    - segment (exact segment name or 'all')
+    - campaign_id (numeric or 'all')
+    """
+    # ---- read filters from query string -------------------------------
+    date_from_str = request.args.get("from") or ""
+    date_to_str = request.args.get("to") or ""
+    segment = request.args.get("segment", "all")
+    campaign_id_str = request.args.get("campaign_id", "all")
 
-    # Use the same rows as the Campaigns page, so numbers line up
-    campaign_rows = get_campaign_listing(
-        status_filter="all",
-        segment_filter="all",
+    def _parse_date(s: str):
+        if not s:
+            return None
+        # HTML date inputs send YYYY-MM-DD
+        try:
+            return datetime.strptime(s, "%Y-%m-%d").date()
+        except ValueError:
+            return None
+
+    date_from = _parse_date(date_from_str)
+    date_to = _parse_date(date_to_str)
+
+    campaign_id = None
+    if campaign_id_str not in ("", "all"):
+        try:
+            campaign_id = int(campaign_id_str)
+        except ValueError:
+            campaign_id = None
+
+    # normalize segment
+    if segment == "all":
+        segment_filter = None
+    else:
+        segment_filter = segment
+
+    # ---- load data for the page --------------------------------------
+    totals = get_analytics_totals(
+        start_date=date_from,
+        end_date=date_to,
+        segment=segment_filter,
+        campaign_id=campaign_id,
     )
 
-    # ---- Aggregate revenue & ROI ------------------------------------
-    total_revenue = sum(row["revenue"] for row in campaign_rows)
-    total_spend = sum(row["spend"] for row in campaign_rows)
-
-    overall_roi = (
-        (total_revenue - total_spend) / total_spend * 100.0
-        if total_spend > 0
-        else 0.0
+    funnel = get_conversion_funnel_filtered(
+        start_date=date_from,
+        end_date=date_to,
+        segment=segment_filter,
+        campaign_id=campaign_id,
     )
 
-    # ---- Aggregate leads & lead conversions -------------------------
-    total_leads = sum(row["leads"] for row in campaign_rows)
-
-    # approximate converted leads from per-campaign lead conversion %
-    converted_leads = sum(
-        int(round(row["leads"] * (row["lead_conversion_rate"] / 100.0)))
-        for row in campaign_rows
+    revenue_time = get_revenue_over_time_filtered(
+        start_date=date_from,
+        end_date=date_to,
+        segment=segment_filter,
+        campaign_id=campaign_id,
     )
 
-    # ---- Revenue by segment -----------------------------------------
-    segment_revenue = {}
-    for row in campaign_rows:
-        seg = row["segment"] or "Unknown"
-        segment_revenue[seg] = segment_revenue.get(seg, 0.0) + row["revenue"]
+    revenue_by_segment = get_revenue_by_segment_filtered(
+        start_date=date_from,
+        end_date=date_to,
+        segment=segment_filter,
+        campaign_id=campaign_id,
+    )
 
-    rev_seg_names = list(segment_revenue.keys())
-    rev_seg_values = [round(v, 2) for v in segment_revenue.values()]
+    top_campaigns = get_top_campaigns_by_revenue_filtered(
+        start_date=date_from,
+        end_date=date_to,
+        segment=segment_filter,
+        campaign_id=campaign_id,
+        limit=5,
+    )
 
-    # Top 5 campaigns by revenue (for the table)
-    top_campaigns = sorted(
-        campaign_rows,
-        key=lambda r: r["revenue"],
-        reverse=True,
-    )[:5]
+    # ---- build dropdown options --------------------------------------
+    campaigns_df = load_campaigns()
+
+    # distinct ordered segments from campaigns
+    segment_options = sorted(campaigns_df["segment"].dropna().unique().tolist())
+
+    # campaign dropdown: (id, name)
+    campaign_options = [
+        (int(row.id), f"{row.name} ({row.segment})")
+        for row in campaigns_df.itertuples(index=False)
+    ]
 
     username = session.get("username") or session.get("email")
 
     return render_template(
         "marketing/analytics.html",
         username=username,
-        # KPI tiles from kpis helper
-        kpis=kpis,
-        # Funnel
+        # filters (so template can keep them selected)
+        date_from=date_from_str,
+        date_to=date_to_str,
+        current_segment=segment,
+        current_campaign_id=campaign_id_str,
+        segment_options=segment_options,
+        campaign_options=campaign_options,
+        # totals
+        total_revenue=totals["total_revenue"],
+        total_spend=totals["total_spend"],
+        overall_roi=totals["overall_roi"],
+        converted_leads=totals["converted_leads"],
+        total_leads=totals["total_leads"],
+        # charts
         funnel_labels=funnel["labels"],
         funnel_values=funnel["values"],
-        # Revenue over time
-        rev_time_labels=revenue_time["labels"],
-        rev_time_values=revenue_time["values"],
-        # Audience / segment distribution (by customer count)
-        segment_names=seg_dist["names"],
-        segment_counts=seg_dist["counts"],
-        # Revenue by segment
-        rev_seg_names=rev_seg_names,
-        rev_seg_values=rev_seg_values,
-        # Campaign-level list & top performers
+        revenue_over_time_labels=revenue_time["labels"],
+        revenue_over_time_values=revenue_time["values"],
+        revenue_by_segment_labels=revenue_by_segment["labels"],
+        revenue_by_segment_values=revenue_by_segment["values"],
         top_campaigns=top_campaigns,
-        # High-level aggregates
-        total_revenue=round(total_revenue, 2),
-        total_spend=round(total_spend, 2),
-        overall_roi=round(overall_roi, 1),
-        total_leads=int(total_leads),
-        converted_leads=int(converted_leads),
     )

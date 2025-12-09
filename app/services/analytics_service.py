@@ -3,6 +3,7 @@
 from pathlib import Path
 from typing import List, Dict
 import pandas as pd
+from datetime import date
 
 # -------------------------------------------------------------------
 # Always load CSVs from:  app/data/
@@ -458,3 +459,314 @@ def get_lead_conversion_by_campaign() -> Dict[int, Dict]:
 
     return metrics
 
+
+def _apply_common_filters(
+    campaigns: pd.DataFrame,
+    events: pd.DataFrame,
+    conversions: pd.DataFrame,
+    start_date: date | None = None,
+    end_date: date | None = None,
+    segment: str | None = None,
+    campaign_id: int | None = None,
+):
+    
+    campaigns = campaigns.copy()
+    events = events.copy()
+    conversions = conversions.copy()
+
+    if campaign_id is not None:
+        campaigns = campaigns[campaigns["id"] == campaign_id]
+        events = events[events["campaign_id"] == campaign_id]
+        conversions = conversions[conversions["campaign_id"] == campaign_id]
+
+    if segment:
+        campaigns = campaigns[campaigns["segment"] == segment]
+        valid_ids = set(campaigns["id"])
+        events = events[events["campaign_id"].isin(valid_ids)]
+        conversions = conversions[conversions["campaign_id"].isin(valid_ids)]
+
+    def _filter_by_date(df: pd.DataFrame, col: str):
+        if col not in df.columns:
+            return df
+        if df.empty:
+            return df
+        d = pd.to_datetime(df[col], dayfirst=True, errors="coerce").dt.date
+        mask = pd.Series(True, index=df.index)
+        if start_date:
+            mask &= d >= start_date
+        if end_date:
+            mask &= d <= end_date
+        return df[mask]
+
+    events = _filter_by_date(events, "event_date")
+    conversions = _filter_by_date(conversions, "event_date")
+
+    return campaigns, events, conversions
+
+
+def get_analytics_totals(
+    start_date: date | None = None,
+    end_date: date | None = None,
+    segment: str | None = None,
+    campaign_id: int | None = None,
+) -> Dict:
+    campaigns = load_campaigns()
+    events = load_campaign_events()
+    conversions = load_conversion_events()
+
+    campaigns, events, conversions = _apply_common_filters(
+        campaigns, events, conversions,
+        start_date=start_date,
+        end_date=end_date,
+        segment=segment,
+        campaign_id=campaign_id,
+    )
+
+    total_revenue = float(conversions["revenue"].sum()) if "revenue" in conversions.columns else 0.0
+
+    if "spend" in campaigns.columns:
+        total_spend = float(campaigns["spend"].sum())
+    elif "budget" in campaigns.columns:
+        total_spend = float(campaigns["budget"].sum())
+    else:
+        total_spend = 0.0
+
+    if total_spend > 0:
+        overall_roi = (total_revenue - total_spend) / total_spend * 100.0
+    else:
+        overall_roi = 0.0
+
+    # simple lead model:
+    # - total leads: all "clicked"
+    # - converted leads: all "converted"
+    if "event_type" in events.columns:
+        total_leads = int((events["event_type"] == "clicked").sum())
+        converted_leads = int((events["event_type"] == "converted").sum())
+    else:
+        total_leads = 0
+        converted_leads = 0
+
+    return {
+        "total_revenue": round(total_revenue, 1),
+        "total_spend": round(total_spend, 1),
+        "overall_roi": round(overall_roi, 1),
+        "total_leads": total_leads,
+        "converted_leads": converted_leads,
+    }
+
+
+# --------- filtered funnel -------------------------------------------
+
+def get_conversion_funnel_filtered(
+    start_date: date | None = None,
+    end_date: date | None = None,
+    segment: str | None = None,
+    campaign_id: int | None = None,
+) -> Dict:
+    campaigns = load_campaigns()
+    events = load_campaign_events()
+    conversions = load_conversion_events()  # not used, but kept for symmetry
+
+    campaigns, events, _ = _apply_common_filters(
+        campaigns, events, conversions,
+        start_date=start_date,
+        end_date=end_date,
+        segment=segment,
+        campaign_id=campaign_id,
+    )
+
+    if "event_type" not in events.columns:
+        return {"labels": [], "values": []}
+
+    stages = ["delivered", "opened", "clicked", "converted"]
+    counts = [
+        int((events["event_type"] == stage).sum())
+        for stage in stages
+    ]
+    return {"labels": stages, "values": counts}
+
+
+# --------- filtered revenue over time --------------------------------
+
+def get_revenue_over_time_filtered(
+    start_date: date | None = None,
+    end_date: date | None = None,
+    segment: str | None = None,
+    campaign_id: int | None = None,
+) -> Dict:
+    campaigns = load_campaigns()
+    events = load_campaign_events()
+    conversions = load_conversion_events()
+
+    # apply common filters (segment, campaign, date on event_date if it exists)
+    campaigns, _, conversions = _apply_common_filters(
+        campaigns, events, conversions,
+        start_date=start_date,
+        end_date=end_date,
+        segment=segment,
+        campaign_id=campaign_id,
+    )
+
+    # pick the correct date column, same as get_revenue_over_time()
+    if "conversion_date" in conversions.columns:
+        date_col = "conversion_date"
+    elif "event_date" in conversions.columns:
+        date_col = "event_date"
+    else:
+        return {"labels": [], "values": []}
+
+    if "revenue" not in conversions.columns or conversions.empty:
+        return {"labels": [], "values": []}
+
+    conversions = conversions.copy()
+    conversions[date_col] = pd.to_datetime(
+        conversions[date_col], errors="coerce", dayfirst=True
+    )
+
+    series = (
+        conversions
+        .dropna(subset=[date_col])
+        .groupby(conversions[date_col].dt.date)["revenue"]
+        .sum()
+        .sort_index()
+    )
+
+    return {
+        "labels": [str(d) for d in series.index],
+        "values": [float(v) for v in series.values],
+    }
+
+
+
+# --------- filtered revenue by segment -------------------------------
+
+def get_revenue_by_segment_filtered(
+    start_date: date | None = None,
+    end_date: date | None = None,
+    segment: str | None = None,
+    campaign_id: int | None = None,
+) -> Dict:
+    campaigns = load_campaigns()
+    events = load_campaign_events()
+    conversions = load_conversion_events()
+
+    campaigns, _, conversions = _apply_common_filters(
+        campaigns, events, conversions,
+        start_date=start_date,
+        end_date=end_date,
+        segment=segment,
+        campaign_id=campaign_id,
+    )
+
+    if conversions.empty:
+        return {"labels": [], "values": []}
+
+    # join conversions with campaigns to know which segment each conversion belongs to
+    merged = conversions.merge(
+        campaigns[["id", "segment"]],
+        left_on="campaign_id",
+        right_on="id",
+        how="left",
+        suffixes=("", "_camp"),
+    )
+
+    if "segment" not in merged.columns:
+        return {"labels": [], "values": []}
+
+    grouped = merged.groupby("segment")["revenue"].sum().sort_values(ascending=False)
+
+    return {
+        "labels": grouped.index.tolist(),
+        "values": [float(v) for v in grouped.values],
+    }
+
+
+# --------- filtered top campaigns by revenue -------------------------
+
+def get_top_campaigns_by_revenue_filtered(
+    start_date: date | None = None,
+    end_date: date | None = None,
+    segment: str | None = None,
+    campaign_id: int | None = None,
+    limit: int = 5,
+) -> list[Dict]:
+    campaigns = load_campaigns()
+    events = load_campaign_events()
+    conversions = load_conversion_events()
+
+    campaigns, events, conversions = _apply_common_filters(
+        campaigns, events, conversions,
+        start_date=start_date,
+        end_date=end_date,
+        segment=segment,
+        campaign_id=campaign_id,
+    )
+
+    if campaigns.empty:
+        return []
+
+    # basic metrics per campaign
+    ev_group = (
+        events.groupby(["campaign_id", "event_type"])["id"]
+        .count()
+        .unstack(fill_value=0)
+    ) if not events.empty else pd.DataFrame()
+
+    for col in ["delivered", "opened", "clicked", "converted"]:
+        if col not in ev_group.columns:
+            ev_group[col] = 0
+
+    ev_group = ev_group.rename(
+        columns={
+            "delivered": "sent",
+            "opened": "opened",
+            "clicked": "clicked",
+            "converted": "converted",
+        }
+    )
+
+    rev_group = (
+        conversions.groupby("campaign_id")["revenue"].sum()
+        if not conversions.empty and "revenue" in conversions.columns
+        else pd.Series(dtype=float, name="revenue")
+    )
+
+    df = campaigns.set_index("id")
+    if not ev_group.empty:
+        df = df.join(ev_group, how="left")
+    if not rev_group.empty:
+        df = df.join(rev_group, how="left")
+
+    for col in ["sent", "opened", "clicked", "converted", "revenue"]:
+        if col not in df.columns:
+            df[col] = 0
+        df[col] = df[col].fillna(0)
+
+    sent = df["sent"].replace(0, pd.NA)
+    df["open_rate"] = (df["opened"] / sent * 100).fillna(0)
+    df["click_rate"] = (df["clicked"] / sent * 100).fillna(0)
+    df["conversion_rate"] = (df["converted"] / sent * 100).fillna(0)
+
+    spend = df.get("spend", pd.Series(0, index=df.index))
+    df["roi"] = ((df["revenue"] - spend) / spend * 100).where(spend > 0, 0)
+
+    df = df.sort_values(by="revenue", ascending=False).head(limit)
+
+    results = []
+    for idx, row in df.reset_index().iterrows():
+        results.append(
+            {
+                "id": int(row["id"]),
+                "name": row.get("name", ""),
+                "segment": row.get("segment", ""),
+                "status": row.get("status", ""),
+                "sent": int(row["sent"]),
+                "open_rate": float(row["open_rate"]),
+                "click_rate": float(row["click_rate"]),
+                "conversion_rate": float(row["conversion_rate"]),
+                "revenue": float(row["revenue"]),
+                "spend": float(row.get("spend", 0.0)),
+                "roi": float(row["roi"]),
+            }
+        )
+    return results

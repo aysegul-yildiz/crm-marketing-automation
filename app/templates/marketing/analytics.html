@@ -270,27 +270,90 @@
       </div>
     </div>
 
-    <!-- KPI row -->
+    <!-- Filters row -->
+    <div
+      class="filters-row"
+      style="display:flex; gap:10px; align-items:center; margin-bottom:16px; font-size:12px;"
+    >
+      <form method="get" style="display:flex; gap:10px; align-items:center;">
+        <span style="color:#9ca3af;">Filter:</span>
+
+        <!-- Date from -->
+        <input
+          type="date"
+          name="from"
+          value="{{ date_from }}"
+          style="font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb;"
+        />
+
+        <!-- Date to -->
+        <input
+          type="date"
+          name="to"
+          value="{{ date_to }}"
+          style="font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb;"
+        />
+
+        <!-- Segment -->
+        <select
+          name="segment"
+          style="font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb;"
+        >
+          <option value="all" {% if current_segment == 'all' %}selected{% endif %}>
+            All segments
+          </option>
+          {% for seg in segment_options %}
+          <option value="{{ seg }}" {% if current_segment == seg %}selected{% endif %}>
+            {{ seg }}
+          </option>
+          {% endfor %}
+        </select>
+
+        <!-- Campaign -->
+        <select
+          name="campaign_id"
+          style="font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb; max-width:260px;"
+        >
+          <option value="all" {% if current_campaign_id == 'all' %}selected{% endif %}>
+            All campaigns
+          </option>
+          {% for cid, label in campaign_options %}
+          <option value="{{ cid }}" {% if current_campaign_id|int == cid %}selected{% endif %}>
+            {{ label }}
+          </option>
+          {% endfor %}
+        </select>
+
+        <button
+          type="submit"
+          style="border-radius:999px; font-size:12px; padding:5px 12px; border:none; background:#4f46e5; color:white; cursor:pointer;"
+        >
+          Apply
+        </button>
+      </form>
+    </div>
+
+    <!-- KPI row (now a proper grid row) -->
     <div class="kpi-row">
       <div class="kpi-card">
         <div class="kpi-label">Total Revenue</div>
-        <div class="kpi-value">₺{{ total_revenue|round(0) }}</div>
+        <div class="kpi-value">₺{{ (total_revenue or 0)|round(0) }}</div>
         <div class="kpi-caption">Attributed to campaigns</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">Total Spend</div>
-        <div class="kpi-value">₺{{ total_spend|round(0) }}</div>
-        <div class="kpi-caption">Campaign media & automation costs</div>
+        <div class="kpi-value">₺{{ (total_spend or 0)|round(0) }}</div>
+        <div class="kpi-caption">Campaign media &amp; automation costs</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">Overall Marketing ROI</div>
-        <div class="kpi-value">{{ overall_roi|round(1) }}%</div>
+        <div class="kpi-value">{{ (overall_roi or 0)|round(1) }}%</div>
         <div class="kpi-caption">((Revenue − Spend) / Spend)</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">Lead Performance</div>
         <div class="kpi-value">
-          {{ converted_leads }} / {{ total_leads }}
+          {{ converted_leads or 0 }} / {{ total_leads or 0 }}
         </div>
         <div class="kpi-caption">Converted leads vs. total generated</div>
       </div>
@@ -376,24 +439,24 @@
               <td>{{ c.segment }}</td>
               <td>
                 {% if c.status == "Active" %}
-                <span class="badge-status badge-active">{{ c.status }}</span>
+                  <span class="badge-status badge-active">{{ c.status }}</span>
                 {% elif c.status == "Scheduled" %}
-                <span class="badge-status badge-scheduled">{{ c.status }}</span>
+                  <span class="badge-status badge-scheduled">{{ c.status }}</span>
                 {% elif c.status == "Completed" %}
-                <span class="badge-status badge-completed">{{ c.status }}</span>
+                  <span class="badge-status badge-completed">{{ c.status }}</span>
                 {% else %}
-                <span class="badge-status badge-other">{{ c.status }}</span>
+                  <span class="badge-status badge-other">{{ c.status }}</span>
                 {% endif %}
               </td>
-              <td class="num">{{ c.sent }}</td>
-              <td class="num">{{ c.open_rate|round(1) }}%</td>
-              <td class="num">{{ c.click_rate|round(1) }}%</td>
-              <td class="num">{{ c.conversion_rate|round(1) }}%</td>
-              <td class="num">{{ c.leads }}</td>
-              <td class="num">{{ c.lead_conversion_rate|round(1) }}%</td>
-              <td class="num">₺{{ c.revenue|round(0) }}</td>
-              <td class="num">₺{{ c.spend|round(0) }}</td>
-              <td class="num">{{ c.roi|round(1) }}%</td>
+              <td class="num">{{ c.sent or 0 }}</td>
+              <td class="num">{{ (c.open_rate or 0)|round(1) }}%</td>
+              <td class="num">{{ (c.click_rate or 0)|round(1) }}%</td>
+              <td class="num">{{ (c.conversion_rate or 0)|round(1) }}%</td>
+              <td class="num">{{ c.leads or 0 }}</td>
+              <td class="num">{{ (c.lead_conversion_rate or 0)|round(1) }}%</td>
+              <td class="num">₺{{ (c.revenue or 0)|round(0) }}</td>
+              <td class="num">₺{{ (c.spend or 0)|round(0) }}</td>
+              <td class="num">{{ (c.roi or 0)|round(1) }}%</td>
             </tr>
             {% endfor %}
           </tbody>
@@ -406,12 +469,14 @@
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-  const funnelLabels = {{ funnel_labels|tojson }};
-  const funnelValues = {{ funnel_values|tojson }};
-  const revenueTimeLabels = {{ rev_time_labels|tojson }};
-  const revenueTimeValues = {{ rev_time_values|tojson }};
-  const revSegNames = {{ rev_seg_names|tojson }};
-  const revSegValues = {{ rev_seg_values|tojson }};
+  const funnelLabels = {{ (funnel_labels or [])|tojson }};
+  const funnelValues = {{ (funnel_values or [])|tojson }};
+
+  const revenueTimeLabels = {{ (revenue_over_time_labels or [])|tojson }};
+  const revenueTimeValues = {{ (revenue_over_time_values or [])|tojson }};
+
+  const revSegNames = {{ (revenue_by_segment_labels or [])|tojson }};
+  const revSegValues = {{ (revenue_by_segment_values or [])|tojson }};
 
   // Funnel chart
   new Chart(document.getElementById("funnelChart"), {
@@ -430,7 +495,7 @@
     options: {
       plugins: { legend: { display: false } },
       scales: {
-        y: { beginAtZero: true, ticks: { stepSize: 10000 } },
+        y: { beginAtZero: true },
       },
     },
   });
