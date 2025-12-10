@@ -189,7 +189,7 @@ def analytics():
         overall_roi=totals["overall_roi"],
         converted_leads=totals["converted_leads"],
         total_leads=totals["total_leads"],
-        # charts
+        # charts – IMPORTANT: names match analytics.html
         funnel_labels=funnel["labels"],
         funnel_values=funnel["values"],
         revenue_over_time_labels=revenue_time["labels"],

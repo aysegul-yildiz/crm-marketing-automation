@@ -266,10 +266,9 @@
     <div class="sidebar-brand">CRM Marketing</div>
 
     <div>
-      <div class="sidebar-section-title">Navigation</div>
       <div class="sidebar-nav">
         <a href="{{ url_for('marketing.dashboard') }}" class="sidebar-link">
-          Overview
+          Dashboard
         </a>
         <a href="#" class="sidebar-link"> Segments </a>
         <a
@@ -279,7 +278,7 @@
           Campaigns
         </a>
         <a href="#" class="sidebar-link"> Workflows </a>
-        <a href="#" class="sidebar-link"> Analytics </a>
+        <a href="{{ url_for('marketing.analytics') }}" class="sidebar-link"> Analytics </a>
       </div>
     </div>
 

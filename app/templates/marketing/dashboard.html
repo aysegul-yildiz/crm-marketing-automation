@@ -109,6 +109,61 @@
     flex-direction: column;
     gap: 16px;
   }
+  .sidebar {
+    width: 230px;
+    background: #ffffff;
+    border-right: 1px solid rgba(15, 23, 42, 0.06);
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sidebar-brand {
+    font-weight: 700;
+    font-size: 17px;
+    color: #4f46e5;
+  }
+
+  .sidebar-section-title {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    margin-bottom: 6px;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sidebar-link {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 9px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #4b5563;
+  }
+
+  .sidebar-link.active {
+    background: #eef2ff;
+    color: #4338ca;
+    font-weight: 600;
+  }
+
+  .sidebar-bottom {
+    margin-top: auto;
+    font-size: 12px;
+    color: #9ca3af;
+  }
+
+  .sidebar-bottom a {
+    color: #4f46e5;
+    text-decoration: none;
+  }
 
   .crm-header-card {
     background: var(--card-bg);
@@ -345,23 +400,31 @@
 
 <div class="crm-dashboard">
   <!-- Sidebar -->
-  <aside class="crm-sidebar">
-    <div>
-      <div class="crm-sidebar-logo">CRM Marketing</div>
-      <div class="crm-sidebar-section-title">Navigation</div>
-      <ul class="crm-sidebar-menu">
-        <li><a href="#" class="is-active">Overview</a></li>
-        <li><a href="#">Segments</a></li>
-        <a href="{{ url_for('marketing.campaigns') }}">Campaigns</a>
+  <aside class="sidebar">
+    <div class="sidebar-brand">CRM Marketing</div>
 
-        <li><a href="#">Workflows</a></li>
-        <li><a href="#">Analytics</a></li>
-      </ul>
+    <div>
+      <div class="sidebar-nav">
+        <a href="{{ url_for('marketing.dashboard') }}" class="sidebar-link">
+          Dashboard
+        </a>
+        <a href="#" class="sidebar-link">Segments</a>
+        <a href="{{ url_for('marketing.campaigns') }}" class="sidebar-link">
+          Campaigns
+        </a>
+        <a href="#" class="sidebar-link">Workflows</a>
+        <a
+          href="{{ url_for('marketing.analytics') }}"
+          class="sidebar-link active"
+        >
+          Analytics
+        </a>
+      </div>
     </div>
 
-    <div class="crm-sidebar-cta">
-      <div>Ready to launch a new flow?</div>
-      <a href="#" class="crm-sidebar-cta-btn">New Campaign</a>
+    <div class="sidebar-bottom">
+      Deep-dive into performance.<br />
+      <a href="{{ url_for('marketing.campaigns') }}">Back to campaigns</a>
     </div>
   </aside>
 

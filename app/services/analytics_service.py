@@ -469,26 +469,26 @@ def _apply_common_filters(
     segment: str | None = None,
     campaign_id: int | None = None,
 ):
-    
     campaigns = campaigns.copy()
     events = events.copy()
     conversions = conversions.copy()
 
+    # ---- campaign filter ---------------------------------------------
     if campaign_id is not None:
         campaigns = campaigns[campaigns["id"] == campaign_id]
         events = events[events["campaign_id"] == campaign_id]
         conversions = conversions[conversions["campaign_id"] == campaign_id]
 
+    # ---- segment filter ----------------------------------------------
     if segment:
         campaigns = campaigns[campaigns["segment"] == segment]
         valid_ids = set(campaigns["id"])
         events = events[events["campaign_id"].isin(valid_ids)]
         conversions = conversions[conversions["campaign_id"].isin(valid_ids)]
 
+    # ---- date filters -------------------------------------------------
     def _filter_by_date(df: pd.DataFrame, col: str):
-        if col not in df.columns:
-            return df
-        if df.empty:
+        if col not in df.columns or df.empty:
             return df
         d = pd.to_datetime(df[col], dayfirst=True, errors="coerce").dt.date
         mask = pd.Series(True, index=df.index)
@@ -498,10 +498,21 @@ def _apply_common_filters(
             mask &= d <= end_date
         return df[mask]
 
+    # events always use event_date
     events = _filter_by_date(events, "event_date")
-    conversions = _filter_by_date(conversions, "event_date")
+
+    # conversions use conversion_date if available, otherwise fall back
+    conv_date_col = None
+    if "conversion_date" in conversions.columns:
+        conv_date_col = "conversion_date"
+    elif "event_date" in conversions.columns:
+        conv_date_col = "event_date"
+
+    if conv_date_col:
+        conversions = _filter_by_date(conversions, conv_date_col)
 
     return campaigns, events, conversions
+
 
 
 def get_analytics_totals(
@@ -524,6 +535,7 @@ def get_analytics_totals(
 
     total_revenue = float(conversions["revenue"].sum()) if "revenue" in conversions.columns else 0.0
 
+    # prefer 'spend', fall back to budget
     if "spend" in campaigns.columns:
         total_spend = float(campaigns["spend"].sum())
     elif "budget" in campaigns.columns:
@@ -587,7 +599,6 @@ def get_conversion_funnel_filtered(
 
 
 # --------- filtered revenue over time --------------------------------
-
 def get_revenue_over_time_filtered(
     start_date: date | None = None,
     end_date: date | None = None,
@@ -598,7 +609,6 @@ def get_revenue_over_time_filtered(
     events = load_campaign_events()
     conversions = load_conversion_events()
 
-    # apply common filters (segment, campaign, date on event_date if it exists)
     campaigns, _, conversions = _apply_common_filters(
         campaigns, events, conversions,
         start_date=start_date,
@@ -607,25 +617,22 @@ def get_revenue_over_time_filtered(
         campaign_id=campaign_id,
     )
 
-    # pick the correct date column, same as get_revenue_over_time()
+    # pick correct date column
+    date_col = None
     if "conversion_date" in conversions.columns:
         date_col = "conversion_date"
     elif "event_date" in conversions.columns:
         date_col = "event_date"
-    else:
+
+    if not date_col or "revenue" not in conversions.columns:
         return {"labels": [], "values": []}
 
-    if "revenue" not in conversions.columns or conversions.empty:
-        return {"labels": [], "values": []}
-
-    conversions = conversions.copy()
     conversions[date_col] = pd.to_datetime(
-        conversions[date_col], errors="coerce", dayfirst=True
+        conversions[date_col], dayfirst=True, errors="coerce"
     )
 
     series = (
-        conversions
-        .dropna(subset=[date_col])
+        conversions.dropna(subset=[date_col])
         .groupby(conversions[date_col].dt.date)["revenue"]
         .sum()
         .sort_index()
@@ -635,8 +642,6 @@ def get_revenue_over_time_filtered(
         "labels": [str(d) for d in series.index],
         "values": [float(v) for v in series.values],
     }
-
-
 
 # --------- filtered revenue by segment -------------------------------
 
