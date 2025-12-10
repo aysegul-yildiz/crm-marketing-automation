@@ -255,3 +255,17 @@ class CampaignRepository:
             result.append(model)
         
         return result
+    
+    @staticmethod
+    def updateCampaign(campaign_id: int, name: str, status: str) -> None:
+        conn = get_connection()
+        cur = conn.cursor()
+        query = """
+            UPDATE campaign
+            SET name = %s, status = %s
+            WHERE id = %s
+        """
+        cur.execute(query, (name, status, campaign_id))
+        conn.commit()
+        cur.close()
+        conn.close()

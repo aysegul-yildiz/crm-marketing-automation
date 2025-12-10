@@ -81,3 +81,9 @@ class CampaignManagementService:
     # statusFilter "" empty string for querying everything, else desired status
     def filterCampaigns(statusFilter: str = ""):
         return CampaignRepository.filterCampaigns(statusFilter)
+
+    @staticmethod
+    def update_campaign(campaign_id: int, name: str, status: str) -> None:
+        if not name:
+            raise ValueError("Campaign name cannot be empty.")
+        CampaignRepository.updateCampaign(campaign_id, name, status)

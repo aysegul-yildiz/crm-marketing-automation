@@ -36,18 +36,25 @@
   </form>
 
   <!-- Campaign List -->
-  <div style="margin-top: 20px; max-height: 250px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; border-radius: 6px;">
+    <form method="GET" action="{{ url_for('campaign.edit_campaign') }}">
+    <div style="margin-top: 20px; max-height: 250px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; border-radius: 6px;">
 
-    {% for campaign in campaigns %}
-      <div style="padding: 10px 0; border-bottom: 1px solid #eee;">
-        <strong>{{ campaign.name }}</strong><br>
-        <span>Status: {{ campaign.status }}</span>
-      </div>
-    {% else %}
-      <p>No campaigns found.</p>
-    {% endfor %}
+        {% for campaign in campaigns %}
+        <label style="display: block; padding: 10px 0; border-bottom: 1px solid #eee;">
+            <input type="radio" name="campaign_id" value="{{ campaign.id }}" required>
+            <strong>{{ campaign.name }}</strong> — <span>{{ campaign.status }}</span>
+        </label>
+        {% else %}
+        <p>No campaigns found.</p>
+        {% endfor %}
 
-  </div>
+    </div>
+
+    <button type="submit" class="btn-outline-pill btn-pill" style="margin-top: 10px;">
+        Edit Selected Campaign
+    </button>
+    </form>
+
 
 </div>
 {% endblock %}

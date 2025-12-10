@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="max-width: 600px; margin: 0 auto;">
+
+  <h2>Edit Campaign</h2>
+  <hr>
+
+  <form action="{{ url_for('campaign.update_campaign') }}" method="POST">
+    
+    <input type="hidden" name="campaign_id" value="{{ campaign.id }}">
+
+    <label>Name:</label>
+    <input type="text" name="name" value="{{ campaign.name }}" required>
+
+    <label>Status:</label>
+    <select name="status" required>
+      <option value="PLANNED"  {% if campaign.status == "PLANNED" %}selected{% endif %}>Planned</option>
+      <option value="ACTIVE"   {% if campaign.status == "ACTIVE" %}selected{% endif %}>Active</option>
+      <option value="CLOSED"   {% if campaign.status == "CLOSED" %}selected{% endif %}>Closed</option>
+    </select>
+
+    <button type="submit" class="btn-primary-pill btn-pill" style="margin-top: 10px;">
+      Save Changes
+    </button>
+  </form>
+
+  <a href="{{ url_for('campaign.new_campaign') }}" class="btn-pill btn-outline-pill" style="margin-top: 20px;">
+    Cancel
+  </a>
+
+</div>
+{% endblock %}

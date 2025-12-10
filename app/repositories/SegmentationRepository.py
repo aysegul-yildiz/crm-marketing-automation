@@ -8,6 +8,20 @@ from app.models.CustomerSegmentationModel import CustomerSegmentationModel
 class SegmentationRepository:
 
     @staticmethod
+    def createSegmentationGroup(name: str) -> int:
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        query = "INSERT INTO segmentation_group (name) VALUES(%s);"
+        cursor.execute(query, (name,))
+        conn.commit()
+        segmentation_group_id = cursor.lastrowid
+
+        cursor.close()
+        conn.close()
+        return segmentation_group_id
+
+    @staticmethod
     def createSegmentationRule(SegmentationRule: SegmentationRuleModel) -> int:
         conn = get_connection()
         cursor = conn.cursor(dictionary=True)
@@ -105,3 +119,4 @@ class SegmentationRepository:
         conn.close()
 
         return [row[0] for row in rows]
+
