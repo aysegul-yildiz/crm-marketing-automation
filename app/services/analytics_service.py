@@ -45,36 +45,24 @@ def load_conversion_events() -> pd.DataFrame:
 
 
 # ---- High-level KPIs ----------------------------------------------- #
-
 def get_kpis() -> Dict:
-    """
-    Returns top-level KPIs for the dashboard:
-      - total_customers
-      - total_segments
-      - active_campaigns
-      - roi (very simple mock)
-    """
     customers = load_customers()
     campaigns = load_campaigns()
     conversions = load_conversion_events()
 
-    # total customers
     total_customers = len(customers)
 
-    # number of segments
     seg_col = "segment" if "segment" in customers.columns else None
     total_segments = customers[seg_col].nunique() if seg_col else 0
 
-    # active campaigns
     if "status" in campaigns.columns:
         active_campaigns = int((campaigns["status"] == "Active").sum())
     else:
         active_campaigns = 0
 
-       # ROI = total revenue / total spend * 100 (never negative)
+    # --- ROI consistent with analytics_totals ( (revenue - spend) / spend * 100 )
     total_revenue = conversions["revenue"].sum() if "revenue" in conversions.columns else 0.0
 
-    # prefer 'spend'; fall back to 'budget' if needed
     if "spend" in campaigns.columns:
         total_spend = campaigns["spend"].sum()
     elif "budget" in campaigns.columns:
@@ -82,9 +70,12 @@ def get_kpis() -> Dict:
     else:
         total_spend = 0.0
 
-    roi = (total_revenue / total_spend * 100) if total_spend > 0 else 0.0
+    if total_spend > 0:
+        roi = ((total_revenue - total_spend) / total_spend) * 100
+    else:
+        roi = 0.0
 
-    return{
+    return {
         "total_customers": int(total_customers),
         "total_segments": int(total_segments),
         "active_campaigns": int(active_campaigns),
