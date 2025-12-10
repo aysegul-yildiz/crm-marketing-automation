@@ -1,4 +1,3 @@
-# app/marketing/routes.py
 from flask import Blueprint, render_template, session, request
 from app.auth.decorators import login_required
 from datetime import datetime
@@ -29,21 +28,18 @@ marketing_bp = Blueprint(
 @marketing_bp.route("/")
 @login_required
 def dashboard():
-    # 1) Load analytics from CSV-based service
     kpis = get_kpis()
     campaigns = get_campaign_effectiveness()
     conversion_funnel = get_conversion_funnel()
     revenue_over_time = get_revenue_over_time()
     seg_dist = get_segment_distribution()
 
-    # 2) Simple "Recent activity" derived from top campaigns
     recent_activity = [
         f'Campaign "{c["name"]}" ({c["status"]}) – '
         f'{c["open_rate"]}% open, {c["click_rate"]}% click'
         for c in campaigns[:5]
     ]
 
-    # 3) Render dashboard
     return render_template(
         "marketing/dashboard.html",
         username=session.get("username"),
@@ -67,7 +63,6 @@ def campaigns():
         segment_filter=segment_filter,
     )
 
-    # NEW: all distinct segments for the dropdown
     segment_options = get_segment_options()
 
     username = session.get("username") or session.get("email")
@@ -78,20 +73,13 @@ def campaigns():
         campaigns=campaigns,
         status_filter=status_filter,
         segment_filter=segment_filter,
-        segment_options=segment_options,   # <-- pass here
+        segment_options=segment_options,   
     )
 
 @marketing_bp.route("/analytics")
 @login_required
 def analytics():
-    """
-    Detailed marketing analytics with filters:
-    - from (YYYY-MM-DD)
-    - to   (YYYY-MM-DD)
-    - segment (exact segment name or 'all')
-    - campaign_id (numeric or 'all')
-    """
-    # ---- read filters from query string -------------------------------
+ 
     date_from_str = request.args.get("from") or ""
     date_to_str = request.args.get("to") or ""
     segment = request.args.get("segment", "all")
@@ -100,7 +88,6 @@ def analytics():
     def _parse_date(s: str):
         if not s:
             return None
-        # HTML date inputs send YYYY-MM-DD
         try:
             return datetime.strptime(s, "%Y-%m-%d").date()
         except ValueError:
@@ -116,13 +103,11 @@ def analytics():
         except ValueError:
             campaign_id = None
 
-    # normalize segment
     if segment == "all":
         segment_filter = None
     else:
         segment_filter = segment
 
-    # ---- load data for the page --------------------------------------
     totals = get_analytics_totals(
         start_date=date_from,
         end_date=date_to,
@@ -159,13 +144,10 @@ def analytics():
         limit=5,
     )
 
-    # ---- build dropdown options --------------------------------------
     campaigns_df = load_campaigns()
 
-    # distinct ordered segments from campaigns
     segment_options = sorted(campaigns_df["segment"].dropna().unique().tolist())
 
-    # campaign dropdown: (id, name)
     campaign_options = [
         (int(row.id), f"{row.name} ({row.segment})")
         for row in campaigns_df.itertuples(index=False)
@@ -176,20 +158,19 @@ def analytics():
     return render_template(
         "marketing/analytics.html",
         username=username,
-        # filters (so template can keep them selected)
         date_from=date_from_str,
         date_to=date_to_str,
         current_segment=segment,
         current_campaign_id=campaign_id_str,
         segment_options=segment_options,
         campaign_options=campaign_options,
-        # totals
+        #totals
         total_revenue=totals["total_revenue"],
         total_spend=totals["total_spend"],
         overall_roi=totals["overall_roi"],
         converted_leads=totals["converted_leads"],
         total_leads=totals["total_leads"],
-        # charts – IMPORTANT: names match analytics.html
+        #charts 
         funnel_labels=funnel["labels"],
         funnel_values=funnel["values"],
         revenue_over_time_labels=revenue_time["labels"],

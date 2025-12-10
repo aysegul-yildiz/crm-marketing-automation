@@ -60,7 +60,6 @@ def get_kpis() -> Dict:
     else:
         active_campaigns = 0
 
-    # --- ROI consistent with analytics_totals ( (revenue - spend) / spend * 100 )
     total_revenue = conversions["revenue"].sum() if "revenue" in conversions.columns else 0.0
 
     if "spend" in campaigns.columns:
@@ -83,12 +82,7 @@ def get_kpis() -> Dict:
     }
 
 
-# ---- Segment distribution ------------------------------------------ #
-
 def get_segment_distribution() -> Dict:
-    """
-    Returns names and counts per segment for the 'Audience Breakdown' chart.
-    """
     customers = load_customers()
     seg_col = None
     if "segment" in customers.columns:
@@ -106,15 +100,7 @@ def get_segment_distribution() -> Dict:
         "counts": [int(v) for v in vc.values],
     }
 
-
-# ---- Conversion funnel --------------------------------------------- #
-
 def get_conversion_funnel() -> Dict:
-    """
-    Overall funnel totals across all campaigns.
-    Expects campaign_event_data.csv to have column 'event_type'
-    with values like: delivered, opened, clicked, converted.
-    """
     events = load_campaign_events()
     if "event_type" not in events.columns:
         return {"labels": [], "values": []}
@@ -130,8 +116,6 @@ def get_conversion_funnel() -> Dict:
 
 def get_revenue_over_time() -> Dict:
     conversions = load_conversion_events()
-
-    # Support both 'conversion_date' and 'event_date'
     date_col = None
     if "conversion_date" in conversions.columns:
         date_col = "conversion_date"
@@ -157,19 +141,7 @@ def get_revenue_over_time() -> Dict:
         "values": [float(v) for v in series.values],
     }
 
-
-# ---- Campaign effectiveness ---------------------------------------- #
-
 def get_campaign_effectiveness() -> List[Dict]:
-    """
-    Returns one row per campaign with:
-      - sent (delivered)
-      - opened
-      - clicked
-      - converted
-      - open_rate, click_rate, conversion_rate  (as %)
-      - revenue  (sum of conversion_event.revenue)
-    """
     campaigns = load_campaigns()
     events = load_campaign_events()
     conversions = load_conversion_events()
@@ -177,7 +149,6 @@ def get_campaign_effectiveness() -> List[Dict]:
     if "id" not in campaigns.columns:
         return []
 
-    # Group events by campaign_id & event_type
     if {"campaign_id", "event_type"}.issubset(events.columns):
         grouped = (
             events.groupby(["campaign_id", "event_type"])["id"]
@@ -201,7 +172,6 @@ def get_campaign_effectiveness() -> List[Dict]:
         }
     )
 
-    # Revenue per campaign
     if {"campaign_id", "revenue"}.issubset(conversions.columns):
         revenue_by_campaign = (
             conversions.groupby("campaign_id")["revenue"]
@@ -211,14 +181,12 @@ def get_campaign_effectiveness() -> List[Dict]:
     else:
         revenue_by_campaign = pd.Series(dtype=float, name="revenue")
 
-    # Merge everything with the campaigns table
     df = campaigns.set_index("id")
     if not grouped.empty:
         df = df.join(grouped, how="left")
     if not revenue_by_campaign.empty:
         df = df.join(revenue_by_campaign, how="left")
 
-    # Fill missing numeric columns
     for col in ["sent", "opened", "clicked", "converted", "revenue"]:
         if col not in df.columns:
             df[col] = 0
@@ -255,19 +223,11 @@ def get_campaign_effectiveness() -> List[Dict]:
     return results
 
 def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"):
-    """
-    Return all campaigns with basic effectiveness metrics
-    for the 'See all campaigns' page.
-
-    status_filter: "all" | "active" | "completed"
-    segment_filter: "all" | <exact segment name>
-    """
     campaigns = load_campaigns()
     events = load_campaign_events()
     conversions = load_conversion_events()
     leads_df = load_leads()
 
-    # ---- pre-aggregate leads ---------------------------------------- #
     if not leads_df.empty and {"campaign_id", "id"}.issubset(leads_df.columns):
         leads_by_campaign = (
             leads_df.groupby("campaign_id")["id"].count().to_dict()
@@ -306,7 +266,6 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
         conv_rate = converted / delivered if delivered else 0
         roi = ((revenue - spend) / spend * 100) if spend > 0 else 0
 
-        # leads & lead conversion
         leads = int(leads_by_campaign.get(cid, 0))
         converted_leads = int(converted_leads_by_campaign.get(cid, 0))
         lead_conv_rate = (converted_leads / leads * 100) if leads else 0.0
@@ -333,7 +292,6 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
 
         rows.append(row)
 
-    # --- apply filters -------------------------------------------------
     if status_filter != "all":
         sf = status_filter.lower()
         rows = [r for r in rows if r["status"].lower() == sf]
@@ -349,16 +307,12 @@ def get_campaign_listing(status_filter: str = "all", segment_filter: str = "all"
     return rows
 
 def get_segment_options() -> list[str]:
-    """
-    Return a sorted list of distinct segment names from campaign_data.csv,
-    used to populate the 'Segment' filter dropdown.
-    """
+ 
     campaigns = load_campaigns()
 
     if "segment" not in campaigns.columns:
         return []
 
-    # unique, non-empty segments
     segs = (
         campaigns["segment"]
         .dropna()
@@ -377,7 +331,6 @@ def get_lead_conversion_by_campaign() -> Dict[int, Dict]:
     events = load_campaign_events()
     conversions = load_conversion_events()
 
-    # figure out which column holds segment name
     seg_col = None
     if "segment" in customers.columns:
         seg_col = "segment"
@@ -385,10 +338,9 @@ def get_lead_conversion_by_campaign() -> Dict[int, Dict]:
         seg_col = "Segment"
 
     if not seg_col:
-        # we can't compute lead metrics without segment info
+        #we cant compute lead metrics without segment info
         return {}
 
-    # Leads = "New Signups (Last 30 Days)"
     lead_mask = customers[seg_col] == "New Signups (Last 30 Days)"
     leads_df = customers[lead_mask]
 
@@ -397,7 +349,6 @@ def get_lead_conversion_by_campaign() -> Dict[int, Dict]:
 
     lead_ids = set(leads_df["id"].astype(int).tolist())
 
-    # Events that involve leads only
     if not {"customer_id", "campaign_id"}.issubset(events.columns):
         return {}
 
@@ -406,7 +357,6 @@ def get_lead_conversion_by_campaign() -> Dict[int, Dict]:
 
     lead_events = events[events["customer_id"].isin(lead_ids)]
 
-    # Conversions that involve leads only
     if not {"customer_id", "campaign_id"}.issubset(conversions.columns):
         return {}
 
@@ -420,12 +370,10 @@ def get_lead_conversion_by_campaign() -> Dict[int, Dict]:
     for _, camp in campaigns.iterrows():
         cid = int(camp["id"])
 
-        # all leads this campaign touched (any event type)
         ev_camp = lead_events[lead_events["campaign_id"] == cid]
         leads_touched_ids = ev_camp["customer_id"].dropna().unique()
         leads_touched = int(len(leads_touched_ids))
 
-        # leads that actually converted, attributed to this campaign id
         conv_camp = lead_conversions[lead_conversions["campaign_id"] == cid]
         leads_converted_ids = conv_camp["customer_id"].dropna().unique()
         leads_converted = int(len(leads_converted_ids))
@@ -464,20 +412,17 @@ def _apply_common_filters(
     events = events.copy()
     conversions = conversions.copy()
 
-    # ---- campaign filter ---------------------------------------------
     if campaign_id is not None:
         campaigns = campaigns[campaigns["id"] == campaign_id]
         events = events[events["campaign_id"] == campaign_id]
         conversions = conversions[conversions["campaign_id"] == campaign_id]
 
-    # ---- segment filter ----------------------------------------------
     if segment:
         campaigns = campaigns[campaigns["segment"] == segment]
         valid_ids = set(campaigns["id"])
         events = events[events["campaign_id"].isin(valid_ids)]
         conversions = conversions[conversions["campaign_id"].isin(valid_ids)]
 
-    # ---- date filters -------------------------------------------------
     def _filter_by_date(df: pd.DataFrame, col: str):
         if col not in df.columns or df.empty:
             return df
@@ -489,10 +434,8 @@ def _apply_common_filters(
             mask &= d <= end_date
         return df[mask]
 
-    # events always use event_date
     events = _filter_by_date(events, "event_date")
 
-    # conversions use conversion_date if available, otherwise fall back
     conv_date_col = None
     if "conversion_date" in conversions.columns:
         conv_date_col = "conversion_date"
@@ -526,7 +469,6 @@ def get_analytics_totals(
 
     total_revenue = float(conversions["revenue"].sum()) if "revenue" in conversions.columns else 0.0
 
-    # prefer 'spend', fall back to budget
     if "spend" in campaigns.columns:
         total_spend = float(campaigns["spend"].sum())
     elif "budget" in campaigns.columns:
@@ -539,9 +481,6 @@ def get_analytics_totals(
     else:
         overall_roi = 0.0
 
-    # simple lead model:
-    # - total leads: all "clicked"
-    # - converted leads: all "converted"
     if "event_type" in events.columns:
         total_leads = int((events["event_type"] == "clicked").sum())
         converted_leads = int((events["event_type"] == "converted").sum())
@@ -557,9 +496,6 @@ def get_analytics_totals(
         "converted_leads": converted_leads,
     }
 
-
-# --------- filtered funnel -------------------------------------------
-
 def get_conversion_funnel_filtered(
     start_date: date | None = None,
     end_date: date | None = None,
@@ -568,7 +504,7 @@ def get_conversion_funnel_filtered(
 ) -> Dict:
     campaigns = load_campaigns()
     events = load_campaign_events()
-    conversions = load_conversion_events()  # not used, but kept for symmetry
+    conversions = load_conversion_events()  
 
     campaigns, events, _ = _apply_common_filters(
         campaigns, events, conversions,
@@ -588,8 +524,6 @@ def get_conversion_funnel_filtered(
     ]
     return {"labels": stages, "values": counts}
 
-
-# --------- filtered revenue over time --------------------------------
 def get_revenue_over_time_filtered(
     start_date: date | None = None,
     end_date: date | None = None,
@@ -608,7 +542,6 @@ def get_revenue_over_time_filtered(
         campaign_id=campaign_id,
     )
 
-    # pick correct date column
     date_col = None
     if "conversion_date" in conversions.columns:
         date_col = "conversion_date"
@@ -634,8 +567,6 @@ def get_revenue_over_time_filtered(
         "values": [float(v) for v in series.values],
     }
 
-# --------- filtered revenue by segment -------------------------------
-
 def get_revenue_by_segment_filtered(
     start_date: date | None = None,
     end_date: date | None = None,
@@ -657,7 +588,6 @@ def get_revenue_by_segment_filtered(
     if conversions.empty:
         return {"labels": [], "values": []}
 
-    # join conversions with campaigns to know which segment each conversion belongs to
     merged = conversions.merge(
         campaigns[["id", "segment"]],
         left_on="campaign_id",
@@ -675,9 +605,6 @@ def get_revenue_by_segment_filtered(
         "labels": grouped.index.tolist(),
         "values": [float(v) for v in grouped.values],
     }
-
-
-# --------- filtered top campaigns by revenue -------------------------
 
 def get_top_campaigns_by_revenue_filtered(
     start_date: date | None = None,
@@ -701,7 +628,6 @@ def get_top_campaigns_by_revenue_filtered(
     if campaigns.empty:
         return []
 
-    # basic metrics per campaign
     ev_group = (
         events.groupby(["campaign_id", "event_type"])["id"]
         .count()

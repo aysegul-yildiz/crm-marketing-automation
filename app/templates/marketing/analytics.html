@@ -11,7 +11,7 @@
 
   .app-shell {
     display: flex;
-    min-height: calc(100vh - 40px); /* base.html nav + hr */
+    min-height: calc(100vh - 40px);
     background: #f5f7ff;
   }
 
@@ -231,7 +231,6 @@
 </style>
 
 <div class="app-shell">
-  <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-brand">CRM Marketing</div>
 
@@ -257,7 +256,6 @@
     </div>
   </aside>
 
-  <!-- Main -->
   <main class="main-area">
     <div class="main-header">
       <div>
@@ -268,7 +266,7 @@
       </div>
     </div>
 
-    <!-- Filters row -->
+   
     <div
       class="filters-row"
       style="display:flex; gap:10px; align-items:center; margin-bottom:16px; font-size:12px;"
@@ -276,7 +274,6 @@
       <form method="get" style="display:flex; gap:10px; align-items:center;">
         <span style="color:#9ca3af;">Filter:</span>
 
-        <!-- Date from -->
         <input
           type="date"
           name="from"
@@ -284,7 +281,6 @@
           style="font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb;"
         />
 
-        <!-- Date to -->
         <input
           type="date"
           name="to"
@@ -292,7 +288,6 @@
           style="font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb;"
         />
 
-        <!-- Segment -->
         <select
           name="segment"
           style="font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb;"
@@ -307,7 +302,6 @@
           {% endfor %}
         </select>
 
-        <!-- Campaign -->
         <select
           name="campaign_id"
           style="font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb; max-width:260px;"
@@ -331,7 +325,6 @@
       </form>
     </div>
 
-    <!-- KPI row (now a proper grid row) -->
     <div class="kpi-row">
       <div class="kpi-card">
         <div class="kpi-label">Total Revenue</div>
@@ -357,7 +350,6 @@
       </div>
     </div>
 
-    <!-- Funnel + Revenue by segment -->
     <section class="grid-2">
       <div class="card">
         <div class="card-header-row">
@@ -386,7 +378,6 @@
       </div>
     </section>
 
-    <!-- Revenue over time -->
     <section class="card">
       <div class="card-header-row">
         <div>
@@ -401,7 +392,6 @@
       </div>
     </section>
 
-    <!-- Top campaigns table -->
     <section class="card">
       <div class="card-header-row">
         <div>
@@ -464,7 +454,6 @@
   </main>
 </div>
 
-<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
   const funnelLabels = {{ (funnel_labels or [])|tojson }};
@@ -476,7 +465,7 @@
   const revSegNames = {{ (revenue_by_segment_labels or [])|tojson }};
   const revSegValues = {{ (revenue_by_segment_values or [])|tojson }};
 
-  // Funnel chart
+  
   new Chart(document.getElementById("funnelChart"), {
     type: "bar",
     data: {
@@ -498,7 +487,6 @@
     },
   });
 
-  // Revenue by segment
   new Chart(document.getElementById("revenueSegmentChart"), {
     type: "bar",
     data: {
@@ -521,7 +509,6 @@
     },
   });
 
-  // Revenue over time
   new Chart(document.getElementById("revenueTimeChart"), {
     type: "line",
     data: {
