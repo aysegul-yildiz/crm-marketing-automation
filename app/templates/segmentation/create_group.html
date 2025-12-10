@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div style="max-width: 600px; margin: 0 auto;">
+<div style="max-width: 800px; margin: 0 auto;">
 
+    <!-- === TOP HALF: SEGMENTATION GROUPS === -->
     <h2>Create Segmentation Group</h2>
     <hr />
 
@@ -25,7 +26,7 @@
         </button>
     </form>
 
-    <!-- List Existing Groups -->
+    <!-- Groups List + Radio Selection -->
     <form method="GET" id="group-select-form">
         {% for g in groups %}
         <div style="
@@ -38,8 +39,7 @@
             justify-content: space-between;">
             
             <div>
-                <strong>{{ g.name }}</strong>
-                <br>
+                <strong>{{ g.name }}</strong><br>
                 <small>ID: {{ g.id }}</small>
             </div>
 
@@ -57,6 +57,55 @@
             Edit Selected Group
         </button>
     </form>
+
+
+    <!-- === BOTTOM HALF: USERS + LISTINGS PANELS === -->
+
+    <hr style="margin: 30px 0;">
+
+    <div style="display: flex; gap: 20px;">
+
+        <!-- Users Box -->
+        <div style="
+            flex: 1;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            padding: 15px;
+            min-height: 200px;">
+            <h3 style="margin-top: 0;">Users</h3>
+
+            {% if users %}
+                <ul style="padding-left: 18px;">
+                {% for u in users %}
+                    <li>{{ u.email }} (ID: {{ u.id }})</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p style="color:#6b7280;">No users found.</p>
+            {% endif %}
+        </div>
+
+        <!-- Listings Box -->
+        <div style="
+            flex: 1;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            padding: 15px;
+            min-height: 200px;">
+            <h3 style="margin-top: 0;">Listings</h3>
+
+            {% if listings %}
+                <ul style="padding-left: 18px;">
+                {% for l in listings %}
+                    <li>{{ l.name }} (ID: {{ l.id }})</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p style="color:#6b7280;">No listings found.</p>
+            {% endif %}
+        </div>
+
+    </div>
 
 </div>
 
