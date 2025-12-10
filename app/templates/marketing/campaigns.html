@@ -299,7 +299,9 @@
         </p>
       </div>
       <div class="main-header-actions">
-        <button class="btn-pill btn-outline-pill">Create Segment</button>
+        <a href="{{ url_for('segmentation.new_group') }}" class="btn-pill btn-outline-pill">
+            Create Segment
+        </a>
         <a href="{{ url_for('campaign.new_campaign') }}" class="btn-pill btn-primary-pill">New Campaign</a>
       </div>
     </div>

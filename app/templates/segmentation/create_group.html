@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div style="max-width: 600px; margin: 0 auto;">
+
+    <h2>Create Segmentation Group</h2>
+    <hr />
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <!-- Create Form -->
+    <form action="{{ url_for('segmentation.create_group') }}" method="POST" style="margin-bottom: 25px;">
+        <label for="name">Group Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit" class="btn-primary-pill btn-pill" style="margin-top: 10px;">
+            Create Group
+        </button>
+    </form>
+
+    <!-- List Existing Groups -->
+    <form method="GET" id="group-select-form">
+        {% for g in groups %}
+        <div style="
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;">
+            
+            <div>
+                <strong>{{ g.name }}</strong>
+                <br>
+                <small>ID: {{ g.id }}</small>
+            </div>
+
+            <input type="radio" name="group_id" value="{{ g.id }}" required>
+        </div>
+        {% endfor %}
+
+        <button formaction="{{ url_for('segmentation.edit_group', group_id=0) }}"
+                onclick="
+                    const selected = document.querySelector('input[name=group_id]:checked');
+                    if (selected) this.form.action = '/segmentation/edit/' + selected.value;
+                "
+                class="btn-pill btn-secondary-pill"
+                style="width: 100%; margin-top: 10px;">
+            Edit Selected Group
+        </button>
+    </form>
+
+</div>
+
+{% endblock %}

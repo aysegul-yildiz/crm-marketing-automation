@@ -1,5 +1,5 @@
 from typing import Optional
-from database import get_connection
+from app.database import get_connection
 from app.models.SegmentationRuleModel import SegmentationRuleModel
 from app.models.ListingSegmentationModel import ListingSegmentationModel
 from app.models.SegmentationGroupModel import SegmentationGroupModel
@@ -120,3 +120,17 @@ class SegmentationRepository:
 
         return [row[0] for row in rows]
 
+
+    @staticmethod
+    def getAllSegmentationGroups() -> list[SegmentationGroupModel]:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        query = "SELECT id, name FROM segmentation_group;"
+        cursor.execute(query)
+        rows = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        return [SegmentationGroupModel(id=row[0], name=row[1]) for row in rows]
