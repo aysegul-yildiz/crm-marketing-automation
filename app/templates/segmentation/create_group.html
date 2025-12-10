@@ -27,7 +27,6 @@
     </form>
 
     <!-- Groups List -->
-
     <form method="GET" id="group-select-form">
         {% for g in groups %}
         <div style="
@@ -66,66 +65,86 @@
     <div style="display: flex; gap: 20px;">
 
         <!-- USERS BOX -->
-        <div style="
-            flex: 1;
-            border: 1px solid #d1d5db;
-            border-radius: 10px;
-            padding: 15px;">
+        <form action="{{ url_for('segmentation.add_user_to_segment') }}"
+              method="POST"
+              id="user-select-form"
+              style="flex: 1; border: 1px solid #d1d5db; border-radius: 10px; padding: 15px;">
+
             <h3 style="margin-top: 0;">Users</h3>
 
-            <form id="user-select-form" method="POST">
-                {% if users %}
-                <ul style="padding-left: 18px; list-style: none;">
-                    {% for u in users %}
-                    <li style="margin-bottom: 8px; display:flex; justify-content:space-between;">
-                        <span>{{ u.name }} {{ u.surname }} — {{ u.email }} (ID: {{ u.id }})</span>
-                        <input type="radio" name="user_id" value="{{ u.id }}">
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% else %}
-                    <p style="color:#6b7280;">No users found.</p>
-                {% endif %}
+            <!-- group filled by JS -->
+            <input type="hidden" name="group_id" id="selected-group-user">
 
-                <!-- ACTION BUTTON -->
-                <button type="button" class="btn-pill btn-primary-pill" style="width:100%; margin-top:10px;">
-                    Add Selected User
-                </button>
-            </form>
-        </div>
+            {% if users %}
+            <ul style="padding-left: 18px; list-style: none;">
+                {% for u in users %}
+                <li style="margin-bottom: 8px; display:flex; justify-content:space-between;">
+                    <span>{{ u.name }} {{ u.surname }} — {{ u.email }} (ID: {{ u.id }})</span>
+                    <input type="radio" name="user_id" value="{{ u.id }}">
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <p style="color:#6b7280;">No users found.</p>
+            {% endif %}
+
+            <!-- ACTION BUTTON -->
+            <button type="submit"
+                    class="btn-pill btn-primary-pill"
+                    style="width:100%; margin-top:10px;"
+                    onclick="copySelectedGroup('selected-group-user')">
+                Add Selected User
+            </button>
+        </form>
 
 
         <!-- LISTINGS BOX -->
-        <div style="
-            flex: 1;
-            border: 1px solid #d1d5db;
-            border-radius: 10px;
-            padding: 15px;">
+        <form action="{{ url_for('segmentation.add_listing_to_segment') }}"
+              method="POST"
+              id="listing-select-form"
+              style="flex: 1; border: 1px solid #d1d5db; border-radius: 10px; padding: 15px;">
+
             <h3 style="margin-top: 0;">Listings</h3>
 
-            <form id="listing-select-form" method="POST">
-                {% if listings %}
-                <ul style="padding-left: 18px; list-style: none;">
-                    {% for l in listings %}
-                    <li style="margin-bottom: 8px; display:flex; justify-content:space-between;">
-                        <span>{{ l.listing_title }} — ${{ "%.2f"|format(l.price) }} (ID: {{ l.id }})</span>
-                        <input type="radio" name="listing_id" value="{{ l.id }}">
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% else %}
-                    <p style="color:#6b7280;">No listings found.</p>
-                {% endif %}
+            <!-- group filled by JS -->
+            <input type="hidden" name="group_id" id="selected-group-listing">
 
-                <!-- ACTION BUTTON -->
-                <button type="button" class="btn-pill btn-primary-pill" style="width:100%; margin-top:10px;">
-                    Add Selected Listing
-                </button>
-            </form>
-        </div>
+            {% if listings %}
+            <ul style="padding-left: 18px; list-style: none;">
+                {% for l in listings %}
+                <li style="margin-bottom: 8px; display:flex; justify-content:space-between;">
+                    <span>{{ l.listing_title }} — ${{ "%.2f"|format(l.price) }} (ID: {{ l.id }})</span>
+                    <input type="radio" name="listing_id" value="{{ l.id }}">
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <p style="color:#6b7280;">No listings found.</p>
+            {% endif %}
+
+            <!-- ACTION BUTTON -->
+            <button type="submit"
+                    class="btn-pill btn-primary-pill"
+                    style="width:100%; margin-top:10px;"
+                    onclick="copySelectedGroup('selected-group-listing')">
+                Add Selected Listing
+            </button>
+        </form>
 
     </div>
 
 </div>
+
+<script>
+function copySelectedGroup(hiddenInputId) {
+    const selectedGroup = document.querySelector('input[name=group_id]:checked');
+    if (!selectedGroup) {
+        alert("Please select a segmentation group first!");
+        event.preventDefault();  // Block form submission
+        return false;
+    }
+    document.getElementById(hiddenInputId).value = selectedGroup.value;
+}
+</script>
 
 {% endblock %}
