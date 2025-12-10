@@ -26,7 +26,8 @@
         </button>
     </form>
 
-    <!-- Groups List + Radio Selection -->
+    <!-- Groups List -->
+
     <form method="GET" id="group-select-form">
         {% for g in groups %}
         <div style="
@@ -60,49 +61,67 @@
 
 
     <!-- === BOTTOM HALF: USERS + LISTINGS PANELS === -->
-
     <hr style="margin: 30px 0;">
 
     <div style="display: flex; gap: 20px;">
 
-        <!-- Users Box -->
+        <!-- USERS BOX -->
         <div style="
             flex: 1;
             border: 1px solid #d1d5db;
             border-radius: 10px;
-            padding: 15px;
-            min-height: 200px;">
+            padding: 15px;">
             <h3 style="margin-top: 0;">Users</h3>
 
-            {% if users %}
-                <ul style="padding-left: 18px;">
-                {% for u in users %}
-                    <li> {{ u.name }} {{ u.surname }} — {{ u.email }} (ID: {{ u.id }}) </li>
-                {% endfor %}
+            <form id="user-select-form" method="POST">
+                {% if users %}
+                <ul style="padding-left: 18px; list-style: none;">
+                    {% for u in users %}
+                    <li style="margin-bottom: 8px; display:flex; justify-content:space-between;">
+                        <span>{{ u.name }} {{ u.surname }} — {{ u.email }} (ID: {{ u.id }})</span>
+                        <input type="radio" name="user_id" value="{{ u.id }}">
+                    </li>
+                    {% endfor %}
                 </ul>
-            {% else %}
-                <p style="color:#6b7280;">No users found.</p>
-            {% endif %}
+                {% else %}
+                    <p style="color:#6b7280;">No users found.</p>
+                {% endif %}
+
+                <!-- ACTION BUTTON -->
+                <button type="button" class="btn-pill btn-primary-pill" style="width:100%; margin-top:10px;">
+                    Add Selected User
+                </button>
+            </form>
         </div>
 
-        <!-- Listings Box -->
+
+        <!-- LISTINGS BOX -->
         <div style="
             flex: 1;
             border: 1px solid #d1d5db;
             border-radius: 10px;
-            padding: 15px;
-            min-height: 200px;">
+            padding: 15px;">
             <h3 style="margin-top: 0;">Listings</h3>
 
-            {% if listings %}
-                <ul style="padding-left: 18px;">
-                {% for l in listings %}
-                    <li> {{ l.listing_title }} — ${{ "%.2f"|format(l.price) }} (ID: {{ l.id }}) </li>
-                {% endfor %}
+            <form id="listing-select-form" method="POST">
+                {% if listings %}
+                <ul style="padding-left: 18px; list-style: none;">
+                    {% for l in listings %}
+                    <li style="margin-bottom: 8px; display:flex; justify-content:space-between;">
+                        <span>{{ l.listing_title }} — ${{ "%.2f"|format(l.price) }} (ID: {{ l.id }})</span>
+                        <input type="radio" name="listing_id" value="{{ l.id }}">
+                    </li>
+                    {% endfor %}
                 </ul>
-            {% else %}
-                <p style="color:#6b7280;">No listings found.</p>
-            {% endif %}
+                {% else %}
+                    <p style="color:#6b7280;">No listings found.</p>
+                {% endif %}
+
+                <!-- ACTION BUTTON -->
+                <button type="button" class="btn-pill btn-primary-pill" style="width:100%; margin-top:10px;">
+                    Add Selected Listing
+                </button>
+            </form>
         </div>
 
     </div>
