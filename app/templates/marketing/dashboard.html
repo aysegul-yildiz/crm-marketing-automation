@@ -27,7 +27,6 @@
     box-sizing: border-box;
   }
 
-  /* Sidebar */
   .crm-sidebar {
     width: 220px;
     background: var(--card-bg);
@@ -102,7 +101,6 @@
     text-decoration: none;
   }
 
-  /* Main area */
   .crm-main {
     flex: 1;
     display: flex;
@@ -205,8 +203,6 @@
     color: var(--primary);
     border: 1px solid var(--primary-soft);
   }
-
-  /* KPI cards */
   .crm-kpi-row {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -239,7 +235,6 @@
     color: var(--text-muted);
   }
 
-  /* Grid for cards below KPIs */
   .crm-grid {
     display: grid;
     grid-template-columns: 2.2fr 1.1fr;
@@ -306,8 +301,6 @@
   .mini-chart {
     height: 150px !important;
   }
-
-  /* Bottom row: campaigns & activity */
   .crm-bottom-grid {
     display: grid;
     grid-template-columns: 1.6fr 1.4fr;
@@ -378,7 +371,6 @@
     text-decoration: underline;
   }
 
-  /* Responsive-ish */
   @media (max-width: 992px) {
     .crm-dashboard {
       flex-direction: column;
@@ -399,7 +391,6 @@
 </style>
 
 <div class="crm-dashboard">
-  <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-brand">CRM Marketing</div>
 
@@ -428,9 +419,7 @@
     </div>
   </aside>
 
-  <!-- Main content -->
   <main class="crm-main">
-    <!-- Header card -->
     <section class="crm-header-card">
       <div>
         <div class="crm-header-title">Marketing Overview</div>
@@ -445,7 +434,6 @@
       </div>
     </section>
 
-    <!-- KPI row -->
     <section class="crm-kpi-row">
       <div class="crm-kpi-card">
         <div class="crm-kpi-label">Total Customers</div>
@@ -469,9 +457,7 @@
       </div>
     </section>
 
-    <!-- Main grid: big analytics card + audience breakdown -->
     <section class="crm-grid">
-      <!-- Big analytics card -->
       <div class="crm-card">
         <div class="crm-card-header">
           <div>
@@ -514,9 +500,7 @@
       </div>
     </section>
 
-    <!-- Bottom row: recent campaigns + activity -->
     <section class="crm-bottom-grid">
-      <!-- Recent campaigns -->
       <div class="crm-card">
         <div class="crm-card-header">
           <div>
@@ -545,7 +529,6 @@
         </table>
       </div>
 
-      <!-- Recent activity -->
       <div class="crm-card">
         <div class="crm-card-header">
           <div>
@@ -565,10 +548,9 @@
   </main>
 </div>
 
-<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-  // Data from backend
+  //data from backend
   const FUNNEL_LABELS = {{ conversion_funnel.labels | tojson }};
   const FUNNEL_VALUES = {{ conversion_funnel["values"] | tojson }};
   const REVENUE_LABELS = {{ revenue_over_time.labels | tojson }};
@@ -576,7 +558,7 @@
   const SEGMENT_NAMES = {{ segment_names | tojson }};
   const SEGMENT_COUNTS = {{ segment_counts | tojson }};
 
-  // Big analytics charts
+  //big analytics charts
   const funnelCtx = document.getElementById('chart-funnel').getContext('2d');
   const revenueCtx = document.getElementById('chart-revenue').getContext('2d');
 
