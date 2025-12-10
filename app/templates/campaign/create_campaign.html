@@ -5,39 +5,22 @@
   <h2>Create New Campaign</h2>
   <hr />
 
-  <form method="POST" action="">
-    
-    <!-- Campaign Name -->
-    <label for="name">Campaign Name</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      required
-      placeholder="Enter campaign name"
-      style="width: 100%; padding: 8px; margin-bottom: 12px;"
-    />
+  <form action="{{ url_for('campaign.create_campaign') }}" method="POST">
+    <label for="name">Campaign Name:</label>
+    <input type="text" id="name" name="name" required>
 
-    <!-- Status -->
-    <label for="status">Status</label>
-    <select
-      id="status"
-      name="status"
-      required
-      style="width: 100%; padding: 8px; margin-bottom: 12px;"
-    >
-      <option value="PLANNED">Planned</option>
-      <option value="ACTIVE">Active</option>
-      <option value="CLOSED">Closed</option>
+    <label for="status">Status:</label>
+    <select id="status" name="status" required>
+        <option value="PLANNED">Planned</option>
+        <option value="ACTIVE">Active</option>
+        <option value="CLOSED">Closed</option>
     </select>
 
     <button type="submit" class="btn-primary-pill btn-pill">
-      Create Campaign
+        Create Campaign
     </button>
-    <a href="" class="btn-pill">
-      Cancel
-    </a>
-  </form>
+</form>
+
 
 </div>
 {% endblock %}

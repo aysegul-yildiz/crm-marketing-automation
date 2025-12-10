@@ -246,9 +246,12 @@ class CampaignRepository:
         conn.close()
 
         result = []
-        for(row in rows):
+        for row in rows:
             model = CampaignModel(
                 id=row["id"],
                 name=row["name"],
                 status=row["status"],
             )
+            result.append(model)
+        
+        return result
