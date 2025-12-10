@@ -98,7 +98,7 @@ class SegmentationRepository:
 
         cursor.execute(
             "INSERT INTO customer_segmentation (customer_id, segmentation_id) VALUES (%s, %s);",
-            (user_id, segmentation_id)
+            (CustomerSegmentation.customer_id, CustomerSegmentation.segmentation_id)
         )
         conn.commit()
         cursor.close()
@@ -111,7 +111,7 @@ class SegmentationRepository:
 
         cursor.execute(
             "SELECT segmentation_id FROM user_segmentation WHERE customer_id = %s;",
-            (user_id,)
+            (customer_id,)
         )
         rows = cursor.fetchall()
 
