@@ -225,3 +225,30 @@ class CampaignRepository:
         cursor.close()
         conn.close()
         return rows
+
+    @staticmethod
+    # statusFilter "" empty string for querying everything, else desired status
+    def filterCampaigns(statusFilter: str = ""):
+        conn = get_connection()
+        cursor = conn.cursor(dictionary = True)
+
+        
+        if statusFilter == "":
+            query = "SELECT * FROM campaign ORDER BY id DESC;"
+            cursor.execute(query)
+        else:
+            query = "SELECT * FROM campaign WHERE status = %s ORDER BY id DESC;"
+            cursor.execute(query, (statusFilter, ))
+        
+        rows = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        result = []
+        for(row in rows):
+            model = CampaignModel(
+                id=row["id"],
+                name=row["name"],
+                status=row["status"],
+            )

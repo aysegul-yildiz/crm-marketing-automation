@@ -43,17 +43,9 @@ class CampaignManagementService:
     def get_workflows_by_campaign_id(campaign_id: int) -> List[WorkflowModel]:
         return CampaignRepository.getWorkflowsByCampaignID(campaign_id)
 
-    # ------------------------------
-    # Workflow Step Operations
-    # ------------------------------
     @staticmethod
-    def add_workflow_step(
-        workflow_id: int,
-        step_order: int,
-        action_type: str,
-        action_payload,
-        status: str = "PENDING",
-    ) -> int:
+    def add_workflow_step( workflow_id: int, step_order: int, action_type: str, 
+        action_payload, status: str = "PENDING",) -> int:
         # Verify workflow exists
         wf = CampaignRepository.getWorkflowByID(workflow_id)
         if wf is None:
@@ -67,9 +59,6 @@ class CampaignManagementService:
     def get_workflow_steps(workflow_id: int) -> List[WorkflowStepModel]:
         return CampaignRepository.getWorkflowSteps(workflow_id)
 
-    # ------------------------------
-    # Campaign Event Operations
-    # ------------------------------
     @staticmethod
     def record_campaign_event(
         customer_id: int,
@@ -87,3 +76,8 @@ class CampaignManagementService:
     @staticmethod
     def get_campaign_events(campaign_id: int):
         return CampaignRepository.getCampaignEvents(campaign_id)
+
+    @staticmethod
+    # statusFilter "" empty string for querying everything, else desired status
+    def filterCampaigns(statusFilter: str = ""):
+        return CampaignRepository.filterCampaigns(statusFilter)
