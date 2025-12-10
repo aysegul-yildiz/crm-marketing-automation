@@ -4,7 +4,14 @@ from app.services.CampaignManagementService import CampaignManagementService
 
 @campaign_bp.route("/", endpoint="new_campaign") 
 def index():
-    return render_template("campaign/create_campaign.html")
+    status_filter = request.args.get("status", "")
+    campaigns = CampaignManagementService.filterCampaigns(status_filter)
+
+    return render_template(
+        "campaign/create_campaign.html",
+        campaigns=campaigns,
+        selected_status=status_filter
+    )
 
 @campaign_bp.route("/create", methods=["POST"], endpoint="create_campaign")
 def create_campaign():

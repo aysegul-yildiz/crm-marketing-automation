@@ -5,6 +5,7 @@
   <h2>Create New Campaign</h2>
   <hr />
 
+  <!-- Campaign Form -->
   <form action="{{ url_for('campaign.create_campaign') }}" method="POST">
     <label for="name">Campaign Name:</label>
     <input type="text" id="name" name="name" required>
@@ -17,10 +18,36 @@
     </select>
 
     <button type="submit" class="btn-primary-pill btn-pill">
-        Create Campaign
+      Create Campaign
     </button>
-</form>
+  </form>
 
+  <hr>
+
+  <!-- Filter -->
+  <form method="GET" action="{{ url_for('campaign.new_campaign') }}">
+    <label for="filter">Filter by status:</label>
+    <select name="status" onchange="this.form.submit()">
+      <option value=""   {% if selected_status == '' %}selected{% endif %}>All</option>
+      <option value="PLANNED" {% if selected_status == 'PLANNED' %}selected{% endif %}>Planned</option>
+      <option value="ACTIVE"  {% if selected_status == 'ACTIVE' %}selected{% endif %}>Active</option>
+      <option value="CLOSED"  {% if selected_status == 'CLOSED' %}selected{% endif %}>Closed</option>
+    </select>
+  </form>
+
+  <!-- Campaign List -->
+  <div style="margin-top: 20px; max-height: 250px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; border-radius: 6px;">
+
+    {% for campaign in campaigns %}
+      <div style="padding: 10px 0; border-bottom: 1px solid #eee;">
+        <strong>{{ campaign.name }}</strong><br>
+        <span>Status: {{ campaign.status }}</span>
+      </div>
+    {% else %}
+      <p>No campaigns found.</p>
+    {% endfor %}
+
+  </div>
 
 </div>
 {% endblock %}
