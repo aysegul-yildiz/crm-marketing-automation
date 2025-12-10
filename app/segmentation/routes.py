@@ -1,13 +1,23 @@
 from flask import render_template, request, redirect, url_for, flash
 from . import segmentation_bp
 from app.services.SegmentationMaintainerService import SegmentationMaintainerService
+from app.services.ExternalService import ExternalService
 
 
 @segmentation_bp.route("/", endpoint="new_group")
 def index():
-    """Displays segmentation group creation page and existing groups list"""
-    groups = SegmentationMaintainerService.get_all_groups()  # <-- fetch from DB
-    return render_template("segmentation/create_group.html", groups=groups)
+    """Displays segmentation group creation page"""
+
+    groups = SegmentationMaintainerService.get_all_groups()  # Add this if not exists
+    customers = ExternalService.get_all_customers()
+    listings = ExternalService.get_all_listings()
+
+    return render_template(
+        "segmentation/create_group.html",
+        groups=groups,
+        users=customers,
+        listings=listings
+    )
 
 
 @segmentation_bp.route("/create", methods=["POST"], endpoint="create_group")

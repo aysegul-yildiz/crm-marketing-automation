@@ -1,15 +1,12 @@
 from typing import Optional
 
-from app.models.CustomerModel import Customer
+from app.models.CustomerModel import CustomerModel
 from app.models.ListingModel import ListingModel
 from app.repositories.ExternalRepository import ExternalRepository
 
 
 class ExternalService:
 
-    # ----------------------------------------
-    # Customer Operations
-    # ----------------------------------------
     @staticmethod
     def create_customer(name: str, surname: str, email: str) -> int:
         if not name or not surname:
@@ -20,14 +17,11 @@ class ExternalService:
         return ExternalRepository.createCustomer(name, surname, email)
 
     @staticmethod
-    def get_customer_by_id(customer_id: int) -> Optional[Customer]:
+    def get_customer_by_id(customer_id: int) -> Optional[CustomerModel]:
         if not customer_id or customer_id <= 0:
             raise ValueError("Invalid customer ID.")
         return ExternalRepository.getCustomerByID(customer_id)
 
-    # ----------------------------------------
-    # Listing Operations
-    # ----------------------------------------
     @staticmethod
     def create_listing(listing_title: str, price: float) -> int:
         if not listing_title:
@@ -42,3 +36,11 @@ class ExternalService:
         if not listing_id or listing_id <= 0:
             raise ValueError("Invalid listing ID.")
         return ExternalRepository.getListingByID(listing_id)
+
+    @staticmethod
+    def get_all_customers() -> list[CustomerModel]:
+        return ExternalRepository.getAllCustomers()
+
+    @staticmethod
+    def get_all_listings() -> list[ListingModel]:
+        return ExternalRepository.getAllListings()

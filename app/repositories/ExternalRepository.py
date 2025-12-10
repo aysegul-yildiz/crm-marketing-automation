@@ -1,8 +1,9 @@
 ## We will put functions which are not direct parts of MA module in here, for simplicity
 
 from typing import Optional
-from database import get_connection
-from app.models.CustomerModel import Customer
+from app.database import get_connection
+from app.models.CustomerModel import CustomerModel
+from app.models.ListingModel import ListingModel
 
 class ExternalRepository:
 
@@ -23,7 +24,7 @@ class ExternalRepository:
         conn.close()
     
     @staticmethod
-    def getCustomerByID(id: int) -> Customer:
+    def getCustomerByID(id: int) -> CustomerModel:
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -36,7 +37,7 @@ class ExternalRepository:
         if not row:
             return None
 
-        return Customer(
+        return CustomerModel(
             id = row["id"],
             name = row["name"],
             email = row["email"]
@@ -79,3 +80,44 @@ class ExternalRepository:
             listing_title=row["listing_title"],
             price=row["price"]
         )
+
+    @staticmethod
+    def getAllCustomers() -> list[CustomerModel]:
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        cursor.execute("SELECT * FROM Customer;")
+        rows = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        customers = []
+        for r in rows:
+            customers.append(CustomerModel(
+                id=r["id"],
+                name=r["name"],
+                surname=r["surname"],
+                email=r["email"]
+            ))
+        return customers
+
+    @staticmethod
+    def getAllListings() -> list[ListingModel]:
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        cursor.execute("SELECT * FROM listing;")
+        rows = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        listings = []
+        for r in rows:
+            listings.append(ListingModel(
+                id=r["id"],
+                listing_title=r["listing_title"],
+                price=r["price"]
+            ))
+        return listings

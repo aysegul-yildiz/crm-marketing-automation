@@ -1,4 +1,4 @@
-class Customer:
+class CustomerModel:
     def __init__(self, id, name, surname, email):
         self.id = id
         self.name = name
