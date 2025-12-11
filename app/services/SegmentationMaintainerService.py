@@ -4,6 +4,7 @@ from app.models.SegmentationRuleModel import SegmentationRuleModel
 from app.models.ListingSegmentationModel import ListingSegmentationModel
 from app.models.SegmentationGroupModel import SegmentationGroupModel
 from app.models.CustomerSegmentationModel import CustomerSegmentationModel
+from app.models.CustomerModel import CustomerModel
 from app.repositories.SegmentationRepository import SegmentationRepository
 
 
@@ -53,3 +54,7 @@ class SegmentationMaintainerService:
     @staticmethod
     def get_all_groups():
         return SegmentationRepository.getAllSegmentationGroups()
+
+    @staticmethod
+    def fetch_customers(segmentation_id: int) -> list[CustomerModel]:
+        return SegmentationRepository.get_customers_by_segmentation(segmentation_id)

@@ -5,6 +5,7 @@ from app.models.ListingSegmentationModel import ListingSegmentationModel
 from app.models.SegmentationGroupModel import SegmentationGroupModel
 from app.models.CustomerSegmentationModel import CustomerSegmentationModel
 from app.models.SegmentationDiscountModel import SegmentationDiscountModel
+from app.models.CustomerModel import CustomerModel
 
 class SegmentationRepository:
 
@@ -188,3 +189,25 @@ class SegmentationRepository:
         conn.commit()
         cursor.close()
         conn.close()
+
+    @staticmethod
+    def get_customers_by_segmentation(segmentation_id: int) -> list[CustomerModel]:
+        """
+        Fetch all customers that belong to a given segmentation group.
+        Returns a list of CustomerModel instances.
+        """
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        query = """
+            SELECT c.*
+            FROM customer AS c
+            JOIN customer_segmentation AS cs ON c.id = cs.customer_id
+            WHERE cs.segmentation_id = %s
+        """
+        cursor.execute(query, (segmentation_id,))
+        rows = cursor.fetchall()
+        cursor.close()
+        conn.close()
+
+        return [CustomerModel(**row) for row in rows] if rows else []

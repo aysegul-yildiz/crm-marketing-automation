@@ -7,6 +7,9 @@ from app.models.WorkflowModel import WorkflowModel
 from app.models.WorkflowStepModel import WorkflowStepModel
 from app.repositories.CampaignRepository import CampaignRepository
 from app.repositories.SegmentationRepository import SegmentationRepository
+from app.services.SegmentationMaintainerService import SegmentationMaintainerService
+from app.services.email_sender import send_email
+
 
 class CampaignExecutionService
 
@@ -15,7 +18,14 @@ class CampaignExecutionService
     def executeWorkflowStep(step: WorkflowStepModel):
         CHECK(action_type IN ('email', 'discord-post', 'discount')),
         if step.action_type == "email":
-            #send email with relevant payload
+            #send email with relevant payload, send to all users of all segments of this campaign
+            groups = CampaignRepository.getSegmentsFromWorkflowStep(step.id)
+            body = step.action_payload
+
+            users = []
+            for group in groups:
+                users = SegmentationMaintainerService.fetch_customers(group.id)
+                
         elif step.action_type == "discord-post":
             #post discord post through webhook
         elif step.action_type == "discount":
@@ -26,5 +36,4 @@ class CampaignExecutionService
             for group in groups:
                 SegmentationRepository.addSegmentationDiscount(group.id, action_payload)
 
-    @staticmethod
-    def
+    
