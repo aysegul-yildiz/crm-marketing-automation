@@ -4,7 +4,7 @@ from app.models.SegmentationRuleModel import SegmentationRuleModel
 from app.models.ListingSegmentationModel import ListingSegmentationModel
 from app.models.SegmentationGroupModel import SegmentationGroupModel
 from app.models.CustomerSegmentationModel import CustomerSegmentationModel
-app.models.SegmentationDiscountModel import SegmentationDiscountModel
+from app.models.SegmentationDiscountModel import SegmentationDiscountModel
 
 class SegmentationRepository:
 
