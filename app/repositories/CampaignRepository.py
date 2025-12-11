@@ -271,3 +271,22 @@ class CampaignRepository:
         conn.commit()
         cur.close()
         conn.close()
+
+    @staticmethod
+    def isWorkflowStepExecutable(step: WorkflowStepModel) -> bool:
+        conn = get connection()
+        curr = conn.cursor()
+
+        # if it is not done, and if the previous step is done or this is the first step
+        # and if it is time to execute this one (enough time elapsed since last step)
+        query = """
+            WITH prev_step AS (SELECT * FROM workflow_step WHERE id = %s)
+            SELECT id FROM workflow_step AS ws
+            WHERE id = %s AND status != 'DONE' AND (step_order = 1 OR 
+            (
+                (SELECT status FROM prev_step) = 'DONE') AND 
+                (ws.delay_minutes_after_prev > (SELECT DATE_SUB(NOW(), prev_step.executed_at)))
+            );
+        """
+
+        return true

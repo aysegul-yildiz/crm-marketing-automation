@@ -98,7 +98,8 @@ CREATE TABLE IF NOT EXISTS workflow_step (
     action_type VARCHAR(50),
     action_payload JSON,
     status VARCHAR(20),
-    delay_minutes_after_prev INT DEFAULT 0, -- 
+    delay_minutes_after_prev INT DEFAULT 0,
+    executed_at TIMESTAMP DEFAULT NULL, 
     FOREIGN KEY(workflow_id) REFERENCES workflow(id)
         ON DELETE CASCADE,
     CHECK(step_order > 0),
