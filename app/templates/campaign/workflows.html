@@ -30,12 +30,11 @@
                             <small>Status: {{ c.status }}</small>
                         </div>
 
-                        <!-- onclick prevents redirects ALWAYS -->
                         <input type="radio"
-                               name="campaign_select"
-                               value="{{ c.id }}"
-                               {% if selected_campaign_id == c.id %}checked{% endif %}
-                               onclick="loadWorkflows(this.value)">
+                        name="campaign_select"
+                        value="{{ c.id }}"
+                        onchange="window.location='{{ url_for('campaign.workflows_page') }}?selected_campaign_id=' + this.value;">
+
                     </li>
                     {% endfor %}
                 </ul>
@@ -51,7 +50,7 @@
                 <h3 style="margin-top: 0;">Create Workflow</h3>
 
                 {% if selected_campaign_id %}
-                <form action="{{ url_for('campaigns.create_workflow') }}" method="POST">
+                <form action="{{ url_for('campaign.create_workflow') }}" method="POST">
 
                     <input type="hidden" name="campaign_id" value="{{ selected_campaign_id }}">
 
