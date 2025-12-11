@@ -352,3 +352,58 @@ class CampaignRepository:
         finally:
             cursor.close()
             conn.close()
+
+    @staticmethod
+    def add_campaign_segment(campaign_id: int, segmentation_id: int):
+        """
+        Inserts a row into campaign_has_segment.
+        """
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute(
+                """
+                INSERT INTO campaign_has_segment (campaign_id, segmentation_id)
+                VALUES (%s, %s)
+                ON DUPLICATE KEY UPDATE campaign_id = campaign_id
+                """,
+                (campaign_id, segmentation_id)
+            )
+            conn.commit()
+        finally:
+            cursor.close()
+            conn.close()
+
+    @staticmethod
+    def get_segments_for_campaign(campaign_id: int):
+        """
+        Returns all SegmentationGroupModel objects for a given campaign_id
+        """
+        conn = get_db_connection()
+        cursor = conn.cursor(dictionary=True)
+        try:
+            cursor.execute(
+                """
+                SELECT sg.id, sg.name
+                FROM segmentation_group sg
+                JOIN campaign_has_segment chs
+                  ON sg.id = chs.segmentation_id
+                WHERE chs.campaign_id = %s
+                """,
+                (campaign_id,)
+            )
+            rows = cursor.fetchall()
+            return [SegmentationGroupModel(id=row['id'], name=row['name']) for row in rows]
+        finally:
+            cursor.close()
+            conn.close()
+    @staticmethod
+    def get_all_campaigns() -> list[CampaignModel]:
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+        cursor.execute("SELECT * FROM campaign;")
+        rows = cursor.fetchall()
+        cursor.close()
+        conn.close()
+
+        return [CampaignModel(id=row["id"], name=row["name"], status=row["status"]) for row in rows]

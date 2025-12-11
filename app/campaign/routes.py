@@ -140,6 +140,17 @@ def add_workflow_step():
     return redirect(url_for("campaign.workflow_steps_page", workflow_id=workflow_id))
 
 
+@campaign_bp.route("/campaign_segments")
+def campaign_segments_page():
+    # Fetch data needed for the page
+    campaigns = CampaignManagementService.get_all_campaigns()
+    segmentation_groups = SegmentationMaintainerService.get_all_groups()
+    
+    return render_template(
+        "campaign/campaign_segments.html",
+        campaigns=campaigns,
+        segmentation_groups=segmentation_groups
+    )
 
 @campaign_bp.route("/<int:campaign_id>/workflows")
 def ajax_get_workflows(campaign_id):

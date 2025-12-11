@@ -110,3 +110,15 @@ class CampaignManagementService:
     @staticmethod
     def update_workflow_step_status(step_id, status):
         CampaignRepository.update_workflow_step_status(step_id, status)
+
+    @staticmethod
+    def add_campaign_segment(campaign_id: int, segmentation_id: int):
+        CampaignRepository.add_campaign_segment(campaign_id, segmentation_id)
+
+    @staticmethod
+    def get_segments_for_campaign(campaign_id: int):
+        return CampaignRepository.get_segments_for_campaign(campaign_id)
+
+    @staticmethod
+    def get_all_campaigns() -> list:
+        return CampaignRepository.get_all_campaigns()

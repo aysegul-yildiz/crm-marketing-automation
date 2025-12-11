@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Campaign Segments Management</h2>
+<hr>
+
+<div style="display:flex; gap:20px; height: 80vh;">
+    <!-- LEFT SIDE -->
+    <div style="flex:1; display:flex; flex-direction:column; gap:20px;">
+        
+        <!-- Campaigns VBox -->
+        <div style="flex:1; border:1px solid #d1d5db; border-radius:10px; padding:15px; overflow-y:auto;">
+            <h4>Campaigns</h4>
+            {% if campaigns %}
+                <ul style="list-style:none; padding:0;">
+                    {% for campaign in campaigns %}
+                        <li style="padding:8px; border-bottom:1px solid #e5e7eb; cursor:pointer;"
+                            onclick="selectCampaign({{ campaign.id }})"
+                            id="campaign-{{ campaign.id }}">
+                            {{ campaign.name }} (ID: {{ campaign.id }})
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No campaigns found.</p>
+            {% endif %}
+        </div>
+
+        <!-- Segments assigned to selected campaign -->
+        <div style="flex:1; border:1px solid #d1d5db; border-radius:10px; padding:15px; overflow-y:auto;">
+            <h4>Assigned Segments</h4>
+            <ul id="assigned-segments" style="list-style:none; padding:0;">
+                <p>Select a campaign to view assigned segments.</p>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div style="flex:1; border:1px solid #d1d5db; border-radius:10px; padding:15px; overflow-y:auto;">
+        <h4>All Segmentation Groups</h4>
+        {% if segmentation_groups %}
+            <ul id="all-segments" style="list-style:none; padding:0;">
+                {% for seg in segmentation_groups %}
+                    <li style="padding:8px; border-bottom:1px solid #e5e7eb;">
+                        {{ seg.name }} (ID: {{ seg.id }})
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No segmentation groups found.</p>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    const assignedSegmentsList = document.getElementById("assigned-segments");
+
+    function selectCampaign(campaignId) {
+        // Clear previous assigned segments
+        assignedSegmentsList.innerHTML = "<p>Loading...</p>";
+
+        // Fetch assigned segments from server via AJAX
+        fetch(`/api/campaign/${campaignId}/segments`)
+            .then(response => response.json())
+            .then(data => {
+                assignedSegmentsList.innerHTML = "";
+                if(data.length === 0){
+                    assignedSegmentsList.innerHTML = "<p>No segments assigned to this campaign.</p>";
+                    return;
+                }
+                data.forEach(seg => {
+                    const li = document.createElement("li");
+                    li.style.padding = "8px";
+                    li.style.borderBottom = "1px solid #e5e7eb";
+                    li.textContent = `${seg.name} (ID: ${seg.id})`;
+                    assignedSegmentsList.appendChild(li);
+                });
+            })
+            .catch(err => {
+                assignedSegmentsList.innerHTML = "<p>Error loading assigned segments.</p>";
+                console.error(err);
+            });
+    }
+</script>
+
+{% endblock %}
