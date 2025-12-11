@@ -35,6 +35,13 @@ CREATE TABLE IF NOT EXISTS listing_segmentation (
         ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS segmentation_discount (
+    segmentation_id INT PRIMARY KEY,
+    discount_percentage INT DEFAULT 0,
+    FOREIGN KEY(segmentation_id) REFERENCES segmentation_group(id)
+        ON DELETE CASCADE,
+    CHECK(discount_percentage >= 0)
+);
 
 CREATE TABLE IF NOT EXISTS customer_segmentation (
     customer_id INT,
@@ -84,7 +91,7 @@ CREATE TABLE IF NOT EXISTS workflow (
         ON DELETE CASCADE
 );
 
-CREATE TABLE workflow_step (
+CREATE TABLE IF NOT EXISTS workflow_step (
     id INT PRIMARY KEY AUTO_INCREMENT,
     workflow_id INT,
     step_order INT NOT NULL,
@@ -100,7 +107,7 @@ CREATE TABLE workflow_step (
     UNIQUE(workflow_id, step_order)
 );
 
-CREATE TABLE customer_event (
+CREATE TABLE IF NOT EXISTS customer_event (
     id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT,
     event_type VARCHAR(50),
@@ -110,7 +117,7 @@ CREATE TABLE customer_event (
 );
 
 
-CREATE TABLE campaign_event (
+CREATE TABLE IF NOT EXISTS campaign_event (
     id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT,
     campaign_id INT,
@@ -123,7 +130,7 @@ CREATE TABLE campaign_event (
 );
 
 
-CREATE TABLE conversion_event (
+CREATE TABLE IF NOT EXISTS conversion_event (
     id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT,
     listing_id INT,
@@ -134,3 +141,4 @@ CREATE TABLE conversion_event (
     FOREIGN KEY (campaign_id) REFERENCES campaign(id),
     FOREIGN KEY (customer_id) REFERENCES Customer(id)
 );
+

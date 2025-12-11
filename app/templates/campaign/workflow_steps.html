@@ -137,6 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const discountPercent = document.getElementById("discount-percent");
     const discountSegment = document.getElementById("discount-segmentation");
 
+    // Hide payload field when DISCOUNT selected
     function updatePayload() {
         const percent = discountPercent.value;
         const segment = discountSegment.value;
@@ -148,22 +149,37 @@ document.addEventListener("DOMContentLoaded", () => {
             segmentation_group_id: Number(segment)
         }, null, 2);
     }
-
     actionSelect.addEventListener("change", () => {
-        if (actionSelect.value === "DISCOUNT") {
+        const isDiscount = actionSelect.value === "DISCOUNT";
+        if (isDiscount) {
+            // Show discount fields
             discountFields.style.display = "flex";
+
+            // Hide payload field
+            payloadField.parentElement.style.display = "none";
+
+            // Autofill payload internally
             payloadField.readOnly = true;
             updatePayload();
-        } else {
+        } 
+        else {
+            // Hide discount fields
             discountFields.style.display = "none";
+
+            // Show payload field again
+            payloadField.parentElement.style.display = "block";
+
             payloadField.readOnly = false;
             payloadField.value = "";
         }
     });
 
+
+    // Update payload when discount-specific inputs change
     discountPercent.addEventListener("input", updatePayload);
     discountSegment.addEventListener("change", updatePayload);
 });
 </script>
+
 
 {% endblock %}
