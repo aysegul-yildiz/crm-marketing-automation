@@ -121,12 +121,10 @@ CREATE TABLE IF NOT EXISTS customer_event (
 CREATE TABLE IF NOT EXISTS campaign_event (
     id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT,
-    campaign_id INT,
     step_id INT,
     event_type VARCHAR(50),
     event_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY(customer_id) REFERENCES Customer(id),
-    FOREIGN KEY(campaign_id) REFERENCES campaign(id),
     FOREIGN KEY(step_id) REFERENCES workflow_step(id)
 );
 
