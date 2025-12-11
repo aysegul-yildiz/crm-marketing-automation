@@ -692,3 +692,112 @@ def get_top_campaigns_by_revenue_filtered(
             }
         )
     return results
+def get_segment_performance_filtered(
+    start_date: date | None = None,
+    end_date: date | None = None,
+    segment: str | None = None,
+    campaign_id: int | None = None,
+) -> list[Dict]:
+
+    campaigns = load_campaigns()
+    events = load_campaign_events()
+    conversions = load_conversion_events()
+    customers = load_customers()
+
+    campaigns, events, conversions = _apply_common_filters(
+        campaigns, events, conversions,
+        start_date=start_date,
+        end_date=end_date,
+        segment=segment,
+        campaign_id=campaign_id,
+    )
+
+    if "segment" not in campaigns.columns or campaigns.empty:
+        return []
+
+    seg_col = None
+    if "segment" in customers.columns:
+        seg_col = "segment"
+    elif "Segment" in customers.columns:
+        seg_col = "Segment"
+
+    customers_by_segment: Dict[str, int] = {}
+    if seg_col:
+        cust_seg_counts = (
+            customers[seg_col]
+            .dropna()
+            .astype(str)
+            .str.strip()
+            .value_counts()
+        )
+        customers_by_segment = {
+            seg_name: int(count)
+            for seg_name, count in cust_seg_counts.items()
+        }
+
+    results: list[Dict] = []
+
+    segments = (
+        campaigns["segment"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .unique()
+        .tolist()
+    )
+
+    for seg_name in segments:
+        seg_campaigns = campaigns[campaigns["segment"] == seg_name]
+        if seg_campaigns.empty:
+            continue
+
+        seg_campaign_ids = seg_campaigns["id"].astype(int).tolist()
+
+        seg_events = events[events["campaign_id"].isin(seg_campaign_ids)]
+        seg_conversions = conversions[conversions["campaign_id"].isin(seg_campaign_ids)]
+
+        delivered = int((seg_events["event_type"] == "delivered").sum()) if "event_type" in seg_events.columns else 0
+        opened = int((seg_events["event_type"] == "opened").sum()) if "event_type" in seg_events.columns else 0
+        clicked = int((seg_events["event_type"] == "clicked").sum()) if "event_type" in seg_events.columns else 0
+        converted = int((seg_events["event_type"] == "converted").sum()) if "event_type" in seg_events.columns else 0
+
+        revenue = float(seg_conversions["revenue"].sum()) if "revenue" in seg_conversions.columns else 0.0
+
+        if "spend" in seg_campaigns.columns:
+            spend = float(seg_campaigns["spend"].sum())
+        elif "budget" in seg_campaigns.columns:
+            spend = float(seg_campaigns["budget"].sum())
+        else:
+            spend = 0.0
+
+    
+        denom = delivered if delivered > 0 else None
+        if denom:
+            open_rate = opened / denom * 100.0
+            click_rate = clicked / denom * 100.0
+            conversion_rate = converted / denom * 100.0
+        else:
+            open_rate = click_rate = conversion_rate = 0.0
+
+        if spend > 0:
+            roi = (revenue - spend) / spend * 100.0
+        else:
+            roi = 0.0
+
+        customers_in_seg = int(customers_by_segment.get(seg_name, 0))
+
+        results.append(
+            {
+                "segment": seg_name,
+                "customers": customers_in_seg,
+                "sent": delivered,
+                "open_rate": round(open_rate, 1),
+                "click_rate": round(click_rate, 1),
+                "conversion_rate": round(conversion_rate, 1),
+                "revenue": round(revenue, 1),
+                "spend": round(spend, 1),
+                "roi": round(roi, 1),
+            }
+        )
+    results = sorted(results, key=lambda r: r["revenue"], reverse=True)
+    return results

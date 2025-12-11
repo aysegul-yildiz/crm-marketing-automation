@@ -16,6 +16,7 @@ from app.services.analytics_service import (
     get_revenue_by_segment_filtered,
     get_top_campaigns_by_revenue_filtered,
     load_campaigns, 
+     get_segment_performance_filtered, 
 )
 
 marketing_bp = Blueprint(
@@ -144,6 +145,14 @@ def analytics():
         limit=5,
     )
 
+    segment_performance = get_segment_performance_filtered(
+        start_date=date_from,
+        end_date=date_to,
+        segment=segment_filter,
+        campaign_id=campaign_id,
+    )
+
+
     campaigns_df = load_campaigns()
 
     segment_options = sorted(campaigns_df["segment"].dropna().unique().tolist())
@@ -178,4 +187,5 @@ def analytics():
         revenue_by_segment_labels=revenue_by_segment["labels"],
         revenue_by_segment_values=revenue_by_segment["values"],
         top_campaigns=top_campaigns,
+        segment_performance=segment_performance,
     )

@@ -392,6 +392,50 @@
       </div>
     </section>
 
+        <section class="card">
+      <div class="card-header-row">
+        <div>
+          <div class="card-title">Segment Performance Overview</div>
+          <div class="card-subtitle">
+            Customers, funnel performance, and revenue per segment.
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="campaign-table">
+          <thead>
+            <tr>
+              <th>Segment</th>
+              <th class="num">Customers</th>
+              <th class="num">Sent</th>
+              <th class="num">Open&nbsp;%</th>
+              <th class="num">Click&nbsp;%</th>
+              <th class="num">Conv.&nbsp;%</th>
+              <th class="num">Revenue</th>
+              <th class="num">Spend</th>
+              <th class="num">ROI&nbsp;%</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in segment_performance %}
+            <tr>
+              <td>{{ row.segment }}</td>
+              <td class="num">{{ row.customers }}</td>
+              <td class="num">{{ row.sent }}</td>
+              <td class="num">{{ row.open_rate }}%</td>
+              <td class="num">{{ row.click_rate }}%</td>
+              <td class="num">{{ row.conversion_rate }}%</td>
+              <td class="num">₺{{ row.revenue|round(0) }}</td>
+              <td class="num">₺{{ row.spend|round(0) }}</td>
+              <td class="num">{{ row.roi }}%</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="card">
       <div class="card-header-row">
         <div>
