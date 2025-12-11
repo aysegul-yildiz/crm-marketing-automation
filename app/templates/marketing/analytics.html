@@ -431,74 +431,62 @@
     </div>
   </div>
 
-  <!-- RIGHT: Segment Performance Heatmap -->
-  <div class="card">
+    <div class="card">
     <div class="card-header-row">
       <div>
-        <div class="card-title">Segment Performance Heatmap</div>
+        <div class="card-title">Lead Nurturing Summary</div>
         <div class="card-subtitle">
-          Darker cells indicate stronger performance for that metric.
+          How many touches leads receive and how long they take to convert.
         </div>
       </div>
     </div>
 
-    <div class="table-wrapper">
-      <table class="heat-table">
-        <thead>
-          <tr>
-            <th>Segment</th>
-            <th class="num">Open&nbsp;%</th>
-            <th class="num">Click&nbsp;%</th>
-            <th class="num">Conv.&nbsp;%</th>
-            <th class="num">ROI&nbsp;%</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for row in segment_performance %}
-          {% set open_alpha = (row.open_rate or 0) / 100 %}
-          {% set click_alpha = (row.click_rate or 0) / 100 %}
-          {% set conv_alpha = (row.conversion_rate or 0) / 100 %}
-          {# roi: map roughly -100..100 to 0..1 #}
-          {% set roi_norm = (row.roi + 100) / 200 %}
-          {% if roi_norm < 0 %}{% set roi_norm = 0 %}{% endif %}
-          {% if roi_norm > 1 %}{% set roi_norm = 1 %}{% endif %}
+    <div style="display:flex; flex-direction:column; gap:10px; margin-top:6px; font-size:13px;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline;">
+        <div>
+          <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
+            Avg touches (converted leads)
+          </div>
+          <div style="font-size:20px; font-weight:700;">
+            {{ lead_nurturing.avg_touches_converted }}
+          </div>
+        </div>
+        <div style="text-align:right; font-size:11px; color:#6b7280;">
+          Converted leads: {{ lead_nurturing.converted_leads_count }}
+        </div>
+      </div>
 
-          <tr>
-            <td class="heat-segment-cell">{{ row.segment }}</td>
+      <div style="display:flex; justify-content:space-between; align-items:baseline;">
+        <div>
+          <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
+            Avg touches (non-converted leads)
+          </div>
+          <div style="font-size:20px; font-weight:700;">
+            {{ lead_nurturing.avg_touches_non_converted }}
+          </div>
+        </div>
+        <div style="text-align:right; font-size:11px; color:#6b7280;">
+          Non-converted leads: {{ lead_nurturing.non_converted_leads_count }}
+        </div>
+      </div>
 
-            <td
-              class="heat-metric-cell"
-              style="background: rgba(79, 70, 229, {{ open_alpha }}); color: {{ 'white' if open_alpha > 0.55 else '#111827' }};"
-            >
-              {{ row.open_rate }}%
-            </td>
-
-            <td
-              class="heat-metric-cell"
-              style="background: rgba(34, 197, 94, {{ click_alpha }}); color: {{ 'white' if click_alpha > 0.55 else '#111827' }};"
-            >
-              {{ row.click_rate }}%
-            </td>
-
-            <td
-              class="heat-metric-cell"
-              style="background: rgba(234, 179, 8, {{ conv_alpha }}); color: {{ 'white' if conv_alpha > 0.55 else '#111827' }};"
-            >
-              {{ row.conversion_rate }}%
-            </td>
-
-            <td
-              class="heat-metric-cell"
-              style="background: rgba(239, 68, 68, {{ roi_norm }}); color: {{ 'white' if roi_norm > 0.55 else '#111827' }};"
-            >
-              {{ row.roi }}%
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      <div style="display:flex; justify-content:space-between; align-items:baseline;">
+        <div>
+          <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
+            Avg days to convert
+          </div>
+          <div style="font-size:20px; font-weight:700;">
+            {{ lead_nurturing.avg_days_to_convert }}
+          </div>
+        </div>
+        <div style="text-align:right; font-size:11px; color:#6b7280;">
+          From first campaign touch to first conversion.
+        </div>
+      </div>
     </div>
   </div>
+</section>
+
 </section>
 
 

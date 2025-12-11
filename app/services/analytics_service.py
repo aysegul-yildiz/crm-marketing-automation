@@ -5,18 +5,12 @@ from typing import List, Dict
 import pandas as pd
 from datetime import date
 
-# -------------------------------------------------------------------
-# Always load CSVs from:  app/data/
-# -------------------------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parents[1]     # -> app/
-DATA_DIR = BASE_DIR / "data"                       # -> app/data/
+BASE_DIR = Path(__file__).resolve().parents[1]     
+DATA_DIR = BASE_DIR / "data"                       
 
 
 
 def _load_csv(filename: str) -> pd.DataFrame:
-    """
-    Loads a mock CSV from app/data with safe error messages.
-    """
     path = DATA_DIR / filename
     if not path.exists():
         raise FileNotFoundError(f"[analytics_service] CSV not found: {path}")
@@ -25,8 +19,6 @@ def _load_csv(filename: str) -> pd.DataFrame:
 def load_leads() -> pd.DataFrame:
     return _load_csv("lead_data.csv")
 
-
-# ---- CSV loaders --------------------------------------------------- #
 
 def load_customers() -> pd.DataFrame:
     return _load_csv("customer_data.csv")
@@ -44,7 +36,6 @@ def load_conversion_events() -> pd.DataFrame:
     return _load_csv("conversion_event_data.csv")
 
 
-# ---- High-level KPIs ----------------------------------------------- #
 def get_kpis() -> Dict:
     customers = load_customers()
     campaigns = load_campaigns()
@@ -338,7 +329,6 @@ def get_lead_conversion_by_campaign() -> Dict[int, Dict]:
         seg_col = "Segment"
 
     if not seg_col:
-        #we cant compute lead metrics without segment info
         return {}
 
     lead_mask = customers[seg_col] == "New Signups (Last 30 Days)"
@@ -801,3 +791,130 @@ def get_segment_performance_filtered(
         )
     results = sorted(results, key=lambda r: r["revenue"], reverse=True)
     return results
+
+
+
+def get_lead_nurturing_metrics_filtered(
+    start_date: date | None = None,
+    end_date: date | None = None,
+    segment: str | None = None,
+    campaign_id: int | None = None,
+) -> Dict:
+
+    campaigns = load_campaigns()
+    events = load_campaign_events()
+    conversions = load_conversion_events()
+
+    campaigns, events, conversions = _apply_common_filters(
+        campaigns, events, conversions,
+        start_date=start_date,
+        end_date=end_date,
+        segment=segment,
+        campaign_id=campaign_id,
+    )
+
+    if events.empty or "customer_id" not in events.columns:
+        return {
+            "avg_touches_converted": 0.0,
+            "avg_touches_non_converted": 0.0,
+            "avg_days_to_convert": 0.0,
+            "converted_leads_count": 0,
+            "non_converted_leads_count": 0,
+        }
+
+    events = events.copy()
+    events["customer_id"] = events["customer_id"].astype(int)
+
+    if "event_date" not in events.columns:
+        return {
+            "avg_touches_converted": 0.0,
+            "avg_touches_non_converted": 0.0,
+            "avg_days_to_convert": 0.0,
+            "converted_leads_count": 0,
+            "non_converted_leads_count": 0,
+        }
+
+    events["event_date"] = pd.to_datetime(
+        events["event_date"], dayfirst=True, errors="coerce"
+    )
+
+    touches_by_customer = (
+        events.groupby("customer_id")["id"].count()
+        if "id" in events.columns
+        else events.groupby("customer_id").size()
+    )
+    first_touch_by_customer = events.groupby("customer_id")["event_date"].min()
+
+    touches_df = pd.DataFrame({
+        "touches": touches_by_customer,
+        "first_touch": first_touch_by_customer,
+    })
+
+    if conversions.empty or "customer_id" not in conversions.columns:
+        converted_leads_count = 0
+        non_converted_leads_count = len(touches_df)
+        return {
+            "avg_touches_converted": 0.0,
+            "avg_touches_non_converted": float(touches_df["touches"].mean()) if non_converted_leads_count > 0 else 0.0,
+            "avg_days_to_convert": 0.0,
+            "converted_leads_count": converted_leads_count,
+            "non_converted_leads_count": non_converted_leads_count,
+        }
+
+    conversions = conversions.copy()
+    conversions["customer_id"] = conversions["customer_id"].astype(int)
+
+    conv_date_col = None
+    if "conversion_date" in conversions.columns:
+        conv_date_col = "conversion_date"
+    elif "event_date" in conversions.columns:
+        conv_date_col = "event_date"
+
+    if conv_date_col is None:
+        return {
+            "avg_touches_converted": 0.0,
+            "avg_touches_non_converted": float(touches_df["touches"].mean()) if len(touches_df) > 0 else 0.0,
+            "avg_days_to_convert": 0.0,
+            "converted_leads_count": 0,
+            "non_converted_leads_count": len(touches_df),
+        }
+
+    conversions[conv_date_col] = pd.to_datetime(
+        conversions[conv_date_col], dayfirst=True, errors="coerce"
+    )
+
+    first_conv_by_customer = conversions.groupby("customer_id")[conv_date_col].min()
+
+    touches_df = touches_df.join(
+        first_conv_by_customer.rename("first_conversion"),
+        how="left",
+    )
+
+    converted = touches_df[touches_df["first_conversion"].notna()].copy()
+    non_converted = touches_df[touches_df["first_conversion"].isna()].copy()
+
+    converted_leads_count = int(len(converted))
+    non_converted_leads_count = int(len(non_converted))
+
+    if converted_leads_count > 0:
+        avg_touches_converted = float(converted["touches"].mean())
+        converted["delta_days"] = (
+            converted["first_conversion"] - converted["first_touch"]
+        ).dt.days
+        avg_days_to_convert = float(converted["delta_days"].mean())
+    else:
+        avg_touches_converted = 0.0
+        avg_days_to_convert = 0.0
+
+    if non_converted_leads_count > 0:
+        avg_touches_non_converted = float(non_converted["touches"].mean())
+    else:
+        avg_touches_non_converted = 0.0
+
+    return {
+        "avg_touches_converted": round(avg_touches_converted, 1),
+        "avg_touches_non_converted": round(avg_touches_non_converted, 1),
+        "avg_days_to_convert": round(avg_days_to_convert, 1),
+        "converted_leads_count": converted_leads_count,
+        "non_converted_leads_count": non_converted_leads_count,
+    }

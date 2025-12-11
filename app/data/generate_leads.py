@@ -1,11 +1,10 @@
-# app/data/generate_leads.py
 
 from pathlib import Path
 import pandas as pd
 import numpy as np
 
-BASE_DIR = Path(__file__).resolve().parents[1]   # -> app/
-DATA_DIR = BASE_DIR / "data"                     # -> app/data
+BASE_DIR = Path(__file__).resolve().parents[1]  
+DATA_DIR = BASE_DIR / "data"                     
 
 
 def main():
@@ -13,7 +12,6 @@ def main():
     campaigns = pd.read_csv(DATA_DIR / "campaign_data.csv")
     conversions = pd.read_csv(DATA_DIR / "conversion_event_data.csv")
 
-    # Segment-based target conversion rates (from lead -> paying customer)
     SEG_CONV_PROB = {
         "High CLV Customers": 0.20,
         "New Signups (Last 30 Days)": 0.12,
@@ -31,17 +29,13 @@ def main():
 
         p = SEG_CONV_PROB.get(seg, DEFAULT_P)
 
-        # how many *actual purchases* this campaign produced
         conv_count = int((conversions["campaign_id"] == cid).sum())
 
         if conv_count == 0:
-            # campaign produced no revenue -> still generate some leads that never convert
             leads_count = int(np.random.randint(20, 80))
         else:
-            # choose leads so that conv_count / leads_count ≈ p
             leads_count = max(conv_count, int(round(conv_count / p)))
 
-        # choose candidate customers from the same segment; if empty, fall back to all
         seg_customers = customers[customers["segment"] == seg]
         if seg_customers.empty:
             seg_customers = customers
@@ -52,7 +46,6 @@ def main():
             replace=True,
         )
 
-        # exactly conv_count of these leads will become paying customers
         converted_flags = np.array(
             [1] * conv_count + [0] * max(leads_count - conv_count, 0)
         )
@@ -65,7 +58,6 @@ def main():
                     "customer_id": int(cust_id),
                     "campaign_id": cid,
                     "is_converted": int(is_conv),
-                    # we don't really use this yet but nice for realism
                     "created_at": camp.get("start_date", ""),
                 }
             )
