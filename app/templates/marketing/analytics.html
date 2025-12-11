@@ -228,6 +228,9 @@
     background: #fef3c7;
     color: #92400e;
   }
+  .roi-positive { color: #16a34a; font-weight:600; }
+.roi-negative { color: #dc2626; font-weight:600; }
+
 </style>
 
 <div class="app-shell">
@@ -428,7 +431,10 @@
               <td class="num">{{ row.conversion_rate }}%</td>
               <td class="num">₺{{ row.revenue|round(0) }}</td>
               <td class="num">₺{{ row.spend|round(0) }}</td>
-              <td class="num">{{ row.roi }}%</td>
+              <td class="num {{ 'roi-negative' if row.roi < 0 else 'roi-positive' }}">
+    {{ row.roi }}%
+</td>
+
             </tr>
             {% endfor %}
           </tbody>
