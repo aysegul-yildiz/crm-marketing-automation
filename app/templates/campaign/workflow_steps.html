@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Workflow Editor</h2>
+<hr>
+
+<h3>{{ workflow.name }} (ID: {{ workflow.id }})</h3>
+
+<p style="color:#6b7280;">Here you will define workflow steps.</p>
+
+<ul>
+    {% for step in steps %}
+    <li>
+        <strong>{{ step.name }}</strong>
+        <br>
+        <small>Order: {{ step.order }}</small>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -95,11 +95,23 @@
                         border: 1px solid #e5e7eb;
                         border-radius: 6px;
                         margin-bottom: 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
                     ">
-                        <strong>{{ w.name }}</strong>
-                        <br>
-                        <small>ID: {{ w.id }}</small>
+                        <div>
+                            <strong>{{ w.name }}</strong><br>
+                            <small>ID: {{ w.id }}</small>
+                        </div>
+
+                        <!-- Edit button -->
+                        <a href="{{ url_for('campaign.workflow_steps_page', workflow_id=w.id) }}"
+                        class="btn-pill btn-primary-pill"
+                        style="padding: 5px 12px; font-size: 0.85rem;">
+                            Edit
+                        </a>
                     </li>
+
                     {% endfor %}
                 </ul>
                 {% else %}

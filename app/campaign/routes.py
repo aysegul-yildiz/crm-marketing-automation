@@ -101,6 +101,24 @@ def create_workflow():
     return redirect(url_for("campaign.workflows_page", selected_campaign_id=campaign_id))
 
 
+@campaign_bp.route("/workflow/<int:workflow_id>/steps", endpoint="workflow_steps_page")
+def workflow_steps_page(workflow_id):
+    workflow = CampaignManagementService.get_workflow_by_id(workflow_id)
+
+    if not workflow:
+        flash("Workflow not found!", "error")
+        return redirect(url_for("campaign.workflows_page"))
+
+    # Later you'll fetch steps, actions, etc.
+    workflow_steps = CampaignManagementService.get_workflow_steps(workflow_id)
+
+    return render_template(
+        "campaign/workflow_steps.html",
+        workflow=workflow,
+        steps=workflow_steps
+    )
+
+
 
 @campaign_bp.route("/<int:campaign_id>/workflows")
 def ajax_get_workflows(campaign_id):
