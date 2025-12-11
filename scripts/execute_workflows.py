@@ -10,7 +10,7 @@ def worker(steps: List[WorkflowStepModel]):
     for step in steps:
         try:
             # Execute step
-            WorkflowService.execute_step(step)
+            CampaignExecutionService.execute_step(step)
         except Exception as e:
             step['status'] = 'FAILED'
             print(f"Step {step['id']} failed: {e}")

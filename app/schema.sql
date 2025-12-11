@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS campaign_has_segment(
 CREATE TABLE IF NOT EXISTS workflow (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
-    campaign_id INT,
+    campaign_id INT NOT NULL,
     creation_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     execution_start_time TIMESTAMP DEFAULT NULL,
     FOREIGN KEY(campaign_id) REFERENCES campaign(id)
