@@ -36,6 +36,15 @@ class CampaignExecutionService
                 EmailSenderService.send_email(to=user.email, body=body)
         elif step.action_type == "discord-post":
             #post discord post through webhook
+
+            payload = json.loads(step.action_payload)
+            webhook_url = "https://discord.com/api/webhooks/1447853640973815808/AnJs6zy3YAK74v39N38TyNPx6veIo5MvMWrAejoiwfxAynBSHXQOqSQMENzMmR3xkUaZ"
+            if content and webhook_url:
+                try:
+                    DiscordSenderService.send_discord_post(webhook_url, payload)
+                except requests.HTTPError as e:
+                    print(f"Discord post failed: {e}")
+                    # handle failure (mark workflow step failed)
         elif step.action_type == "discount":
             #register discount to segments related to campaign which this workflow belongs
             discount = int(step.action_payload)
