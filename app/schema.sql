@@ -91,10 +91,12 @@ CREATE TABLE workflow_step (
     action_type VARCHAR(50),
     action_payload JSON,
     status VARCHAR(20),
+    delay_minutes_after_prev INT DEFAULT 0, -- 
     FOREIGN KEY(workflow_id) REFERENCES workflow(id)
         ON DELETE CASCADE,
     CHECK(step_order > 0),
     CHECK(status IN ('PENDING', 'DONE', 'FAILED')),
+    CHECK(action_type IN ('email', 'discord-post', 'discount')),
     UNIQUE(workflow_id, step_order)
 );
 
