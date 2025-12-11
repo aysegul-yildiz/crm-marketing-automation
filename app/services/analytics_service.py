@@ -184,9 +184,11 @@ def get_campaign_effectiveness() -> List[Dict]:
         df[col] = df[col].fillna(0)
 
     sent = df["sent"].replace(0, pd.NA)
-    df["open_rate"] = (df["opened"] / sent * 100).fillna(0)
-    df["click_rate"] = (df["clicked"] / sent * 100).fillna(0)
-    df["conversion_rate"] = (df["converted"] / sent * 100).fillna(0)
+
+    df["open_rate"] = ((df["opened"] / sent) * 100).fillna(0).astype(float)
+    df["click_rate"] = ((df["clicked"] / sent) * 100).fillna(0).astype(float)
+    df["conversion_rate"] = ((df["converted"] / sent) * 100).fillna(0).astype(float)
+
 
 
     df["open_rate"] = df["open_rate"].round(1)
@@ -655,12 +657,14 @@ def get_top_campaigns_by_revenue_filtered(
         df[col] = df[col].fillna(0)
 
     sent = df["sent"].replace(0, pd.NA)
-    df["open_rate"] = (df["opened"] / sent * 100).fillna(0)
-    df["click_rate"] = (df["clicked"] / sent * 100).fillna(0)
-    df["conversion_rate"] = (df["converted"] / sent * 100).fillna(0)
+
+    df["open_rate"] = ((df["opened"] / sent) * 100).fillna(0).astype(float)
+    df["click_rate"] = ((df["clicked"] / sent) * 100).fillna(0).astype(float)
+    df["conversion_rate"] = ((df["converted"] / sent) * 100).fillna(0).astype(float)
 
     spend = df.get("spend", pd.Series(0, index=df.index))
     df["roi"] = ((df["revenue"] - spend) / spend * 100).where(spend > 0, 0)
+
 
     df = df.sort_values(by="revenue", ascending=False).head(limit)
 
