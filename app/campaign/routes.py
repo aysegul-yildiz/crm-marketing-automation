@@ -1,6 +1,7 @@
 from flask import render_template, request, redirect, url_for, flash
 from . import campaign_bp
 from app.services.CampaignManagementService import CampaignManagementService
+from app.services.SegmentationMaintainerService import SegmentationMaintainerService
 
 @campaign_bp.route("/", endpoint="new_campaign") 
 def index():
@@ -109,14 +110,15 @@ def workflow_steps_page(workflow_id):
         flash("Workflow not found!", "error")
         return redirect(url_for("campaign.workflows_page"))
 
-    # Later you'll fetch steps, actions, etc.
     workflow_steps = CampaignManagementService.get_workflow_steps(workflow_id)
+    segmentation_groups= SegmentationMaintainerService.get_all_groups()
 
-    return render_template(
-        "campaign/workflow_steps.html",
+    return render_template("campaign/workflow_steps.html",
         workflow=workflow,
-        steps=workflow_steps
+        steps=workflow_steps,
+        segmentation_groups=segmentation_groups
     )
+
 
 
 @campaign_bp.route("/add_step", methods=["POST"], endpoint="add_workflow_step")

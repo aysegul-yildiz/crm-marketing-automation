@@ -17,9 +17,11 @@
 ">
     <h4 style="margin-top:0;">Add New Step</h4>
 
-    <form action="{{ url_for('campaign.add_workflow_step') }}" method="POST" style="display:flex; flex-direction:column; gap:12px;">
+   <form action="{{ url_for('campaign.add_workflow_step') }}" 
+        method="POST" 
+        style="display:flex; flex-direction:column; gap:12px;"
+        id="new-step-form">
 
-        <!-- Hidden workflow id -->
         <input type="hidden" name="workflow_id" value="{{ workflow.id }}">
 
         <div>
@@ -29,18 +31,42 @@
 
         <div>
             <label><strong>Action Type:</strong></label>
-            <select name="action_type" required style="width:100%; margin-top:5px;">
+            <select name="action_type" id="action-type-select" required style="width:100%; margin-top:5px;">
                 <option value="" disabled selected>Select Action Type</option>
                 <option value="EMAIL">Email</option>
                 <option value="SMS">SMS</option>
-                <option value="WAIT">Wait / Delay</option>
-                <option value="WEBHOOK">Webhook Call</option>
+                <option value="DISCOUNT">Discount</option>
+                <option value="DISCORD">Discord Post</option>
             </select>
         </div>
 
+        <!-- ==== DISCOUNT FIELDS (hidden by default) ==== -->
+        <div id="discount-fields" style="display:none; flex-direction:column; gap:10px;">
+
+            <div>
+                <label><strong>Discount %:</strong></label>
+                <input type="number" min="1" max="100" id="discount-percent"
+                    placeholder="Enter discount percentage"
+                    style="width:100%; margin-top:5px;">
+            </div>
+
+            <div>
+                <label><strong>Target Segmentation Group:</strong></label>
+                <select id="discount-segmentation" style="width:100%; margin-top:5px;">
+                    <option disabled selected>Select Segment</option>
+                    {% for group in segmentation_groups %}
+                        <option value="{{ group.id }}">{{ group.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <!-- ============================================= -->
+
         <div>
             <label><strong>Action Payload (JSON or Text):</strong></label>
-            <textarea name="action_payload" rows="3" placeholder="Payload content..." style="width:100%; margin-top:5px;"></textarea>
+            <textarea name="action_payload" id="payload-field" rows="3"
+                    placeholder="Payload content..." 
+                    style="width:100%; margin-top:5px;"></textarea>
         </div>
 
         <div>
@@ -52,6 +78,7 @@
             Add Step
         </button>
     </form>
+
 </div>
 
 <!-- ====================== SCROLLABLE WORKFLOW STEPS ====================== -->
@@ -100,5 +127,43 @@
         <p style="color:#6b7280;">No steps defined yet for this workflow.</p>
     {% endif %}
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const actionSelect = document.getElementById("action-type-select");
+    const discountFields = document.getElementById("discount-fields");
+    const payloadField = document.getElementById("payload-field");
+
+    const discountPercent = document.getElementById("discount-percent");
+    const discountSegment = document.getElementById("discount-segmentation");
+
+    function updatePayload() {
+        const percent = discountPercent.value;
+        const segment = discountSegment.value;
+
+        if (!percent || !segment) return;
+
+        payloadField.value = JSON.stringify({
+            discount_percentage: Number(percent),
+            segmentation_group_id: Number(segment)
+        }, null, 2);
+    }
+
+    actionSelect.addEventListener("change", () => {
+        if (actionSelect.value === "DISCOUNT") {
+            discountFields.style.display = "flex";
+            payloadField.readOnly = true;
+            updatePayload();
+        } else {
+            discountFields.style.display = "none";
+            payloadField.readOnly = false;
+            payloadField.value = "";
+        }
+    });
+
+    discountPercent.addEventListener("input", updatePayload);
+    discountSegment.addEventListener("change", updatePayload);
+});
+</script>
 
 {% endblock %}
