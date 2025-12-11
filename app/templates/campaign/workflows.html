@@ -31,9 +31,10 @@
                         </div>
 
                         <input type="radio"
-                        name="campaign_select"
-                        value="{{ c.id }}"
-                        onchange="window.location='{{ url_for('campaign.workflows_page') }}?selected_campaign_id=' + this.value;">
+                            name="campaign_select"
+                            value="{{ c.id }}"
+                            {% if selected_campaign_id == c.id %}checked{% endif %}
+                            onchange="window.location='{{ url_for('campaign.workflows_page') }}?selected_campaign_id=' + this.value;">
 
                     </li>
                     {% endfor %}

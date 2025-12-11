@@ -72,14 +72,16 @@ def update_campaign():
 
 @campaign_bp.route("/workflows", endpoint="workflows_page")
 def workflows_page():
+    campaigns = CampaignManagementService.filterCampaigns("")
+
+    # Get the selected ID from URL
     selected_campaign_id = request.args.get("selected_campaign_id", type=int)
 
-    campaigns = CampaignManagementService.filterCampaigns("")
-    
     workflows = []
     if selected_campaign_id:
         workflows = CampaignManagementService.get_workflows_by_campaign_id(selected_campaign_id)
 
+    print("URL argument:", request.args)
     return render_template(
         "campaign/workflows.html",
         campaigns=campaigns,
@@ -87,12 +89,13 @@ def workflows_page():
         selected_campaign_id=selected_campaign_id
     )
 
+
 @campaign_bp.route("/create_workflow", methods=["POST"], endpoint="create_workflow")
 def create_workflow():
     campaign_id = request.form.get("campaign_id")
     workflow_name = request.form.get("workflow_name")
 
-    CampaignManagementService.create_workflow(campaign_id, workflow_name)
+    CampaignManagementService.create_workflow(workflow_name, campaign_id)
 
     # Redirect back to workflow page with selected campaign
     return redirect(url_for("campaign.workflows_page", selected_campaign_id=campaign_id))
