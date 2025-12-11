@@ -4,6 +4,7 @@ from app.models.SegmentationRuleModel import SegmentationRuleModel
 from app.models.ListingSegmentationModel import ListingSegmentationModel
 from app.models.SegmentationGroupModel import SegmentationGroupModel
 from app.models.CustomerSegmentationModel import CustomerSegmentationModel
+app.models.SegmentationDiscountModel import SegmentationDiscountModel
 
 class SegmentationRepository:
 
@@ -134,3 +135,56 @@ class SegmentationRepository:
         conn.close()
 
         return [SegmentationGroupModel(id=row[0], name=row[1]) for row in rows]
+
+    @staticmethod
+    def getSegmentationDiscount(segmentation_id: int) -> SegmentationDiscountModel | None:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        query = """
+            SELECT segmentation_id, discount_percentage
+            FROM segmentation_discount
+            WHERE segmentation_id = %s;
+        """
+
+        cursor.execute(query, (segmentation_id,))
+        row = cursor.fetchone()
+
+        cursor.close()
+        conn.close()
+
+        if row:
+            return SegmentationDiscountModel(
+                segmentation_id=row[0],
+                discount_percentage=row[1]
+            )
+        return None
+        
+    @staticmethod
+    def addSegmentationDiscount(segmentation_id: int, discount_percentage: int):
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        # Check if discount already exists for this segmentation group
+        existing = CampaignRepository.getSegmentationDiscount(segmentation_id)
+
+        if existing is None:
+            # INSERT
+            query = """
+                INSERT INTO segmentation_discount (segmentation_id, discount_percentage)
+                VALUES (%s, %s);
+            """
+            cursor.execute(query, (segmentation_id, discount_percentage))
+
+        else:
+            # UPDATE
+            query = """
+                UPDATE segmentation_discount
+                SET discount_percentage = %s
+                WHERE segmentation_id = %s;
+            """
+            cursor.execute(query, (discount_percentage, segmentation_id))
+
+        conn.commit()
+        cursor.close()
+        conn.close()

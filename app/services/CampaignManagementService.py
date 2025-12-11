@@ -87,3 +87,23 @@ class CampaignManagementService:
         if not name:
             raise ValueError("Campaign name cannot be empty.")
         CampaignRepository.updateCampaign(campaign_id, name, status)
+
+    @staticmethod
+    def set_segmentation_discount(segmentation_id: int, discount_percentage: int):
+        """
+        Creates or updates a segmentation group's discount.
+        """
+        if discount_percentage < 0 or discount_percentage > 100:
+            raise ValueError("Discount percentage must be between 0 and 100.")
+
+        return CampaignRepository.addSegmentationDiscount(
+            segmentation_id=segmentation_id,
+            discount_percentage=discount_percentage
+        )
+
+    @staticmethod
+    def get_segmentation_discount(segmentation_id: int):
+        """
+        Fetch segmentation discount model or None.
+        """
+        return CampaignRepository.getSegmentationDiscount(segmentation_id)
