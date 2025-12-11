@@ -7,38 +7,77 @@
 
     <div style="display: flex; gap: 25px;">
 
-        <!-- ====================== LEFT COLUMN: CAMPAIGNS ====================== -->
-        <div style="
-            flex: 1;
-            border: 1px solid #d1d5db;
-            border-radius: 10px;
-            padding: 15px;
-        ">
-            <h3 style="margin-top: 0;">Campaigns</h3>
+        <!-- ====================== LEFT HALF ====================== -->
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
 
-            <ul style="padding-left: 0; list-style: none;">
-                {% for c in campaigns %}
-                <li style="margin-bottom: 10px; display:flex; justify-content:space-between;">
+            <!-- ========== CAMPAIGNS BOX ========== -->
+            <div style="
+                border: 1px solid #d1d5db;
+                border-radius: 10px;
+                padding: 15px;
+            ">
+                <h3 style="margin-top: 0;">Campaigns</h3>
 
-                    <label style="cursor:pointer;">
-                        <strong>{{ c.name }}</strong>  
-                        <span style="color:#6b7280;">(ID: {{ c.id }})</span>
-                        <br>
-                        <small>Status: {{ c.status }}</small>
-                    </label>
+                <ul style="padding-left: 0; list-style: none;">
+                    {% for c in campaigns %}
+                    <li style="margin-bottom: 10px; display:flex; justify-content:space-between;">
 
-                    <input type="radio"
-                           name="campaign_select"
-                           value="{{ c.id }}"
-                           {% if selected_campaign_id == c.id %}checked{% endif %}
-                           onchange="loadWorkflows(this.value)">
-                </li>
-                {% endfor %}
-            </ul>
+                        <!-- Replaced LABEL with DIV to stop auto form submission -->
+                        <div style="cursor:pointer;">
+                            <strong>{{ c.name }}</strong>
+                            <span style="color:#6b7280;">(ID: {{ c.id }})</span>
+                            <br>
+                            <small>Status: {{ c.status }}</small>
+                        </div>
+
+                        <!-- onclick prevents redirects ALWAYS -->
+                        <input type="radio"
+                               name="campaign_select"
+                               value="{{ c.id }}"
+                               {% if selected_campaign_id == c.id %}checked{% endif %}
+                               onclick="event.preventDefault(); loadWorkflows(this.value)">
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+            <!-- ========== NEW WORKFLOW CREATION BOX ========== -->
+            <div style="
+                border: 1px solid #d1d5db;
+                border-radius: 10px;
+                padding: 15px;
+            ">
+                <h3 style="margin-top: 0;">Create Workflow</h3>
+
+                {% if selected_campaign_id %}
+                <form action="{{ url_for('campaigns.create_workflow') }}" method="POST">
+
+                    <input type="hidden" name="campaign_id" value="{{ selected_campaign_id }}">
+
+                    <label>Workflow Name:</label>
+                    <input type="text"
+                           name="workflow_name"
+                           placeholder="Enter workflow name"
+                           required
+                           style="width: 100%; margin-top: 5px;">
+
+                    <button type="submit"
+                            class="btn-pill btn-primary-pill"
+                            style="margin-top: 10px; width:100%;">
+                        Add Workflow
+                    </button>
+
+                </form>
+                {% else %}
+                    <p style="color:#6b7280;">Select a campaign to create a workflow.</p>
+                {% endif %}
+            </div>
+
         </div>
 
 
-        <!-- ====================== RIGHT COLUMN: WORKFLOWS ====================== -->
+        <!-- ====================== RIGHT HALF (unchanged) ====================== -->
         <div style="
             flex: 1;
             border: 1px solid #d1d5db;
@@ -47,12 +86,9 @@
         ">
             <h3 style="margin-top: 0;">Workflows</h3>
 
-            <!-- CONTAINER to dynamically update workflows -->
             <div id="workflow-box">
-
                 {% if workflows %}
                 <ul style="padding-left: 0; list-style: none;">
-
                     {% for w in workflows %}
                     <li style="
                         padding: 10px;
@@ -65,34 +101,19 @@
                         <small>ID: {{ w.id }}</small>
                     </li>
                     {% endfor %}
-
                 </ul>
-
                 {% else %}
                     <p style="color:#6b7280;">Select a campaign to view its workflows.</p>
                 {% endif %}
-
             </div>
-
-            <!-- Add Workflow Button -->
-            {% if selected_campaign_id %}
-            <form action="{{ url_for('campaigns.create_workflow') }}" method="POST" style="margin-top: 15px;">
-                <input type="hidden" name="campaign_id" value="{{ selected_campaign_id }}">
-                <input type="text" name="workflow_name" placeholder="New Workflow Name" required>
-                <button type="submit" class="btn-pill btn-primary-pill" style="margin-top: 8px; width:100%;">
-                    Add Workflow
-                </button>
-            </form>
-            {% endif %}
         </div>
 
     </div>
 </div>
 
-<!-- ====================== AJAX SCRIPT ====================== -->
 <script>
 function loadWorkflows(campaignId) {
-    fetch(`/campaigns/${campaignId}/workflows`)
+    fetch(`/campaign/${campaignId}/workflows`)
         .then(response => response.text())
         .then(html => {
             document.getElementById("workflow-box").innerHTML = html;

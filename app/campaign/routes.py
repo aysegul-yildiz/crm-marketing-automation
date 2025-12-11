@@ -87,7 +87,7 @@ def workflows_page():
     )
 
 
-@campaign_bp.route("/campaigns/<int:campaign_id>/workflows")
+@campaign_bp.route("/<int:campaign_id>/workflows")
 def ajax_get_workflows(campaign_id):
     workflows = CampaignManagementService.get_workflows_by_campaign_id(campaign_id)
     return render_template("partials/workflow_list.html", workflows=workflows)
