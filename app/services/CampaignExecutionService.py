@@ -16,16 +16,24 @@ class CampaignExecutionService
     # will try and execute the relevant workflow step, no exception handling here
     @staticmethod
     def executeWorkflowStep(step: WorkflowStepModel):
-        CHECK(action_type IN ('email', 'discord-post', 'discount')),
         if step.action_type == "email":
-            #send email with relevant payload, send to all users of all segments of this campaign
+            # Send email with relevant payload, send to all users of all segments of this campaign
             groups = CampaignRepository.getSegmentsFromWorkflowStep(step.id)
             body = step.action_payload
 
-            users = []
+            # Use a dictionary to track unique users by their id
+            unique_users = {}
+
             for group in groups:
-                users = SegmentationMaintainerService.fetch_customers(group.id)
-                
+                customers = SegmentationMaintainerService.fetch_customers(group.id)
+                for user in customers:
+                    # Key by user.id to avoid duplicates
+                    unique_users[user.id] = user
+
+            # Now unique_users.values() contains distinct CustomerModel objects
+            for user in unique_users.values():
+                # Call your email sender function here
+                EmailSenderService.send_email(to=user.email, body=body)
         elif step.action_type == "discord-post":
             #post discord post through webhook
         elif step.action_type == "discount":
