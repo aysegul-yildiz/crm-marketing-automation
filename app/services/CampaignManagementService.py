@@ -45,14 +45,14 @@ class CampaignManagementService:
 
     @staticmethod
     def add_workflow_step( workflow_id: int, step_order: int, action_type: str, 
-        action_payload, status: str = "PENDING",) -> int:
+        action_payload, status: str = "PENDING", delay_minutes_after_prev: int = 0) -> int:
         # Verify workflow exists
         wf = CampaignRepository.getWorkflowByID(workflow_id)
         if wf is None:
             raise ValueError(f"Workflow with ID {workflow_id} does not exist.")
 
         return CampaignRepository.createWorkflowStep(
-            workflow_id, step_order, action_type, action_payload, status
+            workflow_id, step_order, action_type, action_payload, status, delay_minutes_after_prev
         )
 
     @staticmethod

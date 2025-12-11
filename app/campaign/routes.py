@@ -119,6 +119,25 @@ def workflow_steps_page(workflow_id):
     )
 
 
+@campaign_bp.route("/add_step", methods=["POST"], endpoint="add_workflow_step")
+def add_workflow_step():
+    workflow_id = int(request.form.get("workflow_id"))
+    step_order = int(request.form.get("step_order"))
+    action_type = request.form.get("action_type")
+    action_payload = request.form.get("action_payload")
+    delay = int(request.form.get("delay_minutes_after_prev", 0))
+
+    CampaignManagementService.add_workflow_step(
+        workflow_id=workflow_id,
+        step_order=step_order,
+        action_type=action_type,
+        action_payload=action_payload,
+        delay_minutes_after_prev=delay
+    )
+
+    return redirect(url_for("campaign.workflow_steps_page", workflow_id=workflow_id))
+
+
 
 @campaign_bp.route("/<int:campaign_id>/workflows")
 def ajax_get_workflows(campaign_id):

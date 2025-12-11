@@ -8,14 +8,97 @@
 
 <p style="color:#6b7280;">Here you will define workflow steps.</p>
 
-<ul>
-    {% for step in steps %}
-    <li>
-        <strong>{{ step.name }}</strong>
-        <br>
-        <small>Order: {{ step.order }}</small>
-    </li>
-    {% endfor %}
-</ul>
+<!-- ====================== ADD NEW STEP PANEL ====================== -->
+<div style="
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+">
+    <h4 style="margin-top:0;">Add New Step</h4>
+
+    <form action="{{ url_for('campaign.add_workflow_step') }}" method="POST" style="display:flex; flex-direction:column; gap:12px;">
+
+        <!-- Hidden workflow id -->
+        <input type="hidden" name="workflow_id" value="{{ workflow.id }}">
+
+        <div>
+            <label><strong>Step Order:</strong></label>
+            <input type="number" name="step_order" min="1" required style="width:100%; margin-top:5px;">
+        </div>
+
+        <div>
+            <label><strong>Action Type:</strong></label>
+            <select name="action_type" required style="width:100%; margin-top:5px;">
+                <option value="" disabled selected>Select Action Type</option>
+                <option value="EMAIL">Email</option>
+                <option value="SMS">SMS</option>
+                <option value="WAIT">Wait / Delay</option>
+                <option value="WEBHOOK">Webhook Call</option>
+            </select>
+        </div>
+
+        <div>
+            <label><strong>Action Payload (JSON or Text):</strong></label>
+            <textarea name="action_payload" rows="3" placeholder="Payload content..." style="width:100%; margin-top:5px;"></textarea>
+        </div>
+
+        <div>
+            <label><strong>Delay Minutes After Previous Step:</strong></label>
+            <input type="number" name="delay_minutes_after_prev" min="0" value="0" style="width:100%; margin-top:5px;">
+        </div>
+
+        <button type="submit" class="btn-pill btn-primary-pill" style="margin-top:5px; width:100%;">
+            Add Step
+        </button>
+    </form>
+</div>
+
+<!-- ====================== SCROLLABLE WORKFLOW STEPS ====================== -->
+<div style="
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 15px;
+    height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+">
+
+    {% if steps %}
+        {% for step in steps %}
+        <div style="
+            padding: 15px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: #fafafa;
+        ">
+            <strong style="font-size: 1.1rem;">
+                Step {{ step.order }}: {{ step.action_type }}
+            </strong>
+            <br>
+            <small style="color:#6b7280;">ID: {{ step.id }}</small>
+
+            {% if step.action_payload %}
+            <pre style="
+                background:#f3f4f6;
+                padding:10px;
+                border-radius:6px;
+                margin-top:10px;
+                white-space:pre-wrap;
+            ">{{ step.action_payload }}</pre>
+            {% endif %}
+
+            <p style="margin-top:8px; color:#6b7280;">
+                Delay: {{ step.delay_minutes_after_prev }} minutes
+            </p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p style="color:#6b7280;">No steps defined yet for this workflow.</p>
+    {% endif %}
+</div>
 
 {% endblock %}

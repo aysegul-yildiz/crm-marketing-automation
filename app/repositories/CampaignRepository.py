@@ -119,6 +119,7 @@ class CampaignRepository:
         action_type: str,
         action_payload,
         status: str = "PENDING",
+        delay_minutes_after_prev = 0, 
     ) -> int:
         conn = get_connection()
         cursor = conn.cursor()
@@ -128,12 +129,12 @@ class CampaignRepository:
 
         query = """
             INSERT INTO workflow_step (
-                workflow_id, step_order, action_type, action_payload, status
+                workflow_id, step_order, action_type, action_payload, status, delay_minutes_after_prev
             )
-            VALUES (%s, %s, %s, %s, %s);
+            VALUES (%s, %s, %s, %s, %s, %s);
         """
         cursor.execute(
-            query, (workflow_id, step_order, action_type, payload_str, status)
+            query, (workflow_id, step_order, action_type, payload_str, status, delay_minutes_after_prev)
         )
         conn.commit()
 
@@ -179,6 +180,7 @@ class CampaignRepository:
                     action_type=r["action_type"],
                     action_payload=payload,
                     status=r["status"],
+                    delay_minutes_after_prev=r["delay_minutes_after_prev"]
                 )
             )
 
