@@ -416,7 +416,7 @@
     </section>
 
    <section class="grid-2">
-  <!-- LEFT: Revenue Over Time -->
+  
   <div class="card">
     <div class="card-header-row">
       <div>
@@ -431,7 +431,7 @@
     </div>
   </div>
 
-    <div class="card">
+      <div class="card">
     <div class="card-header-row">
       <div>
         <div class="card-title">Lead Nurturing Summary</div>
@@ -441,55 +441,103 @@
       </div>
     </div>
 
-    <div style="display:flex; flex-direction:column; gap:10px; margin-top:6px; font-size:13px;">
-      <div style="display:flex; justify-content:space-between; align-items:baseline;">
-        <div>
-          <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
-            Avg touches (converted leads)
-          </div>
-          <div style="font-size:20px; font-weight:700;">
-            {{ lead_nurturing.avg_touches_converted }}
-          </div>
+    {% set total_leads_nurturing =
+         (lead_nurturing.converted_leads_count or 0)
+         + (lead_nurturing.non_converted_leads_count or 0) %}
+
+    {% if total_leads_nurturing > 0 %}
+      {% set lead_conv_rate =
+           (lead_nurturing.converted_leads_count * 100.0 / total_leads_nurturing) %}
+    {% else %}
+      {% set lead_conv_rate = 0.0 %}
+    {% endif %}
+
+    <div
+      style="
+        display:grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap:12px;
+        margin-top:10px;
+        font-size:13px;
+      "
+    >
+      <!-- Avg touches (converted) -->
+      <div>
+        <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
+          Avg touches (converted)
         </div>
-        <div style="text-align:right; font-size:11px; color:#6b7280;">
+        <div style="font-size:22px; font-weight:700;">
+          {{ lead_nurturing.avg_touches_converted }}
+        </div>
+        <div style="font-size:11px; color:#6b7280; margin-top:2px;">
           Converted leads: {{ lead_nurturing.converted_leads_count }}
         </div>
       </div>
 
-      <div style="display:flex; justify-content:space-between; align-items:baseline;">
-        <div>
-          <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
-            Avg touches (non-converted leads)
-          </div>
-          <div style="font-size:20px; font-weight:700;">
-            {{ lead_nurturing.avg_touches_non_converted }}
-          </div>
+      <!-- Avg touches (non-converted) -->
+      <div>
+        <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
+          Avg touches (non-converted)
         </div>
-        <div style="text-align:right; font-size:11px; color:#6b7280;">
+        <div style="font-size:22px; font-weight:700;">
+          {{ lead_nurturing.avg_touches_non_converted }}
+        </div>
+        <div style="font-size:11px; color:#6b7280; margin-top:2px;">
           Non-converted leads: {{ lead_nurturing.non_converted_leads_count }}
         </div>
       </div>
 
-      <div style="display:flex; justify-content:space-between; align-items:baseline;">
-        <div>
-          <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
-            Avg days to convert
-          </div>
-          <div style="font-size:20px; font-weight:700;">
-            {{ lead_nurturing.avg_days_to_convert }}
-          </div>
+      <!-- Avg days to convert -->
+      <div>
+        <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
+          Avg days to convert
         </div>
-        <div style="text-align:right; font-size:11px; color:#6b7280;">
-          From first campaign touch to first conversion.
+        <div style="font-size:22px; font-weight:700;">
+          {{ lead_nurturing.avg_days_to_convert }}
+        </div>
+        <div style="font-size:11px; color:#6b7280; margin-top:2px;">
+          From first touch to first conversion.
+        </div>
+      </div>
+
+      <!-- Lead conversion rate -->
+      <div>
+        <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
+          Lead conversion rate
+        </div>
+        <div style="font-size:22px; font-weight:700;">
+          {{ lead_conv_rate|round(1) }}%
+        </div>
+        <div style="font-size:11px; color:#6b7280; margin-top:2px;">
+          {{ lead_nurturing.converted_leads_count }} of {{ total_leads_nurturing }} nurtured leads.
+        </div>
+      </div>
+
+      <!-- Total nurtured leads (full-width tile) -->
+      <div
+        style="
+          grid-column: 1 / -1;
+          margin-top:4px;
+          padding-top:8px;
+          border-top:1px solid #e5e7eb;
+        "
+      >
+        <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
+          Total nurtured leads
+        </div>
+        <div style="font-size:18px; font-weight:600;">
+          {{ total_leads_nurturing }}
+        </div>
+        <div style="font-size:11px; color:#6b7280; margin-top:2px;">
+          Leads that have received at least one campaign touch in the selected period.
         </div>
       </div>
     </div>
   </div>
-</section>
 
 </section>
 
-
+</section>
         <section class="card">
       <div class="card-header-row">
         <div>
