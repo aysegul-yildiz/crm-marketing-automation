@@ -329,3 +329,26 @@ class CampaignRepository:
             result.append(model)
             
         return result
+
+    @staticmethod
+    def update_workflow_step_status(step_id: int, status: str):
+        """
+        Update the status of a workflow step.
+        """
+        conn = get_connection()
+        cursor = conn.cursor()
+        try:
+            query = """
+                UPDATE workflow_step
+                SET status = %s,
+                    executed_at = CASE 
+                                    WHEN %s = 'DONE' THEN NOW() 
+                                    ELSE executed_at 
+                                  END
+                WHERE id = %s;
+            """
+            cursor.execute(query, (status, status, step_id))
+            conn.commit()
+        finally:
+            cursor.close()
+            conn.close()

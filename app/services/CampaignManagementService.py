@@ -107,3 +107,6 @@ class CampaignManagementService:
         Fetch segmentation discount model or None.
         """
         return CampaignRepository.getSegmentationDiscount(segmentation_id)
+    @staticmethod
+    def update_workflow_step_status(step_id, status):
+        CampaignRepository.update_workflow_step_status(step_id, status)
