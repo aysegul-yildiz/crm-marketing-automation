@@ -275,7 +275,7 @@ class CampaignRepository:
     @staticmethod
     def isWorkflowStepExecutable(step: WorkflowStepModel) -> bool:
         conn = get_connection()
-        curr = conn.cursor()
+        cursor = conn.cursor()
 
         # if it is not done, and if the previous step is done or this is the first step
         # and if it is time to execute this one (enough time elapsed since last step)
@@ -284,9 +284,48 @@ class CampaignRepository:
             SELECT id FROM workflow_step AS ws
             WHERE id = %s AND status != 'DONE' AND (step_order = 1 OR 
             (
-                (SELECT status FROM prev_step) = 'DONE') AND 
-                (ws.delay_minutes_after_prev > (SELECT DATE_SUB(NOW(), prev_step.executed_at)))
+                (SELECT status FROM prev_step) = 'DONE') 
+                AND 
+                TIMESTAMPDIFF(MINUTE, prev_step.executed_at, NOW()) >= ws.delay_minutes_after_prev)
             );
         """
+        cursor.execute(query, (WorkflowStepModel.id - 1, WorkflowStepModel.id))
+        row = cursor.fetchone()
 
-        return true
+        return bool(row)
+
+    @staticmethod
+    def getSegmentsFromWorkflowStep(step_id: int) -> list[SegmentationGroupModel]:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        query = """
+        WITH ci AS (
+            SELECT w.id AS workflow_id, w.campaign_id
+            FROM workflow_step AS ws
+            JOIN workflow AS w ON ws.workflow_id = w.id
+            WHERE ws.id = %s
+        )
+        SELECT *
+        FROM segmentation_group
+        WHERE id IN (
+            SELECT DISTINCT segment_id
+            FROM campaign_has_segment
+            WHERE campaign_id = (SELECT campaign_id FROM ci)
+        );"""
+
+        cursor.execute(query, (step_id,))
+
+        rows = cursor.fetchall()
+        cursor.close()
+        conn.close()
+
+        result = []
+        for row in rows:
+            model = SegmentationGroupModel(
+                    id=row["id"],
+                    name=row["name"],
+            )
+            result.append(model)
+            
+        return result
