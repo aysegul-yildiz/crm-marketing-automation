@@ -1,0 +1,17 @@
+{% if workflows %}
+<ul style="padding-left: 0; list-style: none;">
+    {% for w in workflows %}
+    <li style="
+        padding: 10px;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    ">
+        <strong>{{ w.name }}</strong><br>
+        <small>ID: {{ w.id }}</small>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p style="color:#6b7280;">No workflows found for this campaign.</p>
+{% endif %}

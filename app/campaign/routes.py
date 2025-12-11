@@ -68,3 +68,26 @@ def update_campaign():
     except ValueError as ve:
         flash(str(ve), "error")
         return redirect(url_for("campaign.edit_campaign", campaign_id=campaign_id))
+
+
+@campaign_bp.route("/workflows", endpoint="workflows_page")
+def workflows_page():
+    """Displays campaign + workflow management page."""
+
+    # Load all campaigns for left side
+    campaigns = CampaignManagementService.filterCampaigns("")
+
+    # No campaign selected yet
+    workflows = []
+
+    return render_template(
+        "campaign/workflows.html",
+        campaigns=campaigns,
+        workflows=workflows
+    )
+
+
+@campaign_bp.route("/campaigns/<int:campaign_id>/workflows")
+def ajax_get_workflows(campaign_id):
+    workflows = CampaignManagementService.get_workflows_by_campaign_id(campaign_id)
+    return render_template("partials/workflow_list.html", workflows=workflows)

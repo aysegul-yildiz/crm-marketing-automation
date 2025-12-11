@@ -91,7 +91,8 @@ CREATE TABLE workflow_step (
     action_type VARCHAR(50),
     action_payload JSON,
     status VARCHAR(20),
-    FOREIGN KEY(workflow_id) REFERENCES workflow(id),
+    FOREIGN KEY(workflow_id) REFERENCES workflow(id)
+        ON DELETE CASCADE,
     CHECK(step_order > 0),
     CHECK(status IN ('PENDING', 'DONE', 'FAILED')),
     UNIQUE(workflow_id, step_order)
