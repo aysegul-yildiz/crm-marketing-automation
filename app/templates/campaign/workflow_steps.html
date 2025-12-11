@@ -140,14 +140,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hide payload field when DISCOUNT selected
     function updatePayload() {
         const percent = discountPercent.value;
-        const segment = discountSegment.value;
+        if (!percent) return;
 
-        if (!percent || !segment) return;
-
-        payloadField.value = JSON.stringify({
-            discount_percentage: Number(percent),
-            segmentation_group_id: Number(segment)
-        }, null, 2);
+        payloadField.value = percent;
     }
     actionSelect.addEventListener("change", () => {
         const isDiscount = actionSelect.value === "discount";
