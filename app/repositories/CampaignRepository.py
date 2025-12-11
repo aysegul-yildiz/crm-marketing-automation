@@ -274,7 +274,7 @@ class CampaignRepository:
 
     @staticmethod
     def isWorkflowStepExecutable(step: WorkflowStepModel) -> bool:
-        conn = get connection()
+        conn = get_connection()
         curr = conn.cursor()
 
         # if it is not done, and if the previous step is done or this is the first step

@@ -12,4 +12,4 @@ class CampaignExecutionService
     # will try and execute the relevant workflow step, no exception handling here
     @staticmethod
     def executeWorkflowStep(step: WorkflowStepModel):
-        
+        return true
