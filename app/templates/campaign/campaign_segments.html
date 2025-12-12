@@ -4,70 +4,82 @@
 <h2>Campaign Segments Management</h2>
 <hr>
 
-<div style="display:flex; gap:20px; height: 80vh;">
+<div style="display: flex; gap: 20px;">
+
     <!-- LEFT SIDE -->
-    <div style="flex:1; display:flex; flex-direction:column; gap:20px;">
-        
-        <!-- Campaigns VBox -->
-        <div style="flex:1; border:1px solid #d1d5db; border-radius:10px; padding:15px; overflow-y:auto;">
+    <div style="display: flex; flex-direction: column; gap: 20px; width: 50%;">
+
+        <!-- Campaigns Pane -->
+        <div style="border: 1px solid #d1d5db; border-radius: 10px; padding: 15px;">
             <h4>Campaigns</h4>
-            {% if campaigns %}
-                <ul style="list-style:none; padding:0;">
-                    {% for campaign in campaigns %}
-                        <li style="padding:8px; border-bottom:1px solid #e5e7eb; cursor:pointer;"
-                            onclick="selectCampaign({{ campaign.id }})"
-                            id="campaign-{{ campaign.id }}">
-                            {{ campaign.name }} (ID: {{ campaign.id }})
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p>No campaigns found.</p>
-            {% endif %}
+            <form id="campaign-selection-form">
+                {% for campaign in campaigns %}
+                <div style="margin-bottom: 8px;">
+                    <input type="radio" name="selected_campaign"
+                           id="campaign_{{ campaign.id }}" value="{{ campaign.id }}">
+                    <label for="campaign_{{ campaign.id }}">{{ campaign.name }}</label>
+                </div>
+                {% endfor %}
+            </form>
         </div>
 
-        <!-- Segments assigned to selected campaign -->
-        <div style="flex:1; border:1px solid #d1d5db; border-radius:10px; padding:15px; overflow-y:auto;">
+        <!-- Assigned Segments -->
+        <div style="border: 1px solid #d1d5db; border-radius: 10px; padding: 15px;">
             <h4>Assigned Segments</h4>
-            <ul id="assigned-segments" style="list-style:none; padding:0;">
-                <p>Select a campaign to view assigned segments.</p>
+            <ul id="assigned-segments-list" style="list-style:none; padding-left:0;">
+                <li>Select a campaign to load its segments</li>
             </ul>
         </div>
+
     </div>
 
-    <!-- RIGHT SIDE -->
+    <!-- RIGHT SIDE: All Segmentation Groups -->
     <div style="flex:1; border:1px solid #d1d5db; border-radius:10px; padding:15px; overflow-y:auto;">
         <h4>All Segmentation Groups</h4>
+
         {% if segmentation_groups %}
             <ul id="all-segments" style="list-style:none; padding:0;">
                 {% for seg in segmentation_groups %}
-                    <li style="padding:8px; border-bottom:1px solid #e5e7eb;">
-                        {{ seg.name }} (ID: {{ seg.id }})
-                    </li>
+                <li style="padding:8px; border-bottom:1px solid #e5e7eb;">
+                    <input type="radio" name="selected_segmentation"
+                           id="seg_{{ seg.id }}" value="{{ seg.id }}">
+                    <label for="seg_{{ seg.id }}">{{ seg.name }} (ID: {{ seg.id }})</label>
+                </li>
                 {% endfor %}
             </ul>
         {% else %}
             <p>No segmentation groups found.</p>
         {% endif %}
+
+        <!-- ASSIGN BUTTON BELOW SEGMENTS -->
+        <button type="button"
+                class="btn-pill btn-primary-pill"
+                id="assign-btn"
+                style="margin-top: 20px; width: 100%;">
+            Assign to Campaign
+        </button>
+
     </div>
+
 </div>
 
 <script>
-    const assignedSegmentsList = document.getElementById("assigned-segments");
+    const assignedSegmentsList = document.getElementById("assigned-segments-list");
 
+    // Load segments for selected campaign
     function selectCampaign(campaignId) {
-        // Clear previous assigned segments
-        assignedSegmentsList.innerHTML = "<p>Loading...</p>";
+        assignedSegmentsList.innerHTML = "<li>Loading...</li>";
 
-        // Fetch assigned segments from server via AJAX
-        fetch(`/api/campaign/${campaignId}/segments`)
+        fetch(`/campaign/api/campaign/${campaignId}/segments`)
             .then(response => response.json())
             .then(data => {
                 assignedSegmentsList.innerHTML = "";
-                if(data.length === 0){
-                    assignedSegmentsList.innerHTML = "<p>No segments assigned to this campaign.</p>";
+
+                if (data.length === 0) {
+                    assignedSegmentsList.innerHTML = "<li>No segments assigned to this campaign.</li>";
                     return;
                 }
+
                 data.forEach(seg => {
                     const li = document.createElement("li");
                     li.style.padding = "8px";
@@ -77,10 +89,34 @@
                 });
             })
             .catch(err => {
-                assignedSegmentsList.innerHTML = "<p>Error loading assigned segments.</p>";
+                assignedSegmentsList.innerHTML = "<li>Error loading segments.</li>";
                 console.error(err);
             });
     }
+
+    // Watch for campaign selection changes
+    document.querySelectorAll("input[name='selected_campaign']").forEach(radio => {
+        radio.addEventListener("change", () => selectCampaign(radio.value));
+    });
+
+    // Assign selected segment to selected campaign
+    document.getElementById("assign-btn").addEventListener("click", async () => {
+        const campaignId = document.querySelector("input[name='selected_campaign']:checked")?.value;
+        const segmentId = document.querySelector("input[name='selected_segmentation']:checked")?.value;
+
+        if (!campaignId || !segmentId) {
+            alert("Please select both a campaign and a segment.");
+            return;
+        }
+
+        const response = fetch(`/campaign/api/campaign/${campaignId}/assign/${segmentId}`, { method: "POST" });
+
+        const result = await response.json();
+        alert(result.message || "Segment successfully assigned!");
+
+        // Refresh assigned segments box
+        selectCampaign(campaignId);
+    });
 </script>
 
 {% endblock %}

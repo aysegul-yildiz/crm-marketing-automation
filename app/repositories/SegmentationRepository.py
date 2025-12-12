@@ -6,6 +6,8 @@ from app.models.SegmentationGroupModel import SegmentationGroupModel
 from app.models.CustomerSegmentationModel import CustomerSegmentationModel
 from app.models.SegmentationDiscountModel import SegmentationDiscountModel
 from app.models.CustomerModel import CustomerModel
+from app.repositories.CampaignRepository import CampaignRepository
+
 
 class SegmentationRepository:
 
@@ -167,7 +169,7 @@ class SegmentationRepository:
         cursor = conn.cursor()
 
         # Check if discount already exists for this segmentation group
-        existing = CampaignRepository.getSegmentationDiscount(segmentation_id)
+        existing = SegmentationRepository.getSegmentationDiscount(segmentation_id)
 
         if existing is None:
             # INSERT

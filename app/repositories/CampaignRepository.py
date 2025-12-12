@@ -8,6 +8,7 @@ from app.database import get_connection
 from app.models.CampaignModel import CampaignModel
 from app.models.WorkflowStepModel import WorkflowStepModel
 from app.models.WorkflowModel import WorkflowModel
+from app.models.SegmentationGroupModel import SegmentationGroupModel
 
 
 class CampaignRepository:
@@ -297,7 +298,7 @@ class CampaignRepository:
     @staticmethod
     def getSegmentsFromWorkflowStep(step_id: int) -> list[SegmentationGroupModel]:
         conn = get_connection()
-        cursor = conn.cursor()
+        cursor = conn.cursor(dictionary = True)
 
         query = """
         WITH ci AS (
@@ -309,7 +310,7 @@ class CampaignRepository:
         SELECT *
         FROM segmentation_group
         WHERE id IN (
-            SELECT DISTINCT segment_id
+            SELECT DISTINCT segmentation_id
             FROM campaign_has_segment
             WHERE campaign_id = (SELECT campaign_id FROM ci)
         );"""
@@ -358,7 +359,7 @@ class CampaignRepository:
         """
         Inserts a row into campaign_has_segment.
         """
-        conn = get_db_connection()
+        conn = get_connection()
         cursor = conn.cursor()
         try:
             cursor.execute(
@@ -379,7 +380,7 @@ class CampaignRepository:
         """
         Returns all SegmentationGroupModel objects for a given campaign_id
         """
-        conn = get_db_connection()
+        conn = get_connection()
         cursor = conn.cursor(dictionary=True)
         try:
             cursor.execute(
@@ -407,3 +408,45 @@ class CampaignRepository:
         conn.close()
 
         return [CampaignModel(id=row["id"], name=row["name"], status=row["status"]) for row in rows]
+    
+    @staticmethod
+    def get_all_next_workflow_steps() -> list[WorkflowStepModel]:
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        query = """
+            WITH first_workflow_steps AS (
+                SELECT id FROM workflow_step AS ws
+                WHERE status <> 'DONE' AND step_order = 
+                (SELECT MIN(step_order) FROM workflow_step 
+                    WHERE status <> 'DONE' AND workflow_id = ws.workflow_id)
+            )
+            SELECT * FROM workflow_step WHERE id IN (SELECT id FROM first_workflow_steps);
+        """
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        cursor.close()
+        conn.close()
+
+        result: list[WorkflowStepModel] = []
+        for r in rows:
+            payload = r["action_payload"]
+            if isinstance(payload, str):
+                try:
+                    payload = json.loads(payload)
+                except Exception:
+                    pass
+
+            result.append(
+                WorkflowStepModel(
+                    id=r["id"],
+                    workflow_id=r["workflow_id"],
+                    step_order=r["step_order"],
+                    action_type=r["action_type"],
+                    action_payload=payload,
+                    status=r["status"],
+                    delay_minutes_after_prev=r["delay_minutes_after_prev"]
+                )
+            )
+
+        return result

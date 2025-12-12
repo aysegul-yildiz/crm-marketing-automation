@@ -26,7 +26,7 @@ class ExternalRepository:
     @staticmethod
     def getCustomerByID(id: int) -> CustomerModel:
         conn = get_connection()
-        cursor = conn.cursor()
+        cursor = conn.cursor(dictionary = True)
 
         cursor.execute("SELECT * FROM Customer WHERE id = %s;", (id, ))
         row = cursor.fetchone()

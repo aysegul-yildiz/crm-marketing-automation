@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, jsonify
 from . import campaign_bp
 from app.services.CampaignManagementService import CampaignManagementService
 from app.services.SegmentationMaintainerService import SegmentationMaintainerService
@@ -151,6 +151,33 @@ def campaign_segments_page():
         campaigns=campaigns,
         segmentation_groups=segmentation_groups
     )
+
+@campaign_bp.route("/api/campaign/<int:campaign_id>/assign/<int:segmentation_id>", methods=["POST"])
+def assign_segment_to_campaign(campaign_id, segmentation_id):
+    try:
+        CampaignManagementService.add_campaign_segment(campaign_id, segmentation_id)
+        return jsonify({"message": "Segment successfully assigned to campaign."}), 200
+
+    except Exception as e:
+        print("Error assigning segment:", e)
+        return jsonify({"error": "Failed to assign segment"}), 500
+
+@campaign_bp.route("/api/campaign/<int:campaign_id>/segments", methods=["GET"])
+def get_segments_for_campaign(campaign_id):
+    try:
+        segments = CampaignManagementService.get_segments_for_campaign(campaign_id)
+
+        # Convert model objects to JSON-safe dicts
+        result = [
+            {"id": seg.id, "name": seg.name}
+            for seg in segments
+        ]
+
+        return jsonify(result), 200
+
+    except Exception as e:
+        print("Error fetching segments:", e)
+        return jsonify({"error": "Failed to fetch segments"}), 500
 
 @campaign_bp.route("/<int:campaign_id>/workflows")
 def ajax_get_workflows(campaign_id):

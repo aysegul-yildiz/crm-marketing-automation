@@ -6,6 +6,7 @@ from app.models.CampaignModel import CampaignModel
 from app.models.WorkflowModel import WorkflowModel
 from app.models.WorkflowStepModel import WorkflowStepModel
 from app.repositories.CampaignRepository import CampaignRepository
+from app.repositories.SegmentationRepository import SegmentationRepository
 
 class CampaignManagementService:
     @staticmethod
@@ -106,7 +107,7 @@ class CampaignManagementService:
         """
         Fetch segmentation discount model or None.
         """
-        return CampaignRepository.getSegmentationDiscount(segmentation_id)
+        return SegmentationRepository.getSegmentationDiscount(segmentation_id)
     @staticmethod
     def update_workflow_step_status(step_id, status):
         CampaignRepository.update_workflow_step_status(step_id, status)
@@ -122,3 +123,8 @@ class CampaignManagementService:
     @staticmethod
     def get_all_campaigns() -> list:
         return CampaignRepository.get_all_campaigns()
+
+    @staticmethod
+    #returns all workflow steps (with status failed or pending), which have the minimum step id in their individual workflows
+    def get_all_next_workflow_steps() -> list:
+        return CampaignRepository.get_all_next_workflow_steps()
