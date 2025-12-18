@@ -15,6 +15,12 @@ Running the Project:
 
     visit the application in the browser at http://127.0.0.1:5000
 
+Running workflow executor script:
+To run and execute pending workflow steps invoke the relevant python script, outside its containing folder (for include paths to resolve):
+```
+~/crm-marketing-automation$ python ./scripts/execute_workflows.py
+```
+
 Running Tests:
     tests are inside the app/tests folder, to run:
         pytest app/tests -q
