@@ -44,3 +44,6 @@ Project Structure:
     run.py
     requirements.txt
     README.md
+
+Software Architecture Diagrams:
+<img width="4378" height="3761" alt="cs411-project2 drawio" src="https://github.com/user-attachments/assets/ec2451a8-854a-4fb5-91de-85c7deb2dcd7" />
